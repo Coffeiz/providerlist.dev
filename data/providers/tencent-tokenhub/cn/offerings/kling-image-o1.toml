@@ -1,0 +1,14 @@
+id = "kling-image-o1"
+model_ref = "kling/image-o1"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

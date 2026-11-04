@@ -1,0 +1,7 @@
+name = "wanx2.1-imageedit"
+type = "image"
+release_date = "2025-03-25"
+
+[modalities]
+input = [ "image" ]
+output = [ "image" ]

@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "providerlist-www-redirect",
+  "compatibility_date": "2026-10-23",
+  "main": "./apps/worker/src/www-redirect.ts",
+  "routes": [
+    {
+      "pattern": "www.providerlist.dev/*",
+      "zone_name": "providerlist.dev"
+    }
+  ]
+}

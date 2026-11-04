@@ -1,0 +1,14 @@
+id = "mureka-music-v9"
+model_ref = "mureka/mureka-9"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

@@ -1,0 +1,14 @@
+id = "decision-model-preview"
+model_ref = "alibaba/decision-model-preview"
+status = "unknown"
+pricing = []
+
+[api_limits]
+context = 65536
+input = 65536
+output = 0
+rpm = 1200
+tpm = 2000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/decision-model-preview"

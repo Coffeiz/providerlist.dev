@@ -1,0 +1,83 @@
+[[plans]]
+id = "global-glm-coding-lite"
+name = "Lite"
+ratio = "1"
+description = "The GLM Coding Plan is your AI partner for tasks and code — a single subscription that unlocks a suite of agent tools for AI-powered coding and everyday office work."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "18"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "54"
+sale_price = "43.2"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "216"
+sale_price = "151.2"
+
+[plans.allowance]
+credits_5h = 2000
+credits_weekly = 10000
+
+[plans.links]
+official = "https://z.ai/subscribe"
+
+[[plans]]
+id = "global-glm-coding-pro"
+name = "Pro"
+ratio = "6"
+description = "The GLM Coding Plan is your AI partner for tasks and code — a single subscription that unlocks a suite of agent tools for AI-powered coding and everyday office work."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "80"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "240"
+sale_price = "192"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "960"
+sale_price = "672"
+
+[plans.allowance]
+credits_5h = 12000
+credits_weekly = 60000
+
+[plans.links]
+official = "https://z.ai/subscribe"
+
+[[plans]]
+id = "global-glm-coding-max"
+name = "Max"
+ratio = "14"
+description = "The GLM Coding Plan is your AI partner for tasks and code — a single subscription that unlocks a suite of agent tools for AI-powered coding and everyday office work."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "168"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "504"
+sale_price = "403.2"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "2016"
+sale_price = "1411.2"
+
+[plans.allowance]
+credits_5h = 28000
+credits_weekly = 140000
+
+[plans.links]
+official = "https://z.ai/subscribe"

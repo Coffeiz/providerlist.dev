@@ -1,0 +1,19 @@
+id = "doubao-seedream-5-0-flash-260915"
+model_ref = "bytedance/seedream-5-0-flash"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.12"

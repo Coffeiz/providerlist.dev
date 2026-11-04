@@ -1,0 +1,7 @@
+name = "Muse Voice Transcribe 1.0"
+type = "transcription"
+release_date = "2026-09-01"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

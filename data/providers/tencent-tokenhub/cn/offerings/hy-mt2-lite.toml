@@ -1,0 +1,24 @@
+id = "hy-mt2-lite"
+model_ref = "tencent/hy-mt2-lite"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 8000
+input = 4000
+output = 4000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.2"

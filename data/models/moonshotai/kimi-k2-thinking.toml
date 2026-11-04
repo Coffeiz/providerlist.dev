@@ -1,0 +1,16 @@
+name = "kimi-k2-thinking"
+type = "chat"
+family = "K2 Thinking"
+release_date = "2025-11-06"
+
+[limits]
+context = 262144
+output = 262144
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "high", "max" ]
+tool_calling = true

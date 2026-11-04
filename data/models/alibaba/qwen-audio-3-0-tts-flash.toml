@@ -1,0 +1,7 @@
+name = "qwen-audio-3.0-tts-flash"
+type = "speech"
+release_date = "2026-07-14"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

@@ -1,0 +1,21 @@
+id = "MiniMax-H3-Regeneration"
+model_ref = "minimax/minimax-h3-regeneration"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.05"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.05"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.025"

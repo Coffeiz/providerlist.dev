@@ -1,0 +1,126 @@
+website = "https://www.minimax.io"
+
+[docs]
+overview = "https://platform.minimax.io/docs/faq/models"
+pricing = "https://platform.minimax.io/docs/pricing/overview"
+models = "https://platform.minimax.io/docs/guides/text-generation"
+ai_sdk = "https://platform.minimax.io/docs/api-reference/text-ai-sdk"
+
+[[endpoints]]
+id = "global-openai"
+base_url = "https://api.minimax.io/v1"
+api_region = "global"
+documentation = "https://platform.minimax.io/docs/api-reference/text-openai-api"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.io/docs/api-reference/text-chat-openai"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.io/docs/api-reference/file-management-upload"
+path = "/files/upload"
+
+[[endpoints]]
+id = "global-anthropic"
+base_url = "https://api.minimax.io/anthropic"
+api_region = "global"
+documentation = "https://platform.minimax.io/docs/api-reference/text-anthropic-api"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.io/docs/api-reference/text-chat-anthropic"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.io/docs/api-reference/text-chat-anthropic"
+path = "/v1/messages"
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = true
+enum = [ "voice_clone", "prompt_audio", "t2a_async_input", "video_understanding", "video_generation_input" ]
+route_mappings = [ "multipart/form-data.purpose" ]
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.io/docs/api-reference/file-management-upload"
+path = "/files/upload"
+
+[capabilities.links]
+documentation = "https://platform.minimax.io/docs/api-reference/file-management-upload"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "file.file_id", "file.bytes", "file.created_at", "file.filename", "file.purpose", "base_resp.status_code", "base_resp.status_msg" ]
+
+[[capabilities]]
+kind = "web_search"
+required_plan_ids = [ "global-m-plan-go", "global-m-plan-explore", "global-m-plan-build" ]
+
+[[capabilities.parameters]]
+name = "query"
+type = "string"
+required = true
+
+[capabilities.links]
+documentation = "https://platform.minimax.io/docs/guides/token-plan-mcp-guide"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+
+[[capabilities]]
+kind = "image_understanding"
+required_plan_ids = [ "global-m-plan-go", "global-m-plan-explore", "global-m-plan-build" ]
+
+[[capabilities.parameters]]
+name = "prompt"
+type = "string"
+required = true
+
+[[capabilities.parameters]]
+name = "image_source"
+type = "string"
+required = true
+
+[capabilities.links]
+documentation = "https://platform.minimax.io/docs/guides/token-plan-mcp-guide"
+
+[[capabilities.input]]
+name = "prompt"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "image_source"
+kind = "image"
+required = true
+
+[[capabilities.output]]
+kind = "structured"

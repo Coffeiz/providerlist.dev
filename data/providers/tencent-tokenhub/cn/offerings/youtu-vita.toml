@@ -1,0 +1,24 @@
+id = "youtu-vita"
+model_ref = "tencent/youtu-vita"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 128000
+input = 100000
+output = 15000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.5"

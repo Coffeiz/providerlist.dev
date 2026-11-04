@@ -1,0 +1,10 @@
+id = "fun-asr"
+model_ref = "alibaba/fun-asr"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 600
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/fun-asr"

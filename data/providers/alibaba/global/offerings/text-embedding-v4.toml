@@ -1,0 +1,4 @@
+id = "text-embedding-v4"
+model_ref = "alibaba/text-embedding-v4"
+status = "active"
+pricing = []

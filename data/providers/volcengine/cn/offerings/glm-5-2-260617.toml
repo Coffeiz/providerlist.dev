@@ -1,0 +1,29 @@
+id = "glm-5-2-260617"
+model_ref = "zhipu/glm-5-2"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "8.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.017"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "28.00"

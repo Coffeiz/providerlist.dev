@@ -1,0 +1,20 @@
+id = "GLM-Image"
+model_ref = "zhipu/glm-image"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.1"
+
+[[pricing]]
+currency = "CNY"
+rates = []
+unsupported_metrics = [ "input" ]
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

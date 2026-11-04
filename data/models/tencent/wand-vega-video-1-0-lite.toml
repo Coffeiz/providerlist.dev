@@ -1,0 +1,6 @@
+name = "WAND-Vega-Video-1.0-Lite"
+type = "video"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]

@@ -1,0 +1,27 @@
+id = "qwen-voice-enrollment"
+model_ref = "alibaba/qwen-voice-enrollment"
+status = "active"
+
+[api_limits]
+rpm = 180
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-voice-enrollment"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0.01"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0.01"

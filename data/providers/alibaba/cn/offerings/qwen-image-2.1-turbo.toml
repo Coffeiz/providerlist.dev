@@ -1,0 +1,54 @@
+id = "qwen-image-2.1-turbo"
+model_ref = "alibaba/qwen-image-2-1-turbo"
+status = "active"
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-image-2-1-turbo"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.1"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.113362"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.1"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.1"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.1"

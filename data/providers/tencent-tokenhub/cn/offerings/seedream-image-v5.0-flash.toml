@@ -1,0 +1,14 @@
+id = "seedream-image-v5.0-flash"
+model_ref = "bytedance/seedream-5-0-flash"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

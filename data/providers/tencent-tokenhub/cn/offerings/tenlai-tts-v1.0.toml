@@ -1,0 +1,4 @@
+id = "tenlai-tts-v1.0"
+model_ref = "tencent/tenlai-tts-v1-0"
+status = "unknown"
+pricing = []

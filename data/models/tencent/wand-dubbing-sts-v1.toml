@@ -1,0 +1,6 @@
+name = "WAND-Dubbing-STS-V1"
+type = "speech"
+
+[modalities]
+input = [ "audio" ]
+output = [ "audio" ]

@@ -1,0 +1,17 @@
+name = "o1"
+type = "chat"
+family = "o"
+release_date = "2024-12-05"
+
+[limits]
+context = 200000
+output = 100000
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

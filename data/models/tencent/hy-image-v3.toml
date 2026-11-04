@@ -1,0 +1,8 @@
+name = "HY-Image 3.0"
+type = "image"
+release_date = "2025-09-29"
+developer_name = "Tencent Hunyuan"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

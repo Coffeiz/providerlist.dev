@@ -1,0 +1,8 @@
+name = "ChatGPT Image Latest"
+release_date = "2025-12-16"
+type = "image"
+family = "gpt-image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

@@ -1,0 +1,9 @@
+name = "GLM-4.5V"
+release_date = "2025-08-11"
+type = "chat"
+
+[modalities]
+input = [ "text", "image", "video", "file" ]
+
+[limits]
+output = 16000

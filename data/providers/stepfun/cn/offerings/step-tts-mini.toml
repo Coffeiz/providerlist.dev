@@ -1,0 +1,22 @@
+id = "step-tts-mini"
+model_ref = "stepfun/step-tts-mini"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_character"
+unit = "per_10k_characters"
+value = "0.9"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "cloned_voice"
+unit = "per_voice"
+value = "9.9"

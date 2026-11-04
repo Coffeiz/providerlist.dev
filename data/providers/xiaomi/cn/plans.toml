@@ -1,0 +1,71 @@
+[[plans]]
+id = "cn-token-plan-lite"
+name = "Lite"
+credits = 4100000000
+description = "适合首次体验龙虾的尝鲜用户 使用 mimo-v2.6-flash作为基准，可执行约 200 轮中等～复杂任务"
+currency = "CNY"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "39"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "408"
+
+[[plans]]
+id = "cn-token-plan-standard"
+name = "Standard"
+credits = 11000000000
+description = "适合经常使用 AI 为自己提效的办公达人 使用 mimo-v2.6-flash 作为基准，可执行约 1600 轮中等～复杂任务"
+currency = "CNY"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1044"
+
+[[plans]]
+id = "cn-token-plan-pro"
+name = "Pro"
+credits = 38000000000
+description = "适合每天高频使用 AI 的开发者和专业效率达人 使用 mimo-v2.6-flash 作为基准，可执行约 5600 轮中等～复杂任务"
+currency = "CNY"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "329"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "3468"
+
+[[plans]]
+id = "cn-token-plan-max"
+name = "Max"
+credits = 82000000000
+description = "适合把 AI 当核心生产力工具的高强度、重度用户 使用 mimo-v2.6-flash 作为基准，可执行约 12800 轮中等～复杂任务"
+currency = "CNY"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "659"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "6948"

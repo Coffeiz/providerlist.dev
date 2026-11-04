@@ -1,0 +1,15 @@
+name = "Gemini 2.0 Flash-Lite"
+type = "chat"
+release_date = "2025-02-25"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+output = 8192
+
+[capabilities]
+tool_calling = true
+structured_output = true

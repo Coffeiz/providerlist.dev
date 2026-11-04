@@ -1,0 +1,13 @@
+name = "Embedding-3"
+type = "embedding"
+
+[modalities]
+input = [ "text" ]
+output = [ "structured" ]
+
+[limits]
+context = 8000
+
+[output_dimensions]
+supported = [ 256, 512, 1024, 2048 ]
+default = 2048

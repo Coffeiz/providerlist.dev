@@ -1,0 +1,69 @@
+id = "wan3.0-video"
+model_ref = "alibaba/wan3-0-video"
+status = "active"
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan3-0-video"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.21"
+list_value = "0.3"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.21"
+list_value = "0.3"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.42"
+list_value = "0.6"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.42"
+list_value = "0.6"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.84"
+list_value = "1.2"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.84"
+list_value = "1.2"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"

@@ -1,0 +1,7 @@
+id = "codex-mini-latest"
+model_ref = "openai/codex-mini-latest"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/codex-mini-latest"

@@ -1,0 +1,10 @@
+name = "Doubao Seedream 4.0 (250828)"
+type = "image"
+release_date = "2025-08"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "1K", "2K", "4K" ]

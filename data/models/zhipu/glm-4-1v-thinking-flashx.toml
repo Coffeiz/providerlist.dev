@@ -1,0 +1,11 @@
+name = "GLM-4.1V-Thinking-FlashX"
+type = "chat"
+release_date = "2025-07-09"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 64000
+output = 16000

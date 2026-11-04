@@ -1,0 +1,114 @@
+id = "qwen3.7-max"
+model_ref = "alibaba/qwen3-7-max"
+status = "active"
+
+[api_limits]
+context = 1000000
+input = 991808
+output = 131072
+rpm = 60
+tpm = 500000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-7-max"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "36"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "36"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "美国"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "18.736"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "56.207"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "18.736"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "56.207"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "36"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=1000000"
+unit = "per_1m_tokens"
+value = "36"

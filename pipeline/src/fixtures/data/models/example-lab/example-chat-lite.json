@@ -1,0 +1,24 @@
+{
+  "model": {
+    "id": "example-lab/example-chat-lite",
+    "developer_id": "example-lab",
+    "developer_name": "示例模型实验室",
+    "name": "Example Chat Lite",
+    "type": "chat",
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": {
+      "reasoning": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  }
+}

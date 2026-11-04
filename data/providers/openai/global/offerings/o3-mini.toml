@@ -1,0 +1,45 @@
+id = "o3-mini"
+model_ref = "openai/o3-mini"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o3-mini"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.40"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.55"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.55"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.20"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

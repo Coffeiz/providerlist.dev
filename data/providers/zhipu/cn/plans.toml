@@ -1,0 +1,83 @@
+[[plans]]
+id = "cn-glm-coding-lite"
+name = "Lite"
+ratio = "1"
+description = "GLM Coding Plan 是专为大模型调用打造的订阅套餐，仅需少量投入，即可覆盖从代码生成、调试修复到任务自主拆解与交付全流程，Coding 与 Work 一套搞定，为您带来智能、高速、稳定的体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "118"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "354"
+sale_price = "283.2"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1416"
+sale_price = "991.2"
+
+[plans.allowance]
+credits_5h = 2000
+credits_weekly = 10000
+
+[plans.links]
+official = "https://bigmodel.cn/glm-coding"
+
+[[plans]]
+id = "cn-glm-coding-pro"
+name = "Pro"
+ratio = "6"
+description = "GLM Coding Plan 是专为大模型调用打造的订阅套餐，仅需少量投入，即可覆盖从代码生成、调试修复到任务自主拆解与交付全流程，Coding 与 Work 一套搞定，为您带来智能、高速、稳定的体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "538"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "1614"
+sale_price = "1291.2"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "6456"
+sale_price = "4519.2"
+
+[plans.allowance]
+credits_5h = 12000
+credits_weekly = 60000
+
+[plans.links]
+official = "https://bigmodel.cn/glm-coding"
+
+[[plans]]
+id = "cn-glm-coding-max"
+name = "Max"
+ratio = "14"
+description = "GLM Coding Plan 是专为大模型调用打造的订阅套餐，仅需少量投入，即可覆盖从代码生成、调试修复到任务自主拆解与交付全流程，Coding 与 Work 一套搞定，为您带来智能、高速、稳定的体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "1078"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "3234"
+sale_price = "2587.2"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "12936"
+sale_price = "9055.2"
+
+[plans.allowance]
+credits_5h = 28000
+credits_weekly = 140000
+
+[plans.links]
+official = "https://bigmodel.cn/glm-coding"

@@ -1,0 +1,11 @@
+name = "GPT-3.5 Turbo"
+type = "chat"
+release_date = "2023-03-01"
+
+[limits]
+context = 16385
+output = 4096
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

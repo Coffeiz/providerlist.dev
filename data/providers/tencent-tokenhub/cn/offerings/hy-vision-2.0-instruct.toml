@@ -1,0 +1,24 @@
+id = "hy-vision-2.0-instruct"
+model_ref = "tencent/hy-vision-2-0-instruct"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 44000
+input = 24000
+output = 16000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "17.5"

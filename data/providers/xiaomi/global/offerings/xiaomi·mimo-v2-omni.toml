@@ -1,0 +1,6 @@
+id = "xiaomi/mimo-v2-omni"
+model_ref = "xiaomi/mimo-v2-omni"
+status = "unknown"
+
+[links]
+documentation = "https://platform.xiaomimimo.com/api/v1/models"

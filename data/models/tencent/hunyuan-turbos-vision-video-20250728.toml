@@ -1,0 +1,7 @@
+name = "Hunyuan-turbos-vision-video-20250728"
+type = "chat"
+release_date = "2025-07-28"
+
+[modalities]
+input = [ "text", "video" ]
+output = [ "text" ]

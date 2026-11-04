@@ -1,0 +1,11 @@
+name = "GLM-4-Flash-250414"
+release_date = "2025-04-14"
+type = "chat"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 16000

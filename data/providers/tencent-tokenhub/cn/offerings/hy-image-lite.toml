@@ -1,0 +1,4 @@
+id = "hy-image-lite"
+model_ref = "tencent/hy-image-lite"
+status = "unknown"
+pricing = []

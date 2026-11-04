@@ -1,0 +1,12 @@
+name = "Doubao Seed Translation (250915)"
+type = "chat"
+release_date = "2025-09"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 4096
+max_input = 1024
+output = 3072

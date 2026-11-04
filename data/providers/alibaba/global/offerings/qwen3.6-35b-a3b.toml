@@ -1,0 +1,73 @@
+id = "qwen3.6-35b-a3b"
+model_ref = "alibaba/qwen3-6-35b-a3b"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.375"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "2.25"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.248"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.485"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.248"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.485"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.248"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.485"

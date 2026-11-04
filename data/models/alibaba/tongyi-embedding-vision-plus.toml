@@ -1,0 +1,16 @@
+name = "tongyi-embedding-vision-plus"
+type = "embedding"
+release_date = "2025-10-31"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "embedding" ]
+
+[output_dimensions]
+supported = [ 1152 ]
+default = 1152
+
+[capabilities]
+tool_calling = false
+structured_output = false

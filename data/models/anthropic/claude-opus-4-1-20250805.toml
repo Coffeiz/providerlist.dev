@@ -1,0 +1,15 @@
+name = "Claude Opus 4.1"
+type = "chat"
+family = "claude-opus"
+release_date = "2025-08-05"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+
+[capabilities]
+reasoning = true
+tool_calling = true

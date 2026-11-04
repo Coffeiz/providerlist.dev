@@ -1,0 +1,228 @@
+website = "https://bigmodel.cn"
+
+[docs]
+overview = "https://docs.bigmodel.cn/cn/guide/start/model-overview"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/zai"
+pricing = "https://docs.bigmodel.cn/cn/guide/start/pricing"
+api = "https://docs.bigmodel.cn/cn/guide/develop/http/introduction"
+api_reference = "https://docs.bigmodel.cn/cn/api-reference"
+
+[[endpoints]]
+id = "cn-openai"
+base_url = "https://open.bigmodel.cn/api/paas/v4"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/guide/develop/http/introduction"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/api-reference/模型-api/语音转文本"
+path = "/audio/transcriptions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/api-reference/模型-api/对话补全"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/tools/file-parser"
+path = "/files/parser/create"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/tools/file-parser"
+path = "/files/parser/result/{taskIid}/{format_type}"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/api-reference/模型-api/文档解析"
+path = "/layout_parsing"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/api-reference/%E5%B7%A5%E5%85%B7-api/%E7%BD%91%E7%BB%9C%E6%90%9C%E7%B4%A2"
+path = "/web_search"
+
+[[endpoints]]
+id = "cn-anthropic-coding-plan"
+base_url = "https://open.bigmodel.cn/api/anthropic"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/coding-plan/quick-start"
+
+[[endpoints]]
+id = "cn-openai-coding-plan"
+base_url = "https://open.bigmodel.cn/api/coding/paas/v4"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/coding-plan/quick-start"
+
+[[endpoints]]
+id = "cn-responses-coding-plan"
+base_url = "https://open.bigmodel.cn/api/v1"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/coding-plan/quick-start"
+
+[[endpoints]]
+id = "cn-anthropic"
+base_url = "https://open.bigmodel.cn/api/anthropic"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/guide/develop/claude/introduction"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/develop/claude/introduction"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "cn-responses"
+base_url = "https://open.bigmodel.cn/api/v1"
+api_region = "cn"
+documentation = "https://docs.bigmodel.cn/cn/guide/develop/responses/introduction"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/develop/responses/introduction"
+path = "/responses"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "search_engine"
+type = "string"
+required = true
+enum = [ "search_std", "search_pro", "search_pro_sogou", "search_pro_quark" ]
+
+[[capabilities.parameters]]
+name = "search_intent"
+type = "boolean"
+required = true
+default = false
+
+[[capabilities.parameters]]
+name = "count"
+type = "integer"
+required = false
+min = 1
+max = 50
+default = 10
+
+[[capabilities.parameters]]
+name = "search_domain_filter"
+type = "string"
+required = false
+
+[[capabilities.parameters]]
+name = "search_recency_filter"
+type = "string"
+required = false
+enum = [ "oneDay", "oneWeek", "oneMonth", "oneYear", "noLimit" ]
+default = "noLimit"
+
+[[capabilities.parameters]]
+name = "content_size"
+type = "string"
+required = false
+enum = [ "medium", "high" ]
+
+[[capabilities.parameters]]
+name = "request_id"
+type = "string"
+required = false
+min = 6
+max = 64
+
+[[capabilities.parameters]]
+name = "user_id"
+type = "string"
+required = false
+min = 6
+max = 128
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/api-reference/%E5%B7%A5%E5%85%B7-api/%E7%BD%91%E7%BB%9C%E6%90%9C%E7%B4%A2"
+path = "/web_search"
+
+[capabilities.links]
+documentation = "https://docs.bigmodel.cn/api-reference/%E5%B7%A5%E5%85%B7-api/%E7%BD%91%E7%BB%9C%E6%90%9C%E7%B4%A2"
+
+[[capabilities.input]]
+name = "search_query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "created", "request_id", "search_intent[].query", "search_intent[].intent", "search_intent[].keywords", "search_result[].title", "search_result[].content", "search_result[].link", "search_result[].media", "search_result[].icon", "search_result[].refer", "search_result[].publish_date" ]
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "tool_type"
+type = "string"
+required = true
+enum = [ "lite", "expert", "prime" ]
+
+[[capabilities.parameters]]
+name = "file_type"
+type = "string"
+required = true
+enum = [ "PDF", "DOCX", "DOC", "XLS", "XLSX", "PPT", "PPTX", "PNG", "JPG", "JPEG", "CSV", "TXT", "MD", "HTML", "EPUB", "BMP", "GIF", "WEBP", "HEIC", "EPS", "ICNS", "IM", "PCX", "PPM", "TIFF", "XBM", "HEIF", "JP2" ]
+
+[[capabilities.parameters]]
+name = "taskIid"
+type = "string"
+required = true
+route_mappings = [ "/files/parser/result/{taskIid}/{format_type}" ]
+
+[[capabilities.parameters]]
+name = "format_type"
+type = "string"
+required = true
+enum = [ "text", "download_link" ]
+route_mappings = [ "/files/parser/result/{taskIid}/{format_type}" ]
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/tools/file-parser"
+path = "/files/parser/create"
+
+[[capabilities.routes]]
+protocol = "http"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.bigmodel.cn/cn/guide/tools/file-parser"
+path = "/files/parser/result/{taskIid}/{format_type}"
+
+[capabilities.links]
+documentation = "https://docs.bigmodel.cn/cn/guide/tools/file-parser"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "success", "message", "task_id", "status", "content", "parsing_result_url" ]

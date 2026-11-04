@@ -1,0 +1,10 @@
+name = "qwen3.5-plus-2026-04-20"
+type = "chat"
+release_date = "2026-04-20"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true

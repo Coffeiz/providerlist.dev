@@ -1,0 +1,10 @@
+id = "kling/kling-v3-video-generation"
+model_ref = "kling/kling-v3-video-generation"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/kling-v3-video-generation"

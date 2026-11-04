@@ -1,0 +1,312 @@
+name: Provider Data Sync
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: 采集范围
+        type: choice
+        required: true
+        default: all
+        options:
+          - all
+          - provider
+      provider:
+        description: 单个 Provider ID（scope=provider 时填写）
+        type: string
+        required: false
+        default: ''
+  pull_request:
+    branches: [main]
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    outputs:
+      providers: ${{ steps.resolve.outputs.providers }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: resolve
+        run: node scripts/ci/resolve-ingestion-providers.mjs
+
+  collect:
+    needs: plan
+    if: needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        provider: ${{ fromJSON(needs.plan.outputs.providers) }}
+    concurrency:
+      group: provider-ingestion-${{ matrix.provider }}
+      cancel-in-progress: false
+      queue: max
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - name: Prepare Isolated Provider Baseline
+        env:
+          INGEST_PROVIDER: ${{ matrix.provider }}
+        run: node scripts/ci/prepare-ingestion-provider.mjs
+      - name: Restore Source Snapshot Cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .cache/provider-ingest
+          key: provider-ingestion-${{ matrix.provider }}-empty
+          restore-keys: |
+            provider-ingestion-${{ matrix.provider }}-
+      - name: Collect Provider Data
+        id: collect_provider
+        continue-on-error: true
+        env:
+          INGEST_PROVIDER: ${{ matrix.provider }}
+        # 不能写成 `pnpm ingest:sync -- provider X`：这个 `--` 会被 pnpm 原样透传成
+        # 脚本参数，sync-cli 收到 scope="--" 直接退出码 2，采集步骤永远失败。
+        run: pnpm ingest:sync provider "$INGEST_PROVIDER"
+      - name: Compute Source Snapshot Cache Key
+        if: steps.collect_provider.outcome == 'success'
+        id: snapshot_cache_key
+        env:
+          INGEST_PROVIDER: ${{ matrix.provider }}
+        run: node scripts/ci/ingestion-snapshot-cache-key.mjs
+      - name: Save Source Snapshot Cache
+        if: steps.collect_provider.outcome == 'success'
+        uses: actions/cache/save@v4
+        continue-on-error: true
+        with:
+          path: .cache/provider-ingest
+          key: ${{ steps.snapshot_cache_key.outputs.key }}
+      - name: Package Provider Ingestion Artifact
+        if: always()
+        env:
+          INGEST_PROVIDER: ${{ matrix.provider }}
+          INGEST_COLLECT_STEP_OUTCOME: ${{ steps.collect_provider.outcome }}
+        run: node scripts/ci/package-ingestion-provider-artifact.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: provider-ingest-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.provider }}
+          path: ${{ runner.temp }}/provider-ingest-output/${{ matrix.provider }}
+          if-no-files-found: error
+          retention-days: 1
+
+  aggregate:
+    needs: [plan, collect]
+    if: always() && needs.plan.result == 'success'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: provider-ingestion-state-and-pr
+      cancel-in-progress: false
+      queue: max
+    permissions:
+      actions: write
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - uses: actions/download-artifact@v4
+        if: always()
+        continue-on-error: true
+        with:
+          pattern: provider-ingest-${{ github.run_id }}-${{ github.run_attempt }}-*
+          path: ${{ runner.temp }}/provider-ingest-artifacts
+          merge-multiple: false
+      - name: Prepare Serialized Aggregation Branch
+        id: branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if git ls-remote --exit-code --heads origin provider-ingest-state >/dev/null 2>&1; then
+            git fetch origin provider-ingest-state
+          fi
+          if git ls-remote --exit-code --heads origin automation/provider-ingest >/dev/null 2>&1; then
+            git fetch origin automation/provider-ingest
+            if gh pr list --state all --head automation/provider-ingest --json state,mergedAt --jq 'any(.[]; .state == "MERGED")' | grep -qx true; then
+              git push origin --delete automation/provider-ingest
+              git fetch --prune origin
+            fi
+          fi
+          if git show-ref --verify --quiet refs/remotes/origin/provider-ingest-state; then
+            git worktree add "$RUNNER_TEMP/provider-ingest-state" -B provider-ingest-state origin/provider-ingest-state
+          else
+            git worktree add "$RUNNER_TEMP/provider-ingest-state" --detach origin/main
+            git -C "$RUNNER_TEMP/provider-ingest-state" switch -c provider-ingest-state
+          fi
+          if git show-ref --verify --quiet refs/remotes/origin/automation/provider-ingest; then
+            git branch -f automation/provider-ingest origin/automation/provider-ingest
+            git switch automation/provider-ingest
+            git merge --no-edit origin/main
+          else
+            git switch -c automation/provider-ingest origin/main
+          fi
+          echo "state_dir=$RUNNER_TEMP/provider-ingest-state" >> "$GITHUB_OUTPUT"
+      - name: Update FX Candidate
+        id: fx
+        continue-on-error: true
+        run: node pipeline/src/ingest/fetch-fx.mjs
+      - name: Merge Parallel Provider Results
+        id: merge
+        env:
+          INGESTION_PROVIDERS_JSON: ${{ needs.plan.outputs.providers }}
+          INGESTION_ARTIFACTS_DIR: ${{ runner.temp }}/provider-ingest-artifacts
+          INGEST_STATE_DIR: ${{ steps.branches.outputs.state_dir }}
+          INGEST_PR_BODY_PATH: ${{ runner.temp }}/provider-ingest-pr.md
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_RUN_ID: ${{ github.run_id }}
+          GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
+          INGEST_FX_OUTCOME: ${{ steps.fx.outcome }}
+        run: node scripts/ci/merge-ingestion-provider-artifacts.mjs
+      - name: Save Aggregation Report Branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git add -A data
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '更新 Provider 采集候选报告'
+            git push origin HEAD:automation/provider-ingest
+          fi
+      - name: Open or Update Aggregation PR
+        id: pull_request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          if git diff --quiet origin/main...HEAD; then
+            echo 'action=none' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          pr_json=$(gh pr list --state open --head automation/provider-ingest --json number,url --limit 1)
+          pr_number=$(node -e 'const v=JSON.parse(process.argv[1]); process.stdout.write(v[0]?.number ? String(v[0].number) : "")' "$pr_json")
+          if [ -n "$pr_number" ]; then
+            gh pr edit "$pr_number" --body-file "$RUNNER_TEMP/provider-ingest-pr.md"
+            action=updated
+          else
+            closed_json=$(gh pr list --state closed --head automation/provider-ingest --json number,mergedAt --limit 1)
+            closed_number=$(node -e 'const v=JSON.parse(process.argv[1]); process.stdout.write(v[0]?.number ? String(v[0].number) : "")' "$closed_json")
+            if [ -n "$closed_number" ]; then
+              merged_at=$(node -e 'const v=JSON.parse(process.argv[1]); process.stdout.write(v[0]?.mergedAt ?? "")' "$closed_json")
+              if [ -z "$merged_at" ]; then
+                gh pr reopen "$closed_number"
+                gh pr edit "$closed_number" --body-file "$RUNNER_TEMP/provider-ingest-pr.md"
+                pr_number=$closed_number
+                action=reopened
+              else
+                pr_url=$(gh pr create --base main --head automation/provider-ingest --title 'Provider 官方数据采集差异' --body-file "$RUNNER_TEMP/provider-ingest-pr.md")
+                pr_number=${pr_url##*/}
+                action=opened
+              fi
+            else
+              pr_url=$(gh pr create --base main --head automation/provider-ingest --title 'Provider 官方数据采集差异' --body-file "$RUNNER_TEMP/provider-ingest-pr.md")
+              pr_number=${pr_url##*/}
+              action=opened
+            fi
+          fi
+          echo "number=$pr_number" >> "$GITHUB_OUTPUT"
+          echo "action=$action" >> "$GITHUB_OUTPUT"
+      - name: Record Pending Candidate PR Lifecycle
+        if: steps.pull_request.outputs.action != 'none'
+        env:
+          INGEST_PR_LIFECYCLE_ACTION: ${{ steps.pull_request.outputs.action }}
+          INGEST_PR_NUMBER: ${{ steps.pull_request.outputs.number }}
+          INGEST_STATE_DIR: ${{ steps.branches.outputs.state_dir }}/data/ingestion-lifecycle
+        run: node scripts/ci/record-ingestion-pr-open-update.mjs
+      - name: Clean Resolved Ingestion Candidates
+        env:
+          INGEST_REPO_ROOT: ${{ steps.branches.outputs.state_dir }}
+        run: pnpm ingest:cleanup
+      - name: Push Candidate State and Lifecycle
+        if: always() && steps.branches.outputs.state_dir != ''
+        working-directory: ${{ steps.branches.outputs.state_dir }}
+        run: |
+          set -euo pipefail
+          git add data/candidates data/ingestion-lifecycle
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '更新 Provider 候选状态与 PR 生命周期'
+            git push origin HEAD:provider-ingest-state
+          fi
+      - name: Trigger Aggregation PR Review Gate
+        if: steps.pull_request.outputs.action != 'none'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run ci.yml --ref automation/provider-ingest -f review_base=main
+
+  record_pr_lifecycle:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.head.ref == 'automation/provider-ingest' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    concurrency:
+      group: provider-ingestion-state-and-pr
+      cancel-in-progress: false
+      queue: max
+    permissions:
+      contents: write
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+      - run: pnpm install --frozen-lockfile
+      - name: Prepare State Branch
+        id: state
+        run: |
+          set -euo pipefail
+          git fetch origin main provider-ingest-state
+          git worktree add "$RUNNER_TEMP/provider-ingest-state" -B provider-ingest-state origin/provider-ingest-state
+          echo "state_dir=$RUNNER_TEMP/provider-ingest-state" >> "$GITHUB_OUTPUT"
+      - name: Record PR Closure Result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        working-directory: ${{ steps.state.outputs.state_dir }}
+        run: node "$GITHUB_WORKSPACE/scripts/ci/record-ingestion-pr-lifecycle.mjs"
+      - name: Clean Resolved Ingestion Candidates
+        env:
+          INGEST_REPO_ROOT: ${{ steps.state.outputs.state_dir }}
+        run: pnpm ingest:cleanup
+      - name: Push PR Lifecycle State
+        working-directory: ${{ steps.state.outputs.state_dir }}
+        run: |
+          set -euo pipefail
+          git add data/candidates data/ingestion-lifecycle
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '记录 Provider 采集 PR 关闭结果'
+            git push origin HEAD:provider-ingest-state
+          fi

@@ -1,0 +1,16 @@
+name = "kimi-k2.7-code-highspeed"
+family = "K2"
+type = "chat"
+release_date = "2026-06-12"
+
+[limits]
+context = 262144
+output = 262144
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "high", "max" ]
+tool_calling = true

@@ -1,0 +1,91 @@
+id = "chatgpt-image-latest"
+model_ref = "openai/chatgpt-image-latest"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "8.00"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "32.00"
+
+[[pricing.rates]]
+metric = "cache_read_image"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "16.00"
+
+[[pricing.rates]]
+metric = "cache_read_image"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.63"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

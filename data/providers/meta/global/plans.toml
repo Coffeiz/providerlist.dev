@@ -1,0 +1,51 @@
+[[plans]]
+id = "muse-code-everyday-usage"
+name = "Everyday Usage"
+description = "Access to Muse Spark, Muse Wonder* and Muse Image**\nSend 10-50 prompts every 5 hours, including image and video uploads\nUse voice mode\nGet access to web search\nThis credential is for use with Muse Code only. Any additional API keys you create under your Meta Model API account will be billed through pay-as-you-go."
+currency = "USD"
+
+[plans.links]
+official = "https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "5"
+
+[[plans]]
+id = "muse-code-high-usage"
+name = "High Usage"
+description = "Everything from the Everyday Usage plan\n5x more usage than the Everyday Usage plan\nMore multimodal inputs\nThis credential is for use with Muse Code only. Any additional API keys you create under your Meta Model API account will be billed through pay-as-you-go."
+currency = "USD"
+
+[plans.links]
+official = "https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "15"
+
+[[plans]]
+id = "muse-code-power-usage"
+name = "Power Usage"
+description = "Everything from the High Usage plan\nAccess to the most powerful Muse models, including Muse Wonder Full*\n20x more usage than the Everyday Usage plan\nEarly access to new features\nHigher file uploads\nThis credential is for use with Muse Code only. Any additional API keys you create under your Meta Model API account will be billed through pay-as-you-go."
+currency = "USD"
+
+[plans.links]
+official = "https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "50"
+
+[[plans]]
+id = "muse-code-maximum-usage"
+name = "Maximum Usage"
+description = "Everything from the Power Usage plan\n80x more usage than the Everyday Usage plan\nThis credential is for use with Muse Code only. Any additional API keys you create under your Meta Model API account will be billed through pay-as-you-go."
+currency = "USD"
+
+[plans.links]
+official = "https://dev.meta.ai/help/subscriptions/what-is-a-muse-code-subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"

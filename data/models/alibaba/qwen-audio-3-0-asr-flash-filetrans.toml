@@ -1,0 +1,7 @@
+name = "qwen-audio-3.0-asr-flash-filetrans"
+type = "transcription"
+release_date = "2026-07-30"
+
+[modalities]
+input = [ "audio" ]
+output = [ "audio", "text" ]

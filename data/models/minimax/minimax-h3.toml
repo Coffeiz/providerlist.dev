@@ -1,0 +1,12 @@
+name = "MiniMax-H3"
+release_date = "2026-07-31"
+type = "video"
+family = "minimax"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video" ]
+
+[capabilities]
+reasoning = false
+tool_calling = false

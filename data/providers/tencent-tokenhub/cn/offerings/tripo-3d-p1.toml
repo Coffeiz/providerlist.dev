@@ -1,0 +1,14 @@
+id = "tripo-3d-p1"
+model_ref = "tripo/p1-20260311"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_credit"
+value = "0.07"

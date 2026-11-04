@@ -1,0 +1,8 @@
+name = "Seedance 1.5 Pro (251215)"
+type = "video"
+release_date = "2025-12"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video" ]

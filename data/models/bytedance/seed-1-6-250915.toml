@@ -1,0 +1,18 @@
+name = "Seed 1.6 (250915)"
+type = "chat"
+release_date = "2025-09-15"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+input = 229376
+output = 65536
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

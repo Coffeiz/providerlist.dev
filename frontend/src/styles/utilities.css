@@ -1,0 +1,161 @@
+/* 代码、辅助类、系统偏好和响应式规则。 */
+
+.pl-text-warning { color: var(--pl-status-warning); }
+.pl-text-danger { color: var(--pl-status-danger); }
+.pl-text-muted { color: var(--pl-text-tertiary); }
+
+.pl-heading-eyebrow {
+  font-size: var(--pl-text-xs);
+  font-weight: var(--pl-weight-bold);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--pl-text-tertiary);
+}
+
+.pl-lede {
+  max-width: 680px;
+  font-size: var(--pl-text-md);
+  line-height: var(--pl-leading-relaxed);
+  color: var(--pl-text-secondary);
+}
+
+/* ---------- 代码与等宽文本 ---------- */
+
+/* 真正的代码片段：带浅底与细边。
+   只用于「"3.00"」「null」这类**字面量**——
+   让人一眼看出这是代码里的一个值，而不是正文的强调。 */
+.pl-code {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-xs);
+  letter-spacing: -0.035em;
+  line-height: 1.6;
+  background: var(--pl-bg-muted);
+  border: 1px solid var(--pl-border-subtle);
+  border-radius: var(--pl-radius-xs);
+  padding: 1px 5px;
+  color: var(--pl-text-primary);
+  overflow-wrap: anywhere;
+}
+
+/* 标识符与路径：只换字体，**不加框**。
+   模型 ID、字段名、环境变量名到处都是——都给它们套上代码框，
+   满屏就只剩代码框了。视觉重量应该留给真正的端点卡片。 */
+.pl-mono {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-xs);
+  letter-spacing: -0.035em;
+  line-height: 1.6;
+  color: var(--pl-text-secondary);
+  overflow-wrap: anywhere;
+}
+
+/* 端点值：Base URL、调用签名、路径模板。
+   它是卡片里的**主值**——等宽、正常字色、比标识符大一号，
+   但同样不加框：框是卡片的事，值只是卡片里的内容。
+   参照稿的「配置值」也是这么处理的（纯等宽文本 + 旁边的复制图标）。 */
+.pl-endpoint-value {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-sm);
+  letter-spacing: -0.035em;
+  color: var(--pl-text-primary);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 工具类 ---------- */
+
+.pl-hidden { display: none !important; }
+.pl-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- 动效偏好 ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 透明偏好 —— 玻璃层退化为实底，文字对比度不受影响。
+   没有这一档，玻璃风格在「降低透明度」的系统设置下会变成一堆糊字。 */
+@media (prefers-reduced-transparency: reduce) {
+  .pl-glass,
+  .pl-glass-strong,
+  .pl-card,
+  .pl-panel,
+  .pl-searchbar,
+  .pl-button {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .pl-glass,
+  .pl-glass-strong,
+  .pl-card,
+  .pl-panel,
+  .pl-searchbar {
+    background: var(--pl-bg-surface);
+  }
+}
+
+/* ---------- 响应式 ---------- */
+
+@media (max-width: 768px) {
+  :root { --pl-layout-gutter: var(--pl-space-lg); }
+  .pl-container { padding: 0 var(--pl-layout-gutter); }
+  .pl-grid-cards,
+  .pl-grid-wide { grid-template-columns: 1fr; }
+  h1 { font-size: var(--pl-text-md); }
+
+  .pl-content-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pl-space-xs);
+  }
+  .pl-content-title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--pl-space-xs);
+  }
+  .pl-demo-mark {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+/* 虚拟行只占位，不参与表格的内边距和分隔线。 */
+.pl-table .pl-virtual-spacer td {
+  padding: 0;
+  border: 0;
+  line-height: 0;
+}
+.pl-lazy-section.is-pending { min-height: 160px; }
+@media print {
+  .pl-lazy-section.is-pending { min-height: 0; }
+}
+.pl-window-grid-row {
+  display: grid;
+  gap: var(--pl-space-md);
+  padding-bottom: var(--pl-space-md);
+  align-items: stretch;
+}
+.pl-route-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: var(--pl-z-toast);
+  height: 2px;
+  background: var(--pl-text-tertiary);
+}

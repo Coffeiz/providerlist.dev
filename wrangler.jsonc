@@ -1,0 +1,28 @@
+{
+  // Cloudflare Workers 静态资源配置。
+  //
+  // 部署根目录是仓库的 `dist/`——网站文件在根，公开 JSON 在 `/v1/`。
+  //
+  // `run_worker_first` 的两项是**必须的**：
+  // 静态托管的 `not_found_handling: single-page-application` 会把**任何**找不到的
+  // 路径错返回 `index.html`（200 HTML）。对 `/v1/*.json` 来说这会破坏契约——
+  // 消费者拿到 HTML 却以为是 JSON，或把 404 当成有效响应。
+  //
+  // 所以 `/v1/*` 与 `/api/*` 由 Worker 先处理：存在则原样返回，
+  // 不存在则返回标准 JSON 404 / 501。**不允许** SPA fallback 成 200 HTML。
+  //
+  // 详见 docs/guides/operations.md §4.4「SPA fallback 陷阱」。
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "providerlist",
+  "compatibility_date": "2026-10-23",
+  "main": "./apps/worker/src/index.ts",
+  "analytics_engine_datasets": [
+    { "binding": "ProviderList", "dataset": "ProviderList" }
+  ],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/v1/*", "/api/*"]
+  }
+}

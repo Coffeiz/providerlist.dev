@@ -1,0 +1,18 @@
+{
+  "model": {
+    "id": "demo-lab/demo-realtime",
+    "developer_id": "demo-lab",
+    "developer_name": "演示模型实验室",
+    "name": "Demo Realtime",
+    "type": "realtime",
+    "modalities": {
+      "input": [
+        "text",
+        "audio"
+      ],
+      "output": [
+        "audio"
+      ]
+    }
+  }
+}

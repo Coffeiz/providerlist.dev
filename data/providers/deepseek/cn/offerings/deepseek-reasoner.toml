@@ -1,0 +1,6 @@
+id = "deepseek-reasoner"
+model_ref = "deepseek/deepseek-v4-flash-260425"
+status = "unknown"
+
+[links]
+documentation = "https://api-docs.deepseek.com/zh-cn/news/news260424/"

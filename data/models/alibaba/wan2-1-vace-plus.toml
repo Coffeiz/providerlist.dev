@@ -1,0 +1,7 @@
+name = "wan2.1-vace-plus"
+type = "video"
+release_date = "2025-05-14"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]

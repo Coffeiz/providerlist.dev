@@ -1,0 +1,16 @@
+name = "qwen-plus-character"
+type = "chat"
+release_date = "2025-03-20"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 32768
+input = 32768
+output = 4096
+
+[capabilities]
+tool_calling = false
+structured_output = true

@@ -1,0 +1,19 @@
+id = "gemini-3.5-live-translate-preview"
+model_ref = "google/gemini-3-5-live-translate-preview"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/api/live"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "3.50"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "21.00"

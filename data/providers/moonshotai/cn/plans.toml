@@ -1,0 +1,100 @@
+[[plans]]
+id = "adagio"
+name = "Adagio"
+ratio = "1"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "0"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "0"
+
+[[plans]]
+id = "go"
+name = "Go"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "49"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "468"
+
+[[plans]]
+id = "plus"
+name = "Plus"
+ratio = "2"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "948"
+
+[[plans]]
+id = "pro"
+name = "Pro"
+ratio = "4"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "199"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1908"
+
+[[plans]]
+id = "max"
+name = "Max"
+ratio = "14"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "699"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "6708"
+
+[[plans]]
+id = "ultra"
+name = "Ultra"
+ratio = "28"
+currency = "CNY"
+
+[plans.links]
+pricing = "https://www.kimi.com/membership/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "1399"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "13428"

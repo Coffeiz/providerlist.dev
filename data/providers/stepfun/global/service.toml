@@ -1,0 +1,132 @@
+website = "https://platform.stepfun.ai"
+capabilities = []
+
+[docs]
+overview = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+pricing = "https://platform.stepfun.ai/docs/en/guides/pricing/details"
+api = "https://platform.stepfun.ai/docs/en/api-reference/chat/chat-completion-create"
+capabilities = "https://platform.stepfun.com/docs/zh/guides/developer/web-search"
+messages_api = "https://platform.stepfun.ai/docs/en/api-reference/chat/messages-create"
+responses_api = "https://platform.stepfun.ai/docs/en/api-reference/responses/responses-create"
+plans = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[endpoints]]
+id = "global-openai-compatible"
+base_url = "https://api.stepfun.ai/v1"
+api_region = "StepFun International"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/chat-completion-create"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/asr-sse"
+path = "/audio/asr/sse"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/chat-completion-create"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/responses/responses-create"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/create-audio"
+path = "/audio/speech"
+
+[[endpoints]]
+id = "global-anthropic-compatible"
+base_url = "https://api.stepfun.ai"
+api_region = "StepFun International"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/messages-create"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-step-plan"
+base_url = "https://api.stepfun.ai/step_plan"
+api_region = "Step Plan International"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/messages-create"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/asr-sse"
+path = "/v1/audio/asr/sse"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/step-plan/integrations/reasoning-api"
+path = "/v1/chat/completions"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/create-audio"
+path = "/v1/audio/speech"
+
+[[endpoints]]
+id = "global-wss"
+base_url = "https://api.stepfun.ai"
+api_region = "StepFun International"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/realtime/chat"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/asr-stream"
+path = "/v1/realtime/asr/stream"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/realtime/chat"
+path = "/v1/realtime"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/ws-audio"
+path = "/v1/realtime/audio"
+
+[[endpoints]]
+id = "global-step-plan-wss"
+base_url = "https://api.stepfun.ai/step_plan"
+api_region = "Step Plan International"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/ws-audio"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://platform.stepfun.ai/docs/en/api-reference/audio/ws-audio"
+path = "/v1/realtime/audio"

@@ -1,0 +1,15 @@
+name = "Lyria 3 Clip"
+type = "music"
+release_date = "2026-03-25"
+family = "lyria"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "audio", "text" ]
+
+[limits]
+input = 131072
+
+[specifications.audio_duration_seconds]
+min = 30
+max = 30

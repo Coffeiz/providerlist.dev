@@ -1,0 +1,44 @@
+id = "kimi-k3.1-pro-highspeed"
+model_ref = "moonshotai/kimi-k3-1-pro-highspeed"
+status = "active"
+
+[links]
+documentation = "https://intl.cloud.tencent.com/document/product/1300/78934"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 1000000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.2"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "4"
+ttl = "5min"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "8"
+ttl = "1h"

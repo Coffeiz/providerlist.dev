@@ -1,0 +1,4 @@
+id = "tenlai-asr-v1.0"
+model_ref = "tencent/tenlai-asr-v1-0"
+status = "unknown"
+pricing = []

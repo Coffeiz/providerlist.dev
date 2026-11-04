@@ -1,0 +1,16 @@
+name = "Hy4 preview"
+type = "chat"
+family = "Hy"
+release_date = "2026-08-28"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1024000
+output = 64000
+
+[capabilities]
+reasoning = true
+tool_calling = true

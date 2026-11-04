@@ -1,0 +1,7 @@
+name = "qwen3.8-livetranslate-flash-realtime"
+type = "realtime"
+release_date = "2025-09-24"
+
+[modalities]
+input = [ "image", "audio" ]
+output = [ "audio" ]

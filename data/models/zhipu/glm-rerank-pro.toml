@@ -1,0 +1,5 @@
+name = "GLM-rerank-pro"
+type = "reranking"
+
+[modalities]
+input = [ "text", "image", "audio", "video" ]

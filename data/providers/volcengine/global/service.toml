@@ -1,0 +1,86 @@
+website = "https://www.byteplus.com/en/product/modelark"
+capabilities = []
+
+[[endpoints]]
+id = "ap-southeast-1-v3"
+base_url = "https://ark.ap-southeast.bytepluses.com/api/v3"
+api_region = "ap-southeast-1"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/region-availability?redirect=1"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/chat-api?redirect=1"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "3d-generation"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/shumei-create-3d-generation-task-api?redirect=1"
+path = "/contents/generations/tasks"
+
+[[endpoints.routes]]
+protocol = "3d-generation"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/shadoweye-create-3d-generation-task-api?redirect=1"
+path = "/contents/generations/tasks"
+
+[[endpoints.routes]]
+protocol = "image-generation"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/image-generation-api?redirect=1"
+path = "/images/generations"
+
+[[endpoints.routes]]
+protocol = "multimodal-embedding"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/vectorization?redirect=1"
+path = "/embeddings/multimodal"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/create-model-responses-api?redirect=1"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "video-generation"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/create-video-generation-task-api?redirect=1"
+path = "/contents/generations/tasks"
+
+[[endpoints.routes]]
+protocol = "video-generation"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/get-video-generation-task-api?redirect=1"
+path = "/contents/generations/tasks/{id}"
+
+[[endpoints]]
+id = "eu-west-1-v3"
+base_url = "https://ark.eu-west.bytepluses.com/api/v3"
+api_region = "eu-west-1"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/region-availability?redirect=1"
+
+[[endpoints]]
+id = "ap-southeast-1-compatible"
+base_url = "https://ark.ap-southeast.bytepluses.com/api/compatible/v1"
+api_region = "ap-southeast-1（新加坡）"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/messages-api?redirect=1"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/messages-api?redirect=1"
+path = "/messages"
+
+[docs]
+overview = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"

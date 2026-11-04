@@ -1,0 +1,218 @@
+website = "https://www.alibabacloud.com/en/product/modelstudio"
+account_requirements = [ "API Key", "Workspace ID" ]
+
+[[endpoints]]
+id = "global-sg-openai"
+base_url = "https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "新加坡"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+path = "/responses"
+
+[[endpoints]]
+id = "global-jp-openai"
+base_url = "https://{WorkspaceId}.ap-northeast-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "日本（东京）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+path = "/responses"
+
+[[endpoints]]
+id = "global-de-openai"
+base_url = "https://{WorkspaceId}.eu-central-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "德国（法兰克福）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+path = "/responses"
+
+[[endpoints]]
+id = "global-us-openai"
+base_url = "https://{WorkspaceId}.us-east-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "美国（弗吉尼亚）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+path = "/responses"
+
+[[endpoints]]
+id = "global-hk-openai"
+base_url = "https://{WorkspaceId}.cn-hongkong.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "中国香港"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+path = "/responses"
+
+[[endpoints]]
+id = "global-sg-anthropic"
+base_url = "https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "新加坡"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-jp-anthropic"
+base_url = "https://{WorkspaceId}.ap-northeast-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "日本（东京）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-de-anthropic"
+base_url = "https://{WorkspaceId}.eu-central-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "德国（法兰克福）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-us-anthropic"
+base_url = "https://{WorkspaceId}.us-east-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "美国（弗吉尼亚）"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-hk-anthropic"
+base_url = "https://{WorkspaceId}.cn-hongkong.maas.aliyuncs.com/apps/anthropic"
+api_region = "中国香港"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "global-sg-token-plan-openai"
+base_url = "https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "新加坡"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[endpoints]]
+id = "global-sg-token-plan-anthropic"
+base_url = "https://token-plan.ap-southeast-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "新加坡"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+description = "Add the web_search tool to the tools array."
+route_mappings = [ "$.tools[].type" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+description = "The search query or instructions for the model."
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=web_search_call", "output[].action.query", "output_text" ]
+
+[[capabilities.output]]
+kind = "text"
+
+[docs]
+alibaba-api-compatibility = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+alibaba-global-api-base-url = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+alibaba-openai-chat-api = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-chat-completions"
+alibaba-openai-responses-api = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+alibaba-anthropic-messages-api = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+overview = "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/what-is-model-studio"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/alibaba"

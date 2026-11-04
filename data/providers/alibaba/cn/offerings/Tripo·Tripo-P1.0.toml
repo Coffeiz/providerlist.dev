@@ -1,0 +1,10 @@
+id = "Tripo/Tripo-P1.0"
+model_ref = "tripo/tripo-p1-0"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 5
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/tripo-p1-0"

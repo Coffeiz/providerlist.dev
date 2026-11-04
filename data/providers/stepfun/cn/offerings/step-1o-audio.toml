@@ -1,0 +1,24 @@
+id = "step-1o-audio"
+model_ref = "stepfun/step-1o-audio"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "25.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "60.00"

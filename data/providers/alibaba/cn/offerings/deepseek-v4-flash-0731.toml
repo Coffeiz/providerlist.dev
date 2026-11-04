@@ -1,0 +1,110 @@
+id = "deepseek-v4-flash-0731"
+model_ref = "deepseek/deepseek-v4-flash-0731"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "美国"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.604"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9.625"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.604"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9.625"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "日本"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.604"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9.625"

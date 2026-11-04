@@ -1,0 +1,12 @@
+name = "Doubao Seed Character (251128)"
+type = "chat"
+release_date = "2025-11"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 131072
+max_input = 98304
+output = 32768

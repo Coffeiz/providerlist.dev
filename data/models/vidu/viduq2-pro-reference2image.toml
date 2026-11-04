@@ -1,0 +1,11 @@
+name = "vidu/viduq2-pro_reference2image"
+type = "image"
+release_date = "2025-12-01"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

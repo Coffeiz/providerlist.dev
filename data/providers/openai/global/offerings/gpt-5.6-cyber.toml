@@ -1,0 +1,45 @@
+id = "gpt-5.6-cyber"
+model_ref = "openai/gpt-5-6-cyber"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "12.50"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "75.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "short"
+unit = "per_1m_tokens"
+value = "15.625"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "short"
+unit = "per_1m_tokens"
+value = "31.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

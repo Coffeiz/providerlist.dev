@@ -1,0 +1,7 @@
+name = "MiniMax H3"
+type = "video"
+release_date = "2026-07-31"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video", "audio" ]

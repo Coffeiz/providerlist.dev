@@ -1,0 +1,16 @@
+name = "qwen3-rerank"
+type = "reranking"
+release_date = "2026-01-27"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 30000
+input = 30000
+output = 0
+
+[capabilities]
+tool_calling = false
+structured_output = false

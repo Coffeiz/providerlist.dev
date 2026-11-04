@@ -1,0 +1,124 @@
+[[plans]]
+id = "claude-free"
+name = "Free"
+description = "Free for everyone"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "0"
+
+[[plans]]
+id = "claude-pro"
+name = "Pro"
+description = "For everyday work"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "20"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "200"
+
+[[plans]]
+id = "claude-max-5x"
+name = "Max 5x"
+description = "Choose 5x or 20x more usage than Pro*"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[[plans]]
+id = "claude-max-20x"
+name = "Max 20x"
+description = "Choose 5x or 20x more usage than Pro*"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[[plans]]
+id = "claude-team-standard"
+name = "Team Standard seat"
+description = "All Claude features, plus more usage than Pro*"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "25"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "240"
+
+[[plans]]
+id = "claude-team-premium"
+name = "Team Premium seat"
+description = "5x more usage than standard seats*"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "125"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1200"
+
+[[plans]]
+id = "claude-enterprise"
+name = "Enterprise"
+description = "For large businesses operating at scale"
+currency = "USD"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "240"
+
+[[plans]]
+id = "claude-education"
+name = "Education plan"
+description = "Get a comprehensive university‐wide plan for an institution, including its students, faculty, and staff."
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "custom"
+
+[[plans]]
+id = "claude-enterprise-sales-assisted"
+name = "Enterprise (sales-assisted)"
+description = "Contact sales"
+
+[plans.links]
+official = "https://claude.com/pricing"
+
+[[plans.billing_options]]
+billing_period = "year"

@@ -1,0 +1,15 @@
+name = "moonshot-v1-8k"
+type = "chat"
+family = "Moonshot V1"
+release_date = "2024-01-31"
+
+[limits]
+context = 8192
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = true
+structured_output = true

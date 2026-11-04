@@ -1,0 +1,20 @@
+id = "qwen3-vl-rerank"
+model_ref = "alibaba/qwen3-vl-rerank"
+status = "active"
+
+[api_limits]
+input = 120000
+rpm = 600
+tpm = 9000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-vl-rerank"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"

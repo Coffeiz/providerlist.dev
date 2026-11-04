@@ -1,0 +1,27 @@
+id = "qwen-audio-3.0-tts-plus"
+model_ref = "alibaba/qwen-audio-3-0-tts-plus"
+status = "active"
+
+[api_limits]
+rpm = 180
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-audio-3-0-tts-plus"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "1.4"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "1.49884"

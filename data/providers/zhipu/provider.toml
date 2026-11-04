@@ -1,0 +1,8 @@
+id = "zhipu"
+name = "智谱 AI / Z.AI"
+aliases = [ "智谱", "智谱 AI", "Zhipu AI", "Z.AI" ]
+kind = "first_party"
+logo = "/logos/providers/zhipuai.svg"
+
+[integrations]
+ai_sdk = true

@@ -1,0 +1,50 @@
+id = "qwen-flash-character"
+model_ref = "alibaba/qwen-flash-character"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.05"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.4"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.034"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.203"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.034"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.203"

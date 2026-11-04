@@ -1,0 +1,6 @@
+name = "Tripo P2.0 Preview"
+type = "3d"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "3d" ]

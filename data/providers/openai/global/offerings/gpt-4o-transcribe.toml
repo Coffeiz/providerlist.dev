@@ -1,0 +1,4 @@
+id = "gpt-4o-transcribe"
+model_ref = "openai/gpt-4o-transcribe"
+status = "unknown"
+pricing = []

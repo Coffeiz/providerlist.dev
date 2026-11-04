@@ -1,0 +1,21 @@
+id = "GLM-4V-Flash"
+model_ref = "zhipu/glm-4v-flash"
+status = "active"
+
+[api_limits]
+context = 1000
+output = 1000
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "cache_read" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0"

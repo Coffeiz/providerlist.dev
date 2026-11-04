@@ -1,0 +1,36 @@
+id = "vidu/vidu-image_reference2image"
+model_ref = "vidu/vidu-image-reference2image"
+status = "active"
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/vidu-image-reference2image"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.625"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "1"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "1.46875"

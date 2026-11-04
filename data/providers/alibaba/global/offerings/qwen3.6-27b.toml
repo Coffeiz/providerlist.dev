@@ -1,0 +1,39 @@
+id = "qwen3.6-27b"
+model_ref = "alibaba/qwen3-6-27b"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.6"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "3.6"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "0.412564"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "2.475384"

@@ -1,0 +1,6 @@
+name = "WAND-Vega-Image-1.0-Pro"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

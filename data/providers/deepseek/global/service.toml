@@ -1,0 +1,191 @@
+website = "https://platform.deepseek.com/"
+
+[[endpoints]]
+id = "openai-compatible"
+base_url = "https://api.deepseek.com"
+api_region = "未标注"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+documentation = "https://api-docs.deepseek.com/api/create-chat-completion/"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+path = "/v1/tools/fetch"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/api/create-chat-completion/"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/api/create-response/"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+documentation = "https://api-docs.deepseek.com/api/create-response/"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+path = "/v1/tools/search"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/search"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/fetch"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[endpoints]]
+id = "anthropic-compatible"
+base_url = "https://api.deepseek.com/anthropic"
+api_region = "未标注"
+documentation = "https://api-docs.deepseek.com/guides/anthropic_api/"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/anthropic_api/"
+path = "/v1/messages"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "count"
+type = "integer"
+required = false
+min = 1
+max = 50
+default = 10
+description = "The number of results to return, between 1 and 50."
+route_mappings = [ "count" ]
+
+[[capabilities.parameters]]
+name = "ori_question"
+type = "string"
+required = false
+min = 1
+max = 128
+description = "The user's original question that triggered the search, between 1 and 128 characters, to improve query understanding, with null treated as not provided."
+route_mappings = [ "ori_question" ]
+
+[[capabilities.parameters]]
+name = "localization"
+type = "string"
+required = false
+default = ""
+description = "An optional IP address used to localize search results."
+route_mappings = [ "localization" ]
+
+[[capabilities.parameters]]
+name = "need_content"
+type = "boolean"
+required = false
+default = false
+description = "Whether to return page content in content , which is always an empty string when false ."
+route_mappings = [ "need_content" ]
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+path = "/v1/tools/search"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/search"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "successful_request"
+unit = "per_request"
+quantity = 1000
+value = "0.75"
+
+[capabilities.links]
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+description = "The search query must contain 1 to 128 Unicode characters, cannot be all whitespace, and supports the query operators listed below."
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "results[].rerank_score", "results[].title", "results[].url", "results[].snippet", "results[].summary", "results[].content", "results[].site_name", "results[].site_icon", "results[].date", "results[].authority" ]
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+path = "/v1/tools/fetch"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/fetch"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "successful_request"
+unit = "per_request"
+quantity = 1000
+value = "0.75"
+
+[capabilities.links]
+documentation = "https://api-docs.deepseek.com/guides/search/"
+
+[[capabilities.input]]
+name = "url"
+kind = "text"
+required = true
+description = "The page URL to fetch, which must be at most 8192 characters, an HTTP or HTTPS URL with a host, and must not contain a username or password."
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "title", "content" ]
+
+[docs]
+overview = "https://api-docs.deepseek.com/"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/deepseek"

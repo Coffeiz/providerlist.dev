@@ -1,0 +1,7 @@
+name = "grok-voice-3.0"
+release_date = "2026-10-14"
+type = "realtime"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "text", "audio" ]

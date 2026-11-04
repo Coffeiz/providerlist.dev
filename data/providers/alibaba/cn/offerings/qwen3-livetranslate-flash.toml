@@ -1,0 +1,87 @@
+id = "qwen3-livetranslate-flash"
+model_ref = "alibaba/qwen3-livetranslate-flash"
+status = "active"
+
+[api_limits]
+context = 53248
+input = 49152
+output = 4096
+rpm = 100
+tpm = 100000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-qwen3-livetranslate-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "11.573"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "11.573"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4.629"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "11.573"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"

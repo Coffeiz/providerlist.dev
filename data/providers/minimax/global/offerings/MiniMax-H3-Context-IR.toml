@@ -1,0 +1,16 @@
+id = "MiniMax-H3-Context-IR"
+model_ref = "minimax/minimax-h3-context-ir"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.90"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.60"

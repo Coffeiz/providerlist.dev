@@ -1,0 +1,25 @@
+id = "GLM-4.7-FlashX"
+model_ref = "zhipu/glm-4-7-flashx"
+status = "active"
+
+[api_limits]
+context = 128000
+output = 128000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.1"

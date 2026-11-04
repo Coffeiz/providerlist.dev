@@ -1,0 +1,36 @@
+id = "gemini-2.5-flash-preview-tts"
+model_ref = "google/gemini-2-5-flash-preview-tts"
+status = "deprecated"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

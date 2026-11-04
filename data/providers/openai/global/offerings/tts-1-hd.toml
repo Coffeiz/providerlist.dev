@@ -1,0 +1,4 @@
+id = "tts-1-hd"
+model_ref = "openai/tts-1-hd"
+status = "unknown"
+pricing = []

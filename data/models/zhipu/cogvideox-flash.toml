@@ -1,0 +1,6 @@
+name = "CogVideoX-Flash"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

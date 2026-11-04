@@ -1,0 +1,16 @@
+id = "GLM-4-32B-0414-128K"
+model_ref = "zhipu/glm-4-32b-0414-128k"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.1"

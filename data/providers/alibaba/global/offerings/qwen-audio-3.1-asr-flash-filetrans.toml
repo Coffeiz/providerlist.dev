@@ -1,0 +1,35 @@
+id = "qwen-audio-3.1-asr-flash-filetrans"
+model_ref = "alibaba/qwen-audio-3-1-asr-flash-filetrans"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.15"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.47"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.113"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.382"

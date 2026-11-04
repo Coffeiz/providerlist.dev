@@ -1,0 +1,67 @@
+id = "doubao-seed-translation-250915"
+model_ref = "bytedance/doubao-seed-translation-250915"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.20"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.60"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.60"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.24"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.80"
+
+[[pricing.conditions]]
+field = "request.mode"
+operator = "eq"
+value = "batch_inference"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.60"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.24"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.80"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

@@ -1,0 +1,11 @@
+name = "GPT-4o Mini Search Preview"
+type = "chat"
+release_date = "2025-03-11"
+
+[limits]
+context = 128000
+output = 16384
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

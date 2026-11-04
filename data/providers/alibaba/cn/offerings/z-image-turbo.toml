@@ -1,0 +1,45 @@
+id = "z-image-turbo"
+model_ref = "alibaba/z-image-turbo"
+status = "active"
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/z-image-turbo"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.1"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.2"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.110089"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.220177"

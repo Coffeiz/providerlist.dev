@@ -1,0 +1,118 @@
+id = "MiniMax-M3"
+model_ref = "minimax/minimax-m3"
+status = "active"
+
+[api_limits]
+context = 1000000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.10"
+context = "<=512000"
+list_value = "4.20"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.40"
+context = "<=512000"
+list_value = "16.80"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.42"
+context = "<=512000"
+list_value = "0.84"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4.20"
+context = ">512000"
+list_value = "8.40"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "16.80"
+context = ">512000"
+list_value = "33.60"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.84"
+context = ">512000"
+list_value = "1.68"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.15"
+context = "<=512000"
+list_value = "6.30"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12.60"
+context = "<=512000"
+list_value = "25.20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.63"
+context = "<=512000"
+list_value = "1.26"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "priority"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.30"
+context = ">512000"
+list_value = "12.60"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "25.20"
+context = ">512000"
+list_value = "50.40"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.26"
+context = ">512000"
+list_value = "2.52"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "priority"

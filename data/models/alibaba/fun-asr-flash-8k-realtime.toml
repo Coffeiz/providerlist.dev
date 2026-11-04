@@ -1,0 +1,11 @@
+name = "fun-asr-flash-8k-realtime"
+type = "transcription"
+release_date = "2026-02-12"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

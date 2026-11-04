@@ -1,0 +1,10 @@
+id = "fun-asr-flash-8k-realtime"
+model_ref = "alibaba/fun-asr-flash-8k-realtime"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/fun-asr-flash-8k-realtime"

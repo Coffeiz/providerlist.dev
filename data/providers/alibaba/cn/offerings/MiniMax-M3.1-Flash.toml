@@ -1,0 +1,4 @@
+id = "MiniMax-M3.1-Flash"
+model_ref = "minimax/minimax-m3-1-flash"
+status = "unknown"
+pricing = []

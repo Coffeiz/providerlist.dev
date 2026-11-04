@@ -1,0 +1,106 @@
+id = "MiniMax-M3"
+model_ref = "minimax/minimax-m3"
+status = "active"
+
+[api_limits]
+context = 1000000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.30"
+list_value = "0.60"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.20"
+list_value = "2.40"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.06"
+list_value = "0.12"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.60"
+list_value = "1.20"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.40"
+list_value = "4.80"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.12"
+list_value = "0.24"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.45"
+list_value = "0.90"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.80"
+list_value = "3.60"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.09"
+list_value = "0.18"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.90"
+list_value = "1.80"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.60"
+list_value = "7.20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.18"
+list_value = "0.36"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "priority"

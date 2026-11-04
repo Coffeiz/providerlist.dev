@@ -1,0 +1,6 @@
+name = "MiniMax-H3-Max-Turbo"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

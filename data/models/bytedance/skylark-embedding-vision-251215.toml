@@ -1,0 +1,14 @@
+name = "Skylark Embedding Vision (251215)"
+type = "embedding"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "embedding" ]
+
+[limits]
+context = 131072
+
+[output_dimensions]
+supported = [ 2048 ]
+default = 2048

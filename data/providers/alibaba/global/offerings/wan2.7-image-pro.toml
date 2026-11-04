@@ -1,0 +1,25 @@
+id = "wan2.7-image-pro"
+model_ref = "alibaba/wan2-7-image-pro"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.075"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.068761"

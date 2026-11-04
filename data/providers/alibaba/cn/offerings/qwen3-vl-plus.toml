@@ -1,0 +1,265 @@
+id = "qwen3-vl-plus"
+model_ref = "alibaba/qwen3-vl-plus"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 260096
+output = 32768
+rpm = 3000
+tpm = 5000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-vl-plus"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "15"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "30"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "15"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "30"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "1.468"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "11.743"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "2.202"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "17.614"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "4.404"
+
+[[pricing.rates]]
+metric = "output"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "35.228"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "15"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "30"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "欧盟"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "1.499"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "11.991"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "欧盟"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "2.248"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=128000"
+unit = "per_1m_tokens"
+value = "17.986"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "欧盟"
+
+[[pricing.rates]]
+metric = "input"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "4.497"
+
+[[pricing.rates]]
+metric = "output"
+context = ">128000 & <=256000"
+unit = "per_1m_tokens"
+value = "35.972"

@@ -1,0 +1,14 @@
+name = "Gemini Embedding 2"
+type = "embedding"
+release_date = "2026-03-10"
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "embedding" ]
+
+[limits]
+input = 8192
+
+[output_dimensions]
+min = 128
+max = 3072

@@ -1,0 +1,12 @@
+name = "Doubao Seed 2.1 Lite (260915)"
+type = "chat"
+release_date = "2026-09"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+max_input = 1048576
+output = 262144

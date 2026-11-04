@@ -1,0 +1,12 @@
+name = "z-image-turbo"
+type = "image"
+release_date = "2025-12-18"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text" ]
+output = [ "text", "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

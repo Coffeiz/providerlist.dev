@@ -1,0 +1,26 @@
+id = "Embedding-3"
+model_ref = "zhipu/embedding-3"
+status = "active"
+
+[api_limits]
+context = 8000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

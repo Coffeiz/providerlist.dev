@@ -1,0 +1,80 @@
+id = "qwen3.6-35b-a3b"
+model_ref = "alibaba/qwen3-6-35b-a3b"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 260096
+output = 65536
+rpm = 600
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-6-35b-a3b"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "10.8"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "10.8"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "2.810325"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "16.86195"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "1.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "10.8"

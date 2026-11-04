@@ -1,0 +1,3 @@
+id = "MiniMax-M2.1"
+model_ref = "minimax/minimax-m2-1"
+status = "unknown"

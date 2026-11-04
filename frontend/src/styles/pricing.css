@@ -1,0 +1,97 @@
+/* 全站共用的价格项、条件和计费层级展示。 */
+
+.detail-price-kind,
+.detail-price-original { margin-inline-end: var(--pl-space-xs); }
+.detail-price-qualifier {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: var(--pl-space-xs);
+  padding-inline: var(--pl-space-xs);
+  border-radius: var(--pl-radius-xs);
+  background: var(--pl-bg-muted);
+  color: var(--pl-text-secondary);
+  font-size: var(--pl-text-xs);
+  line-height: 1.5;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.pl-price-entry-list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  column-gap: var(--pl-space-sm);
+  row-gap: var(--pl-space-xs);
+}
+.pl-price-entry-item {
+  display: flex;
+  min-width: 0;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pl-price-entry-item + .pl-price-entry-item {
+  padding-inline-start: var(--pl-space-sm);
+  border-inline-start: 1px solid var(--pl-border-subtle);
+}
+.pl-price-entry-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--pl-space-xs);
+  row-gap: var(--pl-space-xs);
+}
+.pl-price-entry-pair-item { display: inline-flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--pl-space-xs); row-gap: var(--pl-space-xs); }
+.pl-price-entry-pair-item + .pl-price-entry-pair-item { margin-inline-start: var(--pl-space-sm); }
+.detail-price-native-value {
+  padding-inline-start: var(--pl-space-xs);
+  border-inline-start: 1px solid var(--pl-border-subtle);
+}
+.pl-price-entry-label:not(.pl-text-price-cache) { color: var(--pl-text-secondary); }
+.detail-price-condition {
+  display: flex;
+  align-items: flex-start;
+  margin-top: var(--pl-space-xs);
+  padding-inline-start: var(--pl-space-sm);
+  border-inline-start: 1px solid var(--pl-border-subtle);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.pl-price-entry + .pl-price-entry,
+.pl-price-rule + .pl-price-rule { margin-top: var(--pl-space-xs); }
+.pl-price-tier-group + .pl-price-tier-group { margin-top: var(--pl-space-sm); }
+.pl-price-tier-title {
+  margin-bottom: var(--pl-space-xs);
+  color: var(--pl-text-primary);
+  font-size: var(--pl-text-xs);
+  font-weight: var(--pl-weight-semibold);
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-tier-group + .pl-price-tier-group {
+  margin-top: var(--pl-space-md);
+  padding-top: var(--pl-space-sm);
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--pl-space-sm);
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-item {
+  width: 100%;
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-item + .pl-price-entry-item {
+  padding-inline-start: 0;
+  border-inline-start: 0;
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-line {
+  gap: var(--pl-space-xs) var(--pl-space-sm);
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-pair-item {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.provider-detail-scope .detail-model-table .detail-price-cell .pl-price-entry-pair-item + .pl-price-entry-pair-item {
+  margin-inline-start: 0;
+}
+.pl-price-native { color: var(--pl-price-native); font-size: var(--pl-text-xs); }
+.pl-price-native-cache { color: var(--pl-price-cache-native); }

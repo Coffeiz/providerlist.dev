@@ -1,0 +1,12 @@
+name = "kling/kling-v3-image-generation"
+type = "image"
+release_date = "2026-02-05"
+developer_name = "Kling AI"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

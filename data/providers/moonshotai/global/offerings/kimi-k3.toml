@@ -1,0 +1,36 @@
+id = "kimi-k3"
+model_ref = "moonshotai/kimi-k3"
+status = "active"
+
+[links]
+documentation = "https://platform.kimi.ai/docs/models"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.30"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "5min"
+unit = "per_1m_tokens"
+value = "3.00"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "1h"
+unit = "per_1m_tokens"
+value = "6.00"

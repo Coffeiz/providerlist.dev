@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0.0",
+  "data_version": "2026-10-23.1",
+  "generated_at": "2026-10-23T06:00:00Z",
+  "provider": {
+    "id": "example-ai",
+    "name": "示例智能",
+    "legal_name": "示例智能科技有限公司",
+    "aliases": [
+      "Example AI",
+      "示例 AI",
+      "yushiliangzhi"
+    ],
+    "kind": "first_party",
+    "official_integration": {
+      "state": "connected",
+      "source_hostname": "registry.example.com",
+      "coverage": {
+        "service_ids": [
+          "cn"
+        ],
+        "offering_count": 2
+      },
+      "last_published_at": "2026-10-23T05:30:00Z"
+    }
+  },
+  "services": [
+    {
+      "id": "cn",
+      "provider_id": "example-ai",
+      "name": "中国大陆 · 按量计费",
+      "account_requirements": [
+        "实名认证"
+      ],
+      "endpoints": [
+        {
+          "id": "cn-messages",
+          "base_url": "https://api.example.com",
+          "api_region": "cn-beijing",
+          "documentation": "https://example.com/docs/messages",
+          "routes": [
+            {
+              "protocol": "messages",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/messages",
+              "path": "/v1/messages"
+            },
+            {
+              "protocol": "vendor-asr",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/asr",
+              "path": "/v1/audio/transcriptions"
+            },
+            {
+              "protocol": "vendor-search",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/web-search",
+              "path": "/v1/web/search"
+            }
+          ]
+        },
+        {
+          "id": "cn-chat-completions",
+          "base_url": "https://api.example.com",
+          "api_region": "cn-beijing",
+          "documentation": "https://example.com/docs/chat-completions",
+          "routes": [
+            {
+              "protocol": "chat-completions",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/chat-completions",
+              "path": "/v1/chat/completions"
+            },
+            {
+              "protocol": "chat-completions",
+              "method": "POST",
+              "callability": "documented_only",
+              "path": "/v1/chat/completions"
+            }
+          ]
+        },
+        {
+          "id": "cn-video",
+          "base_url": "https://api.example.com",
+          "api_region": "cn-beijing",
+          "documentation": "https://example.com/docs/video",
+          "routes": [
+            {
+              "protocol": "vendor-video-job",
+              "method": "POST",
+              "task_id_pointer": "/data/id",
+              "status_path_template": "/video/tasks/{task_id}",
+              "result_path_template": "/video/tasks/{task_id}/result",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/video",
+              "path": "/video/tasks"
+            },
+            {
+              "protocol": "vendor-video-job",
+              "method": "POST",
+              "task_id_pointer": "/data/id",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/video",
+              "path": "/video/tasks"
+            }
+          ]
+        }
+      ],
+      "offerings": [
+        {
+          "id": "example-chat",
+          "service_id": "cn",
+          "model_ref": "example-lab/example-chat",
+          "links": {
+            "model_doc": "https://example.com/docs/example-chat"
+          },
+          "status": "active"
+        },
+        {
+          "id": "example-video-v1",
+          "service_id": "cn",
+          "model_ref": "example-lab/example-video",
+          "links": {
+            "model_doc": "https://example.com/docs/example-video"
+          },
+          "status": "restricted"
+        },
+        {
+          "id": "example-asr-v1",
+          "service_id": "cn",
+          "model_ref": "example-lab/example-asr",
+          "links": {
+            "model_doc": "https://example.com/docs/example-asr"
+          },
+          "status": "active"
+        },
+        {
+          "id": "example-chat-lite",
+          "service_id": "cn",
+          "model_ref": "example-lab/example-chat-lite",
+          "links": {
+            "model_doc": "https://example.com/docs/example-chat-lite",
+            "migration": "https://example.com/docs/migrate/example-chat"
+          },
+          "pricing": [
+            {
+              "currency": "CNY",
+              "rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "value": "0.60"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "value": "2.40"
+                }
+              ],
+              "effective_from": "2026-08-01T00:00:00+08:00"
+            }
+          ],
+          "status": "deprecated"
+        }
+      ],
+      "capabilities": [
+        {
+          "kind": "web_search",
+          "input": [
+            {
+              "name": "query",
+              "kind": "text",
+              "required": true
+            }
+          ],
+          "output": [
+            {
+              "kind": "structured",
+              "fields": [
+                "results",
+                "citations"
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "name": "top_k",
+              "type": "integer",
+              "required": false,
+              "min": 1,
+              "max": 20
+            }
+          ],
+          "constraints": [],
+          "execution": {
+            "mode": "sync"
+          },
+          "routes": [
+            {
+              "protocol": "vendor-search",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/web-search",
+              "path": "/v1/web/search"
+            }
+          ],
+          "links": {
+            "doc": "https://example.com/docs/web-search"
+          }
+        }
+      ],
+      "website": "https://example.com",
+      "docs": {
+        "overview": "https://example.com/docs",
+        "pricing": "https://example.com/docs/pricing",
+        "models": "https://example.com/docs/models"
+      }
+    },
+    {
+      "id": "global",
+      "provider_id": "example-ai",
+      "name": "国际 · 按量计费",
+      "account_requirements": [],
+      "endpoints": [
+        {
+          "id": "global-messages",
+          "base_url": "https://api-global.example.com",
+          "api_region": "global",
+          "documentation": "https://example.com/docs/messages",
+          "routes": [
+            {
+              "protocol": "messages",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://example.com/docs/messages",
+              "path": "/v1/messages"
+            }
+          ]
+        }
+      ],
+      "offerings": [
+        {
+          "id": "example-chat",
+          "service_id": "global",
+          "model_ref": "example-lab/example-chat",
+          "links": {
+            "model_doc": "https://example.com/docs/example-chat"
+          },
+          "pricing": [
+            {
+              "currency": "USD",
+              "rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "value": "0.14"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "value": "0.56"
+                }
+              ],
+              "effective_from": "2026-10-01T00:00:00Z"
+            }
+          ],
+          "status": "active"
+        }
+      ],
+      "website": "https://example.com",
+      "docs": {
+        "overview": "https://example.com/docs",
+        "pricing": "https://example.com/docs/pricing",
+        "models": "https://example.com/docs/models"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+id = "alibaba"
+name = "阿里云百炼"
+aliases = [ "Alibaba Cloud Bailian", "Model Studio" ]
+kind = "cloud_platform"
+logo = "/logos/providers/alibaba.svg"
+
+[integrations]
+ai_sdk = true

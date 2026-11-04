@@ -1,0 +1,7 @@
+id = "chat-latest"
+model_ref = "openai/chat-latest"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"

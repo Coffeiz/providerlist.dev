@@ -1,0 +1,11 @@
+id = "speech-02-hd"
+model_ref = "minimax/speech-02-hd"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_character"
+unit = "per_1m_characters"
+value = "100"

@@ -1,0 +1,22 @@
+provider_id,service_id,offering_id,provider_model_id,display_name,lifecycle_stage,scope,model_ref,resolution_note
+alibaba,cn,qwen-tts-flash-a3dbfe5c,qwen-tts-flash,qwen-tts-flash,active,in_scope_not_retired,,百炼当前目录/价格来源出现该调用 ID，但已检索的官方模型文档未能确认与具体规范模型的精确身份；保留未知。
+alibaba,cn,speech-biasing-7c5e8b4f,speech-biasing,speech-biasing,unknown,in_scope_not_retired,,热词偏置/服务能力，不是独立模型；按 Model/Capability 边界保留未关联。
+alibaba,global,qwen-tts-flash-a3dbfe5c,qwen-tts-flash,qwen-tts-flash,active,in_scope_not_retired,,百炼当前目录/价格来源出现该调用 ID，但已检索的官方模型文档未能确认与具体规范模型的精确身份；保留未知。
+tencent-tokenhub,cn,minimax-voice-clone-bcc362fe,minimax-voice-clone,MiniMax-Voice-Clone,active,in_scope_not_retired,,MiniMax 声音克隆独立服务能力，不是规范基础模型。
+tencent-tokenhub,cn,minimax-voice-design-8052a930,minimax-voice-design,MiniMax-Voice-Design,active,in_scope_not_retired,,MiniMax 声音设计独立服务能力，不是规范基础模型。
+tencent-tokenhub,cn,tripo-3d-animation-8310fa93,tripo-3d-animation,Tripo-3D-Animation,active,in_scope_not_retired,,Tripo 动画 API 功能，不是规范基础模型。
+tencent-tokenhub,cn,tripo-3d-format-d0d62ba4,tripo-3d-format,Tripo-3D-Format,active,in_scope_not_retired,,Tripo 格式转换 API 功能，不是规范基础模型。
+tencent-tokenhub,cn,tripo-3d-rigging-46d060aa,tripo-3d-rigging,Tripo-3D-Rigging,active,in_scope_not_retired,,Tripo 绑骨 API 功能，不是规范基础模型。
+tencent-tokenhub,cn,tripo-3d-rigging-check-404eca9e,tripo-3d-rigging-check,Tripo-3D-Rigging-Check,active,in_scope_not_retired,,Tripo 处理/检查 API 功能，不是规范基础模型。
+stepfun,cn,stepfun-step-1-32k-cn,step-1-32k,step-1-32k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1-8k-cn,step-1-8k,step-1-8k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1o-vision-32k-cn,step-1o-vision-32k,step-1o-vision-32k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1v-32k-cn,step-1v-32k,step-1v-32k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1v-8k-cn,step-1v-8k,step-1v-8k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1x-edit-cn,step-1x-edit,step-1x-edit,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-1x-medium-cn,step-1x-medium,step-1x-medium,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-2-16k-cn,step-2-16k,step-2-16k,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-2-mini-cn,step-2-mini,step-2-mini,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-2x-large-cn,step-2x-large,step-2x-large,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-3-cn,step-3,step-3,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。
+stepfun,cn,stepfun-step-image-edit-2-cn,step-image-edit-2,step-image-edit-2,retired,retired_excluded_from_current_coverage,,已退役且无关联记录；不计入当前供应缺口。

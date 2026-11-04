@@ -1,0 +1,7 @@
+name = "Hy-MT2-Lite"
+type = "chat"
+release_date = "2026-06-12"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

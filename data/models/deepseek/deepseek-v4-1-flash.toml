@@ -1,0 +1,16 @@
+name = "DeepSeek-V4.1-Flash"
+type = "chat"
+release_date = "2026-09-10"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+output = 393216
+
+[capabilities]
+reasoning = [ "none", "low", "high", "max" ]
+tool_calling = true
+structured_output = true

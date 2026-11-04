@@ -1,0 +1,290 @@
+id = "gpt-5.6-terra"
+model_ref = "openai/gpt-5-6-terra"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "12.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "short"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "short"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "18.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.40"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "long"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "long"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "6.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "short"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "9.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "long"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "6.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "short"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "9.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "long"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "24.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.40"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "short"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "short"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "8.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "36.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.80"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "30min"
+context = "long"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "12h"
+context = "long"
+unit = "per_1m_tokens"
+value = "20.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "fast"

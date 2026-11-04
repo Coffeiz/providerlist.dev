@@ -1,0 +1,11 @@
+name = "qwen3-tts-flash"
+type = "speech"
+release_date = "2025-11-27"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

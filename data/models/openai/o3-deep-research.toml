@@ -1,0 +1,16 @@
+name = "o3-deep-research"
+type = "chat"
+family = "o"
+release_date = "2025-06-26"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 100000
+
+[capabilities]
+reasoning = true
+tool_calling = true

@@ -1,0 +1,7 @@
+id = "doubao-seed-2-0-code-preview-260215"
+model_ref = "bytedance/doubao-seed-2-0-code-preview-260215"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"

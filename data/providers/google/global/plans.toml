@@ -1,0 +1,41 @@
+[[plans]]
+id = "google-ai-plus-us"
+name = "Google AI Plus"
+ratio = "2.0"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "9.99"
+
+[plans.links]
+details = "https://one.google.com/about/plans?hl=en_US"
+
+[[plans]]
+id = "google-ai-pro-us"
+name = "Google AI Pro"
+ratio = "4.0"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "19.99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "199.99"
+
+[plans.links]
+details = "https://one.google.com/about/plans?hl=en_US"
+
+[[plans]]
+id = "google-ai-ultra-us"
+name = "Google AI Ultra"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99.99"
+
+[plans.links]
+details = "https://one.google.com/about/plans?hl=en_US"

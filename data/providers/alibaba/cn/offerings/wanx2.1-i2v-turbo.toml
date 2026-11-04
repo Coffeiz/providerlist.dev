@@ -1,0 +1,10 @@
+id = "wanx2.1-i2v-turbo"
+model_ref = "alibaba/wanx2-1-i2v-turbo"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx2-1-i2v-turbo"

@@ -1,0 +1,15 @@
+name = "grok-4.20-0309-reasoning"
+release_date = "2026-03-10"
+type = "chat"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

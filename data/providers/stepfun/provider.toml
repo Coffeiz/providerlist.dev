@@ -1,0 +1,5 @@
+id = "stepfun"
+name = "阶跃星辰"
+aliases = [ "StepFun" ]
+kind = "first_party"
+logo = "/logos/providers/stepfun.svg"

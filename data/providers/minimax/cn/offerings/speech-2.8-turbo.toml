@@ -1,0 +1,11 @@
+id = "speech-2.8-turbo"
+model_ref = "minimax/speech-2-8-turbo"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_character"
+unit = "per_10k_characters"
+value = "2.00"

@@ -1,0 +1,11 @@
+id = "grok-imagine-video-1.5-lite"
+model_ref = "xai/grok-imagine-video-1-5-lite"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_second"
+unit = "per_generated_second"
+value = "0.020"

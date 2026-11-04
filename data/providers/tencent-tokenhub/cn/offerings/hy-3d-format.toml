@@ -1,0 +1,14 @@
+id = "hy-3d-format"
+model_ref = "tencent/hy-3d-format"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_request"
+value = "0.60"

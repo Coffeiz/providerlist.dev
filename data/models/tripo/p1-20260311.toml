@@ -1,0 +1,6 @@
+name = "Tripo P1-20260311"
+type = "3d"
+
+[modalities]
+input = [ "text" ]
+output = [ "3d" ]

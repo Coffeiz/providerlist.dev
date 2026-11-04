@@ -1,0 +1,16 @@
+name = "qwen3.7-max"
+type = "chat"
+family = "qwen"
+release_date = "2026-05-21"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+output = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true

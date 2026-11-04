@@ -1,0 +1,16 @@
+name = "tongyi-intent-detect-v3"
+type = "chat"
+release_date = "2024-01"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 8192
+input = 8192
+output = 4096
+
+[capabilities]
+tool_calling = false
+structured_output = false

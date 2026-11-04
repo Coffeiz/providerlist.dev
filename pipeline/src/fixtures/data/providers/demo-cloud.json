@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0.0",
+  "data_version": "2026-10-23.1",
+  "generated_at": "2026-10-23T06:00:00Z",
+  "provider": {
+    "id": "demo-cloud",
+    "name": "演示云平台",
+    "legal_name": null,
+    "aliases": [
+      "Demo Cloud",
+      "演示云"
+    ],
+    "kind": "cloud_platform"
+  },
+  "services": [
+    {
+      "id": "cn",
+      "provider_id": "demo-cloud",
+      "name": "中国大陆 · 按量计费",
+      "account_requirements": [
+        "实名认证",
+        "企业认证开通语音服务"
+      ],
+      "endpoints": [
+        {
+          "id": "cn-generative",
+          "base_url": "https://gen.demo-cloud.example.net",
+          "api_region": "cn-shanghai",
+          "documentation": "https://demo-cloud.example.net/docs/api",
+          "routes": [
+            {
+              "protocol": "vendor-batch",
+              "method": "POST",
+              "task_id_pointer": "/data/task_id",
+              "status_path_template": "/api/v1/batches/{task_id}",
+              "callability": "documented_only",
+              "path": "/api/v1/batches"
+            },
+            {
+              "protocol": "generate-content",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://demo-cloud.example.net/docs/embeddings",
+              "path": "/api/v1/services/embeddings"
+            },
+            {
+              "protocol": "vendor-image",
+              "method": "POST",
+              "callability": "documented_only",
+              "path": "/api/v1/services/images/generations"
+            },
+            {
+              "protocol": "vendor-realtime",
+              "method": "GET",
+              "callability": "documented_only",
+              "path": "/api/v1/realtime"
+            },
+            {
+              "protocol": "vendor-rerank",
+              "method": "POST",
+              "callability": "documented_only",
+              "path": "/api/v1/services/rerank"
+            },
+            {
+              "protocol": "vendor-tts",
+              "method": "POST",
+              "callability": "documented_only",
+              "documentation": "https://demo-cloud.example.net/docs/tts",
+              "path": "/api/v1/services/tts"
+            },
+            {
+              "protocol": "vendor-file",
+              "method": "POST",
+              "callability": "documented_only",
+              "path": "/api/v1/files"
+            }
+          ]
+        }
+      ],
+      "offerings": [
+        {
+          "id": "demo-embed-v3",
+          "service_id": "cn",
+          "model_ref": "demo-lab/demo-embed",
+          "links": {
+            "model_doc": "https://demo-cloud.example.net/docs/demo-embed"
+          },
+          "status": "active"
+        },
+        {
+          "id": "demo-rerank-v1",
+          "service_id": "cn",
+          "model_ref": "demo-lab/demo-rerank",
+          "links": {
+            "model_doc": "https://demo-cloud.example.net/docs/demo-rerank"
+          },
+          "status": "active"
+        },
+        {
+          "id": "demo-tts-v2",
+          "service_id": "cn",
+          "model_ref": "demo-lab/demo-tts",
+          "links": {
+            "model_doc": "https://demo-cloud.example.net/docs/demo-tts"
+          },
+          "status": "restricted"
+        },
+        {
+          "id": "demo-image-v1",
+          "service_id": "cn",
+          "model_ref": "demo-lab/demo-image",
+          "links": {
+            "model_doc": "https://demo-cloud.example.net/docs/demo-image"
+          },
+          "status": "active"
+        },
+        {
+          "id": "demo-realtime-v1",
+          "service_id": "cn",
+          "model_ref": "demo-lab/demo-realtime",
+          "links": {
+            "model_doc": "https://demo-cloud.example.net/docs/demo-realtime"
+          },
+          "status": "unknown"
+        }
+      ],
+      "capabilities": [
+        {
+          "kind": "file_storage",
+          "input": [
+            {
+              "name": "file",
+              "kind": "file",
+              "required": true,
+              "media": {
+                "max_bytes": 52428800,
+                "transports": [
+                  "multipart"
+                ]
+              }
+            }
+          ],
+          "output": [
+            {
+              "kind": "structured",
+              "fields": [
+                "file_id",
+                "expires_at"
+              ]
+            }
+          ],
+          "parameters": [],
+          "constraints": [],
+          "execution": {
+            "mode": "sync"
+          },
+          "routes": [
+            {
+              "protocol": "vendor-file",
+              "method": "POST",
+              "callability": "documented_only",
+              "path": "/api/v1/files"
+            }
+          ]
+        },
+        {
+          "kind": "batch",
+          "input": [
+            {
+              "name": "input_file",
+              "kind": "file",
+              "required": true,
+              "media": {
+                "mime_types": [
+                  "application/jsonl"
+                ],
+                "max_bytes": 104857600
+              }
+            }
+          ],
+          "output": [
+            {
+              "kind": "structured",
+              "fields": [
+                "task_id",
+                "results_file"
+              ]
+            }
+          ],
+          "parameters": [],
+          "constraints": [],
+          "execution": {
+            "mode": "async_job",
+            "polling": {
+              "recommended_interval_seconds": 60
+            },
+            "supports_cancel": null
+          },
+          "routes": [
+            {
+              "protocol": "vendor-batch",
+              "method": "POST",
+              "task_id_pointer": "/data/task_id",
+              "status_path_template": "/api/v1/batches/{task_id}",
+              "callability": "documented_only",
+              "path": "/api/v1/batches"
+            }
+          ]
+        }
+      ],
+      "website": "https://demo-cloud.example.net",
+      "docs": {
+        "overview": "https://demo-cloud.example.net/docs",
+        "pricing": "https://demo-cloud.example.net/docs/pricing",
+        "models": "https://demo-cloud.example.net/docs/models"
+      }
+    }
+  ]
+}

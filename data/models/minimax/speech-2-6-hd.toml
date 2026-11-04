@@ -1,0 +1,7 @@
+name = "speech-2.6-hd"
+type = "speech"
+release_date = "2025-10-30"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

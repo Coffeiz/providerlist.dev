@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://providerlist.dev/schema/offering-list.schema.json",
+  "title": "ProviderList OfferingList",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "data_version",
+    "generated_at",
+    "total",
+    "items"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "data_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/OfferingListItem"
+      }
+    }
+  },
+  "$defs": {
+    "OfferingListItem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider_id",
+        "service_id",
+        "market",
+        "id",
+        "type",
+        "status"
+      ],
+      "properties": {
+        "provider_id": {
+          "type": "string"
+        },
+        "service_id": {
+          "type": "string"
+        },
+        "market": {
+          "enum": [
+            "CN",
+            "GLOBAL",
+            "OTHER",
+            "UNKNOWN"
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "limits": {
+          "$ref": "model.schema.json#/$defs/ModelLimits"
+        },
+        "pricing": {
+          "type": "array",
+          "items": {
+            "$ref": "public-provider.schema.json#/$defs/PricingGroup"
+          }
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "active",
+            "restricted",
+            "deprecated",
+            "retired",
+            "unknown"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+name = "GPT-5.1"
+release_date = "2025-11-13"
+type = "chat"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 400000
+output = 128000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

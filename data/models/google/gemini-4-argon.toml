@@ -1,0 +1,17 @@
+name = "Gemini 4 Argon"
+type = "chat"
+release_date = "2026-10-13"
+family = "gemini"
+
+[limits]
+context = 1048576
+output = 65536
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

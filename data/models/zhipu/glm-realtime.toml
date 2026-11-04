@@ -1,0 +1,6 @@
+name = "GLM-Realtime"
+type = "realtime"
+
+[modalities]
+input = [ "video", "image", "audio" ]
+output = [ "text", "audio" ]

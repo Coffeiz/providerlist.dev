@@ -1,0 +1,7 @@
+name = "wan2.6-r2v-flash"
+type = "video"
+release_date = "2026-01-29"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "audio" ]

@@ -1,0 +1,14 @@
+id = "yt-video-fx"
+model_ref = "tencent/yt-video-fx"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "credit"
+unit = "per_credit"
+value = "1"

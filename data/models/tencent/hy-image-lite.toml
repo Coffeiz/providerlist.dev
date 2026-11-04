@@ -1,0 +1,7 @@
+name = "HY-Image Lite"
+type = "image"
+developer_name = "Tencent Hunyuan"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]

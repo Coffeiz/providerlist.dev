@@ -1,0 +1,190 @@
+name: Publish
+
+# 设计文档 §10.1：Publish 是**唯一**能写线上静态产物的通道。
+#
+# 强制隔离：
+# - CI 永不写生产。
+# - 公开 /v1/*.json 的 CDN 静态访问无写权限。
+# - /api/v1/ 的 Web 请求无 Git 部署凭证。
+#
+# 本工作流需要 `production` Environment（GitHub 侧配置 Required Reviewers）
+# 与 Cloudflare 凭证 Secret。**没有这些它不会、也不应运行。**
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      data_version:
+        description: '要发布的数据版本（留空则用构建产物的版本）'
+        required: false
+        type: string
+
+# 发布同一时间只允许一个，避免两个部署互相覆盖。
+concurrency:
+  group: publish-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Release Artifacts
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      data_version: ${{ steps.verify.outputs.data_version }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run Type Checks and Tests
+        run: |
+          pnpm typecheck
+          pnpm test
+
+      - name: Validate Source Data
+        run: pnpm validate:data
+
+      # 合并后的 dist/ 才是最终发布根目录（网站在根，公开 JSON 在 /v1/）
+      - name: Build Release Artifacts
+        run: pnpm build
+
+      - name: Mark Catalog as Published
+        run: node scripts/mark-catalog-published.mjs
+
+      - name: Read Data Version
+        id: verify
+        run: |
+          version=$(node -e "process.stdout.write(JSON.parse(require('fs').readFileSync('dist/v1/manifest.json','utf8')).data_version)")
+          echo "data_version=${version}" >> "$GITHUB_OUTPUT"
+          echo "✓ data_version=${version}"
+
+      - name: Upload Release Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: release
+          path: dist/
+          retention-days: 30
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy to Cloudflare
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    # 受保护环境：Required Reviewers 在 GitHub 仓库设置里配置。
+    # 没有这一步，任何 push 都能直接改线上。
+    environment:
+      name: production
+      url: https://providerlist.dev
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: release
+          path: dist
+
+      # Cloudflare 凭证只存在于这里，且 token 最小授权。
+      # 绝不在 pull_request / pull_request_target 里检出执行未审查代码。
+      - name: Deploy www redirect
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx --yes wrangler@latest deploy --config wrangler.www-redirect.jsonc
+
+      - name: Deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@latest deploy --config wrangler.jsonc
+        # 部署失败立即中止——不继续跑冒烟，避免对着旧版本报告成功。
+
+      # 发布后冒烟检查
+      - name: Post-Deployment Smoke Checks
+        run: |
+          set -euo pipefail
+          base="https://providerlist.dev"
+
+          # manifest 必须可访问且状态为 published
+          curl -fsS "$base/v1/manifest.json" -o /tmp/manifest.json
+          node -e "
+            const m = JSON.parse(require('fs').readFileSync('/tmp/manifest.json','utf8'));
+            if (m.catalog_status !== 'published') {
+              console.error('✗ catalog_status 不是 published：' + m.catalog_status);
+              process.exit(1);
+            }
+            console.log('✓ manifest 正常，data_version=' + m.data_version);
+          "
+
+          # 随机抽一个 Provider JSON
+          provider=$(node -e "const m=JSON.parse(require('fs').readFileSync('/tmp/manifest.json','utf8'));const p=m.files.find(f=>/^\/v1\/providers\/[^/]+\.json$/.test(f.path));process.stdout.write(p ? p.path : '')")
+          test -n "$provider"
+          curl -fsS "$base$provider" -o /dev/null
+          echo "✓ Provider JSON 可访问：$provider"
+
+          # 站点当前目录数据与对外 API 使用不同根路径
+          curl -fsS "$base/assets/datasets/catalog-current.json" -o /dev/null
+          echo "✓ 站点 catalog-current.json 可访问"
+
+          # 对外 Offering 列表
+          curl -fsS "$base/v1/offerings.json" -o /dev/null
+          echo "✓ 对外 offerings.json 可访问"
+
+          # JSON MIME 类型必须正确，不能被 SPA fallback 返回 index.html
+          ctype=$(curl -fsS -o /dev/null -w '%{content_type}' "$base/v1/manifest.json")
+          case "$ctype" in
+            application/json*) echo "✓ JSON MIME 正确：$ctype" ;;
+            *) echo "✗ JSON MIME 错误：$ctype（被 SPA fallback 成 HTML 了）"; exit 1 ;;
+          esac
+
+          # 首页路由
+          curl -fsS "$base/" -o /dev/null
+          echo "✓ 首页可访问"
+
+          # Static SEO files and generated landing pages.
+          curl -fsS "$base/sitemap.xml" -o /tmp/sitemap.xml
+          grep -q '<loc>https://providerlist.dev/models/' /tmp/sitemap.xml
+          grep -q '<loc>https://providerlist.dev/providers/' /tmp/sitemap.xml
+          curl -fsS "$base/robots.txt" | grep -Fq 'Sitemap: https://providerlist.dev/sitemap.xml'
+          curl -fsS "$base/providers/" -o /tmp/providers.html
+          grep -q 'rel="canonical" href="https://providerlist.dev/providers/"' /tmp/providers.html
+          echo "✓ sitemap、robots 和预渲染页面可访问"
+
+          # www must permanently redirect to the canonical apex host.
+          redirect=$(curl -sSI -o /dev/null -w '%{http_code} %{redirect_url}' "https://www.providerlist.dev/providers")
+          case "$redirect" in
+            "301 https://providerlist.dev/providers"*) echo "✓ www 永久跳转正常：$redirect" ;;
+            *) echo "✗ www 跳转错误：$redirect"; exit 1 ;;
+          esac
+
+      - name: Record Release
+        run: |
+          echo "已发布 data_version=${{ needs.build.outputs.data_version }}"
+          echo "回滚方式：回退有问题的 main 改动，并由 Publish 重新部署（见 docs/guides/operations.md）"

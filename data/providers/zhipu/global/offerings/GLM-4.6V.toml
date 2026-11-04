@@ -1,0 +1,21 @@
+id = "GLM-4.6V"
+model_ref = "zhipu/glm-4-6v"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.05"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.9"

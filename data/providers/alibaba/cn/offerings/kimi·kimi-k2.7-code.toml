@@ -1,0 +1,87 @@
+id = "kimi/kimi-k2.7-code"
+model_ref = "moonshotai/kimi-k2-7-code"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 262144
+output = 262144
+rpm = 500
+tpm = 3000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/kimi-k2-7-code-by-moonshot"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7.119"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "29.977"

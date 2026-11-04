@@ -1,0 +1,10 @@
+id = "wan3.0-video-prime"
+model_ref = "alibaba/wan3-0-video-prime"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan3-0-video-prime"

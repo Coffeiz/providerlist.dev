@@ -1,0 +1,21 @@
+name = "text-embedding-ada-002"
+type = "embedding"
+family = "text-embedding"
+release_date = "2022-12-15"
+
+[modalities]
+input = [ "text" ]
+output = [ "embedding" ]
+
+[limits]
+input = 8192
+context = 8192
+output = 1536
+
+[output_dimensions]
+supported = [ 1536 ]
+default = 1536
+
+[capabilities]
+reasoning = false
+tool_calling = false

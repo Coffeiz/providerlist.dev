@@ -1,0 +1,6 @@
+id = "grok-voice-2.0"
+model_ref = "xai/grok-voice-2-0"
+status = "deprecated"
+
+[links]
+documentation = "https://docs.x.ai/developers/release-notes"

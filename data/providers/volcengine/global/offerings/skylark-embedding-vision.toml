@@ -1,0 +1,19 @@
+id = "skylark-embedding-vision"
+model_ref = "bytedance/skylark-embedding-vision-251215"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "0.325"
+
+[[pricing.rates]]
+metric = "input_text"
+unit = "per_1m_tokens"
+value = "0.125"

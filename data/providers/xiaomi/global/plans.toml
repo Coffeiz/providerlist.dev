@@ -1,0 +1,71 @@
+[[plans]]
+id = "global-token-plan-lite"
+name = "Lite"
+credits = 4100000000
+description = "Ideal for first-time users who want to try lobster Using mimo-v2.6-flash as the baseline, it can execute approximately 200 rounds of medium-to-complex tasks"
+currency = "USD"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "6"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "63.36"
+
+[[plans]]
+id = "global-token-plan-standard"
+name = "Standard"
+credits = 11000000000
+description = "Ideal for office professionals who regularly use AI to boost their work efficiency Using mimo-v2.6-flash as the baseline, it can execute approximately 1600 rounds of medium-to-complex tasks"
+currency = "USD"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "16"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "168.96"
+
+[[plans]]
+id = "global-token-plan-pro"
+name = "Pro"
+credits = 38000000000
+description = "Ideal for developers and professional productivity enthusiasts who use AI frequently on a daily basis Using mimo-v2.6-flash as the baseline, it can execute approximately 5600 rounds of medium-to-complex tasks"
+currency = "USD"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "50"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "528"
+
+[[plans]]
+id = "global-token-plan-max"
+name = "Max"
+credits = 82000000000
+description = "Ideal for high-intensity, hardcore users who treat AI as a core productivity tool Using mimo-v2.6-flash as the baseline, it can execute approximately 12800 rounds of medium-to-complex tasks"
+currency = "USD"
+
+[plans.links]
+official = "https://mimo.mi.com/docs/en-US/tokenplan/Token%20Plan/subscription"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1056"

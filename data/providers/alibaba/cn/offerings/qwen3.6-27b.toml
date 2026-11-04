@@ -1,0 +1,46 @@
+id = "qwen3.6-27b"
+model_ref = "alibaba/qwen3-6-27b"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 260096
+output = 65536
+rpm = 600
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-6-27b"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "18"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "4.49652"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=256000"
+unit = "per_1m_tokens"
+value = "26.97912"

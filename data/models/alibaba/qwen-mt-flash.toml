@@ -1,0 +1,16 @@
+name = "qwen-mt-flash"
+type = "chat"
+release_date = "2025-11-11"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 16384
+input = 8192
+output = 8192
+
+[capabilities]
+tool_calling = false
+structured_output = false

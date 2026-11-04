@@ -1,0 +1,30 @@
+id = "yt-video-humanactor"
+model_ref = "tencent/yt-video-humanactor"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "1"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "720p"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "2"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "1080p"

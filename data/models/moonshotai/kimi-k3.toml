@@ -1,0 +1,17 @@
+name = "kimi-k3"
+family = "K3"
+type = "chat"
+release_date = "2026-07-16"
+
+[limits]
+context = 1048576
+output = 131072
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "high", "max" ]
+tool_calling = true
+structured_output = true

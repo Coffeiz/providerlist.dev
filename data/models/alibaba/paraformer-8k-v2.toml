@@ -1,0 +1,11 @@
+name = "paraformer-8k-v2"
+type = "transcription"
+release_date = "2024-12-19"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

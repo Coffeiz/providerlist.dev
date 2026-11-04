@@ -1,0 +1,35 @@
+id = "yt-video-2.0"
+model_ref = "tencent/yt-video-2-0"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "2"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "480p"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "5"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "resolution"
+value = "720p"
+
+[[pricing.conditions.any]]
+field = "resolution"
+value = "1080p"

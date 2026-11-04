@@ -1,0 +1,7 @@
+name = "cosyvoice-v3.5-flash"
+type = "speech"
+release_date = "2026-02-27"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

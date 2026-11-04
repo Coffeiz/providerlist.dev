@@ -1,0 +1,26 @@
+id = "qwen-audio-3.1-asr-flash-streaming"
+model_ref = "alibaba/qwen-audio-3-1-asr-flash-streaming"
+status = "active"
+
+[api_limits]
+context = 8192
+input = 8192
+output = 1024
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-audio-3-1-asr-flash-streaming"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.5"

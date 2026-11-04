@@ -1,0 +1,11 @@
+name = "Lyria 3 Pro"
+type = "music"
+release_date = "2026-03-25"
+family = "lyria"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "audio", "text" ]
+
+[limits]
+input = 131072

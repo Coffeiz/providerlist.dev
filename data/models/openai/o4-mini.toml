@@ -1,0 +1,17 @@
+name = "o4-mini"
+type = "chat"
+family = "o-mini"
+release_date = "2025-04-16"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 100000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

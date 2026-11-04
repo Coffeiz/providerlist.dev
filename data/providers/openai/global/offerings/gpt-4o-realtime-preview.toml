@@ -1,0 +1,7 @@
+id = "gpt-4o-realtime-preview"
+model_ref = "openai/gpt-4o-realtime-preview"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-4o-realtime-preview"

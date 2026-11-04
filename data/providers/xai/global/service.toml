@@ -1,0 +1,1436 @@
+website = "https://console.x.ai/"
+
+[[endpoints]]
+id = "global"
+base_url = "https://api.x.ai/v1"
+api_region = "Global"
+documentation = "https://docs.x.ai/developers/pricing"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/requests"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}:cancel"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/chat-completions"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}/content"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/requests"
+
+[[endpoints.routes]]
+protocol = "openai-images"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/images"
+path = "/images/edits"
+
+[[endpoints.routes]]
+protocol = "openai-images"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/images"
+path = "/images/generations"
+
+[[endpoints.routes]]
+protocol = "openai-images"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/images"
+path = "/images/{request_id}"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/results"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/responses"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+path = "/stt"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
+path = "/tts"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/videos"
+path = "/videos/edits"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/videos"
+path = "/videos/extensions"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/videos"
+path = "/videos/generations"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/videos"
+path = "/videos/{request_id}"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/code-execution"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/collections-search"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/web-search"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/x-search"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches/{batch_id}/requests"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}/requests"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}/results"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches/{batch_id}:cancel"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+path = "/files"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/files"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/files/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "DELETE"
+path = "/files/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "GET"
+path = "/files/{file_id}/content"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/stt"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+
+[[endpoints.routes]]
+protocol = "https"
+method = "POST"
+path = "/tts"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
+
+[[endpoints]]
+id = "global-wss"
+base_url = "https://api.x.ai/v1"
+api_region = "Global"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/voice"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/voice"
+path = "/realtime"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/voice"
+path = "/stt"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "GET"
+path = "/stt"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+
+[[endpoints]]
+id = "us-regional"
+base_url = "https://us.api.x.ai/v1"
+api_region = "United States"
+documentation = "https://docs.x.ai/developers/pricing"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/chat-completions"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/inference/responses"
+path = "/responses"
+
+[[endpoints]]
+id = "management"
+base_url = "https://management-api.x.ai/v1"
+api_region = "Global"
+documentation = "https://docs.x.ai/developers/pricing"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}/documents/{file_id}"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}/documents/{file_id}"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "PUT"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[capabilities]]
+kind = "batch"
+
+[[capabilities.parameters]]
+name = "name"
+type = "string"
+required = false
+route_mappings = [ "/batches:body.name" ]
+
+[[capabilities.parameters]]
+name = "input_file_id"
+type = "string"
+required = false
+route_mappings = [ "/batches:body.input_file_id" ]
+
+[[capabilities.parameters]]
+name = "batch_requests"
+type = "array"
+required = false
+route_mappings = [ "/batches/{batch_id}/requests:body.batch_requests" ]
+
+[[capabilities.parameters]]
+name = "batch_request_id"
+type = "string"
+required = false
+route_mappings = [ "/batches/{batch_id}/requests:body.batch_requests[].batch_request_id" ]
+
+[[capabilities.parameters]]
+name = "batch_request"
+type = "object"
+required = false
+route_mappings = [ "/batches/{batch_id}/requests:body.batch_requests[].batch_request" ]
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/requests"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/requests"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}/results"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+path = "/batches/{batch_id}:cancel"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches/{batch_id}/requests"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}/requests"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/batches/{batch_id}/results"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+path = "/batches/{batch_id}:cancel"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/advanced-api-usage/batch-api"
+
+[[capabilities.input]]
+name = "batch_requests"
+kind = "structured"
+required = true
+
+[[capabilities.input]]
+name = "input_file_id"
+kind = "file"
+required = true
+
+[capabilities.input.media]
+mime_types = [ "application/jsonl" ]
+max_bytes = 209715200
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "batch_id", "name", "create_time", "expire_time", "create_api_key_id", "cancel_time", "cancel_by_xai_message", "state", "state.num_requests", "state.num_pending", "state.num_success", "state.num_error", "state.num_cancelled", "batches", "batch_request_metadata", "pagination_token", "batch_request_id", "endpoint", "model", "finish_time", "results", "batch_result", "batch_result.response", "num_requests", "num_pending", "num_success", "num_error", "num_cancelled", "response", "image_response", "video_response", "error_message", "succeeded", "failed", "proto.response", "response.content", "response.usage.total_tokens", "image_response.url", "video_response.url" ]
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "limit"
+type = "integer"
+required = false
+description = "Maximum number of files to return. If not specified, uses the server default of 100. Maximum is 100."
+max = 100
+default = 100
+route_mappings = [ "/files:query.limit" ]
+
+[[capabilities.parameters]]
+name = "order"
+type = "string"
+required = false
+description = "Sort order. Either `\"asc\"` (ascending) or `\"desc\"` (descending). Defaults to `\"desc\"`."
+enum = [ "asc", "desc" ]
+route_mappings = [ "/files:query.order" ]
+
+[[capabilities.parameters]]
+name = "sort_by"
+type = "string"
+required = false
+description = "Field to sort by. Options: `\"created_at\"`, `\"filename\"`, or `\"size\"`. Defaults to `\"filename\"`."
+enum = [ "created_at", "filename", "size" ]
+route_mappings = [ "/files:query.sort_by" ]
+
+[[capabilities.parameters]]
+name = "pagination_token"
+type = "string"
+required = false
+description = "Pass the `pagination_token` returned by the previous response to fetch the next page. Omit it for the first page."
+route_mappings = [ "/files:query.pagination_token" ]
+
+[[capabilities.parameters]]
+name = "expires_after"
+type = "integer"
+required = false
+description = "`expires_after` is set in seconds, measured from upload time. It must be between `3600` (1 hour) and `2592000` (30 days), inclusive. Omit the field to keep the file permanently."
+min = 3600
+max = 2592000
+route_mappings = [ "/files:form.expires_after" ]
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = false
+description = "Echoes the `purpose` value sent at upload time. SpaceXSI does not enforce or interpret this field; it is stored for OpenAI SDK compatibility. Setting `\"assistants\"` is the conventional choice."
+route_mappings = [ "/files:form.purpose" ]
+
+[[capabilities.parameters]]
+name = "file_id"
+type = "string"
+required = false
+route_mappings = [ "/files/{file_id}:path.file_id" ]
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+path = "/files/{file_id}/content"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+path = "/files"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/files"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/files/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "DELETE"
+path = "/files/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "GET"
+path = "/files/{file_id}/content"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "stored_data"
+unit = "per_gib_day"
+value = "0.025"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "downloaded_data"
+unit = "per_gib_download"
+value = "0.20"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/files/managing-files"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "filename", "bytes", "created_at", "expires_at", "object", "purpose", "data[]", "pagination_token", "deleted" ]
+
+[[capabilities.output]]
+kind = "file"
+
+[capabilities.output.artifact]
+kind = "binary"
+
+[[capabilities]]
+kind = "collections"
+
+[[capabilities.parameters]]
+name = "collection_id"
+type = "string"
+required = true
+route_mappings = [ "/collections/{collection_id}" ]
+
+[[capabilities.parameters]]
+name = "collection_name"
+type = "string"
+required = true
+route_mappings = [ "/collections:body.collection_name" ]
+
+[[capabilities.parameters]]
+name = "index_configuration"
+type = "object"
+required = false
+route_mappings = [ "/collections:body.index_configuration" ]
+
+[[capabilities.parameters]]
+name = "chunk_configuration"
+type = "object"
+required = false
+route_mappings = [ "/collections:body.chunk_configuration" ]
+
+[[capabilities.parameters]]
+name = "collection_description"
+type = "string"
+required = false
+route_mappings = [ "/collections:body.collection_description" ]
+
+[[capabilities.parameters]]
+name = "file_id"
+type = "string"
+required = true
+route_mappings = [ "/collections/{collection_id}/documents/{file_id}" ]
+
+[[capabilities.parameters]]
+name = "fields"
+type = "object"
+required = false
+route_mappings = [ "/collections/{collection_id}/documents/{file_id}:body.fields" ]
+
+[[capabilities.parameters]]
+name = "limit"
+type = "integer"
+required = false
+route_mappings = [ "/collections:query.limit" ]
+
+[[capabilities.parameters]]
+name = "team_id"
+type = "string"
+required = false
+route_mappings = [ "/collections:query.team_id" ]
+
+[[capabilities.parameters]]
+name = "order"
+type = "string"
+required = false
+route_mappings = [ "/collections:query.order" ]
+
+[[capabilities.parameters]]
+name = "sort_by"
+type = "string"
+required = false
+route_mappings = [ "/collections:query.sort_by" ]
+
+[[capabilities.parameters]]
+name = "filter"
+type = "string"
+required = false
+route_mappings = [ "/collections:query.filter" ]
+
+[[capabilities.parameters]]
+name = "pagination_token"
+type = "string"
+required = false
+route_mappings = [ "/collections:query.pagination_token" ]
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "PUT"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}/documents/{file_id}"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+path = "/collections/{collection_id}/documents/{file_id}"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/collections"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "GET"
+path = "/collections"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "GET"
+path = "/collections/{collection_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "PUT"
+path = "/collections/{collection_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "DELETE"
+path = "/collections/{collection_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/collections/{collection_id}/documents/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "DELETE"
+path = "/collections/{collection_id}/documents/{file_id}"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "stored_data"
+unit = "per_gib_day"
+value = "0.10"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "downloaded_data"
+unit = "per_gib_download"
+value = "0.20"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/rest-api-reference/collections/collection"
+
+[[capabilities.input]]
+name = "document"
+kind = "file"
+required = false
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "collection_id", "collection_name", "created_at", "index_configuration", "chunk_configuration", "documents_count", "collection_description", "documents.file_metadata", "documents.fields", "documents.status", "documents.error_message" ]
+
+[[capabilities]]
+kind = "transcription"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+path = "/stt"
+
+[[capabilities.routes]]
+protocol = "websocket"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+path = "/stt"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/stt"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+
+[[capabilities.routes]]
+protocol = "websocket"
+method = "GET"
+path = "/stt"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/speech-to-text"
+
+[[capabilities.input]]
+name = "audio"
+kind = "audio"
+required = true
+
+[capabilities.input.media]
+max_bytes = 524288000
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "text", "language", "duration", "words", "channels" ]
+
+[[capabilities.output]]
+kind = "structured"
+streaming = true
+fields = [ "event.type=transcript.created", "event.type=transcript.partial", "event.type=transcript.done", "event.type=error", "event.text", "event.is_final", "event.duration", "event.language", "event.words", "event.channels", "event.channel_index", "event.speech_final", "event.chunk_final", "event.end_of_turn_confidence" ]
+
+[[capabilities.parameters]]
+name = "url"
+type = "string"
+required = false
+description = "URL of an audio file to download and transcribe (server-side)."
+route_mappings = [ "/stt:body.url" ]
+
+[[capabilities.parameters]]
+name = "model"
+type = "string"
+required = false
+description = "`grok-voice-transcribe-2.0` (default)."
+route_mappings = [ "/stt:body.model", "/stt:query.model" ]
+default = "grok-voice-transcribe-2.0"
+
+[[capabilities.parameters]]
+name = "audio_format"
+type = "string"
+required = false
+description = "Format hint for raw/headerless audio: `pcm`, `mulaw`, `alaw`. Container formats are auto-detected — do not set this field for MP3, WAV, etc."
+route_mappings = [ "/stt:body.audio_format" ]
+
+[[capabilities.parameters]]
+name = "sample_rate"
+type = "integer"
+required = false
+enum = [ 8000, 16000, 22050, 24000, 44100, 48000 ]
+description = "Sample rate in Hz. Only required for raw audio (`pcm`, `mulaw`, `alaw`). Supported: `8000`, `16000`, `22050`, `24000`, `44100`, `48000`."
+route_mappings = [ "/stt:body.sample_rate", "/stt:query.sample_rate" ]
+
+[[capabilities.parameters]]
+name = "language"
+type = "string"
+required = false
+description = "Language code (e.g. `en`, `fr`, `de`). Biases transcription toward that language and selects the formatting rules for `format=true`. See [Supported Languages](#supported-languages)."
+route_mappings = [ "/stt:body.language", "/stt:query.language" ]
+
+[[capabilities.parameters]]
+name = "format"
+type = "boolean"
+required = false
+description = "When `true`, enables Inverse Text Normalization — converts spoken numbers/currency to written form (e.g. \"one hundred dollars\" → \"$100\"). Requires `language`. See [Supported Languages](#supported-languages) for coverage."
+route_mappings = [ "/stt:body.format", "/stt:query.format" ]
+default = false
+
+[[capabilities.parameters]]
+name = "multichannel"
+type = "boolean"
+required = false
+description = "When `true`, transcribes each audio channel independently. Results returned in the `channels` array."
+route_mappings = [ "/stt:body.multichannel", "/stt:query.multichannel" ]
+default = false
+
+[[capabilities.parameters]]
+name = "channels"
+type = "integer"
+required = false
+description = "Number of audio channels (2–8). Only required for multichannel raw audio. Auto-detected for container formats."
+route_mappings = [ "/stt:body.channels", "/stt:query.channels" ]
+
+[[capabilities.parameters]]
+name = "diarize"
+type = "boolean"
+required = false
+description = "When `true`, enables speaker diarization. Each word in the response includes a `speaker` field (integer) identifying the detected speaker."
+route_mappings = [ "/stt:body.diarize", "/stt:query.diarize" ]
+
+[[capabilities.parameters]]
+name = "keyterm"
+type = "string"
+required = false
+description = "A key term to bias transcription toward (e.g. product names, proper nouns). Repeat the field for multiple terms (e.g. `keyterm=Understand+The+Universe`). Max 100 terms, each up to 50 characters."
+route_mappings = [ "/stt:body.keyterm", "/stt:query.keyterm" ]
+
+[[capabilities.parameters]]
+name = "filler_words"
+type = "boolean"
+required = false
+description = "When `true`, filler words (e.g. \"uh\", \"um\", \"er\") are included in the transcript. When `false` (default), filler words are automatically removed from the transcript text and the `words` array."
+route_mappings = [ "/stt:body.filler_words", "/stt:query.filler_words" ]
+default = false
+
+[[capabilities.parameters]]
+name = "vad_threshold"
+type = "number"
+required = false
+description = "Speech-probability threshold for the voice-activity gate (0.0–1.0). Audio segments scoring below the threshold are treated as non-speech and skipped for transcription. Lower values transcribe quieter or noisier speech (e.g. narrowband telephony) but may produce spurious text for background noise. `0` disables the gate."
+route_mappings = [ "/stt:body.vad_threshold", "/stt:query.vad_threshold" ]
+
+[[capabilities.parameters]]
+name = "encoding"
+type = "string"
+required = false
+enum = [ "pcm", "mulaw", "alaw", "opus" ]
+description = "Audio encoding: `pcm`, `mulaw`, `alaw`, or `opus`. See [Opus Streaming](#opus-streaming)."
+route_mappings = [ "/stt:query.encoding" ]
+default = "pcm"
+
+[[capabilities.parameters]]
+name = "interim_results"
+type = "boolean"
+required = false
+description = "When `true`, emit partial transcripts `is_final=false` every ~500 ms."
+route_mappings = [ "/stt:query.interim_results" ]
+default = false
+
+[[capabilities.parameters]]
+name = "endpointing"
+type = "integer"
+required = false
+min = 0
+max = 5000
+description = "Silence duration (ms) before utterance-final event. Range: 0–5000. `0` = fire on any VAD silence boundary."
+route_mappings = [ "/stt:query.endpointing" ]
+default = 400
+
+[[capabilities.parameters]]
+name = "smart_turn"
+type = "number"
+required = false
+description = "End-of-turn detection threshold (0.0–1.0). When set, enables Smart Turn — an ML model predicts whether the speaker has finished their thought at each silence boundary. See [Smart Turn](#smart-turn)."
+route_mappings = [ "/stt:query.smart_turn" ]
+
+[[capabilities.parameters]]
+name = "smart_turn_timeout"
+type = "integer"
+required = false
+min = 1
+max = 5000
+description = "Maximum silence duration (ms) before forcing `speech_final`, even when the Smart Turn model predicts the speaker hasn't finished. Range: 1–5000. Only applies when `smart_turn` is enabled. See [Smart Turn](#smart-turn)."
+route_mappings = [ "/stt:query.smart_turn_timeout" ]
+
+[[capabilities]]
+kind = "speech_generation"
+
+[[capabilities.parameters]]
+name = "voice_id"
+type = "string"
+required = false
+description = "Voice to use for synthesis. Defaults to `eve`. See [Voices](#voices)."
+route_mappings = [ "/tts:body.voice_id" ]
+
+[[capabilities.parameters]]
+name = "language"
+type = "string"
+required = true
+description = "BCP-47 language code (e.g. `en`, `zh`, `pt-BR`) or `auto` for automatic language detection. See [Supported Languages](#supported-languages)."
+route_mappings = [ "/tts:body.language" ]
+
+[[capabilities.parameters]]
+name = "output_format"
+type = "object"
+required = false
+description = "Output format configuration. Defaults to MP3 at 24 kHz / 128 kbps. See [Output Formats](#output-formats)."
+route_mappings = [ "/tts:body.output_format" ]
+
+[[capabilities.parameters]]
+name = "speed"
+type = "number"
+required = false
+description = "Speech speed multiplier. `1.0` is normal speed. Values below `1.0` slow down speech, values above `1.0` speed it up. Range: `0.7` to `1.5`. Defaults to `1.0`."
+route_mappings = [ "/tts:body.speed" ]
+
+[[capabilities.parameters]]
+name = "optimize_streaming_latency"
+type = "integer"
+required = false
+description = "Latency optimization level for streaming synthesis. `0` (default): No optimization — best audio quality. `1`: Reduced first-chunk size for lower time-to-first-audio, with minor quality tradeoff at chunk boundaries. `2`: Further reduced first-chunk size for lowest time-to-first-audio, with more noticeable quality tradeoff at chunk boundaries."
+route_mappings = [ "/tts:body.optimize_streaming_latency" ]
+
+[[capabilities.parameters]]
+name = "text_normalization"
+type = "boolean"
+required = false
+description = "Enable text normalization before synthesis. When `true`, the model normalizes written-form text (e.g. numbers, abbreviations, symbols) into spoken-form before generating audio. Defaults to `false`."
+route_mappings = [ "/tts:body.text_normalization" ]
+
+[[capabilities.parameters]]
+name = "with_timestamps"
+type = "boolean"
+required = false
+description = "Return character-level timing metadata alongside the audio. When `true`, the response is a JSON envelope containing base64-encoded audio plus per-character start/end times. Adds latency for the post-synthesis alignment pass. Defaults to `false`. See [Character-level timestamps](#character-level-timestamps)."
+route_mappings = [ "/tts:body.with_timestamps" ]
+
+[[capabilities.parameters]]
+name = "replace"
+type = "object"
+required = false
+description = "Map of phrases to spoken substitutions applied before synthesis. Values may be respellings (`{\"Acme Mobile\": \"Acme Mobull\"}`) or [IPA](#phonetic-pronunciations-with-ipa) phonetics (`{\"nginx\": \"/ˈɛndʒɪn ˈɛks/\"}`). See [Pronunciation Replacements](#pronunciation-replacements)."
+route_mappings = [ "/tts:body.replace" ]
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
+path = "/tts"
+
+[[capabilities.routes]]
+protocol = "https"
+method = "POST"
+path = "/tts"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "character"
+unit = "per_1m_characters"
+quantity = 1000000
+value = "15.00"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/model-capabilities/audio/text-to-speech"
+
+[[capabilities.input]]
+name = "text"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "audio"
+streaming = true
+fields = [ "audio", "content_type", "duration", "audio_timestamps.graph_chars", "audio_timestamps.graph_times" ]
+
+[capabilities.output.media]
+codec = [ "mp3", "wav", "pcm", "mulaw", "alaw" ]
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters.allowed_domains[]"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].filters.allowed_domains[]" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters.excluded_domains[]"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].filters.excluded_domains[]" ]
+
+[[capabilities.parameters]]
+name = "tools[].enable_image_understanding"
+type = "boolean"
+required = false
+route_mappings = [ "body.tools[].enable_image_understanding" ]
+
+[[capabilities.parameters]]
+name = "tools[].enable_image_search"
+type = "boolean"
+required = false
+route_mappings = [ "body.tools[].enable_image_search" ]
+
+[[capabilities.parameters]]
+name = "include[]"
+type = "string"
+required = false
+enum = [ "web_search_call.action.sources" ]
+route_mappings = [ "body.include[]" ]
+
+[[capabilities.input]]
+name = "input[].content"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "response.output[].type=web_search_call", "response.output_text", "response.citations[]", "response.output[].action.sources[]" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/web-search"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/web-search"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/tools/web-search"
+
+[[capabilities]]
+kind = "x_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "x_search" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].allowed_x_handles"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].allowed_x_handles" ]
+
+[[capabilities.parameters]]
+name = "tools[].excluded_x_handles"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].excluded_x_handles" ]
+
+[[capabilities.parameters]]
+name = "tools[].from_date"
+type = "string"
+required = false
+route_mappings = [ "body.tools[].from_date" ]
+
+[[capabilities.parameters]]
+name = "tools[].to_date"
+type = "string"
+required = false
+route_mappings = [ "body.tools[].to_date" ]
+
+[[capabilities.parameters]]
+name = "tools[].enable_image_understanding"
+type = "boolean"
+required = false
+route_mappings = [ "body.tools[].enable_image_understanding" ]
+default = false
+
+[[capabilities.parameters]]
+name = "tools[].enable_video_understanding"
+type = "boolean"
+required = false
+route_mappings = [ "body.tools[].enable_video_understanding" ]
+
+[[capabilities.input]]
+name = "input[].content"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "response.output[].type=custom_tool_call", "response.output[].name", "usage.server_side_tool_usage_details.x_search_calls", "usage.server_side_tool_usage_details.x_posts_fetched", "usage.server_side_tool_usage_details.x_users_fetched", "response.output_text", "citations[]" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/x-search"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/x-search"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/tools/x-search"
+
+[[capabilities]]
+kind = "code_execution"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "code_interpreter" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.input]]
+name = "input[].content"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "response.output[].type=code_interpreter_call", "code_interpreter_call.outputs", "response.output_text" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/code-execution"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/code-execution"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/tools/code-execution"
+
+[[capabilities]]
+kind = "file_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "file_search" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].vector_store_ids[]"
+type = "array"
+required = true
+route_mappings = [ "body.tools[].vector_store_ids" ]
+
+[[capabilities.parameters]]
+name = "tools[].max_num_results"
+type = "integer"
+required = false
+route_mappings = [ "body.tools[].max_num_results" ]
+
+[[capabilities.parameters]]
+name = "include[]"
+type = "string"
+required = false
+enum = [ "file_search_call.results" ]
+route_mappings = [ "body.include[]" ]
+
+[[capabilities.input]]
+name = "input[].content"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=file_search_call", "file_search_call.results[]", "response.output_text", "citations[]" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/collections-search"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://docs.x.ai/developers/tools/collections-search"
+
+[capabilities.links]
+documentation = "https://docs.x.ai/developers/tools/collections-search"
+
+[docs]
+overview = "https://docs.x.ai/developers/models"
+pricing = "https://docs.x.ai/developers/pricing"
+api = "https://docs.x.ai/developers/rest-api-reference/inference"
+voice = "https://docs.x.ai/developers/model-capabilities/audio/voice"
+image = "https://docs.x.ai/developers/rest-api-reference/inference/images"
+video = "https://docs.x.ai/developers/rest-api-reference/inference/videos"

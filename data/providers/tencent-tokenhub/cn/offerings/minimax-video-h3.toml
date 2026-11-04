@@ -1,0 +1,32 @@
+id = "minimax-video-h3"
+model_ref = "minimax/minimax-video-h3"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.2"
+
+[[pricing.conditions]]
+field = "usage.input_image_index"
+operator = "gt"
+value = 5

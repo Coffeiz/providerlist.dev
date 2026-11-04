@@ -1,0 +1,24 @@
+id = "stepaudio-3-realtime-preview"
+model_ref = "stepfun/stepaudio-3-realtime-preview"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0"

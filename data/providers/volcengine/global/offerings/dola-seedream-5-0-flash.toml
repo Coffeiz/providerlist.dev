@@ -1,0 +1,22 @@
+id = "dola-seedream-5-0-flash"
+model_ref = "bytedance/dola-seedream-5-0-flash-260915"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.018"

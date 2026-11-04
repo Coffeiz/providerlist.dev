@@ -1,0 +1,11 @@
+id = "image-01-live"
+model_ref = "minimax/image-01-live"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.025"

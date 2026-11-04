@@ -1,0 +1,6 @@
+id = "gemini-3.5-transcribe"
+model_ref = "google/gemini-3-5-transcribe"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"

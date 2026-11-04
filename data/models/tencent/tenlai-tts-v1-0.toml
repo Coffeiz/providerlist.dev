@@ -1,0 +1,6 @@
+name = "Tenlai-TTS-v1"
+type = "speech"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

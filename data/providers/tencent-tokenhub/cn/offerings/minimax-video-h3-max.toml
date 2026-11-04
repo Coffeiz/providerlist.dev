@@ -1,0 +1,14 @@
+id = "minimax-video-h3-max"
+model_ref = "fal/minimax-h3-max"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_1m_tokens"
+value = "10"

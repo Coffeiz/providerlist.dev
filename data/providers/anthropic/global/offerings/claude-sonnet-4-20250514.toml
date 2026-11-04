@@ -1,0 +1,6 @@
+id = "claude-sonnet-4-20250514"
+model_ref = "anthropic/claude-sonnet-4-20250514"
+status = "unknown"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/about-claude/model-deprecations"

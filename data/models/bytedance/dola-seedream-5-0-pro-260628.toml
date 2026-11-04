@@ -1,0 +1,8 @@
+name = "Dola Seedream 5.0 Pro (260628)"
+type = "image"
+release_date = "2026-06"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

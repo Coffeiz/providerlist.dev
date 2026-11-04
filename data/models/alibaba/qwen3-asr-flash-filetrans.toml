@@ -1,0 +1,11 @@
+name = "qwen3-asr-flash-filetrans"
+type = "transcription"
+release_date = "2025-11-17"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

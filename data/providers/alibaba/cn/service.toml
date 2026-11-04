@@ -1,0 +1,220 @@
+website = "https://www.aliyun.com/product/bailian"
+account_requirements = [ "API Key", "Workspace ID" ]
+
+[[endpoints]]
+id = "cn-openai"
+base_url = "https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "华北2（北京）"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-extractor"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-search"
+path = "/responses"
+
+[[endpoints]]
+id = "sg-openai"
+base_url = "https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "新加坡"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-extractor"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-search"
+path = "/responses"
+
+[[endpoints]]
+id = "us-openai"
+base_url = "https://{WorkspaceId}.us-east-1.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "美国（弗吉尼亚）"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-extractor"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/web-search"
+path = "/responses"
+
+[[endpoints]]
+id = "cn-anthropic"
+base_url = "https://{WorkspaceId}.cn-beijing.maas.aliyuncs.com/apps/anthropic"
+api_region = "华北2（北京）"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[endpoints.routes]]
+protocol = "anthropic"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[endpoints]]
+id = "sg-anthropic"
+base_url = "https://{WorkspaceId}.ap-southeast-1.maas.aliyuncs.com/apps/anthropic"
+api_region = "新加坡"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "cn-token-plan-openai"
+base_url = "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1"
+api_region = "华北2（北京）"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[endpoints]]
+id = "cn-token-plan-anthropic"
+base_url = "https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic"
+api_region = "华北2（北京）"
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+description = "在模型请求的 tools 数组中声明联网搜索工具。"
+route_mappings = [ "$.tools[].type" ]
+
+[[capabilities.routes]]
+protocol = "messages"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[capabilities.routes]]
+protocol = "anthropic"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[capabilities.input]]
+name = "input / messages"
+kind = "text"
+required = true
+description = "告诉模型要搜索的内容；Responses API 示例使用 input，其他兼容协议使用各自的消息字段。"
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=web_search_call", "output[].action.query", "output_text" ]
+
+[[capabilities.output]]
+kind = "text"
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search", "web_extractor" ]
+description = "在模型请求的 tools 数组中同时声明联网搜索与网页抓取工具。"
+route_mappings = [ "$.tools[].type" ]
+
+[[capabilities.routes]]
+protocol = "messages"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[capabilities.routes]]
+protocol = "anthropic"
+method = "POST"
+path = "/v1/messages"
+documentation = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+
+[[capabilities.input]]
+name = "input / messages"
+kind = "text"
+required = true
+description = "用自然语言说明要访问和提取的网页；请求输入字段随兼容协议而异。"
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=web_extractor_call", "output[].goal", "output[].output", "output_text" ]
+
+[[capabilities.output]]
+kind = "text"
+
+[docs]
+alibaba-api-compatibility = "https://docs.bailian.console.aliyun.com/zh/model-studio/more-tools"
+alibaba-global-api-base-url = "https://www.alibabacloud.com/help/en/model-studio/base-url"
+alibaba-openai-chat-api = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-chat-completions"
+alibaba-openai-responses-api = "https://www.alibabacloud.com/help/en/model-studio/qwen-api-via-openai-responses"
+alibaba-anthropic-messages-api = "https://www.alibabacloud.com/help/en/model-studio/anthropic-api-messages"
+overview = "https://docs.bailian.console.aliyun.com/zh/model-studio/"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/alibaba"

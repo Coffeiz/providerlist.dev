@@ -1,0 +1,11 @@
+id = "GLM-TTS-Clone"
+model_ref = "zhipu/glm-tts-clone"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_audio"
+unit = "per_request"
+value = "6"

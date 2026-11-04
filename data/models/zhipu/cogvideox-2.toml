@@ -1,0 +1,6 @@
+name = "CogVideoX-2"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

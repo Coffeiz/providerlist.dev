@@ -1,0 +1,16 @@
+name = "DeepSeek R1"
+type = "chat"
+family = "deepseek-thinking"
+release_date = "2025-01-20"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 32768
+
+[capabilities]
+reasoning = true
+tool_calling = true

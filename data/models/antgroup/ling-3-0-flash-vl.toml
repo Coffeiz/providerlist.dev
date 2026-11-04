@@ -1,0 +1,14 @@
+name = "Ling-3.0-flash-VL"
+family = "Ling 3.0"
+type = "chat"
+release_date = "2026-09-09"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+
+[capabilities]
+reasoning = true

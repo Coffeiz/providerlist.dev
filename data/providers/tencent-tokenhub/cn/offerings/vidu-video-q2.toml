@@ -1,0 +1,14 @@
+id = "vidu-video-q2"
+model_ref = "vidu/vidu-q2-video"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_1m_tokens"
+value = "10"

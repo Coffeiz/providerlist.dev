@@ -1,0 +1,17 @@
+name = "o3-pro"
+release_date = "2025-06-10"
+type = "chat"
+family = "o-pro"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 100000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

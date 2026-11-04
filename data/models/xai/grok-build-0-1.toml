@@ -1,0 +1,15 @@
+name = "grok-build-0.1"
+release_date = "2026-04-16"
+type = "chat"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 256000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

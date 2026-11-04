@@ -1,0 +1,30 @@
+id = "qwen3.8-omni-flash-realtime"
+model_ref = "alibaba/qwen3-8-omni-flash-realtime"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-8-omni-flash-realtime"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.5"

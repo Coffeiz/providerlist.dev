@@ -1,0 +1,6 @@
+id = "kimi-latest"
+model_ref = "moonshotai/kimi-latest"
+status = "retired"
+
+[links]
+documentation = "https://platform.kimi.com/docs/models"

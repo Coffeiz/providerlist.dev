@@ -1,0 +1,11 @@
+name = "GLM-4.7-FlashX"
+type = "chat"
+release_date = "2026-01-19"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 128000

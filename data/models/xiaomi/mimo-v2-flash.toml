@@ -1,0 +1,11 @@
+name = "mimo-v2-flash"
+type = "chat"
+release_date = "2025-12-16"
+developer_name = "Xiaomi MiMo"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 256000

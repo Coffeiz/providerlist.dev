@@ -1,0 +1,17 @@
+id = "deepseek-r1-0528"
+model_ref = "deepseek/deepseek-r1-0528"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "16"

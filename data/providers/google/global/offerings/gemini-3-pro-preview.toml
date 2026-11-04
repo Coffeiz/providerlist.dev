@@ -1,0 +1,6 @@
+id = "gemini-3-pro-preview"
+model_ref = "google/gemini-3-pro-preview"
+status = "retired"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models/gemini-3-pro-preview"

@@ -1,0 +1,87 @@
+id = "qwen3.5-omni-plus"
+model_ref = "alibaba/qwen3-5-omni-plus"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 196608
+output = 65536
+rpm = 60
+tpm = 100000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-5-omni-plus"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "40"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "53"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "40"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "10.49"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "62.2"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "82.44"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "62.2"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"

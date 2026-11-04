@@ -1,0 +1,6 @@
+name = "Unisound U2"
+type = "chat"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

@@ -1,0 +1,11 @@
+id = "CogVideoX-3"
+model_ref = "zhipu/cogvideox-3"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "0.2"

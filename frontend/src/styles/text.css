@@ -1,0 +1,16 @@
+/* 全站共享的基础文本工具类。 */
+
+/* ---------- 文本工具 ---------- */
+
+.pl-text-secondary { color: var(--pl-text-secondary); }
+.pl-text-tertiary { color: var(--pl-text-tertiary); }
+.pl-text-xs { font-size: var(--pl-text-xs); }
+.pl-text-sm { font-size: var(--pl-text-sm); }
+.pl-text-lg { font-size: var(--pl-text-md); }
+.pl-text-mono {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-xs);
+  letter-spacing: -0.035em;
+}
+.pl-text-success { color: var(--pl-status-success); }
+.pl-text-price-cache { color: var(--pl-price-cache); }

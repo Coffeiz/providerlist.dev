@@ -1,0 +1,4 @@
+id = "qwen3.5-plus"
+model_ref = "alibaba/qwen3-5-plus"
+status = "unknown"
+pricing = []

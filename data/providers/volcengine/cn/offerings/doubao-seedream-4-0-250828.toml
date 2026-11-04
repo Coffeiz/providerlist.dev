@@ -1,0 +1,19 @@
+id = "doubao-seedream-4-0-250828"
+model_ref = "bytedance/doubao-seedream-4-0-250828"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.20"

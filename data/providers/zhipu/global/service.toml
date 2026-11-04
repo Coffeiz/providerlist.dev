@@ -1,0 +1,396 @@
+website = "https://z.ai/model-api"
+
+[docs]
+overview = "https://docs.z.ai/guides/overview/overview"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/zai"
+pricing = "https://docs.z.ai/guides/overview/pricing"
+api = "https://docs.z.ai/guides/develop/http/introduction"
+api_reference = "https://docs.z.ai/api-reference"
+
+[[endpoints]]
+id = "global-openai"
+base_url = "https://api.z.ai/api/paas/v4"
+api_region = "global"
+documentation = "https://docs.z.ai/guides/develop/http/introduction"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/audio/audio-transcriptions"
+path = "/audio/transcriptions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/llm/chat-completion"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/image/generate-image-async"
+path = "/async/images/generations"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/image/generate-image"
+path = "/images/generations"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/image/get-image-status"
+path = "/async-result/{id}"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/layout-parsing"
+path = "/layout_parsing"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/tokenizer"
+path = "/tokenizer"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/file-upload"
+path = "/files"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/video/generate-video"
+path = "/videos/generations"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "GET"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/video/get-video-status"
+path = "/async-result/{id}"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/web-reader"
+path = "/reader"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/web-search"
+path = "/web_search"
+
+[[endpoints]]
+id = "global-agents"
+base_url = "https://api.z.ai/api"
+api_region = "global"
+documentation = "https://docs.z.ai/api-reference/agents/agent"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/agent"
+path = "/v1/agents"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/get-async-result"
+path = "/v1/agents/async-result"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/agent-conversation"
+path = "/v1/agents/conversation"
+
+[[endpoints]]
+id = "global-anthropic-coding-plan"
+base_url = "https://api.z.ai/api/anthropic"
+api_region = "global"
+documentation = "https://docs.z.ai/devpack/quick-start"
+
+[[endpoints]]
+id = "global-openai-coding-plan"
+base_url = "https://api.z.ai/api/coding/paas/v4"
+api_region = "global"
+documentation = "https://docs.z.ai/devpack/quick-start"
+
+[[endpoints]]
+id = "global-responses-coding-plan"
+base_url = "https://api.z.ai/api/v1"
+api_region = "global"
+documentation = "https://docs.z.ai/devpack/quick-start"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "search_engine"
+type = "string"
+required = true
+enum = [ "search-prime" ]
+default = "search-prime"
+
+[[capabilities.parameters]]
+name = "count"
+type = "integer"
+required = false
+min = 1
+max = 50
+
+[[capabilities.parameters]]
+name = "search_domain_filter"
+type = "string"
+required = false
+
+[[capabilities.parameters]]
+name = "search_recency_filter"
+type = "string"
+required = false
+enum = [ "oneDay", "oneWeek", "oneMonth", "oneYear", "noLimit" ]
+
+[[capabilities.parameters]]
+name = "request_id"
+type = "string"
+required = false
+min = 6
+max = 64
+
+[[capabilities.parameters]]
+name = "user_id"
+type = "string"
+required = false
+min = 6
+max = 128
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/web-search"
+path = "/web_search"
+
+[capabilities.links]
+documentation = "https://docs.z.ai/api-reference/tools/web-search"
+
+[[capabilities.input]]
+name = "search_query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "created", "search_result[].title", "search_result[].content", "search_result[].link", "search_result[].media", "search_result[].icon", "search_result[].refer", "search_result[].publish_date" ]
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = true
+enum = [ "user_data", "agent" ]
+default = "user_data"
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/file-upload"
+path = "/files"
+
+[capabilities.links]
+documentation = "https://docs.z.ai/api-reference/agents/file-upload"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "object", "bytes", "filename", "purpose", "created_at" ]
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.parameters]]
+name = "timeout"
+type = "integer"
+required = false
+min = 1
+default = 20
+
+[[capabilities.parameters]]
+name = "no_cache"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.parameters]]
+name = "return_format"
+type = "string"
+required = false
+enum = [ "markdown", "text" ]
+default = "markdown"
+
+[[capabilities.parameters]]
+name = "retain_images"
+type = "boolean"
+required = false
+default = true
+
+[[capabilities.parameters]]
+name = "no_gfm"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.parameters]]
+name = "keep_img_data_url"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.parameters]]
+name = "with_images_summary"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.parameters]]
+name = "with_links_summary"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/web-reader"
+path = "/reader"
+
+[capabilities.links]
+documentation = "https://docs.z.ai/api-reference/tools/web-reader"
+
+[[capabilities.input]]
+name = "url"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "created", "request_id", "model", "reader_result.content", "reader_result.description", "reader_result.title", "reader_result.url", "reader_result.external", "reader_result.metadata" ]
+
+[[capabilities]]
+kind = "tokenizer"
+
+[[capabilities.parameters]]
+name = "model"
+type = "string"
+required = true
+enum = [ "glm-4.6" ]
+default = "glm-4.6"
+
+[[capabilities.parameters]]
+name = "request_id"
+type = "string"
+required = false
+min = 6
+max = 64
+
+[[capabilities.parameters]]
+name = "user_id"
+type = "string"
+required = false
+min = 6
+max = 128
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/tools/tokenizer"
+path = "/tokenizer"
+
+[capabilities.links]
+documentation = "https://docs.z.ai/api-reference/tools/tokenizer"
+
+[[capabilities.input]]
+name = "messages"
+kind = "structured"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "request_id", "usage.prompt_tokens", "usage.image_tokens", "usage.video_tokens", "usage.total_tokens" ]
+
+[[capabilities]]
+kind = "agent"
+
+[[capabilities.parameters]]
+name = "agent_id"
+type = "string"
+required = true
+enum = [ "general_translation", "vidu_template_agent", "slides_glm_agent" ]
+
+[[capabilities.parameters]]
+name = "stream"
+type = "boolean"
+required = false
+default = false
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/agent"
+path = "/v1/agents"
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/get-async-result"
+path = "/v1/agents/async-result"
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.z.ai/api-reference/agents/agent-conversation"
+path = "/v1/agents/conversation"
+
+[capabilities.links]
+documentation = "https://docs.z.ai/api-reference/agents/agent"
+
+[[capabilities.input]]
+name = "messages"
+kind = "structured"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "agent_id", "status", "choices", "usage", "async_id" ]

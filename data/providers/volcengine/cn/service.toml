@@ -1,0 +1,126 @@
+website = "https://www.volcengine.com/product/ark"
+
+[[endpoints]]
+id = "cn-openai-compatible"
+base_url = "https://ark.cn-beijing.volces.com/api/v3"
+api_region = "中国（北京）"
+documentation = "https://docs.volcengine.com/docs/ark/chat-api?lang=zh"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+documentation = "https://docs.volcengine.com/docs/ark/chat-api?lang=zh"
+callability = "documented_only"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+documentation = "https://docs.volcengine.com/docs/ark/create-model-responses-api?lang=zh"
+callability = "documented_only"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.volcengine.com/docs/ark/web-search?lang=zh"
+path = "/responses"
+
+[[endpoints]]
+id = "cn-anthropic-compatible"
+base_url = "https://ark.cn-beijing.volces.com/api/compatible"
+api_region = "中国（北京）"
+documentation = "https://docs.volcengine.com/docs/ark/messages-api?lang=zh"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+documentation = "https://docs.volcengine.com/docs/ark/messages-api?lang=zh"
+callability = "documented_only"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.volcengine.com/docs/ark/web-search?lang=zh"
+path = "/v1/messages"
+
+[docs]
+overview = "https://docs.volcengine.com/docs/ark/model-list?lang=zh"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "model"
+type = "string"
+required = true
+enum = [ "doubao-seed-2-1-pro-260915" ]
+route_mappings = [ "body.model" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = false
+enum = [ "web_search" ]
+route_mappings = [ "responses.body.tools[].type", "messages.body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].sources"
+type = "array"
+required = false
+route_mappings = [ "responses.body.tools[].sources" ]
+
+[[capabilities.parameters]]
+name = "web_search_options"
+type = "object"
+required = false
+route_mappings = [ "chat-completions.body.web_search_options" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.volcengine.com/docs/ark/web-search?lang=zh"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.volcengine.com/docs/ark/web-search?lang=zh"
+path = "/chat/completions"
+
+[[capabilities.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://docs.volcengine.com/docs/ark/web-search?lang=zh"
+path = "/v1/messages"
+
+[capabilities.links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/web-search"
+
+[[capabilities.input]]
+name = "input"
+kind = "structured"
+required = true
+
+[[capabilities.input]]
+name = "messages"
+kind = "structured"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].encrypted_content", "output[].type=web_search_call", "output[].action.type", "output[].action.query", "output[].action.queries[]", "output[].content[].type=output_text", "output[].content[].text", "output[].content[].annotations[].type=url_citation", "output[].content[].annotations[].title", "output[].content[].annotations[].url", "output[].content[].annotations[].site_name", "output[].content[].annotations[].publish_time", "output[].content[].annotations[].summary", "usage.tool_usage.web_search", "usage.tool_usage_details.web_search.doubao" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "choices[].message.content", "choices[].message.annotations[].type=url_citation", "choices[].message.annotations[].url_citation.title", "choices[].message.annotations[].url_citation.url", "usage.tool_usage.web_search" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "content[].type", "content[].thinking", "content[].signature", "content[].id", "content[].name", "content[].input.query", "content[].tool_use_id", "content[].content[].type", "content[].content[].title", "content[].content[].url", "content[].content[].page_age", "content[].content[].encrypted_content", "content[].text", "usage.server_tool_use.web_search_requests" ]

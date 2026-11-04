@@ -1,0 +1,30 @@
+id = "doubao-seed-character-260628"
+model_ref = "bytedance/doubao-seed-character-260628"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.20"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.017"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.16"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.00"

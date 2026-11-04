@@ -1,0 +1,15 @@
+name = "Muse Spark 1.2 Contributor"
+type = "chat"
+release_date = "2026-08-05"
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

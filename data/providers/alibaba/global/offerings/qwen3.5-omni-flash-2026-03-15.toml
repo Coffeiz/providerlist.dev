@@ -1,0 +1,80 @@
+id = "qwen3.5-omni-flash-2026-03-15"
+model_ref = "alibaba/qwen3-5-omni-flash"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.2"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.2"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.83"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.48"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.83"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"

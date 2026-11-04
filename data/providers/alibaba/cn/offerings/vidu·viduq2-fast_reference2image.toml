@@ -1,0 +1,18 @@
+id = "vidu/viduq2-fast_reference2image"
+model_ref = "vidu/viduq2-fast-reference2image"
+status = "active"
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/viduq2-fast-reference2image"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.28125"

@@ -1,0 +1,27 @@
+id = "wan2.2-t2i-flash"
+model_ref = "alibaba/wan2-2-t2i-flash"
+status = "active"
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan2-2-t2i-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.14"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.183481"

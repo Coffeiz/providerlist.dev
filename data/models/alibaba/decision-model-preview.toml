@@ -1,0 +1,17 @@
+name = "decision-model-preview"
+type = "decision"
+release_date = "2026-09-24"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 65536
+input = 65536
+output = 0
+
+[capabilities]
+tool_calling = false
+structured_output = false

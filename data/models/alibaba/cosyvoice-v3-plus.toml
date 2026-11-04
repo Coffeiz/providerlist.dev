@@ -1,0 +1,11 @@
+name = "cosyvoice-v3-plus"
+type = "speech"
+release_date = "2026-02-10"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

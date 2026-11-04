@@ -1,0 +1,16 @@
+name = "gte-rerank-v2"
+type = "reranking"
+release_date = "2025-03-20"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 30000
+input = 30000
+output = 0
+
+[capabilities]
+tool_calling = false
+structured_output = false

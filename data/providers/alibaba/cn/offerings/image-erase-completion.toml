@@ -1,0 +1,10 @@
+id = "image-erase-completion"
+model_ref = "alibaba/image-erase-completion"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/image-erase-completion"

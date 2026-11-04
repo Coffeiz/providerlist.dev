@@ -1,0 +1,155 @@
+[[plans]]
+id = "global-token-plan-personal-lite"
+name = "Lite"
+credits = 11500
+description = "Personal Edition : Designed for individual developers, it offers four plan tiers: Lite, Essential, Standard, and Pro, with a Credits limit per subscription month. Higher tiers provide larger quotas."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "8"
+sale_price = "6"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-personal-essential"
+name = "Essential"
+credits = 25500
+description = "Personal Edition : Designed for individual developers, it offers four plan tiers: Lite, Essential, Standard, and Pro, with a Credits limit per subscription month. Higher tiers provide larger quotas."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "16"
+sale_price = "10"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-personal-standard"
+name = "Standard"
+credits = 45000
+description = "Personal Edition : Designed for individual developers, it offers four plan tiers: Lite, Essential, Standard, and Pro, with a Credits limit per subscription month. Higher tiers provide larger quotas."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "25"
+sale_price = "18"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-personal-pro"
+name = "Pro"
+credits = 180000
+description = "Personal Edition : Designed for individual developers, it offers four plan tiers: Lite, Essential, Standard, and Pro, with a Credits limit per subscription month. Higher tiers provide larger quotas."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "80"
+sale_price = "68"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-personal-extra-bundle"
+name = "个人共享用量包"
+credits = 20000
+description = "After the monthly quota is used up, you can purchase Extra Bundles for additional capacity, or wait for the quota to reset at the start of the next subscription month. Unused quota within a subscription month does not carry over to the next cycle."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "15"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[plans.allowance]
+max_concurrent_bundles = 5
+
+[[plans]]
+id = "global-token-plan-team-standard-seat"
+name = "Standard seat"
+credits = 25000
+description = "Token Plan is an AI model subscription service offered by Alibaba Cloud Model Studio. It uses Credits as a unified billing unit and supports various AI coding and agent tools. Token Plan offers Personal Edition and Team Edition in two editions, meeting the needs of individual developers to enterprise teams."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "30"
+sale_price = "20"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-team-pro-seat"
+name = "Pro seat"
+credits = 100000
+description = "Token Plan is an AI model subscription service offered by Alibaba Cloud Model Studio. It uses Credits as a unified billing unit and supports various AI coding and agent tools. Token Plan offers Personal Edition and Team Edition in two editions, meeting the needs of individual developers to enterprise teams."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+sale_price = "75"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-team-max-seat"
+name = "Max seat"
+credits = 250000
+description = "Token Plan is an AI model subscription service offered by Alibaba Cloud Model Studio. It uses Credits as a unified billing unit and supports various AI coding and agent tools. Token Plan offers Personal Edition and Team Edition in two editions, meeting the needs of individual developers to enterprise teams."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[[plans]]
+id = "global-token-plan-team-shared-pack"
+name = "团队共享用量包"
+credits = 625000
+description = "After the monthly quota is used up, you can purchase Extra Bundles for additional capacity, or wait for the quota to reset at the start of the next subscription month. Unused quota within a subscription month does not carry over to the next cycle."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "700"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/token-plan-overview"
+
+[plans.allowance]
+validity_months = 1
+
+[[plans]]
+id = "global-coding-plan-pro"
+name = "Coding Plan Pro"
+description = "Coding Plan gives you access to models including Qwen, GLM, Kimi, and MiniMax in popular AI coding tools. For a fixed monthly fee, it offers a cost-effective alternative to pay-as-you-go API billing."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "50"
+
+[plans.links]
+official = "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+
+[plans.allowance]
+requests_5h = 6000
+requests_weekly = 45000
+requests_monthly = 90000

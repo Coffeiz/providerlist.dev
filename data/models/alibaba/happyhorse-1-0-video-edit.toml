@@ -1,0 +1,12 @@
+name = "happyhorse-1.0-video-edit"
+type = "video"
+release_date = "2026-04-26"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

@@ -1,0 +1,17 @@
+name = "DeepSeek-V4.1-Flash-1017"
+type = "chat"
+family = "deepseek-flash"
+release_date = "2026-10-17"
+
+[limits]
+context = 1048576
+output = 393216
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "none", "low", "high", "max" ]
+tool_calling = true
+structured_output = true

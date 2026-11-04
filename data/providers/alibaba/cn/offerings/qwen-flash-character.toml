@@ -1,0 +1,57 @@
+id = "qwen-flash-character"
+model_ref = "alibaba/qwen-flash-character"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 262144
+output = 32768
+rpm = 120
+tpm = 500000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-flash-character"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.375"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.998"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.5"

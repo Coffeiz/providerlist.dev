@@ -1,0 +1,7 @@
+id = "o4-mini-deep-research"
+model_ref = "openai/o4-mini-deep-research"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o4-mini-deep-research"

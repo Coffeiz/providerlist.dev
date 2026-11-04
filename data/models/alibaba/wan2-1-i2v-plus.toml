@@ -1,0 +1,7 @@
+name = "wan2.1-i2v-plus"
+type = "video"
+release_date = "2025-01-20"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

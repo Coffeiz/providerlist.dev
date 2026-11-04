@@ -1,0 +1,4 @@
+id = "hy-image-v3.0"
+model_ref = "tencent/hy-image-v3"
+status = "unknown"
+pricing = []

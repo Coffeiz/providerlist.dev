@@ -1,0 +1,56 @@
+id = "deepseek-flash"
+model_ref = "deepseek/deepseek-flash"
+status = "active"
+
+[links]
+documentation = "https://api-docs.deepseek.com/quick_start/pricing/"
+
+[api_limits]
+context = 1048576
+output = 393216
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.15"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.003"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.6"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "off_peak"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.006"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.2"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "peak"

@@ -1,0 +1,117 @@
+id = "qwen3-omni-flash-realtime-2025-09-15"
+model_ref = "alibaba/qwen3-omni-flash-realtime"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.3"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "18.9"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.3"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.9"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.3"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.816"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "14.605"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "33.54"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "14.605"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.899"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "14.605"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"

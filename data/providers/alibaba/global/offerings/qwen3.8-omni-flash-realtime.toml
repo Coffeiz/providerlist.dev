@@ -1,0 +1,7 @@
+id = "qwen3.8-omni-flash-realtime"
+model_ref = "alibaba/qwen3-8-omni-flash-realtime"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"

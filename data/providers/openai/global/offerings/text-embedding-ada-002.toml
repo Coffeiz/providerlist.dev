@@ -1,0 +1,14 @@
+id = "text-embedding-ada-002"
+model_ref = "openai/text-embedding-ada-002"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"

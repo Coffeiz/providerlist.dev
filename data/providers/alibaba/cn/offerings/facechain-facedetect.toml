@@ -1,0 +1,10 @@
+id = "facechain-facedetect"
+model_ref = "alibaba/facechain-facedetect"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/facechain-facedetect"

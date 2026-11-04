@@ -1,0 +1,16 @@
+name = "qwen3.5-27b"
+type = "chat"
+family = "qwen"
+release_date = "2026-02-23"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+output = 65536
+
+[capabilities]
+reasoning = true
+tool_calling = true

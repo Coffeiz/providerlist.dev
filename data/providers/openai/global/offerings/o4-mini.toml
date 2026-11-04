@@ -1,0 +1,89 @@
+id = "o4-mini"
+model_ref = "openai/o4-mini"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o4-mini"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.40"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.275"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.55"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.20"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.55"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.138"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "fast"

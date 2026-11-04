@@ -1,0 +1,16 @@
+name = "Qwen-Flash-Character-2026-02-26"
+type = "chat"
+release_date = "2026-02-26"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+input = 262144
+output = 32768
+
+[capabilities]
+tool_calling = false
+structured_output = true

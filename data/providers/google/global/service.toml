@@ -1,0 +1,517 @@
+website = "https://aistudio.google.com/"
+account_requirements = [ "Google AI Studio API key or authorized key" ]
+
+[[endpoints]]
+id = "gemini-api"
+base_url = "https://generativelanguage.googleapis.com/v1beta"
+api_region = "Global"
+documentation = "https://ai.google.dev/api?hl=en"
+
+[[endpoints.routes]]
+protocol = "gemini-batch-generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/batch-api?hl=en"
+task_id_pointer = "/name"
+status_path_template = "/batches/{batch_id}"
+cancel_path_template = "/batches/{batch_id}:cancel"
+path = "/models/{model}:batchGenerateContent"
+
+[[endpoints.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+path = "/models/{model}:generateContent"
+
+[[endpoints.routes]]
+protocol = "gemini-file-search"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/api/file-search/file-search-stores"
+path = "/fileSearchStores"
+
+[[endpoints.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+path = "/models/{model}:embedContent"
+
+[[endpoints.routes]]
+protocol = "interactions-api"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/antigravity-agent"
+path = "/interactions"
+
+[[endpoints.routes]]
+protocol = "interactions-api"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/deep-research"
+path = "/interactions"
+
+[[endpoints.routes]]
+protocol = "interactions-api"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/music-generation"
+path = "/interactions"
+
+[[endpoints]]
+id = "gemini-openai-compatible"
+base_url = "https://generativelanguage.googleapis.com/v1beta/openai"
+api_region = "Global"
+documentation = "https://ai.google.dev/gemini-api/docs/openai?hl=en"
+
+[[endpoints.routes]]
+protocol = "openai-chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/openai?hl=en"
+path = "/chat/completions"
+
+[[endpoints]]
+id = "gemini-live-api"
+base_url = "https://generativelanguage.googleapis.com"
+api_region = "Global"
+documentation = "https://ai.google.dev/api/live"
+
+[[endpoints.routes]]
+protocol = "live-api"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/realtime-music-generation"
+path = "/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent"
+
+[[endpoints.routes]]
+protocol = "live-api"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://ai.google.dev/api/live"
+path = "/ws/google.ai.generativelanguage.v1beta.GenerativeService.BidiGenerateContent"
+
+[[capabilities]]
+kind = "batch"
+
+[[capabilities.parameters]]
+name = "model"
+type = "string"
+required = true
+route_mappings = [ "path.batch.model" ]
+
+[[capabilities.parameters]]
+name = "displayName"
+type = "string"
+required = true
+route_mappings = [ "body.batch.displayName" ]
+
+[[capabilities.parameters]]
+name = "inputConfig"
+type = "object"
+required = true
+route_mappings = [ "body.batch.inputConfig" ]
+
+[[capabilities.parameters]]
+name = "inputConfig.requests.requests[]"
+type = "array"
+required = false
+route_mappings = [ "body.batch.inputConfig.requests.requests" ]
+
+[[capabilities.parameters]]
+name = "inputConfig.fileName"
+type = "string"
+required = false
+route_mappings = [ "body.batch.inputConfig.fileName" ]
+
+[[capabilities.parameters]]
+name = "priority"
+type = "integer"
+required = false
+default = 0
+route_mappings = [ "body.batch.priority" ]
+
+[capabilities.execution]
+mode = "async_job"
+documentation = "任务创建后通过 batches.get 轮询；成功结果为内联响应或 responsesFile，失败信息位于 error。"
+supports_cancel = true
+
+[capabilities.execution.status_mapping]
+"metadata.state" = "Google BatchState enum"
+done = "long-running operation completion flag"
+
+[[capabilities.routes]]
+protocol = "gemini-batch-generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/batch-api?hl=en"
+task_id_pointer = "/name"
+status_path_template = "/batches/{batch_id}"
+cancel_path_template = "/batches/{batch_id}:cancel"
+path = "/models/{model}:batchGenerateContent"
+
+[capabilities.links]
+documentation = "https://aistudio.google.com/api-reference/batch-api?hl=en"
+
+[[capabilities.input]]
+name = "model"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "inputConfig"
+kind = "structured"
+required = true
+
+[[capabilities.input]]
+name = "inputConfig.requests.requests[]"
+kind = "structured"
+required = false
+
+[[capabilities.input]]
+name = "inputConfig.fileName"
+kind = "file"
+required = false
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "name", "displayName", "inputConfig", "state", "done", "metadata.state", "batchStats", "output.inlinedResponses", "output.responsesFile", "response.inlinedResponses", "response.responsesFile", "error" ]
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "displayName"
+type = "string"
+required = false
+max = 512
+route_mappings = [ "body.displayName" ]
+
+[[capabilities.parameters]]
+name = "embeddingModel"
+type = "string"
+required = false
+route_mappings = [ "body.embeddingModel" ]
+
+[[capabilities.routes]]
+protocol = "gemini-file-search"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/api/file-search/file-search-stores"
+path = "/fileSearchStores"
+
+[capabilities.links]
+documentation = "https://ai.google.dev/gemini-api/docs/file-search?hl=en"
+
+[[capabilities.input]]
+name = "request_body"
+kind = "structured"
+required = false
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "name", "displayName", "createTime", "updateTime", "activeDocumentsCount", "pendingDocumentsCount", "failedDocumentsCount", "sizeBytes", "embeddingModel" ]
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "contents"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "steps[].type=google_search_call", "steps[].arguments.queries[]", "steps[].type=google_search_result", "steps[].result[].search_suggestions", "steps[].content[].annotations[].type=url_citation", "steps[].content[].annotations[].url", "steps[].content[].annotations[].title", "steps[].content[].annotations[].start_index", "steps[].content[].annotations[].end_index", "candidates[].content.parts[].text", "candidates[].groundingMetadata.searchEntryPoint.renderedContent", "candidates[].groundingMetadata.searchEntryPoint.sdkBlob", "candidates[].groundingMetadata.groundingChunks[].web.uri", "candidates[].groundingMetadata.groundingChunks[].web.title", "candidates[].groundingMetadata.groundingSupports[].segment", "candidates[].groundingMetadata.groundingSupports[].groundingChunkIndices[]", "candidates[].groundingMetadata.groundingSupports[].confidenceScores[]", "candidates[].groundingMetadata.webSearchQueries[]", "candidates[].groundingMetadata.imageSearchQueries[]" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "google_search" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].search_types[]"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].search_types" ]
+
+[[capabilities.parameters]]
+name = "tools[].googleSearch"
+type = "object"
+required = false
+route_mappings = [ "body.tools[].googleSearch" ]
+
+[[capabilities.parameters]]
+name = "tools[].googleSearch.timeRangeFilter.startTime"
+type = "string"
+required = false
+route_mappings = [ "body.tools[].googleSearch.timeRangeFilter.startTime" ]
+
+[[capabilities.parameters]]
+name = "tools[].googleSearch.timeRangeFilter.endTime"
+type = "string"
+required = false
+route_mappings = [ "body.tools[].googleSearch.timeRangeFilter.endTime" ]
+
+[[capabilities.parameters]]
+name = "tools[].googleSearch.searchTypes.webSearch"
+type = "object"
+required = false
+route_mappings = [ "body.tools[].googleSearch.searchTypes.webSearch" ]
+
+[[capabilities.parameters]]
+name = "tools[].googleSearch.searchTypes.imageSearch"
+type = "object"
+required = false
+route_mappings = [ "body.tools[].googleSearch.searchTypes.imageSearch" ]
+
+[[capabilities.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/google-search"
+path = "/models/{model}:generateContent"
+
+[capabilities.links]
+documentation = "https://aistudio.google.com/docs/google-search?generate-content=true&hl=en"
+
+[[capabilities]]
+kind = "google_maps"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+description = "Interactions API prompt asking about places, routes, or local information."
+
+[[capabilities.input]]
+name = "contents"
+kind = "text"
+required = true
+description = "Natural-language question about places, routes, or local information."
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "candidates[].content.parts[].text", "candidates[].groundingMetadata.groundingChunks[].maps.uri", "candidates[].groundingMetadata.groundingChunks[].maps.title", "candidates[].groundingMetadata.groundingChunks[].maps.text", "candidates[].groundingMetadata.groundingChunks[].maps.placeId", "candidates[].groundingMetadata.groundingChunks[].maps.placeAnswerSources", "candidates[].groundingMetadata.googleMapsWidgetContextToken" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "google_maps" ]
+route_mappings = [ "body.tools[].type" ]
+description = "Interactions API tool discriminator."
+
+[[capabilities.parameters]]
+name = "tools[].latitude"
+type = "number"
+required = false
+route_mappings = [ "body.tools[].latitude" ]
+description = "Latitude of the contextual user location, in degrees (Interactions API)."
+
+[[capabilities.parameters]]
+name = "tools[].longitude"
+type = "number"
+required = false
+route_mappings = [ "body.tools[].longitude" ]
+description = "Longitude of the contextual user location, in degrees (Interactions API)."
+
+[[capabilities.parameters]]
+name = "tools[].enable_widget"
+type = "boolean"
+required = false
+route_mappings = [ "body.tools[].enable_widget" ]
+description = "Whether to return a Maps widget context token (Interactions API)."
+
+[[capabilities.parameters]]
+name = "tools[].googleMaps"
+type = "object"
+required = false
+route_mappings = [ "body.tools[].googleMaps" ]
+description = "Enables Google Maps grounding for GenerateContent requests."
+
+[[capabilities.parameters]]
+name = "toolConfig.retrievalConfig.latLng.latitude"
+type = "number"
+required = false
+route_mappings = [ "body.toolConfig.retrievalConfig.latLng.latitude" ]
+description = "Latitude of the contextual user location, in degrees."
+
+[[capabilities.parameters]]
+name = "toolConfig.retrievalConfig.latLng.longitude"
+type = "number"
+required = false
+route_mappings = [ "body.toolConfig.retrievalConfig.latLng.longitude" ]
+description = "Longitude of the contextual user location, in degrees."
+
+[[capabilities.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/google-maps"
+path = "/models/{model}:generateContent"
+
+[capabilities.links]
+documentation = "https://ai.google.dev/gemini-api/docs/google-maps"
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "contents"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "steps[].type=url_context_result", "steps[].url_context_result.url", "steps[].url_context_result.status", "steps[].content[].annotations[].type=url_citation", "steps[].content[].annotations[].url", "steps[].content[].annotations[].title", "steps[].content[].annotations[].start_index", "steps[].content[].annotations[].end_index", "candidates[].content.parts[].text", "candidates[].urlContextMetadata.urlMetadata[].retrievedUrl", "candidates[].urlContextMetadata.urlMetadata[].urlRetrievalStatus" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "url_context" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].urlContext"
+type = "object"
+required = false
+route_mappings = [ "body.tools[].urlContext" ]
+
+[[capabilities.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/url-context"
+path = "/models/{model}:generateContent"
+
+[capabilities.links]
+documentation = "https://aistudio.google.com/docs/url-context?generate-content=true&hl=en"
+
+[[capabilities]]
+kind = "file_search"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "contents"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "tools[].file_search_store_names[]"
+kind = "structured"
+required = true
+
+[[capabilities.input]]
+name = "tools[].fileSearch.fileSearchStoreNames[]"
+kind = "structured"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "steps[].content[].annotations[].type=file_citation", "steps[].content[].annotations[].file_name", "steps[].content[].annotations[].source", "steps[].content[].annotations[].page_number", "steps[].content[].annotations[].media_id", "steps[].content[].annotations[].custom_metadata", "candidates[].content.parts[].text", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.uri", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.title", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.text", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.fileSearchStore", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.customMetadata[].key", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.customMetadata[].stringValue", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.customMetadata[].numericValue", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.customMetadata[].stringListValue.values[]", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.pageNumber", "candidates[].groundingMetadata.groundingChunks[].retrievedContext.mediaId", "candidates[].groundingMetadata.groundingSupports[]" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "file_search" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].file_search_store_names"
+type = "array"
+required = true
+route_mappings = [ "body.tools[].file_search_store_names" ]
+
+[[capabilities.parameters]]
+name = "tools[].fileSearch.fileSearchStoreNames[]"
+type = "array"
+required = true
+route_mappings = [ "body.tools[].fileSearch.fileSearchStoreNames" ]
+
+[[capabilities.parameters]]
+name = "tools[].fileSearch.topK"
+type = "integer"
+required = false
+route_mappings = [ "body.tools[].fileSearch.topK" ]
+
+[[capabilities.parameters]]
+name = "tools[].fileSearch.metadataFilter"
+type = "string"
+required = false
+route_mappings = [ "body.tools[].fileSearch.metadataFilter" ]
+
+[[capabilities.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/file-search"
+path = "/models/{model}:generateContent"
+
+[capabilities.links]
+documentation = "https://aistudio.google.com/docs/file-search?hl=en"
+
+[[capabilities]]
+kind = "code_execution"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "code_execution" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = false
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "steps[].type=model_output", "steps[].content[].text", "steps[].type=code_execution_call", "steps[].arguments.code", "steps[].type=code_execution_result", "steps[].result" ]
+
+[[capabilities.output]]
+kind = "image"
+
+[capabilities.output.artifact]
+kind = "inline"
+
+[[capabilities.routes]]
+protocol = "generate-content"
+method = "POST"
+callability = "documented_only"
+documentation = "https://ai.google.dev/gemini-api/docs/code-execution"
+path = "/models/{model}:generateContent"
+
+[capabilities.links]
+documentation = "https://aistudio.google.com/docs/code-execution"
+
+[docs]
+overview = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+api = "https://ai.google.dev/api?hl=en"
+pricing = "https://ai.google.dev/gemini-api/docs/pricing?hl=en"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/google"

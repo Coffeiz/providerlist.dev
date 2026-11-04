@@ -1,0 +1,6 @@
+name = "WAND-Vega-Image-1.0-Flash"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

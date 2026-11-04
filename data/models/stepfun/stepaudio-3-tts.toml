@@ -1,0 +1,8 @@
+name = "StepAudio 3 TTS"
+family = "StepAudio 3"
+type = "speech"
+release_date = "2026-09-15"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

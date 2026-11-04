@@ -1,0 +1,6 @@
+name = "Hy-World-2.1-panorama"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

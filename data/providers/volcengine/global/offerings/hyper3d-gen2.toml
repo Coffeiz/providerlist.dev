@@ -1,0 +1,14 @@
+id = "hyper3d-gen2"
+model_ref = "hyper3d/hyper3d-gen2"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "0.399"

@@ -1,0 +1,83 @@
+id = "MiniMax-Hailuo-02"
+model_ref = "minimax/minimax-hailuo-02"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.28"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "768P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 6
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.56"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "768P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 10
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.49"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 6
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.10"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "512P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 6
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.15"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "512P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 10

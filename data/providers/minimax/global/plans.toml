@@ -1,0 +1,59 @@
+[[plans]]
+id = "global-m-plan-go"
+name = "Go"
+ratio = "1"
+description = "Getting started with simple research, light writing, or small code changes."
+currency = "USD"
+
+[plans.links]
+official = "https://www.minimax.io/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "22"
+sale_price = "11"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "264"
+sale_price = "220"
+
+[[plans]]
+id = "global-m-plan-explore"
+name = "Explore"
+ratio = "3"
+description = "Daily use for coding, writing, organizing information, and multi-turn tasks."
+currency = "USD"
+
+[plans.links]
+official = "https://www.minimax.io/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "55"
+sale_price = "27.5"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "648"
+sale_price = "550"
+
+[[plans]]
+id = "global-m-plan-build"
+name = "Build"
+ratio = "7.5"
+description = "Frequent use for long-context work, complex coding tasks, or extensive multimodal creation."
+currency = "USD"
+
+[plans.links]
+official = "https://www.minimax.io/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "132"
+sale_price = "66"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1560"
+sale_price = "1320"

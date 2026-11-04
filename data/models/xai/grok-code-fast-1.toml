@@ -1,0 +1,9 @@
+name = "grok-code-fast-1"
+type = "chat"
+
+[limits]
+output = 10000
+
+[capabilities]
+reasoning = true
+tool_calling = true

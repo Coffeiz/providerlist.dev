@@ -1,0 +1,11 @@
+name = "fun-asr"
+type = "transcription"
+release_date = "2025-09-24"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

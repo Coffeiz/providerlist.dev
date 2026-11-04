@@ -1,0 +1,17 @@
+name = "Gemini Deep Research Max"
+release_date = "2026-04-21"
+type = "chat"
+family = "gemini-pro"
+
+[modalities]
+input = [ "text", "image", "file", "audio", "video" ]
+output = [ "text", "image" ]
+
+[limits]
+input = 1048576
+output = 65536
+context = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true

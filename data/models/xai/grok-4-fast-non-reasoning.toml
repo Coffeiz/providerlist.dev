@@ -1,0 +1,10 @@
+name = "grok-4-fast-non-reasoning"
+type = "chat"
+
+[limits]
+context = 2000000
+output = 2000000
+
+[capabilities]
+reasoning = false
+tool_calling = true

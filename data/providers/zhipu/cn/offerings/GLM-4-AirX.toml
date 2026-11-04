@@ -1,0 +1,17 @@
+id = "GLM-4-AirX"
+model_ref = "zhipu/glm-4-airx"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "cache_read" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

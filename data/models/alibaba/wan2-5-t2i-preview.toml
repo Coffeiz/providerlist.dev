@@ -1,0 +1,7 @@
+name = "wan2.5-t2i-preview"
+type = "image"
+release_date = "2025-09-19"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]

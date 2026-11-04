@@ -1,0 +1,11 @@
+id = "asr-1.0"
+model_ref = "minimax/asr-1-0"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_audio_hour"
+unit = "per_input_audio_hour"
+value = "2.50"

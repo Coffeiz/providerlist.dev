@@ -1,0 +1,160 @@
+id = "gpt-5.4"
+model_ref = "openai/gpt-5-4"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "22.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "7.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.13"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "11.25"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "7.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.13"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "11.25"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "long"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "short"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "fast"

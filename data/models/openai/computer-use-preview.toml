@@ -1,0 +1,11 @@
+name = "computer-use-preview"
+type = "chat"
+release_date = "2025-03-11"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 8192
+output = 1024

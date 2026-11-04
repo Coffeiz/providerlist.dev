@@ -1,0 +1,25 @@
+id = "GLM-4-Long"
+model_ref = "zhipu/glm-4-long"
+status = "active"
+
+[api_limits]
+context = 4000
+output = 4000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.5"

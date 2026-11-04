@@ -1,0 +1,11 @@
+id = "text-embedding-v1"
+model_ref = "alibaba/text-embedding-v1"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1800
+tpm = 1200000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/text-embedding-v1"

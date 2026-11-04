@@ -1,0 +1,8 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'pipeline'
+  - 'frontend'
+  - 'sdk/*'
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,116 @@
+[[plans]]
+id = "cn-volcengine-coding-lite"
+name = "Coding Plan Lite（个人版）"
+description = "方舟 Coding Plan 是为开发者量身定制的订阅服务，助力高效编码开发。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "40"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "120"
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/coding-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
+
+[[plans]]
+id = "cn-volcengine-coding-pro"
+name = "Coding Plan Pro（个人版）"
+ratio = "5"
+description = "方舟 Coding Plan 是为开发者量身定制的订阅服务，助力高效编码开发。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "600"
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/coding-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
+
+[[plans]]
+id = "cn-volcengine-agent-small"
+name = "Agent Plan Small（个人版）"
+credits = 20000
+description = "方舟 Agent Plan 是面向个人用户推出的订阅式大模型服务套餐包，新增支持全模态模型及专属 Harness，采用精细化积分计费模式，助力开启 Agent 场景的全新体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "40"
+
+[plans.allowance]
+credits_weekly = 7000
+credits_5h = 2000
+credits_daily = 10000
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/agent-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
+
+[[plans]]
+id = "cn-volcengine-agent-medium"
+name = "Agent Plan Medium（个人版）"
+credits = 100000
+description = "方舟 Agent Plan 是面向个人用户推出的订阅式大模型服务套餐包，新增支持全模态模型及专属 Harness，采用精细化积分计费模式，助力开启 Agent 场景的全新体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.allowance]
+credits_weekly = 35000
+credits_5h = 10000
+credits_daily = 50000
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/agent-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
+
+[[plans]]
+id = "cn-volcengine-agent-large"
+name = "Agent Plan Large（个人版）"
+credits = 250000
+description = "方舟 Agent Plan 是面向个人用户推出的订阅式大模型服务套餐包，新增支持全模态模型及专属 Harness，采用精细化积分计费模式，助力开启 Agent 场景的全新体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "500"
+
+[plans.allowance]
+credits_weekly = 87500
+credits_5h = 25000
+credits_daily = 125000
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/agent-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"
+
+[[plans]]
+id = "cn-volcengine-agent-max"
+name = "Agent Plan Max（个人版）"
+credits = 500000
+description = "方舟 Agent Plan 是面向个人用户推出的订阅式大模型服务套餐包，新增支持全模态模型及专属 Harness，采用精细化积分计费模式，助力开启 Agent 场景的全新体验。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "1000"
+
+[plans.allowance]
+credits_weekly = 175000
+credits_5h = 50000
+credits_daily = 250000
+
+[plans.links]
+overview = "https://docs.volcengine.com/docs/ark/agent-plan-personal-plan-overview?lang=zh"
+pricing = "https://docs.volcengine.com/docs/ark/model-pricing?lang=zh"

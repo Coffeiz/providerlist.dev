@@ -1,0 +1,11 @@
+id = "wanx-x-painting"
+model_ref = "alibaba/wanx-x-painting"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx-x-painting"

@@ -1,0 +1,5 @@
+id = "xiaomi"
+name = "Xiaomi MiMo"
+aliases = [ "Xiaomi MiMo", "MiMo" ]
+kind = "first_party"
+logo = "/logos/providers/xiaomi.svg"

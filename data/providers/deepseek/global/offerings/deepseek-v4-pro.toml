@@ -1,0 +1,56 @@
+id = "deepseek-v4-pro"
+model_ref = "deepseek/deepseek-v4-pro"
+status = "active"
+
+[links]
+documentation = "https://api-docs.deepseek.com/quick_start/pricing/"
+
+[api_limits]
+context = 1048576
+output = 393216
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.66"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.022"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.98"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "off_peak"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.32"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.044"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.96"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "peak"

@@ -1,0 +1,7 @@
+name = "Kling IMAGE 3.0 Omni"
+type = "image"
+release_date = "2026-02-05"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

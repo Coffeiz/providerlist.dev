@@ -1,0 +1,14 @@
+id = "gpt-transcribe"
+model_ref = "openai/gpt-transcribe"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio_minute"
+unit = "per_minute"
+value = "0.0045"

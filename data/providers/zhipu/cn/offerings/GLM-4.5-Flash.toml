@@ -1,0 +1,7 @@
+id = "GLM-4.5-Flash"
+model_ref = "zhipu/glm-4-5-flash"
+status = "retired"
+
+[api_limits]
+context = 96000
+output = 96000

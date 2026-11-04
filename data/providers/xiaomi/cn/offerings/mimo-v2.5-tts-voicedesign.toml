@@ -1,0 +1,14 @@
+id = "mimo-v2.5-tts-voicedesign"
+model_ref = "xiaomi/mimo-v2-5-tts-voicedesign"
+status = "active"
+
+[links]
+documentation = "https://mimo.mi.com/docs/zh-CN/api/audio/tts"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0"

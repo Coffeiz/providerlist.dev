@@ -1,0 +1,45 @@
+id = "glm-5"
+model_ref = "zhipu/glm-5"
+status = "active"
+
+[api_limits]
+context = 202752
+input = 169984
+output = 16384
+rpm = 500
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/glm-9"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "18"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=198000"
+unit = "per_1m_tokens"
+value = "6"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=198000"
+unit = "per_1m_tokens"
+value = "22"

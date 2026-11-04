@@ -1,0 +1,10 @@
+id = "wan2.2-i2v-plus"
+model_ref = "alibaba/wan2-2-i2v-plus"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan2-2-i2v-plus"

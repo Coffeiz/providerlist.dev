@@ -1,0 +1,16 @@
+id = "qwen3.7-text-embedding"
+model_ref = "alibaba/qwen3-7-text-embedding"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.07"

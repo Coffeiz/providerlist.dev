@@ -1,0 +1,7 @@
+name = "Qwen-VL-OCR-2024-10-28"
+type = "chat"
+release_date = "2024-10-28"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]

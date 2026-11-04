@@ -1,0 +1,14 @@
+id = "stepaudio-3-realtime-preview"
+model_ref = "stepfun/stepaudio-3-realtime-preview"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0"

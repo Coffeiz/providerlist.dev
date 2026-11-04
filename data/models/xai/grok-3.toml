@@ -1,0 +1,9 @@
+name = "grok-3"
+type = "chat"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000

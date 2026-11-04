@@ -1,0 +1,7 @@
+name = "StepAudio 2 ASR Pro"
+family = "StepAudio 2"
+type = "transcription"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

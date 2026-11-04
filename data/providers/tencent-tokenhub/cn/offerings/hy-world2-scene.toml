@@ -1,0 +1,14 @@
+id = "hy-world2-scene"
+model_ref = "tencent/hy-world2-scene"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

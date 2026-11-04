@@ -1,0 +1,6 @@
+id = "lyria-realtime-exp"
+model_ref = "google/lyria-realtime-exp"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/realtime-music-generation"

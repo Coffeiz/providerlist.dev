@@ -1,0 +1,6 @@
+name = "music-cover"
+type = "music"
+
+[modalities]
+input = [ "audio", "text" ]
+output = [ "audio" ]

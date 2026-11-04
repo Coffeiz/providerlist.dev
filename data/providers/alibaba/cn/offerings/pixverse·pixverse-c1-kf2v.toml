@@ -1,0 +1,10 @@
+id = "pixverse/pixverse-c1-kf2v"
+model_ref = "pixverse/pixverse-c1-kf2v"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/pixverse-c1-kf2v"

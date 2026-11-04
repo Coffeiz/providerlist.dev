@@ -1,0 +1,8 @@
+name = "Ling-2.6-1T"
+family = "Ling 2.6"
+type = "chat"
+release_date = "2026-04-29"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

@@ -1,0 +1,6 @@
+name = "Mureka-9"
+type = "music"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "audio" ]

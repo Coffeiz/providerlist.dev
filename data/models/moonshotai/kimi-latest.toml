@@ -1,0 +1,15 @@
+name = "kimi-latest (dynamic alias)"
+type = "chat"
+family = "Kimi Latest"
+release_date = "2025-02-17"
+
+[limits]
+context = 131072
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = true
+structured_output = true

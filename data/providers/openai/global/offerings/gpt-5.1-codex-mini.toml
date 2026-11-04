@@ -1,0 +1,7 @@
+id = "gpt-5.1-codex-mini"
+model_ref = "openai/gpt5-1-codex-mini"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-5.1-codex-mini"

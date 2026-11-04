@@ -1,0 +1,54 @@
+id = "hitem3d-2-0"
+model_ref = "hitem3d/hitem3d-2-0"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "0.8"
+
+[[pricing.conditions]]
+field = "request.output_mode"
+value = "standard_white"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "1.4"
+
+[[pricing.conditions]]
+field = "request.output_mode"
+value = "standard_textured"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "1.2"
+
+[[pricing.conditions]]
+field = "request.output_mode"
+value = "high_precision_white"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "1.8"
+
+[[pricing.conditions]]
+field = "request.output_mode"
+value = "high_precision_textured"

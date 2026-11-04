@@ -1,0 +1,11 @@
+name = "GLM-5.3-FlashX-Legal"
+type = "chat"
+release_date = "2026-10-12"
+
+[limits]
+context = 1000000
+output = 128000
+
+[modalities]
+input = [ "text", "image", "video", "file" ]
+output = [ "text" ]

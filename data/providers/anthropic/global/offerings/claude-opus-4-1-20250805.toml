@@ -1,0 +1,6 @@
+id = "claude-opus-4-1-20250805"
+model_ref = "anthropic/claude-opus-4-1-20250805"
+status = "unknown"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/about-claude/model-deprecations"

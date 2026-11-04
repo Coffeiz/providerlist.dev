@@ -1,0 +1,12 @@
+name = "Qwen-Math-Plus-2024-09-19"
+type = "chat"
+release_date = "2024-09-19"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 4096
+input = 3072
+output = 3072

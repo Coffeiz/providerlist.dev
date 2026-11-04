@@ -1,0 +1,74 @@
+id = "doubao-seedream-5-0-pro-260628"
+model_ref = "bytedance/seedream-5-0-pro"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.30"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "single_image"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "lte"
+value = "2610000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.60"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "single_image"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "gt"
+value = "2610000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.15"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "layer_split"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "lte"
+value = "2610000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.30"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "layer_split"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "gt"
+value = "2610000"

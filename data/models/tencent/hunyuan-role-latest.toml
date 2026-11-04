@@ -1,0 +1,7 @@
+name = "Hunyuan-role-latest"
+type = "chat"
+release_date = "2024-07-04"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

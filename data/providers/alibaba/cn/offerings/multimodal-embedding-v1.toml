@@ -1,0 +1,14 @@
+id = "multimodal-embedding-v1"
+model_ref = "alibaba/multimodal-embedding-v1"
+status = "unknown"
+pricing = []
+
+[api_limits]
+context = 0
+input = 512
+output = 0
+rpm = 120
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/multimodal-embedding-v1"

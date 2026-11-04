@@ -1,0 +1,18 @@
+id = "kling/kling-v3-image-generation"
+model_ref = "kling/kling-v3-image-generation"
+status = "active"
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/kling-v3-image-generation"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.2"

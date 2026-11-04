@@ -1,0 +1,97 @@
+id = "grok-build-0.1"
+model_ref = "xai/grok-build-0-1"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.40"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.4"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"

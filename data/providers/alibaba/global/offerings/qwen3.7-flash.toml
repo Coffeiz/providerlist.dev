@@ -1,0 +1,360 @@
+id = "qwen3.7-flash"
+model_ref = "alibaba/qwen3-7-flash"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.030"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.130"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.100"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.400"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.200"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.800"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.028"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.110"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.083"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.330"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.165"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.660"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.028"
+context = ">0 & <=32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.110"
+context = ">0 & <=32000"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.083"
+context = ">32000 & <=256000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.330"
+context = ">32000 & <=256000"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.165"
+context = ">256000 & <=1000000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.660"
+context = ">256000 & <=1000000"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.028"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.110"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.083"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.330"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.165"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.660"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.028"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.110"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.083"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.330"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.165"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.660"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "美国"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.030"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.130"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "美国"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.100"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.400"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "美国"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.200"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.800"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.028"
+
+[[pricing.rates]]
+metric = "output"
+context = ">0 & <=32000"
+unit = "per_1m_tokens"
+value = "0.110"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.083"
+
+[[pricing.rates]]
+metric = "output"
+context = ">32000 & <=256000"
+unit = "per_1m_tokens"
+value = "0.330"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.165"
+
+[[pricing.rates]]
+metric = "output"
+context = ">256000 & <=1000000"
+unit = "per_1m_tokens"
+value = "0.660"

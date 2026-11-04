@@ -1,0 +1,61 @@
+id = "qwen-mt-uni"
+model_ref = "alibaba/qwen-mt-uni"
+status = "active"
+
+[api_limits]
+rpm = 162
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-mt-uni"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "65"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "20"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "document"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "32"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "400"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"

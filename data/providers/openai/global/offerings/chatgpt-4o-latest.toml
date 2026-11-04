@@ -1,0 +1,7 @@
+id = "chatgpt-4o-latest"
+model_ref = "openai/chatgpt-4o-latest"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/chatgpt-4o-latest"

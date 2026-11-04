@@ -1,0 +1,12 @@
+name = "Kinfra-VL-Embedding-8b"
+type = "embedding"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "embedding" ]
+
+[limits]
+context = 32768
+
+[output_dimensions]
+supported = [ 4096 ]

@@ -1,0 +1,6 @@
+id = "grok-voice-transcribe-1.0"
+model_ref = "xai/grok-voice-transcribe-1-0"
+status = "retired"
+
+[links]
+documentation = "https://docs.x.ai/developers/release-notes"

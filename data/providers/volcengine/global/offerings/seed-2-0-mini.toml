@@ -1,0 +1,160 @@
+id = "seed-2-0-mini"
+model_ref = "bytedance/doubao-seed-2-0-mini-260215"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.02"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.0083"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.40"
+context = "<=128000"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.20"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.04"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.0083"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.80"
+context = ">128000"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.05"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.02"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.20"
+context = "<=128000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.04"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.40"
+context = ">128000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.05"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.02"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.20"
+context = "<=128000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.04"
+context = ">128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.40"
+context = ">128000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

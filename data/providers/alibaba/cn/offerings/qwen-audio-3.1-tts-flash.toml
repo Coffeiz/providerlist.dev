@@ -1,0 +1,37 @@
+id = "qwen-audio-3.1-tts-flash"
+model_ref = "alibaba/qwen-audio-3-1-tts-flash"
+status = "active"
+
+[api_limits]
+rpm = 180
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-audio-3-1-tts-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.677"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "13.636"

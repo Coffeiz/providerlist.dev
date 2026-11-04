@@ -1,0 +1,12 @@
+name = "StepAudio 3 Realtime"
+family = "StepAudio 3"
+type = "realtime"
+release_date = "2026-09-15"
+
+[modalities]
+input = [ "audio" ]
+output = [ "audio" ]
+
+[capabilities]
+reasoning = [ "low", "medium", "high" ]
+tool_calling = true

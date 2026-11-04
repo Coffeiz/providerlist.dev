@@ -1,0 +1,11 @@
+name = "qwen-mt-image"
+type = "image"
+release_date = "2025-08-22"
+
+[modalities]
+input = [ "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

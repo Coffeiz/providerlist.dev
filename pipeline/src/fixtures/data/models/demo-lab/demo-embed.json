@@ -1,0 +1,24 @@
+{
+  "model": {
+    "id": "demo-lab/demo-embed",
+    "developer_id": "demo-lab",
+    "developer_name": "演示模型实验室",
+    "name": "Demo Embed",
+    "type": "embedding",
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "embedding"
+      ]
+    },
+    "output_dimensions": {
+      "supported": [
+        768,
+        1024
+      ],
+      "default": 1024
+    }
+  }
+}

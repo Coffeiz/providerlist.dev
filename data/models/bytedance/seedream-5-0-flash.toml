@@ -1,0 +1,9 @@
+name = "Seedream 5.0 Flash"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "1K", "1.5K", "2K" ]

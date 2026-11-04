@@ -1,0 +1,7 @@
+name = "Hy ASR 3.0 Preview"
+type = "transcription"
+release_date = "2026-08-04"
+
+[modalities]
+input = [ "audio", "video" ]
+output = [ "text" ]

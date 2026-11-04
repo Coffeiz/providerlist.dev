@@ -1,0 +1,37 @@
+id = "gpt-audio"
+model_ref = "openai/gpt-audio"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "32.00"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "64.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

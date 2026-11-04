@@ -1,0 +1,7 @@
+id = "babbage-002"
+model_ref = "openai/babbage-002"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/babbage-002"

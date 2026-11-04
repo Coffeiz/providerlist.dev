@@ -1,0 +1,10 @@
+name = "vidu/vidu-image-lite_reference2image"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

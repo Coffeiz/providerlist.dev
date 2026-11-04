@@ -1,0 +1,55 @@
+id = "deepseek-v4-pro-0813"
+model_ref = "deepseek/deepseek-v4-pro"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 384000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "13.5"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.15"
+
+[[pricing.conditions]]
+field = "time_period"
+value = "off_peak"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "9"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.3"
+
+[[pricing.conditions]]
+field = "time_period"
+value = "peak"

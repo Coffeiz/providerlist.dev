@@ -1,0 +1,10 @@
+id = "pixverse/pixverse-v6-t2v"
+model_ref = "pixverse/pixverse-v6-t2v"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/pixverse-v6-t2v"

@@ -1,0 +1,27 @@
+id = "kimi/kimi-k2.6"
+model_ref = "moonshotai/kimi-k2-6"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 262144
+output = 262144
+rpm = 500
+tpm = 3000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/kimi-k2-6-by-moonshot"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27"

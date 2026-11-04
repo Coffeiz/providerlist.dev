@@ -1,0 +1,101 @@
+id = "vanchin/deepseek-v4.1-flash"
+model_ref = "deepseek/deepseek-v4-1-flash"
+status = "active"
+
+[api_limits]
+context = 1048576
+input = 1048576
+output = 393216
+rpm = 30
+tpm = 600000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/deepseek-v4-1-flash-by-vanchin"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.094"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.75"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"

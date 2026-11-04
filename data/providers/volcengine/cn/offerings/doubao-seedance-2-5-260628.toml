@@ -1,0 +1,80 @@
+id = "doubao-seedance-2-5-260628"
+model_ref = "bytedance/doubao-seedance-2-5-260628"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "70.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "42.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "77.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "46.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true

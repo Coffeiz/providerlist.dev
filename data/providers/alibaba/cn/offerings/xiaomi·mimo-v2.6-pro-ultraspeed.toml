@@ -1,0 +1,27 @@
+id = "xiaomi/mimo-v2.6-pro-ultraspeed"
+model_ref = "xiaomi/mimo-v2-6-pro-ultraspeed"
+status = "active"
+
+[api_limits]
+context = 1048576
+input = 1048576
+output = 131072
+rpm = 100
+tpm = 5000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/mimo-v2-6-pro-ultraspeed"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "30"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "60"

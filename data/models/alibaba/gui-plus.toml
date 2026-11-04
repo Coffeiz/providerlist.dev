@@ -1,0 +1,17 @@
+name = "gui-plus"
+type = "computer_use"
+release_date = "2025-11-12"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 256000
+input = 253952
+output = 32768
+
+[capabilities]
+tool_calling = false
+structured_output = false

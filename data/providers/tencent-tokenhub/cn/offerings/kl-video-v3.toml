@@ -1,0 +1,4 @@
+id = "kl-video-v3"
+model_ref = "kling/kl-video-v3"
+status = "unknown"
+pricing = []

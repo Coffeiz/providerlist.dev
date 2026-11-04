@@ -1,0 +1,81 @@
+id = "qwen-image-3.0-pro"
+model_ref = "alibaba/qwen-image-3-0-pro"
+status = "active"
+
+[api_limits]
+rpm = 5
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-image-3-0-pro"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.25"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.25"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.25"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.03438"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.068761"

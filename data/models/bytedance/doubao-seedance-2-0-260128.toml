@@ -1,0 +1,14 @@
+name = "Doubao Seedance 2.0 (260128)"
+type = "video"
+release_date = "2026-02-12"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video", "audio" ]
+
+[specifications]
+video_output_resolutions = [ "480p", "720p", "1080p", "4K" ]
+
+[specifications.video_duration_seconds]
+min = 4
+max = 15

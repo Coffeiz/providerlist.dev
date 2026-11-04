@@ -1,0 +1,4 @@
+id = "happyhorse-1.1-r2v"
+model_ref = "alibaba/happyhorse-1-1-r2v"
+status = "active"
+pricing = []

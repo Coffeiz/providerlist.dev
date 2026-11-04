@@ -1,0 +1,72 @@
+id = "kimi-k2.5"
+model_ref = "moonshotai/kimi-k2-5"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 229376
+output = 16384
+rpm = 500
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/kimi-k2-5"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"

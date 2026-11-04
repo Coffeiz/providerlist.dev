@@ -1,0 +1,16 @@
+name = "GLM-5.2-Fast-Preview"
+type = "chat"
+developer_name = "智谱 AI"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+output = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

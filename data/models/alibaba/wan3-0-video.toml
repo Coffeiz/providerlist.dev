@@ -1,0 +1,7 @@
+name = "wan3.0-video"
+type = "video"
+release_date = "2026-08-06"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video" ]

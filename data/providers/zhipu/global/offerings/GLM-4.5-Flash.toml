@@ -1,0 +1,21 @@
+id = "GLM-4.5-Flash"
+model_ref = "zhipu/glm-4-5-flash"
+status = "retired"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0"

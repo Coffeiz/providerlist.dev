@@ -1,0 +1,7 @@
+name = "Sambert语音合成"
+type = "speech"
+release_date = "2025-03-18"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

@@ -1,0 +1,32 @@
+# Save one file per Provider model ID under <market>/offerings/.
+# The filename is derived from id; replace '/' with '·' in the filename only.
+id = "example-chat"
+# Link only when the canonical Model identity is confirmed.
+model_ref = "example-ai/example-chat"
+status = "active" # active, restricted, deprecated, retired, or unknown
+
+[links]
+# documentation = "https://example.com/docs/models/example-chat"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.00"
+
+# Optional price-group conditions and rate fields:
+# deployment = "international"
+# region = "Singapore"
+# context = "<=256000"
+# ttl = "5min"
+# list_value = "5.00"
+# [[pricing.conditions]]
+# field = "request.mode"
+# value = "batch"

@@ -1,0 +1,18 @@
+id = "cosyvoice-v2"
+model_ref = "alibaba/cosyvoice-v2"
+status = "active"
+
+[api_limits]
+rpm = 180
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/cosyvoice-v2"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "2"

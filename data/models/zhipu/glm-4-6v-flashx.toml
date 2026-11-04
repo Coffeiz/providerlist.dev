@@ -1,0 +1,7 @@
+name = "GLM-4.6V-FlashX"
+type = "chat"
+release_date = "2025-12-08"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]

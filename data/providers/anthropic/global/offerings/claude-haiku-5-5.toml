@@ -1,0 +1,76 @@
+id = "claude-haiku-5-5"
+model_ref = "anthropic/claude-haiku-5-5"
+status = "active"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+context = "<=100000"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "0.125"
+ttl = "5min"
+context = "<=100000"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "0.20"
+ttl = "1h"
+context = "<=100000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.01"
+context = "<=100000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.50"
+context = "<=100000"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.50"
+context = ">100000"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "0.625"
+ttl = "5min"
+context = ">100000"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "1"
+ttl = "1h"
+context = ">100000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.05"
+context = ">100000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.50"
+context = ">100000"

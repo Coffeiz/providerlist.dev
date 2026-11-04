@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-upscale"
+type = "video"
+release_date = "2026-06-16"
+
+[modalities]
+input = [ "video" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

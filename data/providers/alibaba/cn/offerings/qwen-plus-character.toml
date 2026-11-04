@@ -1,0 +1,87 @@
+id = "qwen-plus-character"
+model_ref = "alibaba/qwen-plus-character"
+status = "active"
+
+[api_limits]
+context = 32768
+input = 32768
+output = 4096
+rpm = 120
+tpm = 500000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-plus-character"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.747"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.492"
+
+[[pricing]]
+currency = "CNY"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing]]
+currency = "CNY"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing]]
+currency = "CNY"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"

@@ -1,0 +1,6 @@
+{
+  "description": "ProviderList third-party dependency license policy",
+  "blockedPatterns": ["AGPL", "GPL", "LGPL", "SSPL", "BUSL"],
+  "reviewLicenses": ["Unknown", "Unlicense", "Python-2.0", "BlueOak-1.0.0"],
+  "exceptions": []
+}

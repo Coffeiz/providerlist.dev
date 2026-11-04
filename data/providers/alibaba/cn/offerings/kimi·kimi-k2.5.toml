@@ -1,0 +1,20 @@
+id = "kimi/kimi-k2.5"
+model_ref = "moonshotai/kimi-k2-5"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"

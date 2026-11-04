@@ -1,0 +1,11 @@
+name = "GLM-5"
+release_date = "2026-02-12"
+type = "chat"
+
+[limits]
+context = 200000
+output = 128000
+
+[modalities]
+output = [ "text" ]
+input = [ "text", "image", "video" ]

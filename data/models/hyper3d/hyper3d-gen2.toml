@@ -1,0 +1,7 @@
+name = "Hyper3D Gen2"
+type = "3d"
+release_date = "2025-10-01"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "3d" ]

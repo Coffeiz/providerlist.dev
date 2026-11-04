@@ -1,0 +1,7 @@
+name = "Kling VIDEO O1"
+type = "video"
+release_date = "2025-12-01"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]

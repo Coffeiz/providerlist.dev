@@ -1,0 +1,10 @@
+name = "vidu/viduq3-ad_reference2video"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

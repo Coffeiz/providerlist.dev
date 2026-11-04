@@ -1,0 +1,27 @@
+id = "qwen-deep-research"
+model_ref = "alibaba/qwen-deep-research"
+status = "active"
+
+[api_limits]
+context = 1000000
+input = 997952
+output = 32768
+rpm = 120
+tpm = 1200000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-qwen-deep-research"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "54"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "163"

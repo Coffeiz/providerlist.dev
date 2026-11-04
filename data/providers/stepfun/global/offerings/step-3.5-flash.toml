@@ -1,0 +1,24 @@
+id = "step-3.5-flash"
+model_ref = "stepfun/step-3-5-flash"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.02"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.30"

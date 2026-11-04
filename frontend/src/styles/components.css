@@ -1,0 +1,498 @@
+/* 全站共用组件：页头、搜索筛选、徽章、按钮、表单和表格。 */
+
+/* ---------- 页头 ---------- */
+
+.pl-content-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pl-space-lg);
+  margin-bottom: var(--pl-space-lg);
+}
+
+.pl-content-title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--pl-space-lg);
+  min-width: 0;
+}
+
+.pl-content-title h1 {
+  font-size: var(--pl-text-lg);
+  font-weight: var(--pl-weight-strong);
+  letter-spacing: -0.055em;
+}
+
+.pl-result-count {
+  font-size: var(--pl-text-sm);
+  color: var(--pl-text-tertiary);
+  white-space: nowrap;
+}
+
+.pl-demo-mark {
+  margin-left: auto;
+  font-size: var(--pl-text-xs);
+  color: var(--pl-text-tertiary);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* ---------- 搜索 ---------- */
+
+.pl-searchbar {
+  display: flex;
+  align-items: center;
+  gap: var(--pl-space-md);
+  height: 50px;
+  padding: 0 var(--pl-space-lg);
+  margin-bottom: var(--pl-space-lg);
+  background: var(--pl-glass-bg-strong);
+  backdrop-filter: var(--pl-glass-blur);
+  -webkit-backdrop-filter: var(--pl-glass-blur);
+  border: 1px solid var(--pl-glass-border);
+  border-radius: var(--pl-radius-lg);
+  transition:
+    border-color var(--pl-duration-fast) var(--pl-ease-standard),
+    box-shadow var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-searchbar:focus-within {
+  border-color: var(--pl-border-focus);
+  box-shadow: var(--pl-control-focus-shadow);
+}
+
+.pl-searchbar input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--pl-text-primary);
+  font-family: inherit;
+  font-size: var(--pl-text-sm);
+}
+
+.pl-searchbar input:focus-visible {
+  outline: none;
+}
+
+.pl-searchbar input::placeholder {
+  color: var(--pl-text-disabled);
+}
+
+/* 搜索框内的图标统一在这里定尺寸与描边——四个视图都用到它，
+   各自在 scoped 里抄一份会漂。 */
+.pl-searchbar svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  color: var(--pl-text-tertiary);
+}
+
+.pl-kbd {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-xs);
+  padding: 4px 6px;
+  border-radius: var(--pl-radius-xs);
+  border: 1px solid var(--pl-glass-border);
+  color: var(--pl-text-tertiary);
+  white-space: nowrap;
+}
+
+/* ---------- 筛选条 ---------- */
+
+.pl-filterbar {
+  display: flex;
+  align-items: center;
+  gap: var(--pl-space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--pl-space-lg);
+}
+
+/* 筛选条上的 chip 由 SelectPopup 的 compact 形态自带
+   （标签 + 值 + 箭头在同一个触发器里，弹层以它为锚点）。 */
+
+.pl-reset-text {
+  border: 0;
+  background: none;
+  padding: var(--pl-space-xs) var(--pl-space-sm);
+  color: var(--pl-text-tertiary);
+  font-family: inherit;
+  font-size: var(--pl-text-xs);
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-reset-text:hover { color: var(--pl-text-primary); }
+}
+
+/* ---------- 徽章（5 个变体）---------- */
+
+/* neutral 承载普通标签与「状态待核实」，success / warning / danger 承载
+   供应状态，inverse 承载「官方接入」这类来源徽章。
+   刻意不给 Operation 之类的分类标签留彩色通道——它们不是状态。 */
+.pl-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pl-space-xs);
+  padding: 4px 7px;
+  border-radius: var(--pl-radius-xs);
+  font-size: var(--pl-text-xs);
+  font-weight: var(--pl-weight-medium);
+  line-height: 1.35;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.pl-badge-neutral {
+  color: var(--pl-status-neutral);
+  background: var(--pl-status-neutral-bg);
+  border-color: var(--pl-status-neutral-border);
+}
+.pl-badge-success {
+  color: var(--pl-status-success);
+  background: var(--pl-status-success-bg);
+  border-color: var(--pl-status-success-border);
+}
+.pl-badge-warning {
+  color: var(--pl-status-warning);
+  background: var(--pl-status-warning-bg);
+  border-color: var(--pl-status-warning-border);
+}
+.pl-badge-danger {
+  color: var(--pl-status-danger);
+  background: var(--pl-status-danger-bg);
+  border-color: var(--pl-status-danger-border);
+}
+/* inverse —— 墨色实底。全站唯一的实心块，因此它必须留给信任信号
+   （官方接入），不能被普通标签随便占用。 */
+.pl-badge-inverse {
+  color: var(--pl-text-inverse);
+  background: var(--pl-bg-inverse);
+  border-color: var(--pl-bg-inverse);
+}
+
+/* ---------- 按钮 ---------- */
+
+.pl-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--pl-space-sm);
+  padding: var(--pl-space-sm) var(--pl-space-lg);
+  border-radius: var(--pl-radius-md);
+  border: 1px solid var(--pl-control-border);
+  background: var(--pl-control-bg);
+  color: var(--pl-text-primary);
+  font-family: inherit;
+  font-size: var(--pl-text-sm);
+  font-weight: var(--pl-weight-medium);
+  cursor: pointer;
+  transition:
+    background var(--pl-duration-fast) var(--pl-ease-standard),
+    border-color var(--pl-duration-fast) var(--pl-ease-standard),
+    color var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-button:hover:not(:disabled) {
+  background: var(--pl-control-bg-hover);
+  border-color: var(--pl-glass-border-strong);
+  text-decoration: none;
+}
+}
+
+.pl-button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.pl-button:disabled {
+  color: var(--pl-text-disabled);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* 主按钮用「墨色反色」而不是彩色 —— 页面上唯一的实心块，
+   因此它必须是中性墨色，不能抢走状态语义色的注意力。 */
+.pl-button-primary {
+  background: var(--pl-bg-inverse);
+  border-color: var(--pl-bg-inverse);
+  color: var(--pl-text-inverse);
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-button-primary:hover:not(:disabled) {
+  background: var(--pl-ink-hard);
+  border-color: var(--pl-ink-hard);
+}
+}
+
+.pl-button-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--pl-text-secondary);
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-button-ghost:hover:not(:disabled) {
+  background: var(--pl-bg-subtle);
+  border-color: transparent;
+  color: var(--pl-text-primary);
+}
+}
+
+/* ---------- 图标 ---------- */
+
+/* 线性描边图标：尺寸跟随字号（1em），颜色跟随 currentColor。
+   因此图标不需要自己的尺寸令牌——字号变大它就跟着变大，
+   暗色主题下也不会失配。 */
+.pl-icon {
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  fill: currentColor;
+  stroke: none;
+}
+
+/* 只有图标的按钮：透明底、无边框，图标继承文字色。
+   用于「复制路径」这类动作——图标比文字更省空间，
+   但仍然必须带 aria-label，不能只靠图形表意。 */
+.pl-icon-button {
+  display: inline-grid;
+  place-items: center;
+  padding: var(--pl-space-xs);
+  border: 0;
+  border-radius: var(--pl-radius-xs);
+  background: transparent;
+  color: var(--pl-text-tertiary);
+  font-size: var(--pl-text-md);
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background var(--pl-duration-fast) var(--pl-ease-standard),
+    color var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-icon-button:hover:not(:disabled) {
+  background: var(--pl-bg-muted);
+  color: var(--pl-text-primary);
+}
+}
+
+/* ---------- 表单 ---------- */
+
+/* 选择器不再用原生 `<select>`——它是系统控件，样式不可控。
+   统一走 `components/SelectPopup.vue`，外观定义在组件内。 */
+.pl-input {
+  width: 100%;
+  padding: var(--pl-space-sm) var(--pl-space-md);
+  border-radius: var(--pl-radius-md);
+  border: 1px solid var(--pl-control-border);
+  background: var(--pl-control-bg);
+  color: var(--pl-text-primary);
+  font-family: inherit;
+  font-size: var(--pl-text-sm);
+  transition:
+    border-color var(--pl-duration-fast) var(--pl-ease-standard),
+    box-shadow var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-input:focus {
+  outline: none;
+  border-color: var(--pl-border-focus);
+  box-shadow: var(--pl-control-focus-shadow);
+}
+
+/* 自绘复选框：颜色与尺寸来自 pl-checkbox 组件令牌。 */
+.pl-checkbox {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--pl-checkbox-size);
+  height: var(--pl-checkbox-size);
+  margin: 0;
+  border: 1px solid var(--pl-checkbox-border);
+  border-radius: var(--pl-checkbox-radius);
+  background: var(--pl-checkbox-bg);
+  cursor: pointer;
+  transition:
+    background var(--pl-duration-fast) var(--pl-ease-standard),
+    border-color var(--pl-duration-fast) var(--pl-ease-standard),
+    box-shadow var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-checkbox::before {
+  content: '';
+  width: 4px;
+  height: 8px;
+  border: solid var(--pl-checkbox-checkmark);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg) scale(0);
+  transition: transform var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-checkbox:checked {
+  border-color: var(--pl-checkbox-checked-border);
+  background: var(--pl-checkbox-checked-bg);
+}
+
+.pl-checkbox:checked::before { transform: rotate(45deg) scale(1); }
+
+.pl-checkbox:focus-visible {
+  outline: none;
+  box-shadow: var(--pl-checkbox-focus-shadow);
+}
+
+.pl-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* 自绘单选框：与 pl-checkbox 共用控件语义令牌。 */
+.pl-radio {
+  appearance: none;
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: var(--pl-radio-size);
+  height: var(--pl-radio-size);
+  margin: 0;
+  border: 1px solid var(--pl-radio-border);
+  border-radius: var(--pl-radius-full);
+  background: var(--pl-radio-bg);
+  cursor: pointer;
+  transition:
+    background var(--pl-duration-fast) var(--pl-ease-standard),
+    border-color var(--pl-duration-fast) var(--pl-ease-standard),
+    box-shadow var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-radio::before {
+  content: '';
+  width: var(--pl-radio-dot-size);
+  height: var(--pl-radio-dot-size);
+  border-radius: var(--pl-radius-full);
+  background: var(--pl-radio-dot);
+  transform: scale(0);
+  transition: transform var(--pl-duration-fast) var(--pl-ease-standard);
+}
+
+.pl-radio:checked { border-color: var(--pl-radio-checked-border); }
+.pl-radio:checked::before { transform: scale(1); }
+
+.pl-radio:focus-visible {
+  outline: none;
+  box-shadow: var(--pl-radio-focus-shadow);
+}
+
+.pl-radio:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pl-input::placeholder { color: var(--pl-text-disabled); }
+
+.pl-label {
+  display: block;
+  font-size: var(--pl-text-xs);
+  font-weight: var(--pl-weight-medium);
+  color: var(--pl-text-secondary);
+  margin-bottom: var(--pl-space-xs);
+}
+
+/* ---------- 表格 ---------- */
+
+.pl-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--pl-text-xs);
+}
+
+.pl-table th {
+  text-align: left;
+  font-weight: var(--pl-weight-medium);
+  font-size: var(--pl-text-xs);
+  letter-spacing: var(--pl-tracking-wide);
+  text-transform: uppercase;
+  color: var(--pl-text-tertiary);
+  background: var(--pl-bg-surface);
+  padding: var(--pl-space-md);
+  border-bottom: 1px solid var(--pl-border-subtle);
+  white-space: nowrap;
+}
+
+.pl-table-sort-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--pl-space-xs);
+  margin: calc(-1 * var(--pl-space-sm)) calc(-1 * var(--pl-space-xs));
+  padding: var(--pl-space-sm) var(--pl-space-xs);
+  border: 0;
+  border-radius: var(--pl-radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.pl-table-sort-button:hover { color: var(--pl-text-primary); }
+.pl-table-sort-button:focus-visible { outline: 2px solid var(--pl-border-focus); outline-offset: 1px; }
+.pl-table-sort-indicator { color: var(--pl-text-disabled); font-size: 0.9em; }
+.pl-table-sort-button:hover .pl-table-sort-indicator { color: var(--pl-text-secondary); }
+
+.pl-table td {
+  padding: var(--pl-space-md);
+  border-bottom: 1px solid var(--pl-border-subtle);
+  vertical-align: middle;
+}
+
+.pl-table tr:last-child td { border-bottom: 0; }
+
+.pl-table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.pl-table-sticky-head {
+  position: fixed;
+  z-index: var(--pl-z-sticky);
+  overflow: hidden;
+  pointer-events: auto;
+  background: var(--pl-bg-surface);
+}
+
+.pl-table-sticky-head .pl-table th { position: static; }
+
+.pl-table-sticky-head::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  border-bottom: 1px solid var(--pl-border-subtle);
+}
+
+.pl-table-floating-scroll {
+  position: fixed;
+  bottom: 0;
+  z-index: var(--pl-z-sticky);
+  height: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-radius: var(--pl-radius-full);
+  background: var(--pl-glass-bg-strong);
+  box-shadow: var(--pl-shadow-md);
+  scrollbar-color: var(--pl-border-strong) transparent;
+  scrollbar-width: thin;
+}
+
+.pl-table-floating-scroll-content { height: 1px; }
+.pl-table-floating-scroll::-webkit-scrollbar { height: 14px; }
+.pl-table-floating-scroll::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: var(--pl-radius-full);
+  background: var(--pl-border-strong);
+  background-clip: content-box;
+}
+.pl-table-floating-scroll::-webkit-scrollbar-track { background: transparent; }

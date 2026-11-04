@@ -1,0 +1,11 @@
+id = "muse-voice-transcribe-1.0"
+model_ref = "meta/muse-voice-transcribe-1-0"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "audio_processed"
+unit = "per_hour"
+value = "0.18"

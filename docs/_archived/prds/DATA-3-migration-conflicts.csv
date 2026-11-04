@@ -1,0 +1,18 @@
+provider_id,service_id,offering_id,provider_model_id,model_ref,field,legacy_value,registry_value,result,source_refs,assertions
+minimax,cn,cn-usage-image-01,image-01,minimax/image-01,/release_date,"""2025-04-02""",,needs_review,minimax-cn-model-releases,官方发布记录列出发布日期 2025-04-02。
+minimax,cn,cn-usage-music-2-0,Music-2.0,minimax/music-2-0,/release_date,"""2025-10-30""",,needs_review,minimax-cn-model-releases,官方发布记录列出发布日期 2025-10-30。
+minimax,global,global-usage-image-01,image-01,minimax/image-01,/release_date,"""2025-02-15""",,needs_review,minimax-global-model-releases,官方发布记录列出发布日期 2025-02-15。
+minimax,global,global-usage-music-2-0,Music-2.0,minimax/music-2-0,/release_date,"""2025-10-29""",,needs_review,minimax-global-model-releases,官方发布记录列出发布日期 2025-10-29。
+zhipu,cn,cn-glm-4-6,GLM-4.6,zhipu/glm-4-6,/modalities/input,"[""text"",""image"",""video""]",,needs_review,zhipu-cn-chat-api,官方文档对 GLM-4.6 声明输入类型为 text、image、video。
+zhipu,cn,cn-glm-5,GLM-5,zhipu/glm-5,/modalities/input,"[""text"",""image"",""video""]",,needs_review,zhipu-cn-chat-api,官方文档对 GLM-5 声明输入类型为 text、image、video。
+zhipu,cn,cn-glm-5-3,GLM-5.3,zhipu/glm-5-3,/modalities/input,"[""text"",""image"",""video""]",,needs_review,zhipu-cn-chat-api;zhipu-cn-pricing,官方文档对 GLM-5.3 声明输入类型为 text、image、video。 | 官方文档对 GLM-5.3 声明输入类型为 text、image、video。
+zhipu,cn,cn-glm-5-3,GLM-5.3,zhipu/glm-5-3,/release_date,"""2026-08-19""",,needs_review,zhipu-cn-release-notes,官方发布记录将 GLM-5.3 标记为 2026-08-19 发布。
+zhipu,cn,cn-glm-5-3-flash,GLM-5.3-Flash,zhipu/glm-5-3-flash,/modalities/input,"[""text"",""image"",""video""]",,needs_review,zhipu-cn-chat-api;zhipu-cn-pricing;zhipu-cn-coding-plan,官方文档对 GLM-5.3-Flash 声明输入类型为 text、image、video。 | 官方文档对 GLM-5.3-Flash 声明输入类型为 text、image、video。 | 官方文档对 GLM-5.3-Flash 声明输入类型为 text、image、video。
+zhipu,cn,cn-glm-5-3-flashx,GLM-5.3-FlashX,zhipu/glm-5-3-flashx,/modalities/input,"[""text"",""image"",""video""]",,needs_review,zhipu-cn-chat-api;zhipu-cn-pricing,官方文档对 GLM-5.3-FlashX 声明输入类型为 text、image、video。 | 官方文档对 GLM-5.3-FlashX 声明输入类型为 text、image、video。
+zhipu,global,global-glm-4-6,GLM-4.6,zhipu/glm-4-6,/modalities/input,"[""text""]",,needs_review,zhipu-global-chat-api,官方文档对 GLM-4.6 声明输入类型为 text。
+zhipu,global,global-glm-5,GLM-5,zhipu/glm-5,/modalities/input,"[""text""]",,needs_review,zhipu-global-chat-api,官方文档对 GLM-5 声明输入类型为 text。
+zhipu,global,global-glm-5-3,GLM-5.3,zhipu/glm-5-3,/modalities/input,"[""text""]",,needs_review,zhipu-global-chat-api,官方文档对 GLM-5.3 声明输入类型为 text。
+zhipu,global,global-glm-5-3,GLM-5.3,zhipu/glm-5-3,/release_date,"""2026-08-18""",,needs_review,zhipu-global-release-notes,官方发布记录将 GLM-5.3 标记为 2026-08-18 发布。
+zhipu,global,global-glm-5-3-flash,GLM-5.3-Flash,zhipu/glm-5-3-flash,/modalities/input,"[""text"",""image"",""video"",""file""]",,needs_review,zhipu-global-chat-api,官方文档对 GLM-5.3-Flash 声明输入类型为 text、image、video、file。
+zhipu,global,global-glm-5-3-flashx,GLM-5.3-FlashX,zhipu/glm-5-3-flashx,/modalities/input,"[""text"",""image"",""video"",""file""]",,needs_review,zhipu-global-chat-api,官方文档对 GLM-5.3-FlashX 声明输入类型为 text、image、video、file。
+alibaba,cn/global,glm-5-2-03ee1b2d,glm-5.2,zhipu/glm-5-2,/developer_id,alibaba,zhipu,resolved,alibaba-model-detail-018;zhipu-cn-model-catalog,阿里云百炼官方详情将 glm-5.2 明确归属智谱；迁移前的 alibaba/glm-5-2 是错误开发者归属，已改为引用 zhipu/glm-5-2。

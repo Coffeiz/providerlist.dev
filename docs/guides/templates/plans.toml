@@ -1,0 +1,16 @@
+# Plans for this market. Remove the example block if the Provider has no plans.
+[[plans]]
+id = "example-monthly"
+name = "Example Plan"
+currency = "USD"
+# ratio = "2" # Relative quota compared with the market's reference plan.
+# credits = 20000
+
+[[plans.billing_options]]
+billing_period = "month" # month, year, or one_time
+price = "20.00"
+# sale_price = "10.00"
+# sale_type = "first_month"
+
+[plans.links]
+official = "https://example.com/plans"

@@ -1,0 +1,7 @@
+name = "wanx2.0-t2i-turbo"
+type = "image"
+release_date = "2025-01-20"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]

@@ -1,0 +1,16 @@
+name = "DeepSeek-V4-Pro-GA"
+type = "chat"
+release_date = "2026-08-13"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+max_input = 1048576
+output = 393216
+
+[capabilities]
+reasoning = true
+tool_calling = true

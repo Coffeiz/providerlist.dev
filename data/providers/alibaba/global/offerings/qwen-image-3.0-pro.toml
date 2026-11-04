@@ -1,0 +1,7 @@
+id = "qwen-image-3.0-pro"
+model_ref = "alibaba/qwen-image-3-0-pro"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"

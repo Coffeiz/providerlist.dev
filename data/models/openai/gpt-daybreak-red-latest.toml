@@ -1,0 +1,18 @@
+name = "GPT Daybreak Red"
+release_date = "2026-08-07"
+type = "chat"
+family = "gpt"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 400000
+input = 272000
+output = 128000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

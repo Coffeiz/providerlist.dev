@@ -1,0 +1,12 @@
+name = "Qwen-Plus-2025-01-25"
+type = "chat"
+release_date = "2025-01-25"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 131072
+input = 129024
+output = 8192

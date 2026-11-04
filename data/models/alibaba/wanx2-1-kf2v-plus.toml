@@ -1,0 +1,7 @@
+name = "wanx2.1-kf2v-plus"
+type = "video"
+release_date = "2025-04-21"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

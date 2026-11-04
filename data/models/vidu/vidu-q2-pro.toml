@@ -1,0 +1,8 @@
+name = "Vidu Q2-Pro"
+type = "video"
+release_date = "2026-01-30"
+developer_name = "生数科技 / Vidu"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

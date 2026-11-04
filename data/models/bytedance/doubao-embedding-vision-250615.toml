@@ -1,0 +1,15 @@
+name = "Doubao Embedding Vision 250615"
+type = "embedding"
+release_date = "2025-06-28"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "embedding" ]
+
+[limits]
+context = 128000
+
+[output_dimensions]
+supported = [ 1024, 2048 ]
+default = 2048

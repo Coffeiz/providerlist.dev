@@ -1,0 +1,149 @@
+id = "grok-4.20-0309-reasoning"
+model_ref = "xai/grok-4-20-0309-reasoning"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.40"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.16"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.conditions]]
+field = "api_mode"
+operator = "eq"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.32"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.conditions]]
+field = "api_mode"
+operator = "eq"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2.5"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.4"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "5"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "5"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "10"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"

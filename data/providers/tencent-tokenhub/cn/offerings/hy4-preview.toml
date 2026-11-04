@@ -1,0 +1,29 @@
+id = "hy4-preview"
+model_ref = "tencent/hy4-preview"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 1000000
+input = 960000
+output = 64000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "18"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.3"

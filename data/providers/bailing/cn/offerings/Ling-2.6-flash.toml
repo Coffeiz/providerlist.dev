@@ -1,0 +1,6 @@
+id = "Ling-2.6-flash"
+model_ref = "antgroup/ling-2-6-flash"
+status = "deprecated"
+
+[links]
+documentation = "https://developer.ant-ling.com/zh-CN/docs/models/deprecation/"

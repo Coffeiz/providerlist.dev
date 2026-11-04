@@ -1,0 +1,29 @@
+id = "hy3"
+model_ref = "tencent/hy3"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 256000
+input = 192000
+output = 128000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.25"

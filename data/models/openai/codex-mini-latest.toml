@@ -1,0 +1,11 @@
+name = "codex-mini-latest"
+type = "chat"
+release_date = "2025-05-15"
+
+[limits]
+context = 200000
+output = 100000
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]

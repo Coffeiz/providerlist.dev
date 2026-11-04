@@ -1,0 +1,18 @@
+id = "qwen-mt-image-2.0"
+model_ref = "alibaba/qwen-mt-image-2-0"
+status = "active"
+
+[api_limits]
+rpm = 1
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-mt-image-2-0"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.004"

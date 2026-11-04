@@ -1,0 +1,10 @@
+id = "vidu/viduq3-pro_text2video"
+model_ref = "vidu/viduq3-pro-text2video"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/viduq3-pro-text2video"

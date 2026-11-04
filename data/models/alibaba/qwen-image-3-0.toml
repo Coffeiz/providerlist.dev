@@ -1,0 +1,7 @@
+name = "qwen-image-3.0"
+type = "image"
+release_date = "2026-08-04"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

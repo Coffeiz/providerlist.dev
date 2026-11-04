@@ -1,0 +1,138 @@
+/**
+ * API 区域的视觉语言。
+ *
+ * 这套样式是**区域级**的，不属于某一个视图：
+ * - `/design` 页要展示同一批端点卡片；
+ * - 端点卡片将来在别处被引用时，也不该另起一套样式。
+ *
+ * 结构参照「独立页面标题 → 玻璃面板中的端点卡片、动作、样例与约定」：
+ * 标题不放进玻璃面板，端点卡片则在面板里彼此独立。
+ *
+ * 所有值都来自 `--pl-api-*` 令牌（见 `styles/tokens.css` 的组件层）。
+ * 这里不出现裸颜色、裸尺寸——API 区域是设计系统的一部分，
+ * 不是一块自带样式的拼贴。
+ */
+
+/* ---------- 区域面板 ---------- */
+
+.api-panel {
+  padding: var(--pl-api-panel-padding);
+  border-radius: var(--pl-api-panel-radius);
+  background: var(--pl-api-panel-bg);
+  border: 1px solid var(--pl-api-panel-border);
+  backdrop-filter: var(--pl-glass-blur);
+  -webkit-backdrop-filter: var(--pl-glass-blur);
+}
+
+/* ---------- 端点卡片 ---------- */
+
+/* 一个端点一张卡：左边的标题与路径，右边的复制图标。
+   卡片是面板里的浅色块，彼此独立，不共用边框。 */
+.api-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pl-api-card-gap);
+  margin: var(--pl-api-card-list-margin) 0;
+}
+
+.api-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pl-space-sm);
+  min-width: 0;
+  padding: var(--pl-api-card-padding);
+  border-radius: var(--pl-api-card-radius);
+  background: var(--pl-api-card-bg);
+  border: 1px solid var(--pl-api-card-border);
+}
+
+.api-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.api-card-path {
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-api-path-size);
+  letter-spacing: -0.035em;
+  color: var(--pl-api-path-color);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 示例响应 ---------- */
+
+.api-section-label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--pl-space-md);
+  margin: var(--pl-space-xl) 0 var(--pl-space-sm);
+}
+
+.api-section-label h2 {
+  font-size: var(--pl-text-md);
+  font-weight: var(--pl-weight-semibold);
+}
+
+.api-codebox {
+  margin: 0;
+  padding: var(--pl-api-code-padding);
+  border-radius: var(--pl-api-code-radius);
+  background: var(--pl-api-code-bg);
+  color: var(--pl-text-primary);
+  font-family: var(--pl-font-mono);
+  font-size: var(--pl-text-xs);
+  letter-spacing: -0.035em;
+  line-height: var(--pl-leading-relaxed);
+  max-height: var(--pl-api-code-max-height);
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 说明块 ---------- */
+
+.api-note {
+  margin-top: var(--pl-space-lg);
+  padding: var(--pl-api-note-padding);
+  border: 1px solid var(--pl-api-note-border);
+  border-radius: var(--pl-api-note-radius);
+  font-size: var(--pl-text-xs);
+  line-height: var(--pl-leading-relaxed);
+  color: var(--pl-text-secondary);
+}
+
+.api-note strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--pl-text-primary);
+  font-weight: var(--pl-weight-semibold);
+}
+
+.api-note p {
+  margin: 0;
+}
+
+.api-schema-links {
+  display: flex;
+  align-items: center;
+  gap: var(--pl-space-md);
+  flex-wrap: wrap;
+  margin-top: var(--pl-space-sm) !important;
+}
+
+.api-schema-link {
+  color: var(--pl-text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .api-schema-link:hover {
+  color: var(--pl-text-primary);
+  text-decoration: none;
+}
+}

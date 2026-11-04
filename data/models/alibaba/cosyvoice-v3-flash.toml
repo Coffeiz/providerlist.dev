@@ -1,0 +1,11 @@
+name = "cosyvoice-v3-flash"
+type = "speech"
+release_date = "2026-02-09"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

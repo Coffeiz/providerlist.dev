@@ -1,0 +1,7 @@
+name = "wan2.7-t2v"
+type = "video"
+release_date = "2026-04-03"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "video" ]

@@ -1,0 +1,133 @@
+[[plans]]
+id = "xai-global-subscription-free"
+name = "Free"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "0"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "0"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-subscription-plus"
+name = "Plus"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "8"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "80"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-subscription-premium"
+name = "Premium"
+currency = "USD"
+ratio = "4"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "30"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "300"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-subscription-super"
+name = "Super"
+currency = "USD"
+ratio = "15"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1000"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-subscription-ultra"
+name = "Ultra"
+currency = "USD"
+ratio = "50"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "2000"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-teams-premium"
+name = "Teams Premium"
+currency = "USD"
+ratio = "4"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "30"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-teams-super"
+name = "Teams Super"
+currency = "USD"
+ratio = "15"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-teams-ultra"
+name = "Teams Ultra"
+ratio = "50"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"
+
+[[plans]]
+id = "xai-global-teams-and-ultra"
+name = "Teams and Ultra"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.links]
+official = "https://docs.x.ai/x-subscription/pricing"

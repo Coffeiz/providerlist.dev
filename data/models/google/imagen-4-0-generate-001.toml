@@ -1,0 +1,10 @@
+name = "Imagen 4 Standard"
+type = "image"
+release_date = "2025-08-14"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]
+
+[limits]
+input = 480

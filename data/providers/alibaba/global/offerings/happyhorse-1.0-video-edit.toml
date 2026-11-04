@@ -1,0 +1,4 @@
+id = "happyhorse-1.0-video-edit"
+model_ref = "alibaba/happyhorse-1-0-video-edit"
+status = "active"
+pricing = []

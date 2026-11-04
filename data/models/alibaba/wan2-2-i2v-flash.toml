@@ -1,0 +1,7 @@
+name = "wan2.2-i2v-flash"
+type = "video"
+release_date = "2025-08-11"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

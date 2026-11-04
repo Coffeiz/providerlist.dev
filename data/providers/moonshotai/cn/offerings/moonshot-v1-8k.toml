@@ -1,0 +1,6 @@
+id = "moonshot-v1-8k"
+model_ref = "moonshotai/moonshot-v1-8k"
+status = "retired"
+
+[links]
+documentation = "https://platform.kimi.com/docs/models"

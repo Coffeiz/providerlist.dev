@@ -1,0 +1,7 @@
+name = "MiniMax Hailuo 2.3"
+type = "video"
+release_date = "2025-10-28"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

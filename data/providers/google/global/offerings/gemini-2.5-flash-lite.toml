@@ -1,0 +1,50 @@
+id = "gemini-2.5-flash-lite"
+model_ref = "google/gemini-2-5-flash-lite"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.40"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.72"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "priority"

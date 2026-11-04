@@ -1,0 +1,3 @@
+id = "Music-2.0"
+model_ref = "minimax/music-2-0"
+status = "unknown"

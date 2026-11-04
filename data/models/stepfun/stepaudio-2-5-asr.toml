@@ -1,0 +1,8 @@
+name = "StepAudio 2.5 ASR"
+family = "StepAudio 2.5"
+type = "transcription"
+release_date = "2026-04-24"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

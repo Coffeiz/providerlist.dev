@@ -1,0 +1,277 @@
+website = "https://cloud.tencent.com/product/tokenhub"
+
+[docs]
+overview = "https://cloud.tencent.com/document/product/1823/130050"
+api = "https://cloud.tencent.com/document/product/1823/130078"
+model_list = "https://cloud.tencent.com/document/product/1823/130051"
+pricing = "https://cloud.tencent.com/document/product/1823/130055"
+coding_plan = "https://cloud.tencent.com/document/product/1823/130092"
+token_plan = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[endpoints]]
+id = "openai-compatible"
+base_url = "https://tokenhub.tencentmaas.com/v1"
+api_region = "广州 · 中国大陆"
+documentation = "https://cloud.tencent.com/document/product/1823/130078"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/wx-asr/async-asr"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/asrproxy/sync_transcribe"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/130079"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/130079"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/133515"
+path = "/embeddings"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/135745"
+path = "/wand/hunyuan-image/v3-generation"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/135745"
+path = "/wand/hunyuan-image/v35-generation"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/mureka-music/generation"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/minimax-music/generation"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/minimax-tts/sync-tts"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/dubbing/async_generation"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/138804"
+path = "/wand/minimax-tts/sync_design"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/132358"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/132358"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/136579"
+path = "/wand/hunyuan-image/world2-panorama"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/136579"
+path = "/wand/hunyuan-video/world2-scene"
+
+[[endpoints]]
+id = "openai-compatible-backup"
+base_url = "https://tokenhub.tencentmaas.cn/v1"
+api_region = "广州 · 中国大陆（备用）"
+documentation = "https://cloud.tencent.com/document/product/1823/130078"
+
+[[endpoints]]
+id = "anthropic-compatible"
+base_url = "https://tokenhub.tencentmaas.com/v1"
+api_region = "广州 · 中国大陆"
+documentation = "https://cloud.tencent.com/document/product/1823/130079"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/130079"
+path = "/messages"
+
+[[endpoints]]
+id = "tokenhub-api"
+base_url = "https://tokenhub.tencentmaas.com"
+api_region = "广州"
+documentation = "https://cloud.tencent.com/document/product/1823/130078"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+path = "/v1/chat/completions"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "openai_embeddings"
+method = "POST"
+path = "/v1/embeddings"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/v1/responses"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "model"
+type = "string"
+required = true
+enum = [ "deepseek-v4-pro", "deepseek-v4-pro-0813", "deepseek-v4.1-flash", "deepseek-v4.1-flash-1017", "hy3" ]
+route_mappings = [ "$.model" ]
+
+[[capabilities.parameters]]
+name = "enable"
+type = "boolean"
+required = true
+default = true
+route_mappings = [ "$.enable" ]
+
+[[capabilities.parameters]]
+name = "search_source"
+type = "string"
+required = false
+default = "standard"
+enum = [ "lite", "standard" ]
+route_mappings = [ "$.search_source" ]
+
+[[capabilities.parameters]]
+name = "user_location"
+type = "object"
+required = false
+route_mappings = [ "$.user_location" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+route_mappings = [ "$.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].search_source"
+type = "string"
+required = false
+default = "standard"
+enum = [ "lite", "standard" ]
+route_mappings = [ "$.tools[].search_source" ]
+
+[[capabilities.parameters]]
+name = "tools[].search_context_size"
+type = "string"
+required = false
+default = "medium"
+enum = [ "low", "medium", "high" ]
+route_mappings = [ "$.tools[].search_context_size" ]
+
+[[capabilities.parameters]]
+name = "tools[].user_location"
+type = "object"
+required = false
+route_mappings = [ "$.tools[].user_location" ]
+
+[[capabilities.input]]
+name = "messages"
+kind = "structured"
+required = true
+
+[[capabilities.input]]
+name = "input"
+kind = "structured"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "search_results[].index", "search_results[].url", "search_results[].name", "search_results[].snippet", "search_results[].site" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type", "output[].action.query", "output[].content[].annotations[].url", "output[].content[].annotations[].title" ]
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/132358"
+path = "/v1/chat/completions"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://cloud.tencent.com/document/product/1823/132358"
+path = "/v1/responses"
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+path = "/v1/chat/completions"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/v1/responses"
+
+[capabilities.links]
+documentation = "https://cloud.tencent.com/document/product/1823/132358"

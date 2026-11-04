@@ -1,0 +1,7 @@
+name = "Kling IMAGE O1"
+type = "image"
+release_date = "2025-12-01"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

@@ -1,0 +1,10 @@
+name = "GLM-4-FlashX-250414"
+type = "chat"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 16000

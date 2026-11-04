@@ -1,0 +1,6 @@
+name = "Hy-Video-1.5"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

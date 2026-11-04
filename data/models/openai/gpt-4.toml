@@ -1,0 +1,16 @@
+name = "GPT-4"
+type = "chat"
+family = "gpt"
+release_date = "2023-11-06"
+
+[limits]
+context = 8192
+output = 8192
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = false
+tool_calling = true

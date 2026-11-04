@@ -1,0 +1,7 @@
+name = "Step TTS Mini"
+family = "Step TTS"
+type = "speech"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

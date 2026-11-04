@@ -1,0 +1,125 @@
+{
+  "wordmarks": {
+    "abliteration-ai": {
+      "aspectRatio": 7.4826
+    },
+    "aki-io": {
+      "aspectRatio": 1.9076
+    },
+    "alibaba-cn": {
+      "aspectRatio": 1.9914
+    },
+    "alibaba-coding-plan-cn": {
+      "aspectRatio": 1.9914
+    },
+    "alibaba-coding-plan": {
+      "aspectRatio": 1.9914
+    },
+    "alibaba-token-plan-cn": {
+      "aspectRatio": 1.9914
+    },
+    "alibaba-token-plan": {
+      "aspectRatio": 1.9914
+    },
+    "alibaba": {
+      "aspectRatio": 1.9914
+    },
+    "amd": {
+      "aspectRatio": 4.129
+    },
+    "auriko": {
+      "aspectRatio": 2.0
+    },
+    "cloudflare-ai-gateway": {
+      "aspectRatio": 2.1868
+    },
+    "cloudflare-workers-ai": {
+      "aspectRatio": 2.1868
+    },
+    "crusoe": {
+      "aspectRatio": 4.1986
+    },
+    "dinference": {
+      "aspectRatio": 0.5019
+    },
+    "drun": {
+      "aspectRatio": 2.5439
+    },
+    "fireworks-ai": {
+      "aspectRatio": 1.9911
+    },
+    "hpc-ai": {
+      "aspectRatio": 4.8179
+    },
+    "hyper": {
+      "aspectRatio": 3.4324
+    },
+    "io-net": {
+      "aspectRatio": 2.3429
+    },
+    "modal": {
+      "aspectRatio": 1.9129
+    },
+    "oci": {
+      "aspectRatio": 7.6551
+    },
+    "orcarouter": {
+      "aspectRatio": 1.9091
+    },
+    "qvac": {
+      "aspectRatio": 2.6113
+    },
+    "reflection": {
+      "aspectRatio": 2.0838
+    },
+    "requesty": {
+      "aspectRatio": 4.5015
+    },
+    "sap-ai-core": {
+      "aspectRatio": 2.0
+    },
+    "scnet-token-plan": {
+      "aspectRatio": 4.3791
+    },
+    "siliconflow-cn": {
+      "aspectRatio": 2.0306
+    },
+    "siliconflow": {
+      "aspectRatio": 2.0306
+    },
+    "tempr": {
+      "aspectRatio": 0.4236
+    }
+  },
+  "raster": [
+    "atomic-chat",
+    "hpc-ai",
+    "orcarouter",
+    "requesty",
+    "wafer.ai"
+  ],
+  "fullColor": [
+    "google",
+    "meta",
+    "tencent-tokenhub",
+    "volcengine"
+  ],
+  "markScale": {
+    "alibaba": 0.84,
+    "alibaba-cn": 0.84,
+    "alibaba-coding-plan": 0.84,
+    "alibaba-coding-plan-cn": 0.84,
+    "alibaba-token-plan": 0.84,
+    "alibaba-token-plan-cn": 0.84,
+    "tencent-tokenhub": 1,
+    "volcengine": 1
+  },
+  "framed": [
+    "alibaba",
+    "alibaba-cn",
+    "alibaba-coding-plan",
+    "alibaba-coding-plan-cn",
+    "alibaba-token-plan",
+    "alibaba-token-plan-cn"
+  ]
+}
