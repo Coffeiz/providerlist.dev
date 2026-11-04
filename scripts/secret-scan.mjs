@@ -17,6 +17,7 @@
  *   退出码 0 = 干净，1 = 发现疑似密钥
  */
 
+import { pathToFileURL } from 'node:url';
 import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
@@ -264,6 +265,6 @@ async function main() {
   process.exitCode = 1;
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   await main();
 }
