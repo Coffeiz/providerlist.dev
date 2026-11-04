@@ -1,0 +1,14 @@
+id = "omni-moderation-latest"
+model_ref = "openai/omni-moderation-latest"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0"

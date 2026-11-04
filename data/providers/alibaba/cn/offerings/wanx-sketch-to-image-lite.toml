@@ -1,0 +1,19 @@
+id = "wanx-sketch-to-image-lite"
+model_ref = "alibaba/wanx-sketch-to-image-lite"
+status = "active"
+
+[api_limits]
+rpm = 120
+tpm = 3000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx-sketch-to-image-lite"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.06"

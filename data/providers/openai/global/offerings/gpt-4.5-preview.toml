@@ -1,0 +1,7 @@
+id = "gpt-4.5-preview"
+model_ref = "openai/gpt4-5-preview"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-4.5-preview"

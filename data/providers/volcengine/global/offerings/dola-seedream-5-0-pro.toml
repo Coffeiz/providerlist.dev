@@ -1,0 +1,82 @@
+id = "dola-seedream-5-0-pro"
+model_ref = "bytedance/dola-seedream-5-0-pro-260628"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.003"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.045"
+
+[[pricing.conditions]]
+field = "request.generation_mode"
+value = "single_image"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "lte"
+value = 2610000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.09"
+
+[[pricing.conditions]]
+field = "request.generation_mode"
+value = "single_image"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "gt"
+value = 2610000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.0225"
+
+[[pricing.conditions]]
+field = "request.generation_mode"
+value = "layer_decomposition"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "lte"
+value = 2610000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.045"
+
+[[pricing.conditions]]
+field = "request.generation_mode"
+value = "layer_decomposition"
+
+[[pricing.conditions]]
+field = "request.output_pixels"
+operator = "gt"
+value = 2610000

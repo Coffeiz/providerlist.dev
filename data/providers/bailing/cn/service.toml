@@ -1,0 +1,38 @@
+website = "https://developer.ant-ling.com/zh-CN/docs/"
+capabilities = []
+
+[[endpoints]]
+id = "openai-compatible"
+base_url = "https://api.ant-ling.com/v1"
+api_region = "中国"
+documentation = "https://developer.ant-ling.com/zh-CN/docs/api-reference/chat/openai"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developer.ant-ling.com/zh-CN/docs/api-reference/chat/openai"
+path = "/chat/completions"
+
+[[endpoints]]
+id = "anthropic-compatible"
+base_url = "https://api.ant-ling.com/anthropic"
+api_region = "中国"
+documentation = "https://developer.ant-ling.com/zh-CN/docs/api-reference/chat/anthropic/"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developer.ant-ling.com/zh-CN/docs/api-reference/chat/anthropic/"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+documentation = "https://developer.ant-ling.com/zh-CN/docs/api-reference/chat/anthropic/"
+path = "/v1/messages"
+
+[docs]
+overview = "https://developer.ant-ling.com/zh-CN/docs/api-reference/"
+pricing = "https://developer.ant-ling.com/zh-CN/docs/models/price/"

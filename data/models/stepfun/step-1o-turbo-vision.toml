@@ -1,0 +1,10 @@
+name = "Step-1o Turbo Vision"
+family = "Step-1o"
+type = "chat"
+
+[limits]
+context = 32768
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]

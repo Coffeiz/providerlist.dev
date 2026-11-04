@@ -1,0 +1,7 @@
+name = "qwen3.5-ocr"
+type = "chat"
+release_date = "2026-06-16"
+
+[modalities]
+input = [ "image" ]
+output = [ "text" ]

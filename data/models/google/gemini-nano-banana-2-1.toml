@@ -1,0 +1,17 @@
+name = "Nano Banana 2.1"
+type = "image"
+release_date = "2026-10-06"
+
+[modalities]
+input = [ "text", "image", "video", "file" ]
+output = [ "image", "text" ]
+
+[limits]
+input = 131072
+output = 32768
+
+[specifications]
+image_output_resolutions = [ "1K", "2K", "4K" ]
+
+[capabilities]
+reasoning = true

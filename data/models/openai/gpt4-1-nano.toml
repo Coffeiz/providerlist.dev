@@ -1,0 +1,11 @@
+name = "GPT-4.1 nano"
+type = "chat"
+release_date = "2025-04-14"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1047576
+output = 32768

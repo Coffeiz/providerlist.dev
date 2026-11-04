@@ -1,0 +1,11 @@
+id = "grok-imagine-image-quality"
+model_ref = "xai/grok-imagine-image-quality"
+status = "retired"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.05"

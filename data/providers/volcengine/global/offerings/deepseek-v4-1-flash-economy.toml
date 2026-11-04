@@ -1,0 +1,86 @@
+id = "deepseek-v4-1-flash-economy"
+model_ref = "deepseek/deepseek-v4-1-flash-economy"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.12"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.002"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.0083"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.48"
+
+[[pricing.conditions]]
+field = "request.time_period"
+value = "off_peak"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.24"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.005"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.0083"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.96"
+
+[[pricing.conditions]]
+field = "request.time_period"
+value = "peak"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.12"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.002"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.48"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing.conditions]]
+field = "request.time_period"
+value = "off_peak"

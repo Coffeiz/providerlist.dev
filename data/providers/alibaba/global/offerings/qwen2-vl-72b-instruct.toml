@@ -1,0 +1,21 @@
+id = "qwen2-vl-72b-instruct"
+model_ref = "alibaba/qwen2-vl-72b-instruct"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+deployment = "中国内地"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.294"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.881"

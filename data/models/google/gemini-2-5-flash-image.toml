@@ -1,0 +1,14 @@
+name = "Nano Banana"
+type = "image"
+release_date = "2025-10-02"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image", "text" ]
+
+[limits]
+input = 65536
+output = 32768
+
+[specifications]
+image_output_resolutions = [ "1K" ]

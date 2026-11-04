@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-v6-kf2v"
+type = "video"
+release_date = "2026-03-29"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

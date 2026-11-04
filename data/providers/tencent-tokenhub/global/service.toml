@@ -1,0 +1,48 @@
+website = "https://intl.cloud.tencent.com/products/tokenhub"
+
+[docs]
+overview = "https://intl.cloud.tencent.com/document/product/1300/78933"
+api = "https://intl.cloud.tencent.com/document/product/1300/78941"
+model_list = "https://intl.cloud.tencent.com/document/product/1300/78934"
+pricing = "https://intl.cloud.tencent.com/document/product/1300/78937"
+coding_plan = "https://cloud.tencent.com/document/product/1823/130092"
+token_plan = "https://www.tencentcloud.com/document/product/1300/81315"
+
+[[endpoints]]
+id = "global-openai-compatible"
+base_url = "https://tokenhub-intl.tencentcloudmaas.com/v1"
+api_region = "新加坡 · 全球"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632?lang=en"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632"
+path = "/responses"
+
+[[endpoints]]
+id = "global-openai-compatible-backup"
+base_url = "https://tokenhub-intl.tencentcloudmaas.tech/v1"
+api_region = "新加坡 · 全球（备用）"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632?lang=en"
+
+[[endpoints]]
+id = "global-anthropic-compatible"
+base_url = "https://tokenhub-intl.tencentcloudmaas.com/v1"
+api_region = "新加坡 · 全球"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632?lang=en"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://intl.cloud.tencent.com/document/product/1300/80632"
+path = "/messages"

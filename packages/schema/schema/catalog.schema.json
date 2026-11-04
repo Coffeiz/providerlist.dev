@@ -1,0 +1,653 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://providerlist.dev/schema/catalog.schema.json",
+  "title": "ProviderList Catalog Index Documents",
+  "description": "目录索引类文档的公开 Schema：manifest、Provider 摘要索引、当前目录、搜索索引。根节点用 oneOf 覆盖四种文档形态，消费者可直接用它校验下载到的文件。",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/Manifest"
+    },
+    {
+      "$ref": "#/$defs/ProviderIndex"
+    },
+    {
+      "$ref": "#/$defs/CatalogCurrent"
+    },
+    {
+      "$ref": "#/$defs/SearchIndex"
+    }
+  ],
+  "$defs": {
+    "Semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "IsoDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ModelType": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9]*(?:[._-][a-z0-9]+)*$",
+      "description": "开放枚举：十三个已知标准类型（包含 music、3d、world_model 与 computer_use）+ 上游可能带来的未知值。"
+    },
+    "AccountMarket": {
+      "enum": [
+        "CN",
+        "GLOBAL",
+        "OTHER",
+        "UNKNOWN"
+      ]
+    },
+    "CurrencyCode": {
+      "type": "string",
+      "enum": [
+        "CNY",
+        "USD",
+        "EUR",
+        "JPY",
+        "GBP",
+        "HKD",
+        "TWD",
+        "KRW",
+        "SGD",
+        "AUD",
+        "CAD",
+        "CHF",
+        "INR",
+        "RUB",
+        "BRL",
+        "MXN",
+        "ZAR",
+        "THB",
+        "MYR",
+        "IDR",
+        "PHP",
+        "VND",
+        "TRY",
+        "PLN",
+        "CZK",
+        "SEK",
+        "NOK",
+        "DKK",
+        "NZD",
+        "AED",
+        "SAR",
+        "ILS",
+        "EGP",
+        "NGN",
+        "KES",
+        "UAH",
+        "RON",
+        "HUF",
+        "CLP",
+        "COP",
+        "ARS",
+        "PEN",
+        "PKR",
+        "BDT",
+        "LKR",
+        "KWD",
+        "BHD",
+        "OMR",
+        "JOD",
+        "TND"
+      ]
+    },
+    "OfficialIntegration": {
+      "type": "object",
+      "required": [
+        "state"
+      ],
+      "additionalProperties": false,
+      "description": "由授权 Registry 与 PublicationEvent 编译生成，**不接受源数据自报**。",
+      "properties": {
+        "state": {
+          "enum": [
+            "none",
+            "domain_bound",
+            "connected",
+            "revoked",
+            "stale"
+          ]
+        },
+        "source_hostname": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "service_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "offering_count": {
+              "type": "number"
+            }
+          }
+        },
+        "last_published_at": {
+          "$ref": "#/$defs/IsoDateTime"
+        }
+      }
+    },
+    "ProviderSummary": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "aliases",
+        "kind",
+        "account_markets",
+        "billing_currencies",
+        "model_types",
+        "active_offering_count",
+        "service_capability_count"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kind": {
+          "enum": [
+            "first_party",
+            "aggregator",
+            "cloud_platform",
+            "other"
+          ]
+        },
+        "logo": {
+          "type": "string"
+        },
+        "account_markets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/AccountMarket"
+          }
+        },
+        "billing_currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrencyCode"
+          }
+        },
+        "model_types": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ModelType"
+          }
+        },
+        "active_offering_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "service_capability_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "official_integration": {
+          "$ref": "#/$defs/OfficialIntegration"
+        }
+      }
+    },
+    "ProviderIndex": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "data_version",
+        "generated_at",
+        "providers"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/Semver"
+        },
+        "data_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ProviderSummary"
+          }
+        }
+      }
+    },
+    "Manifest": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "data_version",
+        "generated_at",
+        "catalog_status",
+        "files"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/Semver"
+        },
+        "data_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "catalog_status": {
+          "enum": [
+            "published",
+            "draft"
+          ]
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^sha256:[0-9a-f]{64}$"
+              },
+              "bytes": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "source_revisions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CatalogStats": {
+      "type": "object",
+      "required": [
+        "provider_count",
+        "service_count",
+        "canonical_model_count",
+        "active_offering_count",
+        "active_offering_count_by_type",
+        "service_capability_count",
+        "first_party_direct_offering_count",
+        "official_feed_coverage"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "provider_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "service_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "canonical_model_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "active_offering_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "active_offering_count_by_type": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "service_capability_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "first_party_direct_offering_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "official_feed_coverage": {
+          "type": "object",
+          "required": [
+            "provider_count",
+            "offering_count"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "provider_count": {
+              "type": "number",
+              "minimum": 0
+            },
+            "offering_count": {
+              "type": "number",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "CurrentOffering": {
+      "type": "object",
+      "required": [
+        "provider_id",
+        "service_id",
+        "id",
+        "model_ref",
+        "model_type",
+        "account_market",
+        "billing_currencies",
+        "status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "service_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_ref": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "model_type": {
+          "$ref": "#/$defs/ModelType"
+        },
+        "account_market": {
+          "$ref": "#/$defs/AccountMarket"
+        },
+        "billing_currencies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrencyCode"
+          }
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "pricing": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingGroup"
+          }
+        },
+        "status": {
+          "$ref": "#/$defs/OfferingStatus"
+        }
+      }
+    },
+    "CatalogCurrent": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "data_version",
+        "generated_at",
+        "providers",
+        "offerings",
+        "stats"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/Semver"
+        },
+        "data_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ProviderSummary"
+          }
+        },
+        "offerings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CurrentOffering"
+          }
+        },
+        "stats": {
+          "$ref": "#/$defs/CatalogStats"
+        }
+      }
+    },
+    "SearchIndexEntry": {
+      "type": "object",
+      "required": [
+        "kind",
+        "provider_id",
+        "title",
+        "keywords",
+        "href"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "provider",
+            "offering"
+          ]
+        },
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "model_type": {
+          "$ref": "#/$defs/ModelType"
+        },
+        "href": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "SearchIndex": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "data_version",
+        "generated_at",
+        "entries"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "$ref": "#/$defs/Semver"
+        },
+        "data_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "generated_at": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/SearchIndexEntry"
+          }
+        }
+      }
+    },
+    "PricingGroup": {
+      "type": "object",
+      "required": [
+        "currency",
+        "rates"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "$ref": "#/$defs/CurrencyCode"
+        },
+        "rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingRate"
+          }
+        },
+        "deployment": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Provider 标注的部署范围，例如国际或中国内地。"
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "部署区域，不等同于账号市场。"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PriceCondition"
+          }
+        },
+        "unsupported_metrics": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effective_from": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "effective_until": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "PricingRate": {
+      "type": "object",
+      "required": [
+        "metric",
+        "unit",
+        "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ttl": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*(s|min|h|d)$"
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "$ref": "#/$defs/BillingUnit"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "value": {
+          "$ref": "#/$defs/DecimalString"
+        },
+        "list_value": {
+          "$ref": "#/$defs/DecimalString"
+        }
+      }
+    },
+    "BillingUnit": {
+      "type": "string",
+      "minLength": 1
+    },
+    "DecimalString": {
+      "type": "string",
+      "pattern": "^-?(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$"
+    },
+    "PriceCondition": {
+      "type": "object"
+    },
+    "OfferingStatus": {
+      "type": "string",
+      "enum": [
+        "active",
+        "restricted",
+        "deprecated",
+        "retired",
+        "unknown"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+id = "grok-imagine-image"
+model_ref = "xai/grok-imagine-image"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.02"

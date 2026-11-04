@@ -1,0 +1,77 @@
+id = "qwen-audio-3.1-realtime-flash"
+model_ref = "unknown"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.5"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.5"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+deployment = "国际"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.677"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.104"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+deployment = "国际"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.781"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.104"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"

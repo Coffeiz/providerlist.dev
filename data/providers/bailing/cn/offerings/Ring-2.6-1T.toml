@@ -1,0 +1,6 @@
+id = "Ring-2.6-1T"
+model_ref = "antgroup/ring-2-6-1t"
+status = "deprecated"
+
+[links]
+documentation = "https://developer.ant-ling.com/zh-CN/docs/models/deprecation/"

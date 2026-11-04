@@ -1,0 +1,11 @@
+name = "GLM-5-Turbo"
+release_date = "2026-03-15"
+type = "chat"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 128000

@@ -1,0 +1,6 @@
+id = "kimi-k2-0905-preview"
+model_ref = "moonshotai/kimi-k2-0905"
+status = "retired"
+
+[links]
+documentation = "https://platform.kimi.ai/docs/models"

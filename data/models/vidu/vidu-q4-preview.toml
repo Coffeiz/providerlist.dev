@@ -1,0 +1,8 @@
+name = "Vidu Q4 Preview"
+type = "video"
+release_date = "2026-10-07"
+developer_name = "生数科技 / Vidu"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

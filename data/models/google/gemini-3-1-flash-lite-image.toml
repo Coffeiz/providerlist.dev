@@ -1,0 +1,17 @@
+name = "Nano Banana 2 Lite"
+type = "image"
+release_date = "2026-06-30"
+
+[modalities]
+input = [ "text", "image", "video", "file" ]
+output = [ "image", "text" ]
+
+[limits]
+input = 65536
+output = 4096
+
+[specifications]
+image_output_resolutions = [ "1K" ]
+
+[capabilities]
+reasoning = true

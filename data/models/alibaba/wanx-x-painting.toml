@@ -1,0 +1,11 @@
+name = "wanx-x-painting"
+type = "image"
+release_date = "2024-05-28"
+
+[modalities]
+input = [ "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

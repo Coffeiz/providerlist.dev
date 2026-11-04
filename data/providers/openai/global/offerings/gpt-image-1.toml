@@ -1,0 +1,7 @@
+id = "gpt-image-1"
+model_ref = "openai/gpt-image-1"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-image-1"

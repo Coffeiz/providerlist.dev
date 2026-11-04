@@ -1,0 +1,51 @@
+id = "MiniMax-Hailuo-2.3-Fast"
+model_ref = "minimax/minimax-hailuo-2-3-fast"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.19"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "768P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 6
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.32"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "768P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 10
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_video"
+value = "0.33"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing.conditions]]
+field = "video.duration_seconds"
+value = 6

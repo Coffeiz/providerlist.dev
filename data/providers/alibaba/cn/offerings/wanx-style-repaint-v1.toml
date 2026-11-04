@@ -1,0 +1,19 @@
+id = "wanx-style-repaint-v1"
+model_ref = "alibaba/wanx-style-repaint-v1"
+status = "active"
+
+[api_limits]
+rpm = 120
+tpm = 3000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx-style-repaint-v1"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.12"

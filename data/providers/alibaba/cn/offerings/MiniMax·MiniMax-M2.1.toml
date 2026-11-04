@@ -1,0 +1,27 @@
+id = "MiniMax/MiniMax-M2.1"
+model_ref = "minimax/minimax-m2-1"
+status = "active"
+
+[api_limits]
+context = 204800
+input = 204800
+output = 131072
+rpm = 500
+tpm = 20000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/minimax-m2-1-by-minimax"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8.4"

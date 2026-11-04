@@ -1,0 +1,7 @@
+id = "o1-mini"
+model_ref = "openai/o1-mini"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o1-mini"

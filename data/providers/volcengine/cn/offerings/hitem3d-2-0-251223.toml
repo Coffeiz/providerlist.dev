@@ -1,0 +1,54 @@
+id = "hitem3d-2-0-251223"
+model_ref = "hitem3d/hitem3d-2-0"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "5.80"
+
+[[pricing.conditions]]
+field = "output_mode"
+value = "standard_white"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "10.15"
+
+[[pricing.conditions]]
+field = "output_mode"
+value = "standard_textured"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "8.70"
+
+[[pricing.conditions]]
+field = "output_mode"
+value = "high_detail_white"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_3d_asset"
+unit = "per_request"
+value = "13.05"
+
+[[pricing.conditions]]
+field = "output_mode"
+value = "high_detail_textured"

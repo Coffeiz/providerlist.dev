@@ -1,0 +1,40 @@
+id = "o1-pro"
+model_ref = "openai/o1-pro"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o1-pro"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "150.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "600.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "75.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "300.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

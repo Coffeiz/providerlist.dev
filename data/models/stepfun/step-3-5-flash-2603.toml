@@ -1,0 +1,15 @@
+name = "Step 3.5 Flash 2603"
+family = "Step 3"
+type = "chat"
+release_date = "2026-04-02"
+
+[limits]
+context = 262144
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "medium", "high" ]
+tool_calling = true

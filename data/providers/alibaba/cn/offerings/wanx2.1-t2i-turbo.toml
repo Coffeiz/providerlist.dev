@@ -1,0 +1,18 @@
+id = "wanx2.1-t2i-turbo"
+model_ref = "alibaba/wanx2-1-t2i-turbo"
+status = "active"
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx2-1-t2i-turbo"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.14"

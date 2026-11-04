@@ -1,0 +1,14 @@
+id = "stepaudio-2-asr-pro"
+model_ref = "stepfun/stepaudio-2-asr-pro"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_audio_hour"
+unit = "per_input_audio_hour"
+value = "2"

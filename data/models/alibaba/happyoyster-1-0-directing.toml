@@ -1,0 +1,12 @@
+name = "happyoyster-1.0-directing"
+type = "world_model"
+release_date = "2026-09-17"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

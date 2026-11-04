@@ -1,0 +1,7 @@
+id = "happyoyster-1.0-adventure"
+model_ref = "alibaba/happyoyster-1-0-adventure"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/happyoyster-1-0-adventure"

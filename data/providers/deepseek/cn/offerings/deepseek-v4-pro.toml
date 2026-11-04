@@ -1,0 +1,56 @@
+id = "deepseek-v4-pro"
+model_ref = "deepseek/deepseek-v4-pro"
+status = "active"
+
+[links]
+documentation = "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+
+[api_limits]
+context = 1048576
+output = 393216
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4.5"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.15"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "13.5"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "off_peak"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "9.0"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.30"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27.0"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "peak"

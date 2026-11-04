@@ -1,0 +1,10 @@
+name = "GLM-4-Long"
+type = "chat"
+
+[limits]
+context = 1000000
+output = 4000
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

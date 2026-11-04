@@ -1,0 +1,27 @@
+id = "vanchin/deepseek-v3.2-think"
+model_ref = "deepseek/deepseek-v3-2-think"
+status = "active"
+
+[api_limits]
+context = 131072
+input = 98304
+output = 65536
+rpm = 30
+tpm = 600000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/deepseek-v3-2-think"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3"

@@ -1,0 +1,16 @@
+name = "mimo-v2.6-flash"
+type = "chat"
+release_date = "2026-09-22"
+
+[modalities]
+input = [ "text", "image", "audio", "video" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+output = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

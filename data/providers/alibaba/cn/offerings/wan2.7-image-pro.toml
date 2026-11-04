@@ -1,0 +1,27 @@
+id = "wan2.7-image-pro"
+model_ref = "alibaba/wan2-7-image-pro"
+status = "active"
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan2-7-image-pro"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.562065"

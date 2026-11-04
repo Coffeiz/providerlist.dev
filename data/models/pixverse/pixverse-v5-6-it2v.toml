@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-v5.6-it2v"
+type = "video"
+release_date = "2026-01-26"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

@@ -1,0 +1,99 @@
+id = "gpt-5.4-pro"
+model_ref = "openai/gpt-5-4-pro"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "180.00"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "60.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "270.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "90.00"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "135.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "short"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "short"
+unit = "per_1m_tokens"
+value = "90.00"
+
+[[pricing.rates]]
+metric = "input"
+context = "long"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing.rates]]
+metric = "output"
+context = "long"
+unit = "per_1m_tokens"
+value = "135.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "flex"

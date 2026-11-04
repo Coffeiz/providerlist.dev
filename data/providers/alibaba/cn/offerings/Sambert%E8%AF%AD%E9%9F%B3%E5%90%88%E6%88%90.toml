@@ -1,0 +1,18 @@
+id = "Sambert语音合成"
+model_ref = "alibaba/sambert"
+status = "active"
+
+[api_limits]
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/sambert"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "1"

@@ -1,0 +1,7 @@
+name = "wan2.7-image"
+type = "image"
+release_date = "2026-04-01"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

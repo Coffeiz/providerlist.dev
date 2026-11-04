@@ -1,0 +1,15 @@
+name = "moonshot-v1-128k-vision-preview"
+type = "chat"
+family = "Moonshot V1"
+release_date = "2025-01-13"
+
+[limits]
+context = 131072
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = true
+structured_output = true

@@ -1,0 +1,27 @@
+id = "deepseek-r1-distill-qwen-1.5b"
+model_ref = "deepseek/deepseek-r1-distill-qwen-1-5b"
+status = "active"
+
+[api_limits]
+context = 32768
+input = 32768
+output = 16384
+rpm = 60
+tpm = 100000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/deepseek-r1-distill-qwen-1-5b"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0"

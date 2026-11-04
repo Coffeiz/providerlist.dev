@@ -1,0 +1,13 @@
+name = "mimo-v2-omni"
+type = "chat"
+release_date = "2026-03-18"
+developer_name = "Xiaomi MiMo"
+
+[modalities]
+input = [ "text", "image", "audio", "video" ]
+
+[limits]
+context = 256000
+
+[capabilities]
+tool_calling = true

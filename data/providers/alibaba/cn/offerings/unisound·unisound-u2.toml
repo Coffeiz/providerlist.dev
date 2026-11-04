@@ -1,0 +1,27 @@
+id = "unisound/unisound-u2"
+model_ref = "unisound/unisound-u2"
+status = "active"
+
+[api_limits]
+context = 163840
+input = 159744
+output = 65536
+rpm = 300
+tpm = 3000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/unisound-u2-by-unisound"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"

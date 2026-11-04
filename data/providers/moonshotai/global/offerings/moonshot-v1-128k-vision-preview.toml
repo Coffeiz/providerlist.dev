@@ -1,0 +1,6 @@
+id = "moonshot-v1-128k-vision-preview"
+model_ref = "moonshotai/moonshot-v1-128k-vision-preview"
+status = "retired"
+
+[links]
+documentation = "https://platform.kimi.ai/docs/models"

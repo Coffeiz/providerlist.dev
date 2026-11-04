@@ -1,0 +1,4 @@
+id = "deepseek/deepseek-v4-pro-0813"
+model_ref = "deepseek/deepseek-v4-pro"
+status = "unknown"
+pricing = []

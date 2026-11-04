@@ -1,0 +1,107 @@
+name: CI
+
+# 设计文档 §10.1：CI 在每个 PR 上运行，**只读**。
+# 写生产是 Publish 流水线的唯一职责——本工作流没有任何部署权限。
+on:
+  pull_request:
+    branches: [main]
+  pull_request_review:
+    types: [submitted]
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      review_base:
+        description: 仅供 Sync 触发采集 PR 评审门禁时指定基线分支
+        type: string
+        required: false
+
+# 同一个 PR 上的新提交会取消旧运行，避免浪费额度。
+concurrency:
+  group: ci-${{ github.ref }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  verify:
+    name: Type Check · Data Validation · Tests · Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 设计文档 §10.1 CI 检查项：类型检查
+      - name: Type Check
+        run: pnpm typecheck
+
+      # 敏感信息扫描——设计文档 §10.1「敏感信息扫描」。
+      # 放在测试之前：泄露是比测试失败更严重的问题，应该先报。
+      - name: Secret Scan
+        run: pnpm scan:secrets
+
+      # Schema 校验 + 交叉引用检查 + Fixture 回归
+      - name: Validate Source Data (Schema · Cross-References · Lifecycle Evidence · Provider Model Field Boundaries)
+        run: pnpm validate:data
+
+      # 页面按钮和文档链接必须指向用户可读页面，不能暴露 Markdown 抓取文件。
+      - name: Check Page Links
+        run: pnpm check:page-links
+
+      # 第三方依赖许可证清单必须与锁定安装结果同步，并符合许可证策略。
+      - name: Check Third-Party Dependency Licenses
+        run: pnpm licenses:check
+
+      - name: Check Ingestion Review Status
+        if: github.event_name == 'pull_request' || github.event_name == 'pull_request_review' || (github.event_name == 'workflow_dispatch' && inputs.review_base != '')
+        run: node scripts/ci/check-ingestion-review-gate.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REVIEW_BASE_REF: ${{ inputs.review_base || github.event.pull_request.base.ref }}
+
+      # 规则验证 + Fixture 回归 + 公开 Schema 同源校验
+      - name: Run Full Test Suite
+        run: pnpm test
+
+      # 静态构建：catalog 产物 + 站点产物
+      # 缺 dist/v1 时前端构建会直接失败，不会产出半成品站点。
+      - name: Build Public Data and Site
+        run: pnpm build
+        env:
+          VITE_ANALYTICS_DISABLED: 'true'
+
+      - name: Validate Build Artifacts
+        run: |
+          test -f dist/v1/manifest.json
+          test -f dist/v1/schema/public-provider.schema.json
+          test -f dist/v1/offerings.json
+          test -f dist/assets/datasets/catalog-current.json
+          test -f frontend/dist/index.html
+          test -f frontend/dist/v1/manifest.json
+          test -f frontend/dist/assets/datasets/catalog-current.json
+          echo "产物自检通过"
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-and-frontend
+          path: |
+            dist/
+            frontend/dist/
+          retention-days: 7
+          if-no-files-found: error

@@ -1,0 +1,11 @@
+name = "GPT-4 Turbo Preview"
+type = "chat"
+release_date = "2023-11-06"
+
+[limits]
+context = 128000
+output = 4096
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

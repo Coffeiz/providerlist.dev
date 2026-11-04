@@ -1,0 +1,23 @@
+id = "gpt-3.5-turbo"
+model_ref = "openai/gpt3-5-turbo"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-3.5-turbo"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

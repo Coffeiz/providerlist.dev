@@ -1,0 +1,14 @@
+id = "hy-3d-express"
+model_ref = "tencent/hy-3d-express"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_credit"
+value = "0.12"

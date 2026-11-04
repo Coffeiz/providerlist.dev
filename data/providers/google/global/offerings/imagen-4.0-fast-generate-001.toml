@@ -1,0 +1,6 @@
+id = "imagen-4.0-fast-generate-001"
+model_ref = "google/imagen-4-0-fast-generate-001"
+status = "retired"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models/imagen"

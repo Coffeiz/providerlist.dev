@@ -1,0 +1,16 @@
+id = "grok-voice-3.0"
+model_ref = "xai/grok-voice-3-0"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio_minute"
+unit = "per_input_audio_minute"
+value = "0.08"
+
+[[pricing.rates]]
+metric = "text_input"
+unit = "per_request"
+value = "0.004"

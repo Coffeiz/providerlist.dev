@@ -1,0 +1,10 @@
+id = "image-instance-segmentation"
+model_ref = "alibaba/image-instance-segmentation"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/model-image-instance-segmentation"

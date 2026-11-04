@@ -1,0 +1,7 @@
+id = "text-moderation-latest"
+model_ref = "openai/text-moderation-latest"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/text-moderation-latest"

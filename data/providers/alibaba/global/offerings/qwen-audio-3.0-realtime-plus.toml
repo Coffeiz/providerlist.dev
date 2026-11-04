@@ -1,0 +1,80 @@
+id = "qwen-audio-3.0-realtime-plus"
+model_ref = "alibaba/qwen-audio-3-0-realtime-plus"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.4"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.4"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.688"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.501"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "5.501"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.501"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"

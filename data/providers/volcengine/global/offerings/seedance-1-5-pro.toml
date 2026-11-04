@@ -1,0 +1,70 @@
+id = "seedance-1-5-pro"
+model_ref = "bytedance/seedance-1-5-pro-251215"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.4"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing.conditions]]
+field = "request.video_audio"
+value = true
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.2"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing.conditions]]
+field = "request.video_audio"
+value = false
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.2"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "offline"
+
+[[pricing.conditions]]
+field = "request.video_audio"
+value = true
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.6"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "offline"
+
+[[pricing.conditions]]
+field = "request.video_audio"
+value = false

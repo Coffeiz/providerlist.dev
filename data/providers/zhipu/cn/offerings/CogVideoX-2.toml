@@ -1,0 +1,23 @@
+id = "CogVideoX-2"
+model_ref = "zhipu/cogvideox-2"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "0.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

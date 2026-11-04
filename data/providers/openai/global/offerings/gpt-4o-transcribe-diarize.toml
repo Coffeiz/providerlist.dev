@@ -1,0 +1,4 @@
+id = "gpt-4o-transcribe-diarize"
+model_ref = "openai/gpt-4o-transcribe-diarize"
+status = "unknown"
+pricing = []

@@ -1,0 +1,7 @@
+name = "mimo-v2.5-asr"
+type = "transcription"
+release_date = "2026-06-02"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

@@ -1,0 +1,27 @@
+id = "qwen-doc-turbo"
+model_ref = "alibaba/qwen-doc-turbo"
+status = "active"
+
+[api_limits]
+context = 262144
+input = 253952
+output = 8192
+rpm = 600
+tpm = 3000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-doc-turbo"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.6"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1"

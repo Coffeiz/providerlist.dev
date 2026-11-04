@@ -1,0 +1,71 @@
+[[plans]]
+id = "global-byteplus-coding-personal-lite"
+name = "Coding Plan Lite Personal"
+description = "The ModelArk Coding Plan is a subscription service for AI coding scenarios tailored for developers."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "10"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "30"
+
+[plans.links]
+overview = "https://docs.byteplus.com/en/docs/ModelArk/coding-plan-personal-plan-overview?redirect=1"
+pricing = "https://docs.byteplus.com/en/docs/ModelArk/model-pricing?redirect=1"
+
+[[plans]]
+id = "global-byteplus-coding-personal-pro"
+name = "Coding Plan Pro Personal"
+ratio = "5"
+description = "The ModelArk Coding Plan is a subscription service for AI coding scenarios tailored for developers."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "50"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "150"
+
+[plans.links]
+overview = "https://docs.byteplus.com/en/docs/ModelArk/coding-plan-personal-plan-overview?redirect=1"
+pricing = "https://docs.byteplus.com/en/docs/ModelArk/model-pricing?redirect=1"
+
+[[plans]]
+id = "global-byteplus-coding-team-lite"
+name = "Coding Plan Team Lite"
+description = "Coding Plan Team is a subscription-based large model coding service designed for enterprise customers."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "20"
+
+[plans.allowance]
+min_seats = 5
+
+[plans.links]
+overview = "https://docs.byteplus.com/en/docs/ModelArk/coding-plan-enterprise-plan-overview?redirect=1"
+pricing = "https://docs.byteplus.com/en/docs/ModelArk/model-pricing?redirect=1"
+
+[[plans]]
+id = "global-byteplus-coding-team-pro"
+name = "Coding Plan Team Pro"
+ratio = "5"
+description = "Coding Plan Team is a subscription-based large model coding service designed for enterprise customers."
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[plans.allowance]
+min_seats = 5
+
+[plans.links]
+overview = "https://docs.byteplus.com/en/docs/ModelArk/coding-plan-enterprise-plan-overview?redirect=1"
+pricing = "https://docs.byteplus.com/en/docs/ModelArk/model-pricing?redirect=1"

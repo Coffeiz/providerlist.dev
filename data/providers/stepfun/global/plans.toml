@@ -1,0 +1,115 @@
+[[plans]]
+id = "stepfun-global-step-plan-flash-mini"
+name = "Flash Mini"
+credits = 400000000
+description = "Step Plan is a subscription service from the StepFun API Platform that lets you use StepFun models at a subscription price in mainstream coding tools and agent platforms such as OpenClaw, Claude Code, Trae, and Cursor."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "6.99"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "18.99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "69.99"
+
+[[plans]]
+id = "stepfun-global-step-plan-flash-plus"
+name = "Flash Plus"
+credits = 1600000000
+description = "Step Plan is a subscription service from the StepFun API Platform that lets you use StepFun models at a subscription price in mainstream coding tools and agent platforms such as OpenClaw, Claude Code, Trae, and Cursor."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "9.99"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "26.99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "95.99"
+
+[[plans]]
+id = "stepfun-global-step-plan-flash-pro"
+name = "Flash Pro"
+credits = 8000000000
+description = "Step Plan is a subscription service from the StepFun API Platform that lets you use StepFun models at a subscription price in mainstream coding tools and agent platforms such as OpenClaw, Claude Code, Trae, and Cursor."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "29"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "79"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "289"
+
+[[plans]]
+id = "stepfun-global-step-plan-flash-max"
+name = "Flash Max"
+credits = 40000000000
+description = "Step Plan is a subscription service from the StepFun API Platform that lets you use StepFun models at a subscription price in mainstream coding tools and agent platforms such as OpenClaw, Claude Code, Trae, and Cursor."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "269"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "989"
+
+[[plans]]
+id = "stepfun-global-step-plan-small"
+name = "Small"
+credits = 400000000
+description = "If you use up your monthly allowance, you can purchase booster packs instead of waiting for the next month."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "one_time"
+price = "6.99"
+
+[[plans]]
+id = "stepfun-global-step-plan-large"
+name = "Large"
+credits = 1600000000
+description = "If you use up your monthly allowance, you can purchase booster packs instead of waiting for the next month."
+currency = "USD"
+
+[plans.links]
+official = "https://platform.stepfun.ai/docs/en/step-plan/overview"
+
+[[plans.billing_options]]
+billing_period = "one_time"
+price = "9.99"

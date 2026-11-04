@@ -1,0 +1,7 @@
+name = "wanx2.1-t2i-plus"
+type = "image"
+release_date = "2025-01-09"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]

@@ -1,0 +1,11 @@
+name = "GLM-5.1"
+release_date = "2026-04-07"
+type = "chat"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 128000

@@ -1,0 +1,11 @@
+name = "GPT-Realtime-2.1 Mini"
+type = "realtime"
+release_date = "2026-07-06"
+
+[modalities]
+input = [ "text", "image", "audio" ]
+output = [ "text", "audio" ]
+
+[limits]
+context = 128000
+output = 32000

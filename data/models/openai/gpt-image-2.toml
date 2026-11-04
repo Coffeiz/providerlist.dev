@@ -1,0 +1,15 @@
+name = "GPT-Image-2"
+type = "image"
+family = "gpt-image"
+release_date = "2026-04-21"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "1024x1024", "1536x1024", "1024x1536", "2048x2048", "2048x1152", "3840x2160", "2160x3840" ]
+
+[capabilities]
+reasoning = false
+tool_calling = false

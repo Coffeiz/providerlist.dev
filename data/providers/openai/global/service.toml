@@ -1,0 +1,418 @@
+website = "https://platform.openai.com/"
+
+[[endpoints]]
+id = "openai-api"
+base_url = "https://api.openai.com/v1"
+api_region = "全球"
+documentation = "https://developers.openai.com/api/reference/resources/models/methods/list"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+documentation = "https://developers.openai.com/api/docs/models/gpt-6-astra"
+path = "/batch"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/models/gpt-6-astra"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/models/gpt-6-astra"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/image-generation?generate-images-api=responses"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+path = "/batch"
+documentation = "https://developers.openai.com/api/docs/models/gpt-6-astra"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+route_mappings = [ "/tools/*/type" ]
+
+[[capabilities.parameters]]
+name = "tools[].search_context_size"
+type = "string"
+required = false
+enum = [ "low", "medium", "high" ]
+route_mappings = [ "/tools/*/search_context_size" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters"
+type = "object"
+required = false
+route_mappings = [ "/tools/*/filters" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters.allowed_domains[]"
+type = "string"
+required = false
+route_mappings = [ "/tools/*/filters/allowed_domains/*" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters.blocked_domains[]"
+type = "string"
+required = false
+route_mappings = [ "/tools/*/filters/blocked_domains/*" ]
+
+[[capabilities.parameters]]
+name = "tools[].user_location"
+type = "object"
+required = false
+route_mappings = [ "/tools/*/user_location" ]
+
+[[capabilities.parameters]]
+name = "tools[].external_web_access"
+type = "boolean"
+required = false
+route_mappings = [ "/tools/*/external_web_access" ]
+
+[[capabilities.parameters]]
+name = "tools[].search_content_types[]"
+type = "string"
+required = false
+enum = [ "text", "image" ]
+route_mappings = [ "/tools/*/search_content_types/*" ]
+
+[[capabilities.parameters]]
+name = "tools[].image_settings"
+type = "object"
+required = false
+route_mappings = [ "/tools/*/image_settings" ]
+
+[[capabilities.parameters]]
+name = "tools[].image_settings.max_results"
+type = "integer"
+required = false
+route_mappings = [ "/tools/*/image_settings/max_results" ]
+
+[[capabilities.parameters]]
+name = "tools[].image_settings.caption"
+type = "boolean"
+required = false
+route_mappings = [ "/tools/*/image_settings/caption" ]
+
+[[capabilities.parameters]]
+name = "include[]"
+type = "string"
+required = false
+enum = [ "web_search_call.action.sources", "web_search_call.results" ]
+route_mappings = [ "/include/*" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+
+[capabilities.links]
+documentation = "https://developers.openai.com/api/docs/guides/tools-web-search?api-mode=responses"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=web_search_call", "output[].id", "output[].status", "output[].action.type", "output[].action.query", "output[].action.sources[]", "output[].results[]", "output[].type=message", "output[].content[].type=output_text", "output[].content[].text", "output[].content[].annotations[].type=url_citation", "output[].content[].annotations[].url", "output[].content[].annotations[].title", "output[].content[].annotations[].start_index", "output[].content[].annotations[].end_index" ]
+
+[[capabilities]]
+kind = "file_search"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "file_search" ]
+route_mappings = [ "/tools/*/type" ]
+
+[[capabilities.parameters]]
+name = "tools[].vector_store_ids[]"
+type = "string"
+required = true
+route_mappings = [ "/tools/*/vector_store_ids/*" ]
+
+[[capabilities.parameters]]
+name = "tools[].max_num_results"
+type = "integer"
+required = false
+route_mappings = [ "/tools/*/max_num_results" ]
+
+[[capabilities.parameters]]
+name = "tools[].filters"
+type = "object"
+required = false
+route_mappings = [ "/tools/*/filters" ]
+
+[[capabilities.parameters]]
+name = "include[]"
+type = "string"
+required = false
+enum = [ "file_search_call.results" ]
+route_mappings = [ "/include/*" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+
+[capabilities.links]
+documentation = "https://developers.openai.com/api/docs/guides/tools-file-search"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=file_search_call", "output[].id", "output[].status", "output[].queries[]", "output[].search_results[]", "output[].type=message", "output[].content[].type=output_text", "output[].content[].text", "output[].content[].annotations[].type=file_citation", "output[].content[].annotations[].file_id", "output[].content[].annotations[].filename", "output[].content[].annotations[].index" ]
+
+[[capabilities]]
+kind = "code_execution"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "code_interpreter" ]
+route_mappings = [ "body.tools[].type" ]
+
+[[capabilities.parameters]]
+name = "tools[].container.type"
+type = "string"
+required = false
+enum = [ "auto" ]
+route_mappings = [ "body.tools[].container.type" ]
+
+[[capabilities.parameters]]
+name = "tools[].container.file_ids[]"
+type = "array"
+required = false
+route_mappings = [ "body.tools[].container.file_ids" ]
+
+[[capabilities.parameters]]
+name = "tools[].container.memory_limit"
+type = "string"
+required = false
+enum = [ "4g", "1g", "16g", "64g" ]
+default = "1g"
+route_mappings = [ "body.tools[].container.memory_limit" ]
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=code_interpreter_call", "output[].container_id", "output[].code", "output[].outputs[]", "output[].status", "output_text", "container_file_citation.container_id", "container_file_citation.file_id", "container_file_citation.filename" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/tools-code-interpreter"
+path = "/responses"
+
+[capabilities.links]
+documentation = "https://developers.openai.com/api/docs/guides/tools-code-interpreter"
+
+[[capabilities]]
+kind = "image_generation"
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "image_generation" ]
+route_mappings = [ "/tools/*/type" ]
+
+[[capabilities.parameters]]
+name = "tools[].model"
+type = "string"
+required = true
+route_mappings = [ "/tools/*/model" ]
+
+[[capabilities.parameters]]
+name = "tools[].action"
+type = "string"
+required = false
+enum = [ "auto", "generate", "edit" ]
+route_mappings = [ "/tools/*/action" ]
+
+[[capabilities.parameters]]
+name = "tools[].size"
+type = "string"
+required = false
+route_mappings = [ "/tools/*/size" ]
+
+[[capabilities.parameters]]
+name = "tools[].quality"
+type = "string"
+required = false
+enum = [ "auto", "low", "medium", "high", "xhigh", "max" ]
+route_mappings = [ "/tools/*/quality" ]
+
+[[capabilities.parameters]]
+name = "tools[].background"
+type = "string"
+required = false
+enum = [ "auto", "transparent", "opaque" ]
+route_mappings = [ "/tools/*/background" ]
+
+[[capabilities.parameters]]
+name = "tools[].output_format"
+type = "string"
+required = false
+enum = [ "png", "webp", "jpeg" ]
+route_mappings = [ "/tools/*/output_format" ]
+
+[[capabilities.parameters]]
+name = "tools[].output_compression"
+type = "integer"
+required = false
+min = 0
+max = 100
+route_mappings = [ "/tools/*/output_compression" ]
+
+[[capabilities.parameters]]
+name = "tools[].partial_images"
+type = "integer"
+required = false
+min = 0
+max = 3
+route_mappings = [ "/tools/*/partial_images" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/image-generation"
+path = "/responses"
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/responses"
+callability = "documented_only"
+documentation = "https://developers.openai.com/api/docs/guides/image-generation?generate-images-api=responses"
+
+[capabilities.links]
+documentation = "https://developers.openai.com/api/docs/guides/image-generation?generate-images-api=responses"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.input]]
+name = "image"
+kind = "image"
+required = false
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=image_generation_call", "output[].id", "output[].status", "output[].result", "output[].revised_prompt" ]
+
+[[capabilities]]
+kind = "batch"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "POST"
+path = "/batch"
+documentation = "https://developers.openai.com/api/docs/models/gpt-6-astra"
+
+[docs]
+overview = "https://developers.openai.com/api/docs/models"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/openai"

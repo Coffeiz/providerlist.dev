@@ -1,0 +1,299 @@
+website = "https://dev.meta.ai/"
+
+[[endpoints]]
+id = "meta-model-api"
+base_url = "https://api.meta.ai/v1"
+api_region = "未标注"
+documentation = "https://dev.meta.ai/docs/api-reference"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "DELETE"
+documentation = "https://dev.meta.ai/docs/api-reference/files/delete-file"
+path = "/v1/files/{file_id}"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file-content"
+path = "/v1/files/{file_id}/content"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file"
+path = "/v1/files/{file_id}"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/list-files"
+path = "/v1/files"
+
+[[endpoints.routes]]
+protocol = "openai_images"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/api-reference/images/edit-image"
+path = "/v1/images/edits"
+
+[[endpoints.routes]]
+protocol = "openai_images"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/api-reference/images/create-image"
+path = "/v1/images/generations"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/protocols"
+path = "/v1/responses"
+
+[[endpoints.routes]]
+protocol = "anthropic_messages"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/protocols"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "openai_chat_completions"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/protocols"
+path = "/v1/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/search-grounding"
+path = "/v1/responses"
+
+[[endpoints.routes]]
+protocol = "meta-speech-transcription"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/models"
+path = "/v1/asr/transcribe"
+
+[[endpoints.routes]]
+protocol = "meta-speech-transcription"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/api-reference/voice/transcribe"
+path = "/v1/asr/transcribe"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/api-reference/files/upload-file"
+path = "/v1/files"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "POST"
+path = "/v1/files"
+documentation = "https://dev.meta.ai/docs/api-reference/files/upload-file"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files"
+documentation = "https://dev.meta.ai/docs/api-reference/files/list-files"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "DELETE"
+path = "/v1/files/{file_id}"
+documentation = "https://dev.meta.ai/docs/api-reference/files/delete-file"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files/{file_id}"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file"
+
+[[endpoints.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files/{file_id}/content"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file-content"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+path = "/v1/responses"
+documentation = "https://dev.meta.ai/docs/search-grounding"
+
+[[endpoints]]
+id = "meta-model-api-realtime"
+base_url = "https://api.meta.ai"
+api_region = "未标注"
+documentation = "https://dev.meta.ai/docs/api-reference/voice/realtime"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WS"
+documentation = "https://dev.meta.ai/docs/api-reference/voice/realtime"
+path = "/v1/asr/realtime"
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "file"
+type = "string"
+required = true
+route_mappings = [ "multipart/form-data.file" ]
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = false
+route_mappings = [ "multipart/form-data.purpose", "query.purpose" ]
+enum = [ "user_data", "batch" ]
+
+[[capabilities.parameters]]
+name = "expires_after"
+type = "object"
+required = false
+route_mappings = [ "multipart/form-data.expires_after" ]
+
+[[capabilities.parameters]]
+name = "limit"
+type = "integer"
+required = false
+route_mappings = [ "query.limit" ]
+min = 1
+max = 10000
+
+[[capabilities.parameters]]
+name = "order"
+type = "string"
+required = false
+route_mappings = [ "query.order" ]
+enum = [ "asc", "desc" ]
+
+[[capabilities.parameters]]
+name = "after"
+type = "string"
+required = false
+route_mappings = [ "query.after" ]
+
+[[capabilities.parameters]]
+name = "file_id"
+type = "string"
+required = true
+route_mappings = [ "path.file_id" ]
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "POST"
+documentation = "https://dev.meta.ai/docs/api-reference/files/upload-file"
+path = "/v1/files"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/list-files"
+path = "/v1/files"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "DELETE"
+documentation = "https://dev.meta.ai/docs/api-reference/files/delete-file"
+path = "/v1/files/{file_id}"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file"
+path = "/v1/files/{file_id}"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file-content"
+path = "/v1/files/{file_id}/content"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "POST"
+path = "/v1/files"
+documentation = "https://dev.meta.ai/docs/api-reference/files/upload-file"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files"
+documentation = "https://dev.meta.ai/docs/api-reference/files/list-files"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "DELETE"
+path = "/v1/files/{file_id}"
+documentation = "https://dev.meta.ai/docs/api-reference/files/delete-file"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files/{file_id}"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file"
+
+[[capabilities.routes]]
+protocol = "openai_files"
+method = "GET"
+path = "/v1/files/{file_id}/content"
+documentation = "https://dev.meta.ai/docs/api-reference/files/retrieve-file-content"
+
+[capabilities.links]
+documentation = "https://dev.meta.ai/docs/api-reference"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "bytes", "created_at", "expires_at", "filename", "object", "purpose", "status", "status_details" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "object", "data", "first_id", "last_id", "has_more" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "object", "deleted" ]
+
+[[capabilities.output]]
+kind = "file"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.input]]
+name = "input"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "text"
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "output[].type=web_search_call", "output[].content[].annotations[].type=url_citation" ]
+
+[[capabilities.parameters]]
+name = "tools[].type"
+type = "string"
+required = true
+enum = [ "web_search" ]
+route_mappings = [ "/tools/*/type" ]
+
+[[capabilities.routes]]
+protocol = "responses"
+method = "POST"
+path = "/v1/responses"
+documentation = "https://dev.meta.ai/docs/search-grounding"
+
+[docs]
+overview = "https://dev.meta.ai/docs/models"
+api = "https://dev.meta.ai/docs/api-reference"
+image = "https://dev.meta.ai/docs/api-reference/images/create-image"
+speech = "https://dev.meta.ai/docs/api-reference/voice/realtime"

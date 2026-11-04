@@ -1,0 +1,6 @@
+name = "grok-voice-2.0"
+type = "realtime"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "text", "audio" ]

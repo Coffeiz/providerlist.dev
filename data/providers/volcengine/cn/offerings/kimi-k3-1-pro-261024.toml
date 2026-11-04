@@ -1,0 +1,29 @@
+id = "kimi-k3-1-pro-261024"
+model_ref = "moonshotai/kimi-k3-1-pro"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "13.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.30"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.017"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "68.00"

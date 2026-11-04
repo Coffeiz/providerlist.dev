@@ -1,0 +1,381 @@
+id = "wan3.0-video"
+model_ref = "alibaba/wan3-0-video"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/models"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.035"
+list_value = "0.05"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.035"
+list_value = "0.05"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.07"
+list_value = "0.1"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.07"
+list_value = "0.1"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.14"
+list_value = "0.2"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.14"
+list_value = "0.2"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "日本（东京）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "德国（法兰克福）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "美国（弗吉尼亚）"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0288792"
+list_value = "0.041256"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480P"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.0577591"
+list_value = "0.082513"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720P"
+
+[[pricing]]
+currency = "USD"
+region = "中国香港"
+deployment = "全球"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.1155175"
+list_value = "0.165025"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080P"

@@ -1,0 +1,12 @@
+name = "shoemodel-v1"
+type = "image"
+release_date = "2024-06-21"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

@@ -1,0 +1,18 @@
+name = "GPT-6 Sol"
+type = "chat"
+family = "gpt-sol"
+release_date = "2026-09-22"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1050000
+output = 128000
+input = 922000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

@@ -1,0 +1,7 @@
+id = "gpt-4o-mini-audio-preview"
+model_ref = "openai/gpt-4o-mini-audio-preview"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-4o-mini-audio-preview"

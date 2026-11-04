@@ -1,0 +1,86 @@
+id = "dreamina-seedance-2-0-mini"
+model_ref = "bytedance/doubao-seedance-2-0-mini-260615"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.5"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.5"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.1"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.1"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"

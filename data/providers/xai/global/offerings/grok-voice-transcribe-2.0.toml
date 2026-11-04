@@ -1,0 +1,24 @@
+id = "grok-voice-transcribe-2.0"
+model_ref = "xai/grok-voice-transcribe-2-0"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio_hour"
+unit = "per_input_audio_hour"
+value = "0.10"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio_hour"
+unit = "per_input_audio_hour"
+value = "0.20"
+
+[[pricing.conditions]]
+field = "transport"
+operator = "eq"
+value = "streaming"

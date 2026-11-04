@@ -1,0 +1,11 @@
+id = "image-01"
+model_ref = "minimax/image-01"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.0035"

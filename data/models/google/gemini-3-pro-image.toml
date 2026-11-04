@@ -1,0 +1,18 @@
+name = "Nano Banana Pro"
+type = "image"
+release_date = "2026-05-28"
+family = "gemini-pro"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image", "text" ]
+
+[limits]
+input = 65536
+output = 32768
+
+[specifications]
+image_output_resolutions = [ "1K", "2K", "4K" ]
+
+[capabilities]
+reasoning = true

@@ -1,0 +1,6 @@
+name = "Tenlai-ASR-v1"
+type = "transcription"
+
+[modalities]
+input = [ "audio", "video" ]
+output = [ "text" ]

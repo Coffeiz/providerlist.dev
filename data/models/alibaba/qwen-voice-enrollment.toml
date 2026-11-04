@@ -1,0 +1,11 @@
+name = "qwen-voice-enrollment"
+type = "speech"
+release_date = "2025-11-27"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

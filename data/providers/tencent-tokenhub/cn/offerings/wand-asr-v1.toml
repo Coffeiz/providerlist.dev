@@ -1,0 +1,14 @@
+id = "wand-asr-v1"
+model_ref = "tencent/wand-asr-v1"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "10"

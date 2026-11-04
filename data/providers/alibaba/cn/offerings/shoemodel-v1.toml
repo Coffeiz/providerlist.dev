@@ -1,0 +1,10 @@
+id = "shoemodel-v1"
+model_ref = "alibaba/shoemodel-v1"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/shoemodel-v1"

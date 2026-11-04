@@ -1,0 +1,17 @@
+name = "qwen3.8-omni-flash"
+type = "chat"
+family = "qwen"
+release_date = "2026-09-17"
+
+[limits]
+context = 1000000
+output = 131072
+
+[modalities]
+input = [ "text", "image", "audio", "video" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

@@ -1,0 +1,34 @@
+id = "gemini-3.8-live"
+model_ref = "google/gemini-3-8-live"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/api/live"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_text"
+unit = "per_1m_tokens"
+value = "0.75"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "3.00"
+
+[[pricing.rates]]
+metric = "input_image_video"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output_text"
+unit = "per_1m_tokens"
+value = "4.50"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "12.00"

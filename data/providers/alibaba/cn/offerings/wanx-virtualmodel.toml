@@ -1,0 +1,11 @@
+id = "wanx-virtualmodel"
+model_ref = "alibaba/wanx-virtualmodel"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+tpm = 3000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx-virtualmodel"

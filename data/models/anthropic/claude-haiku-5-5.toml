@@ -1,0 +1,17 @@
+name = "Claude Haiku 5.5"
+type = "chat"
+family = "claude-haiku"
+release_date = "2026-10-07"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+output = 128000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

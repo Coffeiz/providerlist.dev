@@ -1,0 +1,18 @@
+name = "qwen-flash"
+type = "chat"
+family = "qwen"
+release_date = "2025-07-28"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+output = 32768
+input = 997952
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

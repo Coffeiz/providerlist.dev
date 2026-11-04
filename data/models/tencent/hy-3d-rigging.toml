@@ -1,0 +1,6 @@
+name = "HY-3D-Rigging"
+type = "3d"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "3d" ]

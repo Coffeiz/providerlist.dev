@@ -1,0 +1,251 @@
+/**
+ * 全局基础、布局与表面样式。
+ *
+ * 规则：
+ * - 组件样式消费语义令牌，不硬编码颜色。
+ * - 状态不能仅靠颜色表达——每个状态徽章都带文案。
+ * - 焦点必须可见（键盘可达性）。
+ * - 玻璃层只做两档（普通/实底），不逐个组件微调透明度——
+ *   否则叠层时后层会被前层压出色阶，页面会越刷越浑。
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--pl-bg-canvas);
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: var(--pl-font-sans);
+  font-size: var(--pl-text-sm);
+  line-height: var(--pl-leading-normal);
+  letter-spacing: var(--pl-tracking-normal);
+  color: var(--pl-text-primary);
+  background: var(--pl-bg-canvas);
+  transition:
+    background var(--pl-duration-base) var(--pl-ease-standard),
+    color var(--pl-duration-base) var(--pl-ease-standard);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@supports (-webkit-tap-highlight-color: transparent) {
+  :where(button, a, input, textarea, select) { -webkit-tap-highlight-color: transparent; }
+}
+
+/* 背景氛围层 —— 固定在视口底，玻璃层折射的就是它。
+   单独一层而不是 body 的 background-image：页面滚动时氛围必须固定，
+   否则玻璃卡片滚动中会看到底色在动。 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--pl-atmosphere);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: var(--pl-weight-semibold);
+  line-height: var(--pl-leading-tight);
+  letter-spacing: var(--pl-tracking-tight);
+}
+
+h1 { font-size: var(--pl-text-xl); line-height: 1.25; }
+h2 { font-size: var(--pl-text-lg); }
+h3 { font-size: var(--pl-text-md); }
+h4 { font-size: var(--pl-text-sm); }
+
+p { margin: 0; }
+
+a {
+  color: var(--pl-text-link);
+  text-decoration: none;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  a:hover { text-decoration: none; }
+}
+
+code,
+.mono {
+  font-family: var(--pl-font-mono);
+  font-size: 0.93em;
+  letter-spacing: -0.035em;
+  font-variant-ligatures: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--pl-border-focus);
+  outline-offset: 3px;
+  border-radius: var(--pl-radius-xs);
+}
+
+::selection {
+  background: var(--pl-selection-bg);
+  color: var(--pl-selection-text);
+}
+
+/* ---------- 布局 ---------- */
+
+.pl-container {
+  max-width: var(--pl-layout-max);
+  margin: 0 auto;
+  padding: 0 var(--pl-layout-gutter);
+}
+
+/* 页面纵向留白。
+   只设上下内边距——写成 `padding: a 0 b` 简写会把 .pl-container 的左右内边距
+   一并覆盖成 0，内容就会贴到屏幕边缘（而顶栏与页脚仍有留白，视觉上对不齐）。 */
+.pl-page {
+  padding-top: var(--pl-space-xl);
+  padding-bottom: var(--pl-space-xl);
+}
+
+.pl-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pl-space-lg);
+}
+
+.pl-stack-sm { gap: var(--pl-space-md); }
+.pl-stack-xs { gap: var(--pl-space-sm); }
+.pl-stack-lg { gap: var(--pl-space-xl); }
+
+.pl-row {
+  display: flex;
+  align-items: center;
+  gap: var(--pl-space-md);
+}
+
+.pl-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--pl-space-lg);
+}
+
+.detail-section-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: var(--pl-space-sm);
+  row-gap: var(--pl-space-xs);
+}
+
+.detail-section > p.pl-text-sm.pl-text-secondary {
+  margin-block-start: calc(-1 * var(--pl-space-md));
+  font-size: var(--pl-text-xs);
+}
+
+.detail-section-count {
+  color: var(--pl-text-tertiary);
+  font-size: var(--pl-text-xs);
+  font-weight: var(--pl-weight-regular);
+  letter-spacing: normal;
+}
+
+.pl-wrap { flex-wrap: wrap; }
+
+.pl-grow { flex: 1; min-width: 0; }
+
+.pl-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-grid {
+  display: grid;
+  gap: var(--pl-space-lg);
+}
+
+.pl-grid-cards {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.pl-grid-wide {
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+}
+
+.op-io-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* ---------- 玻璃材质 ---------- */
+
+.pl-glass,
+.pl-glass-strong {
+  background: var(--pl-glass-bg);
+  backdrop-filter: var(--pl-glass-blur);
+  -webkit-backdrop-filter: var(--pl-glass-blur);
+  border: 1px solid var(--pl-glass-border);
+  box-shadow: var(--pl-glass-shadow);
+}
+
+.pl-glass-strong {
+  background: var(--pl-glass-bg-strong);
+}
+
+/* ---------- 表面 ---------- */
+
+.pl-card {
+  background: var(--pl-glass-bg-strong);
+  backdrop-filter: var(--pl-glass-blur);
+  -webkit-backdrop-filter: var(--pl-glass-blur);
+  border: 1px solid var(--pl-glass-border);
+  border-radius: var(--pl-radius-lg);
+  box-shadow: var(--pl-glass-shadow);
+  padding: var(--pl-space-lg);
+}
+
+.pl-card-interactive {
+  transition:
+    transform var(--pl-duration-base) var(--pl-ease-standard),
+    border-color var(--pl-duration-base) var(--pl-ease-standard),
+    box-shadow var(--pl-duration-base) var(--pl-ease-standard);
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 769px) {
+  .pl-card-interactive:hover {
+  border-color: var(--pl-glass-border-strong);
+  box-shadow: var(--pl-glass-shadow-hover);
+  transform: translateY(-2px);
+}
+}
+
+.pl-panel {
+  background: var(--pl-glass-bg);
+  backdrop-filter: var(--pl-glass-blur);
+  -webkit-backdrop-filter: var(--pl-glass-blur);
+  border: 1px solid var(--pl-glass-border);
+  border-radius: var(--pl-radius-lg);
+  overflow: hidden;
+}
+
+.pl-panel-header {
+  padding: var(--pl-space-lg);
+  border-bottom: 1px solid var(--pl-border-subtle);
+  background: var(--pl-bg-subtle);
+}
+
+.pl-panel-body { padding: var(--pl-space-lg); }
+
+.pl-divider {
+  height: 1px;
+  background: var(--pl-border-subtle);
+  border: 0;
+  margin: 0;
+}

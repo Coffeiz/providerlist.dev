@@ -1,0 +1,5 @@
+name = "GLM-4V-Plus-0111"
+type = "chat"
+
+[modalities]
+input = [ "text", "image", "video" ]

@@ -1,0 +1,6 @@
+name = "WAND-Dubbing-Clone-V2"
+type = "video"
+
+[modalities]
+input = [ "video" ]
+output = [ "video" ]

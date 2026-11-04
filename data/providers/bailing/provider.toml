@@ -1,0 +1,5 @@
+id = "bailing"
+name = "蚂蚁百灵"
+aliases = [ "Ant Ling", "Bailing" ]
+kind = "first_party"
+logo = "/logos/providers/bailing.svg"

@@ -1,0 +1,4 @@
+id = "qwen-audio-3.1-asr-flash"
+model_ref = "alibaba/qwen-audio-3-1-asr-flash"
+status = "active"
+pricing = []

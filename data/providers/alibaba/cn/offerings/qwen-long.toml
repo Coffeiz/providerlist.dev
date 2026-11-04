@@ -1,0 +1,27 @@
+id = "qwen-long"
+model_ref = "alibaba/qwen-long"
+status = "active"
+
+[api_limits]
+context = 10000000
+input = 10000000
+output = 8192
+rpm = 1200
+tpm = 3000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-long"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2"

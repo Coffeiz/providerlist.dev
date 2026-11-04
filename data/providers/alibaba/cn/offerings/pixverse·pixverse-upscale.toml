@@ -1,0 +1,10 @@
+id = "pixverse/pixverse-upscale"
+model_ref = "pixverse/pixverse-upscale"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/pixverse-upscale"

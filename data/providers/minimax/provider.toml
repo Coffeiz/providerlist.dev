@@ -1,0 +1,8 @@
+id = "minimax"
+name = "MiniMax"
+aliases = [ "MiniMax" ]
+kind = "first_party"
+logo = "/logos/providers/minimax.svg"
+
+[integrations]
+ai_sdk = true

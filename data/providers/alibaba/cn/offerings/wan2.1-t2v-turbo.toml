@@ -1,0 +1,7 @@
+id = "wan2.1-t2v-turbo"
+model_ref = "alibaba/wan2-1-t2v-turbo"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan2-1-t2v-turbo"

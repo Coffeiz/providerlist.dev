@@ -1,0 +1,4 @@
+id = "whisper-1"
+model_ref = "openai/whisper-1"
+status = "unknown"
+pricing = []

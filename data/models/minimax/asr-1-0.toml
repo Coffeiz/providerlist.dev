@@ -1,0 +1,6 @@
+name = "asr-1.0"
+type = "transcription"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

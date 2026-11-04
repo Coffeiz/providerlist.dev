@@ -1,0 +1,179 @@
+website = "https://platform.deepseek.com/"
+
+[[endpoints]]
+id = "cn-openai-compatible"
+base_url = "https://api.deepseek.com"
+api_region = "未标注"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/api/create-chat-completion/"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/api/create-response/"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+path = "/v1/tools/fetch"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+path = "/v1/tools/search"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/search"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[endpoints.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/fetch"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[endpoints]]
+id = "cn-anthropic-compatible"
+base_url = "https://api.deepseek.com/anthropic"
+api_region = "未标注"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/anthropic_api/"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/anthropic_api/"
+path = "/v1/messages"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "count"
+type = "integer"
+required = false
+min = 1
+max = 50
+default = 10
+description = "返回条数，1～50。"
+route_mappings = [ "count" ]
+
+[[capabilities.parameters]]
+name = "ori_question"
+type = "string"
+required = false
+min = 1
+max = 128
+description = "触发搜索的用户原始问题，1～128 个字符，有助于更好地理解搜索意图，传 null 视为未提供。"
+route_mappings = [ "ori_question" ]
+
+[[capabilities.parameters]]
+name = "localization"
+type = "string"
+required = false
+default = ""
+description = "用于优先返回本地化搜索结果的 IP 地址。"
+route_mappings = [ "localization" ]
+
+[[capabilities.parameters]]
+name = "need_content"
+type = "boolean"
+required = false
+default = false
+description = "是否在 content 中返回网页正文，为 false 时 content 恒为空字符串。"
+route_mappings = [ "need_content" ]
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+path = "/v1/tools/search"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/search"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[capabilities.pricing]]
+currency = "CNY"
+
+[[capabilities.pricing.rates]]
+metric = "successful_request"
+unit = "per_request"
+quantity = 1000
+value = "5"
+
+[capabilities.links]
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+description = "搜索词，1～128 个 Unicode 字符，不能全为空白，支持下方列出的搜索语法。"
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "results[].rerank_score", "results[].title", "results[].url", "results[].snippet", "results[].summary", "results[].content", "results[].site_name", "results[].site_icon", "results[].date", "results[].authority" ]
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+path = "/v1/tools/fetch"
+
+[[capabilities.routes]]
+protocol = "rest-json"
+method = "POST"
+path = "/v1/tools/fetch"
+callability = "documented_only"
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[capabilities.pricing]]
+currency = "CNY"
+
+[[capabilities.pricing.rates]]
+metric = "successful_request"
+unit = "per_request"
+quantity = 1000
+value = "5"
+
+[capabilities.links]
+documentation = "https://api-docs.deepseek.com/zh-cn/guides/search/"
+
+[[capabilities.input]]
+name = "url"
+kind = "text"
+required = true
+description = "要抓取的网页地址，长度不超过 8192，必须为含 host 的 HTTP/HTTPS URL，且不能携带用户名或密码。"
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "title", "content" ]
+
+[docs]
+overview = "https://api-docs.deepseek.com/zh-cn/"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/deepseek"

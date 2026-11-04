@@ -1,0 +1,5 @@
+id = "volcengine"
+name = "火山方舟"
+aliases = [ "Volcengine Ark" ]
+kind = "cloud_platform"
+logo = "/logos/providers/volcengine.svg"

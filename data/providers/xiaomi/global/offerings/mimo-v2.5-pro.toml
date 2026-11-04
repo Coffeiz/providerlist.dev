@@ -1,0 +1,6 @@
+id = "mimo-v2.5-pro"
+model_ref = "xiaomi/mimo-v2-5-pro"
+status = "retired"
+
+[links]
+documentation = "https://mimo.mi.com/docs/en-US/updates/deprecate"

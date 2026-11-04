@@ -1,0 +1,10 @@
+name = "Step-1o Audio"
+family = "Step-1o"
+type = "realtime"
+
+[modalities]
+input = [ "audio" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = true

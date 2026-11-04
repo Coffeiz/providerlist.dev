@@ -1,0 +1,19 @@
+id = "doubao-embedding-vision-251215"
+model_ref = "bytedance/doubao-embedding-vision-251215"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_text"
+unit = "per_1m_tokens"
+value = "0.70"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "1.80"

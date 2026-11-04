@@ -1,0 +1,4 @@
+id = "qwen-audio-3.1-tts-plus"
+model_ref = "alibaba/qwen-audio-3-1-tts-plus"
+status = "active"
+pricing = []

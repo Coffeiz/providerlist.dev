@@ -1,0 +1,7 @@
+name = "DeepSeek OCR"
+type = "chat"
+release_date = "2025-10-20"
+
+[modalities]
+input = [ "image" ]
+output = [ "text" ]

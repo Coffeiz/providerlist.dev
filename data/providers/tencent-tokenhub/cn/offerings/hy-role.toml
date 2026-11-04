@@ -1,0 +1,24 @@
+id = "hy-role"
+model_ref = "tencent/hy-role"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 32000
+input = 28000
+output = 4000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.4"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9.6"

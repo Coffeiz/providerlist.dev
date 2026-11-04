@@ -1,0 +1,10 @@
+id = "speech-biasing"
+model_ref = "unknown"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 600
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/speech-biasing"

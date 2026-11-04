@@ -1,0 +1,26 @@
+id = "qwen-plus-character-ja"
+model_ref = "alibaba/qwen-plus-character-ja"
+status = "active"
+
+[api_limits]
+context = 8192
+input = 7680
+output = 512
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-plus-character-ja"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.67"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.275"

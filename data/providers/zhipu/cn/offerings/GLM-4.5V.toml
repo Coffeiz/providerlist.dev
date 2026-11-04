@@ -1,0 +1,48 @@
+id = "GLM-4.5V"
+model_ref = "zhipu/glm-4-5v"
+status = "active"
+
+[api_limits]
+output = 0
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.4"
+context = "<32000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+context = ">=32000 & <64000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12"
+context = ">=32000 & <64000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.8"
+context = ">=32000 & <64000"

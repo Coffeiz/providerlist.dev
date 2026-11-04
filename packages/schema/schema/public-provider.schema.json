@@ -1,0 +1,1283 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://providerlist.dev/schema/public-provider.schema.json",
+  "title": "ProviderList public Provider document",
+  "description": "Public Provider JSON keeps TOML-owned fields and hierarchy. Only publication metadata is added; path-derived relationships, provenance, and generated presentation state are omitted.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "data_version",
+    "generated_at",
+    "provider",
+    "services"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "$ref": "#/$defs/Semver"
+    },
+    "data_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generated_at": {
+      "$ref": "#/$defs/IsoDateTime"
+    },
+    "provider": {
+      "$ref": "#/$defs/Provider"
+    },
+    "services": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Service"
+      }
+    },
+    "plans": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Plan"
+      }
+    }
+  },
+  "$defs": {
+    "Semver": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "IsoDateTime": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "JsonPointer": {
+      "type": "string",
+      "pattern": "^(/([^/~]|~[01])*)*$"
+    },
+    "CurrencyCode": {
+      "type": "string",
+      "enum": [
+        "CNY",
+        "USD",
+        "EUR",
+        "JPY",
+        "GBP",
+        "HKD",
+        "TWD",
+        "KRW",
+        "SGD",
+        "AUD",
+        "CAD",
+        "CHF",
+        "INR",
+        "RUB",
+        "BRL",
+        "MXN",
+        "ZAR",
+        "THB",
+        "MYR",
+        "IDR",
+        "PHP",
+        "VND",
+        "TRY",
+        "PLN",
+        "CZK",
+        "SEK",
+        "NOK",
+        "DKK",
+        "NZD",
+        "AED",
+        "SAR",
+        "ILS",
+        "EGP",
+        "NGN",
+        "KES",
+        "UAH",
+        "RON",
+        "HUF",
+        "CLP",
+        "COP",
+        "ARS",
+        "PEN",
+        "PKR",
+        "BDT",
+        "LKR",
+        "KWD",
+        "BHD",
+        "OMR",
+        "JOD",
+        "TND"
+      ],
+      "description": "ISO 4217 三字母代码。「人民币」的正确代码是 CNY——RMB 不是 ISO 4217 代码，收录它会让「不同币种严禁直接比较数值」这条规则失效。"
+    },
+    "DecimalString": {
+      "type": "string",
+      "pattern": "^-?\\d+(\\.\\d+)?$",
+      "description": "十进制字符串。金额权威表示是字符串，不是 number——避免浮点误差。"
+    },
+    "Endpoint": {
+      "type": "object",
+      "required": [
+        "id",
+        "base_url",
+        "api_region"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "base_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "api_region": {
+          "type": "string",
+          "minLength": 1
+        },
+        "routes": {
+          "description": "Route definitions in this Endpoint's API inventory.",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Route"
+          }
+        },
+        "default_headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "documentation": {
+          "type": "string"
+        }
+      }
+    },
+    "CapabilityIOKind": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9]*(?:[._-][a-z0-9]+)*$",
+      "description": "**开放枚举**：八个已知模态（text / image / video / audio / file / structured / 3d / embedding）+ 上游可能带来的未知值。未知值必须保留原值，不得静默并入其他模态。"
+    },
+    "Cardinality": {
+      "type": "object",
+      "required": [
+        "min"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "number",
+          "minimum": 0
+        },
+        "max": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "NumericRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        }
+      }
+    },
+    "DimensionConstraint": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "width": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "height": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "pixels": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "aspect_ratios": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "MediaSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mime_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "max_bytes": {
+          "type": "number",
+          "minimum": 0,
+          "description": "单文件最大字节数；0 不是未知。"
+        },
+        "duration_seconds": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "dimensions": {
+          "$ref": "#/$defs/DimensionConstraint"
+        },
+        "fps": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "sample_rate_hz": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "channels": {
+          "$ref": "#/$defs/NumericRange"
+        },
+        "codec": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "container": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "transports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CapabilityInput": {
+      "type": "object",
+      "required": [
+        "name",
+        "kind",
+        "required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "$ref": "#/$defs/CapabilityIOKind"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "cardinality": {
+          "$ref": "#/$defs/Cardinality"
+        },
+        "media": {
+          "$ref": "#/$defs/MediaSpec"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "ArtifactKind": {
+      "enum": [
+        "inline",
+        "binary",
+        "url",
+        "file_id"
+      ]
+    },
+    "OutputArtifact": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/ArtifactKind"
+        },
+        "expires_in_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "download_auth": {
+          "type": "string"
+        }
+      }
+    },
+    "CapabilityOutput": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/CapabilityIOKind"
+        },
+        "media": {
+          "$ref": "#/$defs/MediaSpec"
+        },
+        "artifact": {
+          "$ref": "#/$defs/OutputArtifact"
+        },
+        "streaming": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ParameterType": {
+      "enum": [
+        "string",
+        "number",
+        "integer",
+        "boolean",
+        "object",
+        "array"
+      ]
+    },
+    "ParameterSpec": {
+      "type": "object",
+      "required": [
+        "name",
+        "type",
+        "required"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "$ref": "#/$defs/ParameterType"
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "nullable": {
+          "type": "boolean"
+        },
+        "enum": {
+          "type": "array",
+          "items": {
+            "type": [
+              "string",
+              "number",
+              "boolean"
+            ]
+          }
+        },
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        },
+        "step": {
+          "type": "number"
+        },
+        "default": {},
+        "description": {
+          "type": "string"
+        },
+        "route_mappings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ConditionExpression": {
+      "description": "有限条件 AST。不接受字符串脚本、任意正则执行器或外部可执行表达式。",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "all": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ConditionExpression"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "any": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/ConditionExpression"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/ConditionExpression"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "eq"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "eq": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": [
+                  "string",
+                  "null",
+                  "number",
+                  "boolean"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "in"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "in": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": [
+                    "string",
+                    "null",
+                    "number",
+                    "boolean"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "lt"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lt": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "lte"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "lte": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "gt"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "gt": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "gte"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "gte": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "requires"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "requires": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "excludes"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "excludes": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 1,
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ConstraintRule": {
+      "type": "object",
+      "required": [
+        "id",
+        "if",
+        "then"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "if": {
+          "$ref": "#/$defs/ConditionExpression"
+        },
+        "then": {
+          "$ref": "#/$defs/ConditionExpression"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "ExecutionMode": {
+      "enum": [
+        "sync",
+        "stream",
+        "async_job",
+        "bidirectional_realtime"
+      ]
+    },
+    "PollingSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recommended_interval_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "ExecutionSpec": {
+      "type": "object",
+      "required": [
+        "mode"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "$ref": "#/$defs/ExecutionMode"
+        },
+        "polling": {
+          "$ref": "#/$defs/PollingSpec"
+        },
+        "status_mapping": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "supports_cancel": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "documentation": {
+          "type": "string"
+        }
+      }
+    },
+    "Protocol": {
+      "type": "string",
+      "description": "协议标识。开放枚举：已知协议之外的上游命名必须保留原值。"
+    },
+    "Callability": {
+      "enum": [
+        "documented_only",
+        "declarative_ready",
+        "adapter_required",
+        "api_probed"
+      ],
+      "description": "协议适配状态——**这是适配状态，不是真实性级别**。数据存在不等于能够执行。"
+    },
+    "Route": {
+      "type": "object",
+      "required": [
+        "protocol",
+        "method",
+        "path"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "protocol": {
+          "$ref": "#/$defs/Protocol"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "compatibility": {
+          "type": "object"
+        },
+        "callability": {
+          "$ref": "#/$defs/Callability"
+        },
+        "task_id_pointer": {
+          "$ref": "#/$defs/JsonPointer"
+        },
+        "status_path_template": {
+          "type": "string"
+        },
+        "result_path_template": {
+          "type": "string"
+        },
+        "cancel_path_template": {
+          "type": "string"
+        },
+        "documentation": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^/"
+        }
+      }
+    },
+    "Offering": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "api_limits": {
+          "$ref": "#/$defs/ApiLimits"
+        },
+        "pricing": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingGroup"
+          }
+        },
+        "status": {
+          "$ref": "#/$defs/OfferingStatus"
+        }
+      }
+    },
+    "ServiceCapabilityKind": {
+      "type": "string",
+      "description": "Provider 在当前市场提供的能力。一个 Service 中每种 kind 只记录一条；开放枚举，保留未知值。"
+    },
+    "ServiceCapability": {
+      "type": "object",
+      "required": [
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/ServiceCapabilityKind"
+        },
+        "required_plan_ids": {
+          "type": "array",
+          "description": "可解锁此能力的套餐选项；至少持有其中一个即可。",
+          "items": {
+            "type": "string"
+          }
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "pricing": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingGroup"
+          }
+        },
+        "routes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Route"
+          }
+        },
+        "input": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityInput"
+          }
+        },
+        "output": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityOutput"
+          }
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ParameterSpec"
+          }
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ConstraintRule"
+          }
+        },
+        "execution": {
+          "$ref": "#/$defs/ExecutionSpec"
+        }
+      }
+    },
+    "BillingUnit": {
+      "type": "string",
+      "description": "计费单位。开放枚举：已知单位之外的上游命名必须保留原值，不得静默并入 per_1m_tokens。"
+    },
+    "PriceCondition": {
+      "description": "价格条件 AST。与 ConditionExpression 语义分离：计费规则变化不得隐式改变请求合法性。",
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "all"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "all": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/PriceCondition"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "any"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "any": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/PriceCondition"
+              }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "not"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "not": {
+              "$ref": "#/$defs/PriceCondition"
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": [
+            "field",
+            "value"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "field": {
+              "type": "string",
+              "minLength": 1
+            },
+            "operator": {
+              "enum": [
+                "eq",
+                "lt",
+                "lte",
+                "gt",
+                "gte",
+                "between"
+              ],
+              "default": "eq"
+            },
+            "value": {}
+          }
+        }
+      ]
+    },
+    "Service": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "docs": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "account_requirements": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "endpoints": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Endpoint"
+          }
+        },
+        "offerings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Offering"
+          }
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ServiceCapability"
+          }
+        },
+        "supply_status": {
+          "$ref": "#/$defs/SupplyStatus"
+        },
+        "pricing": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingGroup"
+          }
+        }
+      }
+    },
+    "PlanBillingOption": {
+      "type": "object",
+      "required": [
+        "billing_period"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "billing_period": {
+          "enum": [
+            "month",
+            "quarter",
+            "year",
+            "custom",
+            "one_time"
+          ]
+        },
+        "price": {
+          "$ref": "#/$defs/DecimalString"
+        },
+        "sale_price": {
+          "$ref": "#/$defs/DecimalString"
+        },
+        "sale_type": {
+          "enum": [
+            "first_month"
+          ]
+        }
+      }
+    },
+    "Plan": {
+      "type": "object",
+      "required": [
+        "id",
+        "billing_options"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "currency": {
+          "$ref": "#/$defs/CurrencyCode"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "billing_options": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/PlanBillingOption"
+          }
+        },
+        "ratio": {
+          "$ref": "#/$defs/DecimalString",
+          "description": "相对于同市场基准套餐的额度比例；例如 \"3\" 表示三倍。与 credits 二选一。"
+        },
+        "credits": {
+          "description": "套餐额度；精确值使用非负整数，估算值使用带 ~ 前缀的字符串，例如 \"~20000\"。与 ratio 二选一。",
+          "oneOf": [
+            {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^~[0-9]+$"
+            }
+          ]
+        },
+        "description": {
+          "type": "string"
+        },
+        "links": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "allowance": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "valid_from": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "valid_until": {
+          "$ref": "#/$defs/IsoDateTime"
+        }
+      }
+    },
+    "Provider": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "aliases",
+        "kind"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "legal_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "kind": {
+          "enum": [
+            "first_party",
+            "aggregator",
+            "cloud_platform",
+            "other"
+          ]
+        },
+        "integrations": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ai_sdk": {
+              "type": "boolean",
+              "default": false
+            }
+          }
+        },
+        "logo": {
+          "type": "string"
+        }
+      }
+    },
+    "ApiLimits": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "context": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "input": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "output": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "rpm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "tpm": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "SupplyStatus": {
+      "type": "string",
+      "enum": [
+        "active",
+        "deprecated",
+        "retired",
+        "unknown"
+      ]
+    },
+    "PricingRate": {
+      "type": "object",
+      "required": [
+        "metric",
+        "unit",
+        "value"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ttl": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*(s|min|h|d)$"
+        },
+        "context": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "$ref": "#/$defs/BillingUnit"
+        },
+        "quantity": {
+          "type": "number"
+        },
+        "value": {
+          "$ref": "#/$defs/DecimalString"
+        },
+        "list_value": {
+          "$ref": "#/$defs/DecimalString"
+        }
+      }
+    },
+    "PricingGroup": {
+      "type": "object",
+      "required": [
+        "currency",
+        "rates"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "currency": {
+          "$ref": "#/$defs/CurrencyCode"
+        },
+        "rates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PricingRate"
+          }
+        },
+        "deployment": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Provider 标注的部署范围，例如国际或中国内地。"
+        },
+        "region": {
+          "type": "string",
+          "minLength": 1,
+          "description": "部署区域，不等同于账号市场。"
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/PriceCondition"
+          }
+        },
+        "unsupported_metrics": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "applies_to": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "effective_from": {
+          "$ref": "#/$defs/IsoDateTime"
+        },
+        "effective_until": {
+          "$ref": "#/$defs/IsoDateTime"
+        }
+      }
+    },
+    "OfferingStatus": {
+      "type": "string",
+      "enum": [
+        "active",
+        "restricted",
+        "deprecated",
+        "retired",
+        "unknown"
+      ]
+    }
+  }
+}

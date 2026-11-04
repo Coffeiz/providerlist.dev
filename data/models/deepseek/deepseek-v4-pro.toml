@@ -1,0 +1,17 @@
+name = "DeepSeek-V4-Pro-0813"
+type = "chat"
+family = "deepseek-thinking"
+release_date = "2026-04-24"
+
+[limits]
+context = 1048576
+output = 393216
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "none", "low", "high", "max" ]
+tool_calling = true
+structured_output = true

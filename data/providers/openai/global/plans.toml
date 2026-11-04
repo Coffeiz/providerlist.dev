@@ -1,0 +1,125 @@
+[[plans]]
+id = "chatgpt-free"
+name = "Free"
+description = "ChatGPT Free plan; see the official page for current benefits."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "0"
+
+[[plans]]
+id = "chatgpt-go"
+name = "Go"
+description = "ChatGPT Go plan; see the official page for current benefits."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "8"
+
+[[plans]]
+id = "chatgpt-plus"
+name = "Plus"
+description = "ChatGPT Plus plan; OpenAI API usage is billed separately."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "20"
+
+[[plans]]
+id = "chatgpt-pro-100"
+name = "Pro 100"
+description = "ChatGPT Pro subscription tier; see the official page for current benefits."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[[plans]]
+id = "chatgpt-pro-200"
+name = "Pro 200"
+description = "ChatGPT Pro subscription tier; see the official page for current benefits."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[[plans]]
+id = "chatgpt-pro-500"
+name = "Pro 500"
+description = "ChatGPT Pro subscription tier; see the official page for current benefits."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "500"
+
+[[plans]]
+id = "chatgpt-business-standard"
+name = "Business"
+description = "Business workspace plan; the page states a minimum of two seats."
+currency = "USD"
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "25"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "240"
+
+[[plans]]
+id = "chatgpt-business-premium"
+name = "Business Premium seat"
+description = "Premium includes 5x more usage than Standard seats, no 5-hour usage limit, and the flexibility to mix, assign, and reassign seat types – all within one secure, centrally managed workspace."
+currency = "USD"
+
+[plans.links]
+official = "https://chatgpt.com/zh-Hans-CN/pricing/"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "125"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1200"
+
+[[plans]]
+id = "chatgpt-enterprise"
+name = "Enterprise & Edu"
+description = "Enterprise and Edu plans; pricing is not publicly listed and requires contacting sales."
+
+[plans.links]
+official = "https://learn.chatgpt.com/docs/pricing?site_locale=en"
+
+[[plans.billing_options]]
+billing_period = "year"
+
+[[plans.billing_options]]
+billing_period = "custom"

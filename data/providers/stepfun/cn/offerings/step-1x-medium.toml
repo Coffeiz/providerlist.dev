@@ -1,0 +1,6 @@
+id = "step-1x-medium"
+model_ref = "unknown"
+status = "retired"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/deprecations"

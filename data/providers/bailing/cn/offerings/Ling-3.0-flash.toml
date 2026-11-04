@@ -1,0 +1,27 @@
+id = "Ling-3.0-flash"
+model_ref = "antgroup/ling-3-0-flash"
+status = "active"
+
+[links]
+documentation = "https://developer.ant-ling.com/zh-CN/docs/models/ling/"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.14"
+list_value = "0.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.42"
+list_value = "1.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.028"
+list_value = "0.10"

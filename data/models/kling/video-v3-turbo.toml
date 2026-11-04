@@ -1,0 +1,6 @@
+name = "Kling VIDEO 3.0 Turbo"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

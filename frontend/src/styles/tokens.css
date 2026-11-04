@@ -1,0 +1,380 @@
+/**
+ * ProviderList 设计令牌。
+ *
+ * 分层结构（见 agentskills/design/references/design-system.md）：
+ *   1. 原始层（primitive）—— 纯粹的色板与刻度，不表达语义
+ *   2. 语义层（semantic）—— 表达用途：surface / text / border / status / glass
+ *   3. 组件层（component）—— 具体组件消费语义层，不重新定义颜色
+ *
+ * ── 数量约束（硬性）───────────────────────────────────────────────
+ * - **每条色阶最多 3 档**，命名用语义词（-soft / -medium / -hard），
+ *   不用数字刻度（-50 / -100 / -900）。数字刻度会诱使人一直加档，
+ *   而档位一多就没人说得清哪一档才是「那个」灰。
+ * - **每类刻度最多 5 档**（间距、圆角、字号、字重……），同样用语义词。
+ * - 语义层的令牌是**角色**不是色阶：一个角色一个值，不成组。
+ * - 新增颜色前先问：能不能用已有的中性阶或状态阶表达？
+ *
+ * ── 颜色基调 ──────────────────────────────────────────────────────
+ * 中性单色 + 克制玻璃。强调不靠彩色品牌色，而靠「墨色反色」建立层级——
+ * 这样页面里唯一有彩色的只剩状态语义色，读数时颜色不会被误当成装饰。
+ */
+
+/* ==========================================================================
+   1. 原始层 · 色板
+   ========================================================================== */
+
+:root {
+  /* 中性表面阶：白 → 页面底 → 分区底 */
+  --pl-surface-soft: #ffffff;
+  --pl-surface-medium: #f7f7f8;
+  --pl-surface-hard: #ebebee;
+
+  /* 中性墨阶：弱 → 中 → 强。承担文字层级与实底强调。 */
+  --pl-ink-soft: #9a9aa0;
+  --pl-ink-medium: #6c6e74;
+  --pl-ink-hard: #191a1c;
+
+  /* 状态阶：弱（背景）→ 中（图标/边框）→ 强（文字） */
+  --pl-success-soft: #e8f3ec;
+  --pl-success-medium: #3a9c74;
+  --pl-success-hard: #236349;
+
+  --pl-warning-soft: #f8efdf;
+  --pl-warning-medium: #c98a2b;
+  --pl-warning-hard: #87591a;
+
+  --pl-danger-soft: #f7e9e9;
+  --pl-danger-medium: #c95656;
+  --pl-danger-hard: #8d3636;
+
+  /* 字体 */
+  --pl-font-sans:
+    'ProviderList Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  --pl-font-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+
+  /* ── 间距（5 档）───────────────────────────────────────────────── */
+  --pl-space-xs: 0.25rem;   /*  4px */
+  --pl-space-sm: 0.5rem;    /*  8px */
+  --pl-space-md: 0.75rem;   /* 12px */
+  --pl-space-lg: 1rem;      /* 16px */
+  --pl-space-xl: 2rem;      /* 32px */
+
+  /* ── 圆角（5 档）───────────────────────────────────────────────── */
+  --pl-radius-xs: 6px;      /* 徽章、代码块 */
+  --pl-radius-sm: 8px;      /* 控件 */
+  --pl-radius-md: 12px;     /* 输入框、内嵌块 */
+  --pl-radius-lg: 17px;     /* 卡片、面板 */
+  --pl-radius-full: 9999px; /* 胶囊 */
+
+  /* ── 字号（5 档）───────────────────────────────────────────────── */
+  --pl-text-xs: 0.6875rem;  /* 11px 辅助与徽章 */
+  --pl-text-sm: 0.8125rem;  /* 13px 正文基准 */
+  --pl-text-md: 1rem;        /* 16px 强调正文与小标题 */
+  --pl-text-lg: 1.4375rem;  /* 23px 区块标题 */
+  --pl-text-xl: 2.125rem;   /* 34px 页面标题 */
+
+  /* ── 行高 ──────────────────────────────────────────────────────── */
+  --pl-leading-tight: 1.2;
+  --pl-leading-snug: 1.35;
+  --pl-leading-normal: 1.5;
+  --pl-leading-relaxed: 1.7;
+
+  /* ── 字重（5 档）───────────────────────────────────────────────── */
+  --pl-weight-regular: 400;
+  --pl-weight-medium: 500;
+  --pl-weight-semibold: 600;
+  --pl-weight-strong: 660;
+  --pl-weight-bold: 700;
+
+  /* ── 字距 ──────────────────────────────────────────────────────── */
+  --pl-tracking-tight: -0.045em;
+  --pl-tracking-snug: -0.02em;
+  --pl-tracking-normal: -0.006em;
+  --pl-tracking-wide: 0.045em;
+
+  /* ── 动效 ──────────────────────────────────────────────────────── */
+  --pl-duration-instant: 80ms;
+  --pl-duration-fast: 140ms;
+  --pl-duration-base: 180ms;
+  --pl-duration-slow: 280ms;
+  --pl-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --pl-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --pl-ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* ── 层级 ──────────────────────────────────────────────────────── */
+  --pl-z-base: 0;
+  --pl-z-sticky: 100;
+  --pl-z-header: 200;
+  --pl-z-overlay: 150;
+  --pl-z-modal: 400;
+  --pl-z-toast: 500;
+
+  /* ── 布局 ──────────────────────────────────────────────────────── */
+  --pl-layout-max: 1600px;
+  --pl-layout-gutter: 30px;
+  --pl-layout-content: 880px;
+  --pl-layout-sidebar: 224px;
+  --pl-header-height: 64px;
+  --pl-topbar-offset: 12px;
+}
+
+/* ==========================================================================
+   2. 语义层 · 亮色
+   ========================================================================== */
+
+:root,
+html[data-theme='light'] {
+  color-scheme: light;
+
+  /* 表面 */
+  --pl-bg-canvas: var(--pl-surface-medium);
+  --pl-bg-surface: var(--pl-surface-soft);
+  --pl-bg-subtle: color-mix(in srgb, var(--pl-surface-hard) 55%, var(--pl-surface-soft));
+  --pl-bg-muted: var(--pl-surface-hard);
+  /* 玻璃层内部的浅色块底：只有一丝中性色，用来给嵌套块分层，
+     不做成实心灰块——实心灰块在玻璃上会显得脏。 */
+  --pl-bg-tint: color-mix(in srgb, var(--pl-ink-soft) 3%, transparent);
+  --pl-bg-overlay: rgb(28 28 30 / 28%);
+  --pl-bg-inverse: var(--pl-ink-hard);
+
+  /* 玻璃材质 —— 半透明白 + 背景模糊。
+     模糊只做一层，靠 saturate 补回被透射冲淡的饱和度。 */
+  --pl-glass-bg: rgb(255 255 255 / 62%);
+  --pl-glass-bg-strong: rgb(255 255 255 / 79%);
+  --pl-glass-border: rgb(25 26 28 / 9%);
+  --pl-glass-border-strong: rgb(25 26 28 / 16%);
+  --pl-glass-blur: blur(22px) saturate(100%);
+  --pl-glass-shadow: 0 8px 35px rgb(24 24 29 / 2.2%);
+  --pl-glass-shadow-hover: 0 12px 30px rgb(24 24 29 / 6%);
+
+  /* 背景氛围 —— 顶部单团柔光。
+     刻意比「多点霓虹」克制：它只负责让玻璃层有可折射的底，不参与信息表达。 */
+  --pl-atmosphere:
+    radial-gradient(
+      ellipse 880px 450px at 48% -22%,
+      rgb(215 215 220 / 24%),
+      transparent 85%
+    );
+
+  /* 文字 */
+  --pl-text-primary: var(--pl-ink-hard);
+  --pl-text-secondary: var(--pl-ink-medium);
+  --pl-text-tertiary: var(--pl-ink-soft);
+  --pl-text-disabled: var(--pl-ink-soft);
+  --pl-text-inverse: var(--pl-surface-soft);
+  --pl-text-link: var(--pl-ink-hard);
+  --pl-selection-bg: var(--pl-ink-hard);
+  --pl-selection-text: var(--pl-surface-soft);
+  --pl-price-cache: var(--pl-success-hard);
+  --pl-price-native: var(--pl-text-tertiary);
+  --pl-price-cache-native: color-mix(in srgb, var(--pl-price-cache) 30%, var(--pl-price-native));
+
+  /* 边框 */
+  --pl-border-subtle: rgb(25 26 28 / 9%);
+  --pl-border-strong: rgb(25 26 28 / 16%);
+  --pl-border-focus: var(--pl-ink-hard);
+
+  /* 状态 —— success / warning / danger 有色，neutral 用中性阶表达。
+     Operation 标签不是状态，不该占用彩色通道。 */
+  --pl-status-success: var(--pl-success-hard);
+  --pl-status-success-bg: var(--pl-success-soft);
+  --pl-status-success-border: color-mix(in srgb, var(--pl-success-medium) 32%, transparent);
+  --pl-status-warning: var(--pl-warning-hard);
+  --pl-status-warning-bg: var(--pl-warning-soft);
+  --pl-status-warning-border: color-mix(in srgb, var(--pl-warning-medium) 32%, transparent);
+  --pl-status-danger: var(--pl-danger-hard);
+  --pl-status-danger-bg: var(--pl-danger-soft);
+  --pl-status-danger-border: color-mix(in srgb, var(--pl-danger-medium) 32%, transparent);
+  --pl-status-neutral: var(--pl-ink-medium);
+  --pl-status-neutral-bg: var(--pl-bg-subtle);
+  --pl-status-neutral-border: var(--pl-border-subtle);
+
+  /* 交互 */
+  --pl-control-bg: var(--pl-glass-bg-strong);
+  --pl-control-bg-hover: rgb(255 255 255 / 92%);
+  --pl-control-border: var(--pl-glass-border);
+  --pl-control-ring: rgb(25 26 28 / 12%);
+  --pl-control-focus-shadow: 0 0 0 3px var(--pl-control-ring);
+
+  /* 阴影 */
+  --pl-shadow-xs: 0 1px 2px rgb(24 24 29 / 4%);
+  --pl-shadow-sm: 0 2px 8px rgb(24 24 29 / 4%);
+  --pl-shadow-md: 0 8px 35px rgb(24 24 29 / 5%);
+  --pl-shadow-lg: 0 12px 30px rgb(24 24 29 / 8%);
+  --pl-shadow-focus: 0 0 0 3px var(--pl-control-ring);
+
+  /* 图表 */
+  --pl-chart-grid-line: var(--pl-surface-hard);
+  --pl-chart-tick: var(--pl-ink-medium);
+}
+
+/* ==========================================================================
+   3. 语义层 · 暗色
+   ========================================================================== */
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+
+  --pl-bg-canvas: var(--pl-surface-medium);
+  --pl-bg-surface: var(--pl-surface-soft);
+  --pl-bg-subtle: color-mix(in srgb, var(--pl-surface-soft) 16%, var(--pl-surface-medium));
+  --pl-bg-muted: var(--pl-surface-hard);
+  --pl-bg-tint: color-mix(in srgb, var(--pl-ink-medium) 4%, transparent);
+  --pl-bg-overlay: rgb(10 10 11 / 48%);
+  --pl-bg-inverse: var(--pl-ink-hard);
+
+  /* 暗色下玻璃底要更实，否则文字对比度不够 */
+  --pl-glass-bg: rgb(33 34 37 / 54%);
+  --pl-glass-bg-strong: rgb(31 32 35 / 87%);
+  --pl-glass-border: rgb(238 238 242 / 9.5%);
+  --pl-glass-border-strong: rgb(238 238 242 / 18%);
+  --pl-glass-blur: blur(22px) saturate(100%);
+  --pl-glass-shadow: 0 8px 35px rgb(0 0 0 / 9%);
+  --pl-glass-shadow-hover: 0 14px 35px rgb(0 0 0 / 18%);
+
+  --pl-atmosphere:
+    radial-gradient(
+      ellipse 850px 430px at 60% -19%,
+      rgb(75 76 83 / 19%),
+      transparent 85%
+    );
+
+  --pl-text-primary: var(--pl-ink-hard);
+  --pl-text-secondary: var(--pl-ink-medium);
+  --pl-text-tertiary: var(--pl-ink-soft);
+  --pl-text-disabled: var(--pl-ink-soft);
+  --pl-text-inverse: var(--pl-surface-medium);
+  --pl-text-link: var(--pl-ink-hard);
+  --pl-selection-bg: var(--pl-ink-hard);
+  --pl-selection-text: var(--pl-surface-soft);
+  --pl-price-native: var(--pl-text-tertiary);
+  --pl-price-cache-native: color-mix(in srgb, var(--pl-price-cache) 30%, var(--pl-price-native));
+
+  --pl-border-subtle: rgb(238 238 242 / 9.5%);
+  --pl-border-strong: rgb(238 238 242 / 18%);
+  --pl-border-focus: var(--pl-ink-hard);
+
+  --pl-status-success: #6fc39b;
+  --pl-status-success-bg: rgb(58 156 116 / 14%);
+  --pl-status-success-border: rgb(58 156 116 / 30%);
+  --pl-status-warning: #e0ae63;
+  --pl-status-warning-bg: rgb(201 138 43 / 14%);
+  --pl-status-warning-border: rgb(201 138 43 / 30%);
+  --pl-status-danger: #e08282;
+  --pl-status-danger-bg: rgb(201 86 86 / 14%);
+  --pl-status-danger-border: rgb(201 86 86 / 30%);
+  --pl-status-neutral: var(--pl-ink-medium);
+  --pl-status-neutral-bg: var(--pl-bg-subtle);
+  --pl-status-neutral-border: var(--pl-border-subtle);
+
+  --pl-control-bg: var(--pl-glass-bg-strong);
+  --pl-control-bg-hover: rgb(44 45 49 / 92%);
+  --pl-control-border: var(--pl-glass-border-strong);
+  --pl-control-ring: rgb(238 238 242 / 16%);
+
+  --pl-shadow-xs: 0 1px 2px rgb(0 0 0 / 30%);
+  --pl-shadow-sm: 0 2px 8px rgb(0 0 0 / 34%);
+  --pl-shadow-md: 0 8px 35px rgb(0 0 0 / 22%);
+  --pl-shadow-lg: 0 12px 30px rgb(0 0 0 / 30%);
+
+  --pl-chart-grid-line: var(--pl-bg-muted);
+  --pl-chart-tick: var(--pl-ink-medium);
+}
+
+/* ==========================================================================
+   4. 语义层 · 暗色下的原始层覆盖
+   ==========================================================================
+   原始层是「不表达语义」的色板，但它仍然要能换肤——
+   中性阶在暗色下必须整体翻转，否则语义层引用到的还是亮色的那一档。
+   翻转放在这里，语义层只管引用。
+   ========================================================================== */
+
+html[data-theme='dark'] {
+  --pl-surface-soft: #1b1c20;
+  --pl-surface-medium: #131417;
+  --pl-surface-hard: #2c2d31;
+
+  --pl-ink-soft: #85878d;
+  --pl-ink-medium: #989a9f;
+  --pl-ink-hard: #eeeef0;
+
+  --pl-success-soft: rgb(58 156 116 / 14%);
+  --pl-success-medium: #3a9c74;
+  --pl-success-hard: #6fc39b;
+
+  --pl-warning-soft: rgb(201 138 43 / 14%);
+  --pl-warning-medium: #c98a2b;
+  --pl-warning-hard: #e0ae63;
+
+  --pl-danger-soft: rgb(201 86 86 / 14%);
+  --pl-danger-medium: #c95656;
+  --pl-danger-hard: #e08282;
+}
+
+/* ==========================================================================
+   5. 组件层
+   ==========================================================================
+   API 页有自己的视觉语言：区域面板、端点卡片、方法、路径、示例响应、说明块。
+   这些值集中成 `--pl-api-*` 一组，视图里不再散落裸值——
+   否则「API 区域」会慢慢长成第二套设计系统。
+
+   组件层**只消费语义层**，不定义新颜色：
+   亮暗两套主题自动跟着语义层切换，这里只需要一份定义。
+
+   注意这组令牌属于**组件层**，不计入语义层的「一个角色一个值」约束——
+   语义层只描述用途，颜色与尺寸的最终归属在组件层。
+   ========================================================================== */
+
+:root {
+  /* 复选框：自定义控件，不依赖浏览器原生外观。 */
+  --pl-checkbox-size: 16px;
+  --pl-checkbox-radius: var(--pl-radius-xs);
+  --pl-checkbox-bg: var(--pl-control-bg);
+  --pl-checkbox-border: var(--pl-control-border);
+  --pl-checkbox-checked-bg: var(--pl-bg-inverse);
+  --pl-checkbox-checked-border: var(--pl-bg-inverse);
+  --pl-checkbox-checkmark: var(--pl-text-inverse);
+  --pl-checkbox-focus-shadow: var(--pl-control-focus-shadow);
+
+  /* 单选框：与复选框共享控件语义，保持圆形选择状态。 */
+  --pl-radio-size: 16px;
+  --pl-radio-bg: var(--pl-control-bg);
+  --pl-radio-border: var(--pl-control-border);
+  --pl-radio-dot-size: 10px;
+  --pl-radio-checked-border: var(--pl-border-focus);
+  --pl-radio-dot: var(--pl-bg-inverse);
+  --pl-radio-focus-shadow: var(--pl-control-focus-shadow);
+
+  /* API 内容区域 */
+  /* API 内容面板 —— 页面标题独立于玻璃面板 */
+  --pl-api-panel-bg: var(--pl-glass-bg);
+  --pl-api-panel-border: var(--pl-glass-border);
+  --pl-api-panel-radius: var(--pl-radius-lg);
+  --pl-api-panel-padding: var(--pl-space-xl);
+
+  /* 端点卡片 —— 每个 API 一张，落在面板内部 */
+  --pl-api-card-bg: var(--pl-bg-tint);
+  --pl-api-card-border: var(--pl-border-subtle);
+  --pl-api-card-radius: var(--pl-radius-md);
+  --pl-api-card-padding: var(--pl-space-md);
+  --pl-api-card-gap: var(--pl-space-sm);
+  --pl-api-card-list-margin: var(--pl-space-xl);
+
+  /* 路径 */
+  --pl-api-path-color: var(--pl-text-primary);
+  --pl-api-path-size: var(--pl-text-xs);
+
+  /* 示例响应 */
+  --pl-api-code-bg: var(--pl-bg-muted);
+  --pl-api-code-radius: var(--pl-radius-md);
+  --pl-api-code-padding: var(--pl-space-md);
+  --pl-api-code-max-height: 320px;
+
+  /* 说明块 */
+  --pl-api-note-border: var(--pl-border-subtle);
+  --pl-api-note-radius: var(--pl-radius-md);
+  --pl-api-note-padding: var(--pl-space-md);
+}

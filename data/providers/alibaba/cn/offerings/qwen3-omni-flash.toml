@@ -1,0 +1,124 @@
+id = "qwen3-omni-flash"
+model_ref = "alibaba/qwen3-omni-flash"
+status = "active"
+
+[api_limits]
+context = 65536
+input = 49152
+output = 16384
+rpm = 60
+tpm = 100000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-omni-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.9"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "15.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.9"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.3"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "6.9"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.156"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12.183"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "text"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "27.962"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12.183"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "audio"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "5.725"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "12.183"
+
+[[pricing.conditions]]
+field = "usage.input_modality"
+value = "image"

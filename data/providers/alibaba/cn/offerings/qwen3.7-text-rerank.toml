@@ -1,0 +1,22 @@
+id = "qwen3.7-text-rerank"
+model_ref = "alibaba/qwen3-7-text-rerank"
+status = "active"
+
+[api_limits]
+context = 32768
+input = 32768
+output = 0
+rpm = 3000
+tpm = 9000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-7-text-rerank"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"

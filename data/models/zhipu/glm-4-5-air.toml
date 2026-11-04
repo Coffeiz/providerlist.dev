@@ -1,0 +1,11 @@
+name = "GLM-4.5-Air"
+type = "chat"
+release_date = "2025-07-28"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 96000

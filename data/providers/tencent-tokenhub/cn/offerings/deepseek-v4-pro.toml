@@ -1,0 +1,29 @@
+id = "deepseek-v4-pro"
+model_ref = "deepseek/deepseek-v4-pro"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 384000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "24"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1"

@@ -1,0 +1,263 @@
+id = "grok-4.7"
+model_ref = "xai/grok-4-7"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "6.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "12.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1.6"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.4"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "4.8"
+
+[[pricing.conditions]]
+field = "api_mode"
+operator = "eq"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "3.2"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "0.8"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "9.6"
+
+[[pricing.conditions]]
+field = "api_mode"
+operator = "eq"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "12"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "24"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "2.2"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "0.55"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "6.6"
+
+[[pricing.conditions]]
+field = "api_region"
+operator = "eq"
+value = "United States"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "4.4"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "1.1"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "13.2"
+
+[[pricing.conditions]]
+field = "api_region"
+operator = "eq"
+value = "United States"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "4.4"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "1.1"
+
+[[pricing.rates]]
+metric = "output"
+context = "<200000"
+unit = "per_1m_tokens"
+value = "13.2"
+
+[[pricing.conditions]]
+field = "api_region"
+operator = "eq"
+value = "United States"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "8.8"
+
+[[pricing.rates]]
+metric = "cache_read"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "2.2"
+
+[[pricing.rates]]
+metric = "output"
+context = ">=200000"
+unit = "per_1m_tokens"
+value = "26.4"
+
+[[pricing.conditions]]
+field = "api_region"
+operator = "eq"
+value = "United States"
+
+[[pricing.conditions]]
+field = "service_tier"
+operator = "eq"
+value = "priority"

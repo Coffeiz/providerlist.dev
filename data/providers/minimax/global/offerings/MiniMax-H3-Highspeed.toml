@@ -1,0 +1,25 @@
+id = "MiniMax-H3-Highspeed"
+model_ref = "minimax/minimax-h3-highspeed"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.06"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.06"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.03"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "768P"

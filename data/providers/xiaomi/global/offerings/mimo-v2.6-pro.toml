@@ -1,0 +1,52 @@
+id = "mimo-v2.6-pro"
+model_ref = "xiaomi/mimo-v2-6-pro"
+status = "active"
+
+[links]
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/openai-api"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.0036"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.435"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.87"
+
+[[pricing.conditions]]
+field = "inference_type"
+operator = "eq"
+value = "realtime"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.0018"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.2175"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.435"
+
+[[pricing.conditions]]
+field = "inference_type"
+operator = "eq"
+value = "batch"

@@ -1,0 +1,10 @@
+name = "Lyria 3.5"
+type = "music"
+release_date = "2026-09-03"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "audio", "text" ]
+
+[limits]
+input = 131072

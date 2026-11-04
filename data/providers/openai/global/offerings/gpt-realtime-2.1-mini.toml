@@ -1,0 +1,67 @@
+id = "gpt-realtime-2.1-mini"
+model_ref = "openai/gpt-realtime-2-1-mini"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "20.00"
+
+[[pricing.rates]]
+metric = "cache_read_audio"
+unit = "per_1m_tokens"
+value = "0.30"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.60"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.40"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.06"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "0.80"
+
+[[pricing.rates]]
+metric = "cache_read_image"
+unit = "per_1m_tokens"
+value = "0.08"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

@@ -1,0 +1,19 @@
+id = "gemini-3.5-transcribe-live"
+model_ref = "google/gemini-3-5-transcribe-live"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "3.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21.00"

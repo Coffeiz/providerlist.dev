@@ -1,0 +1,16 @@
+name = "qwen3.8-2.4t-a95b"
+type = "chat"
+family = "qwen"
+release_date = "2026-08-12"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+output = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true

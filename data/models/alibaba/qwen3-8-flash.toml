@@ -1,0 +1,17 @@
+name = "qwen3.8-flash"
+type = "chat"
+family = "qwen"
+release_date = "2026-08-26"
+
+[limits]
+context = 1000000
+output = 64000
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

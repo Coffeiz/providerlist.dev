@@ -1,0 +1,11 @@
+name = "vidu/viduq2-pro_reference2video"
+type = "video"
+release_date = "2026-01-30"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

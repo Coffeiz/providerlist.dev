@@ -1,0 +1,11 @@
+name = "kling/kling-v3-turbo-video-generation"
+type = "video"
+developer_name = "Kling AI"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

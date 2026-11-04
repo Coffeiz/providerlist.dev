@@ -1,0 +1,11 @@
+id = "GLM-Image"
+model_ref = "zhipu/glm-image"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.015"

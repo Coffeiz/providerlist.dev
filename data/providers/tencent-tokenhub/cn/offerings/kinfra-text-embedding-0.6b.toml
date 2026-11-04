@@ -1,0 +1,17 @@
+id = "kinfra-text-embedding-0.6b"
+model_ref = "tencent/kinfra-text-embedding-0-6b"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 32000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"

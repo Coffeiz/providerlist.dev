@@ -1,0 +1,7 @@
+name = "qwen3.5-omni-flash"
+type = "chat"
+release_date = "2026-03-26"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "audio" ]

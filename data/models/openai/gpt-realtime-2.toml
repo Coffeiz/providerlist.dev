@@ -1,0 +1,16 @@
+name = "GPT-Realtime-2"
+type = "realtime"
+family = "gpt"
+release_date = "2026-05-07"
+
+[modalities]
+input = [ "text", "image", "audio" ]
+output = [ "text", "audio" ]
+
+[limits]
+context = 128000
+output = 32000
+
+[capabilities]
+reasoning = false
+tool_calling = true

@@ -1,0 +1,12 @@
+name = "image-01"
+type = "image"
+family = "minimax"
+release_date = "2025-02-15"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[capabilities]
+reasoning = false
+tool_calling = false

@@ -1,0 +1,49 @@
+id = "GLM-5"
+model_ref = "zhipu/glm-5"
+status = "active"
+
+[api_limits]
+context = 128000
+output = 128000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "18"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1"
+context = "<32000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6"
+context = ">=32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "22"
+context = ">=32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.5"
+context = ">=32000"

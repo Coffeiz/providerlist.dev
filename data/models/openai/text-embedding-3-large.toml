@@ -1,0 +1,22 @@
+name = "text-embedding-3-large"
+type = "embedding"
+family = "text-embedding"
+release_date = "2024-01-25"
+
+[modalities]
+input = [ "text" ]
+output = [ "embedding" ]
+
+[limits]
+input = 8192
+context = 8191
+output = 3072
+
+[output_dimensions]
+min = 1
+max = 3072
+default = 3072
+
+[capabilities]
+reasoning = false
+tool_calling = false

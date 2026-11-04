@@ -1,0 +1,21 @@
+id = "qwen-plus-2025-01-12"
+model_ref = "alibaba/qwen-plus-2025-01-12"
+status = "active"
+
+[links]
+documentation = "https://docs.modelstudio.console.alibabacloud.com/zh/model-studio/model-pricing"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+deployment = "中国内地"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.115"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.287"

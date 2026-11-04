@@ -1,0 +1,7 @@
+name = "CogVideoX-3"
+release_date = "2025-07-15"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

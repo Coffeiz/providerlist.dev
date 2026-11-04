@@ -1,0 +1,10 @@
+name = "grok-imagine-image-2.0"
+release_date = "2026-08-07"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "1K", "1.5K", "2K" ]

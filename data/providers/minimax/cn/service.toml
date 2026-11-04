@@ -1,0 +1,103 @@
+website = "https://www.minimax.cn"
+
+[docs]
+overview = "https://platform.minimax.cn/docs/faq/models"
+pricing = "https://platform.minimax.cn/docs/pricing/overview"
+models = "https://platform.minimax.cn/docs/guides/text-generation"
+ai_sdk = "https://platform.minimax.cn/docs/api-reference/text-ai-sdk"
+
+[[endpoints]]
+id = "cn-openai"
+base_url = "https://api.minimax.cn/v1"
+api_region = "cn"
+documentation = "https://platform.minimax.cn/docs/api-reference/text-openai-api"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/text-chat-openai"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/file-management-upload"
+path = "/files/upload"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/responses-create"
+path = "/responses"
+
+[[endpoints]]
+id = "cn-anthropic"
+base_url = "https://api.minimax.cn/anthropic"
+api_region = "cn"
+documentation = "https://platform.minimax.cn/docs/api-reference/text-anthropic-api"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/text-chat-anthropic"
+path = "/v1/messages"
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = true
+enum = [ "voice_clone", "prompt_audio", "t2a_async_input", "video_understanding", "video_generation_input" ]
+route_mappings = [ "multipart/form-data.purpose" ]
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.minimax.cn/docs/api-reference/file-management-upload"
+path = "/files/upload"
+
+[capabilities.links]
+documentation = "https://platform.minimax.cn/docs/api-reference/file-management-upload"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "file.file_id", "file.bytes", "file.created_at", "file.filename", "file.purpose", "base_resp.status_code", "base_resp.status_msg" ]
+
+[[capabilities]]
+kind = "web_search"
+required_plan_ids = [ "cn-m-plan-go", "cn-m-plan-explore", "cn-m-plan-build" ]
+
+[[capabilities.parameters]]
+name = "query"
+type = "string"
+required = true
+
+[capabilities.links]
+documentation = "https://platform.minimax.cn/docs/m-plan/mcp-guide"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"

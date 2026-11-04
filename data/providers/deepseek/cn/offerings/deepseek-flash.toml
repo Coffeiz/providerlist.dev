@@ -1,0 +1,56 @@
+id = "deepseek-flash"
+model_ref = "deepseek/deepseek-flash"
+status = "active"
+
+[links]
+documentation = "https://api-docs.deepseek.com/zh-cn/quick_start/pricing/"
+
+[api_limits]
+context = 1048576
+output = 393216
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.02"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "off_peak"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.04"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+
+[[pricing.conditions]]
+field = "time_period"
+operator = "eq"
+value = "peak"

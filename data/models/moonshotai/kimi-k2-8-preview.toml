@@ -1,0 +1,11 @@
+name = "Kimi K2.8 Preview"
+type = "chat"
+release_date = "2026-09-11"
+developer_name = "Moonshot AI"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576

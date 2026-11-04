@@ -1,0 +1,7 @@
+id = "GLM-4.6"
+model_ref = "zhipu/glm-4-6"
+status = "active"
+
+[api_limits]
+context = 128000
+output = 128000

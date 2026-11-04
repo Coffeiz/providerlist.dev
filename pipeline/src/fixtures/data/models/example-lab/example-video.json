@@ -1,0 +1,18 @@
+{
+  "model": {
+    "id": "example-lab/example-video",
+    "developer_id": "example-lab",
+    "developer_name": "示例模型实验室",
+    "name": "Example Video",
+    "type": "video",
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "video"
+      ]
+    }
+  }
+}

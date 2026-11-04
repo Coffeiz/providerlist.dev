@@ -1,0 +1,10 @@
+id = "video-style-transform"
+model_ref = "alibaba/video-style-transform"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/video-style-transform"

@@ -1,0 +1,16 @@
+name = "tongyi-xiaomi-analysis-flash"
+type = "chat"
+release_date = "2026-01-09"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 32768
+input = 28672
+output = 4096
+
+[capabilities]
+tool_calling = false
+structured_output = false

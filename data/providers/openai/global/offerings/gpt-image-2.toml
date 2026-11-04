@@ -1,0 +1,84 @@
+id = "gpt-image-2"
+model_ref = "openai/gpt-image-2"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "8.00"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing.rates]]
+metric = "cache_read_image"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.rates]]
+metric = "cache_read_image"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.625"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

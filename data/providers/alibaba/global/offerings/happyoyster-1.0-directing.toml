@@ -1,0 +1,4 @@
+id = "happyoyster-1.0-directing"
+model_ref = "alibaba/happyoyster-1-0-directing"
+status = "active"
+pricing = []

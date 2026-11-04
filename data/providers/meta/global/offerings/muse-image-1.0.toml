@@ -1,0 +1,11 @@
+id = "muse-image-1.0"
+model_ref = "meta/muse-image-1-0"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_image"
+unit = "per_image"
+value = "0.01"

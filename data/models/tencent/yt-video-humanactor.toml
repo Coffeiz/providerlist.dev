@@ -1,0 +1,6 @@
+name = "YT-Video-HumanActor"
+type = "video"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

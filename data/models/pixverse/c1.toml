@@ -1,0 +1,7 @@
+name = "PixVerse C1"
+type = "video"
+release_date = "2026-04-07"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]

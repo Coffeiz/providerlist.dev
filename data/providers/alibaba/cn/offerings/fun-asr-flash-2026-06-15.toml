@@ -1,0 +1,10 @@
+id = "fun-asr-flash-2026-06-15"
+model_ref = "alibaba/fun-asr-flash-2026-06-15"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 600
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/fun-asr-flash"

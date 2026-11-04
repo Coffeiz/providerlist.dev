@@ -1,0 +1,7 @@
+name = "mimo-v2.5-tts-voiceclone"
+type = "speech"
+release_date = "2026-04-23"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "audio" ]

@@ -1,0 +1,7 @@
+name = "wan2.2-s2v"
+type = "video"
+release_date = "2025-08-25"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

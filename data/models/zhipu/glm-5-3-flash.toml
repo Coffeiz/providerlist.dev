@@ -1,0 +1,11 @@
+name = "GLM-5.3-Flash"
+release_date = "2026-08-26"
+type = "chat"
+
+[limits]
+context = 1000000
+output = 128000
+
+[modalities]
+output = [ "text" ]
+input = [ "video", "text", "image", "file" ]

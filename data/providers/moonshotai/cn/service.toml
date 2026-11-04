@@ -1,0 +1,301 @@
+website = "https://platform.kimi.com"
+
+[docs]
+overview = "https://platform.kimi.com/docs/api/overview"
+membership = "https://www.kimi.com/membership/pricing"
+ai_sdk = "https://ai-sdk.dev/providers/ai-sdk-providers/moonshotai"
+
+[[endpoints]]
+id = "openai-compatible-cn"
+base_url = "https://api.moonshot.cn/v1"
+api_region = "中国"
+documentation = "https://platform.kimi.com/docs/api/chat"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+documentation = "https://platform.kimi.com/docs/api/batch-create"
+path = "/batches"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+documentation = "https://platform.kimi.com/docs/api/chat"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/chat"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+task_id_pointer = "/id"
+status_path_template = "/batches/{batch_id}"
+cancel_path_template = "/batches/{batch_id}/cancel"
+documentation = "https://platform.kimi.com/docs/api/batch-create"
+path = "/batches"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-fetch"
+path = "/tools/fetch"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+documentation = "https://platform.kimi.com/docs/api/responses"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/responses"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-search"
+path = "/tools/search"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-search-pro"
+path = "/tools/search_pro"
+
+[[endpoints.routes]]
+protocol = "openai-files"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/files-upload"
+path = "/files"
+
+[[endpoints]]
+id = "anthropic-compatible-cn"
+base_url = "https://api.moonshot.cn/anthropic"
+api_region = "中国"
+documentation = "https://platform.kimi.com/docs/api/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/messages"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+documentation = "https://platform.kimi.com/docs/api/messages"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "moonshot-tools-api-cn"
+base_url = "https://api.moonshot.cn"
+api_region = "中国"
+documentation = "https://platform.kimi.com/docs/api/overview"
+
+[[endpoints.routes]]
+protocol = "kimi-tools"
+method = "POST"
+path = "/v1/tools/search"
+documentation = "https://platform.kimi.com/docs/api/tools-search"
+
+[[endpoints.routes]]
+protocol = "kimi-tools"
+method = "POST"
+path = "/v1/tools/search_pro"
+documentation = "https://platform.kimi.com/docs/api/tools-search-pro"
+
+[[endpoints.routes]]
+protocol = "kimi-tools"
+method = "POST"
+path = "/v1/tools/fetch"
+documentation = "https://platform.kimi.com/docs/api/tools-fetch"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "text_query"
+type = "string"
+required = true
+route_mappings = [ "/request/text_query" ]
+
+[[capabilities.parameters]]
+name = "timeout_seconds"
+type = "integer"
+required = false
+route_mappings = [ "/request/timeout_seconds" ]
+min = 1
+max = 60
+
+[[capabilities.parameters]]
+name = "limit"
+type = "integer"
+required = false
+route_mappings = [ "/request/limit" ]
+min = 1
+max = 20
+default = 5
+
+[[capabilities.parameters]]
+name = "include_content"
+type = "boolean"
+required = false
+route_mappings = [ "/request/include_content" ]
+default = false
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-search"
+path = "/tools/search"
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-search-pro"
+path = "/tools/search_pro"
+
+[[capabilities.input]]
+name = "text_query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+
+[[capabilities]]
+kind = "web_fetch"
+
+[[capabilities.parameters]]
+name = "url"
+type = "string"
+required = true
+route_mappings = [ "/request/url" ]
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/tools-fetch"
+path = "/tools/fetch"
+
+[capabilities.links]
+documentation = "https://platform.kimi.com/docs/api/tools-fetch"
+
+[[capabilities.input]]
+name = "url"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "url", "markdown", "title" ]
+
+[[capabilities]]
+kind = "file_storage"
+
+[[capabilities.parameters]]
+name = "purpose"
+type = "string"
+required = false
+default = "file-extract"
+enum = [ "file-extract", "image", "video", "batch" ]
+route_mappings = [ "multipart/form-data.purpose" ]
+
+[[capabilities.parameters]]
+name = "filename"
+type = "string"
+required = false
+max = 4096
+route_mappings = [ "multipart/form-data.filename" ]
+
+[[capabilities.routes]]
+protocol = "openai-files"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.kimi.com/docs/api/files-upload"
+path = "/files"
+
+[capabilities.links]
+documentation = "https://platform.kimi.com/docs/api/files-upload"
+
+[[capabilities.input]]
+name = "file"
+kind = "file"
+required = true
+
+[capabilities.input.media]
+max_bytes = 104857600
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "filename", "mime_type", "size_bytes", "created_at", "purpose", "extract_status" ]
+
+[[capabilities]]
+kind = "batch"
+
+[capabilities.execution]
+mode = "async_job"
+
+[[capabilities.parameters]]
+name = "input_file_id"
+type = "string"
+required = true
+route_mappings = [ "/input_file_id" ]
+
+[[capabilities.parameters]]
+name = "endpoint"
+type = "string"
+required = true
+enum = [ "/v1/chat/completions" ]
+route_mappings = [ "/endpoint" ]
+
+[[capabilities.parameters]]
+name = "completion_window"
+type = "string"
+required = true
+route_mappings = [ "/completion_window" ]
+
+[[capabilities.parameters]]
+name = "metadata"
+type = "object"
+required = false
+route_mappings = [ "/metadata" ]
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+task_id_pointer = "/id"
+status_path_template = "/batches/{batch_id}"
+cancel_path_template = "/batches/{batch_id}/cancel"
+documentation = "https://platform.kimi.com/docs/api/batch-create"
+path = "/batches"
+
+[capabilities.links]
+documentation = "https://platform.kimi.com/docs/guide/use-batch-api"
+
+[[capabilities.input]]
+name = "input_file_id"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "status", "output_file_id", "error_file_id" ]

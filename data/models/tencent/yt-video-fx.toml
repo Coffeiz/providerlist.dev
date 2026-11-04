@@ -1,0 +1,6 @@
+name = "YT-Video-FX"
+type = "video"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

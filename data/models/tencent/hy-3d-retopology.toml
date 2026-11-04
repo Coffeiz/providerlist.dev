@@ -1,0 +1,7 @@
+name = "HY-3D-Retopolog"
+type = "3d"
+release_date = "2025-12-10"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "3d" ]

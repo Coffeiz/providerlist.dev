@@ -1,0 +1,16 @@
+id = "GLM-OCR"
+model_ref = "zhipu/glm-ocr"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.03"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.03"

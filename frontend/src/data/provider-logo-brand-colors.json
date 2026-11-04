@@ -1,0 +1,18 @@
+{
+  "alibaba": "#FF6A00",
+  "alibaba-cn": "#FF6A00",
+  "alibaba-coding-plan": "#FF6A00",
+  "alibaba-coding-plan-cn": "#FF6A00",
+  "alibaba-token-plan": "#FF6A00",
+  "alibaba-token-plan-cn": "#FF6A00",
+  "bailing": "#1677FF",
+  "deepseek": "#4D6BFE",
+  "minimax": "#FF6452",
+  "minimax-cn": "#FF6452",
+  "minimax-coding-plan": "#FF6452",
+  "minimax-cn-coding-plan": "#FF6452",
+  "xiaomi": "#FF6900",
+  "xiaomi-token-plan-cn": "#FF6900",
+  "xiaomi-token-plan-ams": "#FF6900",
+  "xiaomi-token-plan-sgp": "#FF6900"
+}

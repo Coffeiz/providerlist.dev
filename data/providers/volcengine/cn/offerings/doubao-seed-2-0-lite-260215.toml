@@ -1,0 +1,117 @@
+id = "doubao-seed-2-0-lite-260215"
+model_ref = "bytedance/doubao-seed-2-0-lite-260215"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+context = "<=32000"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "4.5"
+context = "<=32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.12"
+context = "<=32000"
+
+[[pricing.rates]]
+metric = "cache_read_audio"
+unit = "per_1m_tokens"
+value = "1.8"
+context = "<=32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.8"
+context = "<=32000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.45"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "6.75"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.18"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "cache_read_audio"
+unit = "per_1m_tokens"
+value = "2.7"
+context = "<=128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.7"
+context = "<=128000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.9"
+context = "<=256000"
+
+[[pricing.rates]]
+metric = "input_audio"
+unit = "per_1m_tokens"
+value = "13.5"
+context = "<=256000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.36"
+context = "<=256000"
+
+[[pricing.rates]]
+metric = "cache_read_audio"
+unit = "per_1m_tokens"
+value = "5.4"
+context = "<=256000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.4"
+context = "<=256000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

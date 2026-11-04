@@ -1,0 +1,17 @@
+name = "Claude Sonnet 4.5"
+type = "chat"
+family = "claude-sonnet"
+release_date = "2025-09-29"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 64000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

@@ -1,0 +1,14 @@
+name = "qwen3-vl-rerank"
+type = "reranking"
+release_date = "2026-01-29"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[limits]
+input = 120000
+
+[capabilities]
+tool_calling = false
+structured_output = false

@@ -1,0 +1,15 @@
+id = "wan2.1-t2i-plus"
+model_ref = "alibaba/wan2-1-t2i-plus"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wan2-1-t2i-plus"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+
+[[pricing.rates]]
+metric = "image"
+unit = "per_image"
+value = "0.366962"

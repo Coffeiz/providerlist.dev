@@ -1,0 +1,26 @@
+id = "muse-spark-1.2"
+model_ref = "meta/muse-spark-1-2"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.15"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.25"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.25"
+
+[[pricing.conditions]]
+field = "usage.mode"
+operator = "eq"
+value = "Standard mode"

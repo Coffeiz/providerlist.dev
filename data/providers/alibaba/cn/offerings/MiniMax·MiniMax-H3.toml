@@ -1,0 +1,10 @@
+id = "MiniMax/MiniMax-H3"
+model_ref = "minimax/minimax-h3"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/minimax-h3"

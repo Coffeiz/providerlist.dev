@@ -1,0 +1,16 @@
+node_modules/
+dist/
+frontend/dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+coverage/
+.vite/
+.wrangler/
+*.tsbuildinfo
+data/upstream/snapshots/
+.cache/provider-ingest/
+# 本机操作信息、代理配置等，不进入版本控制
+agentskills/local/

@@ -1,0 +1,6 @@
+name = "Music-2.0"
+type = "music"
+release_date = "2025-10-29"
+
+[specifications.audio_duration_seconds]
+max = 300

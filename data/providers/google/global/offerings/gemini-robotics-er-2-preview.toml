@@ -1,0 +1,70 @@
+id = "gemini-robotics-er-2-preview"
+model_ref = "google/gemini-robotics-er-2-preview"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-12-31T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-12-31T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.50"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2027-01-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2027-01-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

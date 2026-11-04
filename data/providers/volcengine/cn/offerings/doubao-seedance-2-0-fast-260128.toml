@@ -1,0 +1,48 @@
+id = "doubao-seedance-2-0-fast-260128"
+model_ref = "bytedance/doubao-seedance-2-0-fast-260128"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "37.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "22.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true

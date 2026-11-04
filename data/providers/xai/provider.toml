@@ -1,0 +1,5 @@
+id = "xai"
+name = "xAI"
+aliases = [ "Grok API" ]
+kind = "first_party"
+logo = "/logos/providers/xai.svg"

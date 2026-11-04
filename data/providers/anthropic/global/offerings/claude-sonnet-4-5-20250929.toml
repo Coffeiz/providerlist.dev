@@ -1,0 +1,36 @@
+id = "claude-sonnet-4-5-20250929"
+model_ref = "anthropic/claude-sonnet-4-5-20250929"
+status = "active"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "3.75"
+ttl = "5min"
+
+[[pricing.rates]]
+metric = "cache_write"
+unit = "per_1m_tokens"
+value = "6"
+ttl = "1h"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.30"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "15"

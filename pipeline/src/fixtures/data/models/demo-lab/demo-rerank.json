@@ -1,0 +1,17 @@
+{
+  "model": {
+    "id": "demo-lab/demo-rerank",
+    "developer_id": "demo-lab",
+    "developer_name": "演示模型实验室",
+    "name": "Demo Rerank",
+    "type": "reranking",
+    "modalities": {
+      "input": [
+        "text"
+      ],
+      "output": [
+        "text"
+      ]
+    }
+  }
+}

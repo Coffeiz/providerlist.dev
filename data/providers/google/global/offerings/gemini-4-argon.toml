@@ -1,0 +1,142 @@
+id = "gemini-4-argon"
+model_ref = "google/gemini-4-argon"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-11-30T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2026-12-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "20.00"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-11-30T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2026-12-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-11-30T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "5.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2026-12-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2.00"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "flex"
+
+[[pricing]]
+currency = "USD"
+effective_until = "2026-11-30T23:59:59Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.60"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "18.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "priority"
+
+[[pricing]]
+currency = "USD"
+effective_from = "2026-12-01T00:00:00Z"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7.20"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "36.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "priority"

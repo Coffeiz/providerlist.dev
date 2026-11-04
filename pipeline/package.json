@@ -1,0 +1,69 @@
+{
+  "name": "@providerlist/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "离线数据处理：上游取数、归一化与生命周期求值、数据校验、编译公开 JSON",
+  "bin": {
+    "providerlist-build": "./src/cli.ts"
+  },
+  "scripts": {
+    "build": "node --experimental-strip-types src/cli.ts build",
+    "validate": "node --experimental-strip-types src/cli.ts validate",
+    "ingest:sources": "node --experimental-strip-types src/ingest/cli.ts sources",
+    "ingest:source": "node --experimental-strip-types src/ingest/cli.ts fetch",
+    "ingest:feed-discovery": "node --experimental-strip-types src/ingest/cli.ts feed-discovery",
+    "ingest:minimax": "node --experimental-strip-types src/ingest/cli.ts minimax",
+    "ingest:minimax:merge": "node --experimental-strip-types src/ingest/cli.ts minimax-merge",
+    "ingest:zhipu": "node --experimental-strip-types src/ingest/cli.ts zhipu",
+    "ingest:zhipu:merge": "node --experimental-strip-types src/ingest/cli.ts zhipu-merge",
+    "ingest:moonshotai": "node --experimental-strip-types src/ingest/cli.ts moonshotai",
+    "ingest:stepfun": "node --experimental-strip-types src/ingest/cli.ts stepfun",
+    "ingest:deepseek": "node --experimental-strip-types src/ingest/cli.ts deepseek",
+    "ingest:alibaba": "node --experimental-strip-types src/ingest/cli.ts alibaba",
+    "ingest:volcengine": "node --experimental-strip-types src/ingest/cli.ts volcengine",
+    "ingest:volcengine:global": "node --experimental-strip-types src/ingest/cli.ts volcengine-global",
+    "ingest:volcengine:global-merge": "node --experimental-strip-types src/ingest/cli.ts volcengine-global-merge",
+    "ingest:tencent": "node --experimental-strip-types src/ingest/cli.ts tencent",
+    "ingest:xiaomi": "node --experimental-strip-types src/ingest/cli.ts xiaomi",
+    "ingest:bailing": "node --experimental-strip-types src/ingest/cli.ts bailing",
+    "ingest:openai": "node --experimental-strip-types src/ingest/cli.ts openai",
+    "ingest:openai:merge": "node --experimental-strip-types src/ingest/cli.ts openai-merge",
+    "ingest:google": "node --experimental-strip-types src/ingest/cli.ts google",
+    "ingest:xai": "node --experimental-strip-types src/ingest/cli.ts xai",
+    "ingest:meta": "node --experimental-strip-types src/ingest/cli.ts meta",
+    "ingest:sync": "node --experimental-strip-types src/ingest/sync-cli.ts",
+    "ingest:global-merges": "node --experimental-strip-types src/ingest/cli.ts global-merges",
+    "ingest:ir:apply": "node --experimental-strip-types src/ingest/cli.ts apply-ir",
+    "ingest:moonshotai:merge": "node --experimental-strip-types src/ingest/cli.ts moonshotai-merge",
+    "ingest:stepfun:merge": "node --experimental-strip-types src/ingest/cli.ts stepfun-merge",
+    "ingest:deepseek:merge": "node --experimental-strip-types src/ingest/cli.ts deepseek-merge",
+    "ingest:alibaba:merge": "node --experimental-strip-types src/ingest/cli.ts alibaba-merge",
+    "ingest:volcengine:merge": "node --experimental-strip-types src/ingest/cli.ts volcengine-merge",
+    "ingest:tencent:merge": "node --experimental-strip-types src/ingest/cli.ts tencent-merge",
+    "ingest:xiaomi:merge": "node --experimental-strip-types src/ingest/cli.ts xiaomi-merge",
+    "ingest:bailing:merge": "node --experimental-strip-types src/ingest/cli.ts bailing-merge",
+    "ingest:decision": "node --experimental-strip-types src/ingest/cli.ts decision",
+    "ingest:cleanup": "node --experimental-strip-types src/ingest/cli.ts cleanup",
+    "ingest:fx": "node src/ingest/fetch-fx.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\" && node --test \"tests/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "@providerlist/schema": "workspace:*",
+    "@providerlist/shared": "workspace:*",
+    "smol-toml": "^1.9.1"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "typescript": "^5.7.2"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/compile/index.ts",
+    "./compile": "./src/compile/index.ts",
+    "./compile/*": "./src/compile/*.ts",
+    "./normalize": "./src/normalize/index.ts",
+    "./normalize/*": "./src/normalize/*.ts"
+  }
+}

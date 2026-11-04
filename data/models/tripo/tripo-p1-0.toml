@@ -1,0 +1,9 @@
+name = "Tripo/Tripo-P1.0"
+type = "3d"
+
+[modalities]
+input = [ "text" ]
+
+[capabilities]
+tool_calling = true
+structured_output = true

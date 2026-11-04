@@ -1,0 +1,6 @@
+name = "HY-Vision-2.0-Instruct"
+type = "chat"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]

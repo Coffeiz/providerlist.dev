@@ -1,0 +1,55 @@
+id = "deepseek-v4-flash-0731"
+model_ref = "deepseek/deepseek-v4-flash-0731"
+status = "active"
+
+[links]
+documentation = "https://intl.cloud.tencent.com/document/product/1300/78934"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 384000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.22"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.66"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.007"
+
+[[pricing.conditions]]
+field = "time_period"
+value = "off_peak"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.44"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.32"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.014"
+
+[[pricing.conditions]]
+field = "time_period"
+value = "peak"

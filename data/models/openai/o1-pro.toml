@@ -1,0 +1,17 @@
+name = "o1-pro"
+type = "chat"
+family = "o-pro"
+release_date = "2025-03-19"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 200000
+output = 100000
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

@@ -1,0 +1,17 @@
+id = "deepseek-v3.2-think"
+model_ref = "deepseek/deepseek-v3-2-think"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3"

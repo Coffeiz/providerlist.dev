@@ -1,0 +1,10 @@
+name = "Muse Image 1.0"
+type = "image"
+release_date = "2026-07-07"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[capabilities]
+reasoning = true

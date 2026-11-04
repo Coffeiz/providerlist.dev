@@ -1,0 +1,12 @@
+name = "Doubao Seed 2.0 Code Preview (260215)"
+type = "chat"
+release_date = "2026-02"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+max_input = 229376
+output = 131072

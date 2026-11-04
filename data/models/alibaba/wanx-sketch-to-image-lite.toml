@@ -1,0 +1,11 @@
+name = "wanx-sketch-to-image-lite"
+type = "image"
+release_date = "2024-06-11"
+
+[modalities]
+input = [ "image" ]
+output = [ "image" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

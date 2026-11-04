@@ -1,0 +1,11 @@
+id = "music-2.6"
+model_ref = "minimax/music-2-6"
+status = "restricted"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_audio"
+unit = "per_song"
+value = "1.0"

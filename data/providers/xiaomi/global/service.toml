@@ -1,0 +1,261 @@
+website = "https://platform.xiaomimimo.com"
+
+[docs]
+overview = "https://mimo.mi.com/docs/en-US/api/model/list-models"
+pricing = "https://mimo.mi.com/docs/zh-CN/price/pay-as-you-go"
+plans = "https://mimo.mi.com/docs/zh-CN/price/token-plan"
+
+[[endpoints]]
+id = "openai-compatible-global"
+base_url = "https://api.xiaomimimo.com/v1"
+api_region = "海外"
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/openai-api"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/api/audio/tts"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/api/audio/Speech-Recognition"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/openai-api"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/tool-calling/web-search"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/responses"
+path = "/responses"
+
+[[endpoints]]
+id = "anthropic-compatible-global"
+base_url = "https://api.xiaomimimo.com/anthropic"
+api_region = "海外"
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/anthropic-api"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/api/chat/anthropic-api"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "batch-global"
+base_url = "https://batch-api-${region}.xiaomimimo.com/v1"
+api_region = "海外"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}/cancel"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/files"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "GET"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/files/{file_id}/content"
+
+[[endpoints.routes]]
+protocol = "batch"
+method = "GET"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}"
+
+[[capabilities]]
+kind = "batch"
+
+[[capabilities.parameters]]
+name = "input_file_id"
+type = "string"
+required = true
+route_mappings = [ "/input_file_id" ]
+
+[[capabilities.parameters]]
+name = "endpoint"
+type = "string"
+required = true
+enum = [ "/v1/chat/completions" ]
+route_mappings = [ "/endpoint" ]
+
+[[capabilities.parameters]]
+name = "completion_window"
+type = "string"
+required = true
+route_mappings = [ "/completion_window" ]
+
+[[capabilities.parameters]]
+name = "name"
+type = "string"
+required = true
+route_mappings = [ "/name" ]
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/files"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "GET"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}/cancel"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "DELETE"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/batches/{batch_id}"
+
+[[capabilities.routes]]
+protocol = "batch"
+method = "GET"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+path = "/files/{file_id}/content"
+
+[capabilities.links]
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/batch-api"
+
+[[capabilities.input]]
+name = "input_file"
+kind = "file"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "id", "endpoint", "input_file_id", "completion_window", "status", "output_file_id", "error_file_id", "request_counts.total", "request_counts.completed", "request_counts.failed" ]
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "max_keyword"
+type = "integer"
+required = false
+route_mappings = [ "tools[].max_keyword" ]
+
+[[capabilities.parameters]]
+name = "force_search"
+type = "boolean"
+required = false
+route_mappings = [ "tools[].force_search" ]
+
+[[capabilities.parameters]]
+name = "limit"
+type = "integer"
+required = false
+route_mappings = [ "tools[].limit" ]
+
+[[capabilities.parameters]]
+name = "user_location"
+type = "object"
+required = false
+route_mappings = [ "tools[].user_location" ]
+
+[[capabilities.parameters]]
+name = "tool_choice"
+type = "string"
+required = false
+route_mappings = [ "tool_choice" ]
+
+[[capabilities.parameters]]
+name = "stream"
+type = "boolean"
+required = false
+route_mappings = [ "stream" ]
+
+[[capabilities.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/tool-calling/web-search"
+path = "/chat/completions"
+
+[[capabilities.pricing]]
+currency = "USD"
+
+[[capabilities.pricing.rates]]
+metric = "web_search_call"
+unit = "per_1k_requests"
+value = "5"
+
+[capabilities.links]
+documentation = "https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/tool-calling/web-search"
+
+[[capabilities.input]]
+name = "messages"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "text"
+streaming = true
+fields = [ "choices[].message.content" ]
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "choices[].message.annotations[].type", "choices[].message.annotations[].url", "choices[].message.annotations[].title", "choices[].message.annotations[].summary", "choices[].message.annotations[].site_name", "choices[].message.annotations[].publish_time", "choices[].message.annotations[].logo_url", "usage.web_search_usage.tool_usage", "usage.web_search_usage.page_usage" ]

@@ -1,0 +1,11 @@
+name = "grok-imagine-image-quality"
+release_date = "2026-04-03"
+type = "image"
+family = "grok"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "1K", "1.5K", "2K" ]

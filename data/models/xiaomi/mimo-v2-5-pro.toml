@@ -1,0 +1,16 @@
+name = "mimo-v2.5-pro"
+type = "chat"
+release_date = "2026-04-23"
+
+[limits]
+context = 1048576
+input = 1048576
+output = 131072
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = true
+structured_output = true

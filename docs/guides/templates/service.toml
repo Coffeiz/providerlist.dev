@@ -1,0 +1,42 @@
+# One file per market directory, for example data/providers/example-ai/global/service.toml.
+supply_status = "active" # active, deprecated, retired, or unknown
+# account_requirements = ["Requires an active API account"]
+
+[links]
+# website = "https://example.com"
+# overview = "https://example.com/docs"
+# api = "https://example.com/api"
+# pricing = "https://example.com/pricing"
+
+[[endpoints]]
+id = "example-api"
+base_url = "https://api.example.com/v1"
+# api_region = "Global"
+# documentation = "https://example.com/api"
+
+[[endpoints.routes]]
+protocol = "openai-chat-completions"
+method = "POST"
+path = "/chat/completions"
+callability = "documented_only"
+# documentation = "https://example.com/api/chat"
+
+# Add independent market capabilities only when the Provider exposes them.
+# Each capability kind appears once in this Service.
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.routes]]
+protocol = "openai-chat-completions"
+method = "POST"
+path = "/chat/completions"
+callability = "documented_only"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+# fields = ["results[].title", "results[].url"]

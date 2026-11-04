@@ -1,0 +1,113 @@
+[[plans]]
+id = "stepfun-cn-step-plan-mini"
+name = "Mini"
+credits = 400000000
+description = "Step Plan 套餐（Token Plan）按月提供 Credit 额度，模型调用按实际用量扣减。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "49"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "129"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "456"
+
+[[plans]]
+id = "stepfun-cn-step-plan-plus"
+name = "Plus"
+credits = 1600000000
+description = "Step Plan 套餐（Token Plan）按月提供 Credit 额度，模型调用按实际用量扣减。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "269"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "936"
+
+[[plans]]
+id = "stepfun-cn-step-plan-pro"
+name = "Pro"
+credits = 8000000000
+description = "Step Plan 套餐（Token Plan）按月提供 Credit 额度，模型调用按实际用量扣减。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "199"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "539"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1860"
+
+[[plans]]
+id = "stepfun-cn-step-plan-max"
+name = "Max"
+credits = 40000000000
+description = "Step Plan 套餐（Token Plan）按月提供 Credit 额度，模型调用按实际用量扣减。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "699"
+
+[[plans.billing_options]]
+billing_period = "quarter"
+price = "1889"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "6666"
+
+[[plans]]
+id = "stepfun-cn-step-plan-small-refill"
+name = "小油包"
+description = "当月套餐 Credit 用尽后，可购买加油包补充额度。加油包仅向已订阅 Step Plan 的用户开放，有效期为 30 天，与套餐有效期分别计算。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "one_time"
+price = "49"
+
+[[plans]]
+id = "stepfun-cn-step-plan-large-refill"
+name = "大油包"
+description = "当月套餐 Credit 用尽后，可购买加油包补充额度。加油包仅向已订阅 Step Plan 的用户开放，有效期为 30 天，与套餐有效期分别计算。"
+currency = "CNY"
+
+[plans.links]
+official = "https://platform.stepfun.com/docs/zh/step-plan/pricing"
+
+[[plans.billing_options]]
+billing_period = "one_time"
+price = "99"

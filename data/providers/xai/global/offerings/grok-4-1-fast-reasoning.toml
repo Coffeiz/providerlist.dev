@@ -1,0 +1,6 @@
+id = "grok-4-1-fast-reasoning"
+model_ref = "xai/grok-4-1-fast-reasoning"
+status = "retired"
+
+[links]
+documentation = "https://docs.x.ai/developers/migration/may-15-retirement"

@@ -1,0 +1,7 @@
+name = "GLM-TTS-Clone"
+release_date = "2025-12-11"
+type = "speech"
+
+[modalities]
+input = [ "audio", "text" ]
+output = [ "structured", "audio" ]

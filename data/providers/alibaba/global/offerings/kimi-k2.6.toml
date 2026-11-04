@@ -1,0 +1,17 @@
+id = "kimi-k2.6"
+model_ref = "moonshotai/kimi-k2-6"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.8939"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.7131"

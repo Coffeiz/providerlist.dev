@@ -1,0 +1,6 @@
+name = "GLM-OCR"
+release_date = "2026-02-03"
+
+[modalities]
+input = [ "image", "application/pdf" ]
+output = [ "text" ]

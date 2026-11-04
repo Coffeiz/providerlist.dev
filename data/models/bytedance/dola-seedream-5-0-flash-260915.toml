@@ -1,0 +1,8 @@
+name = "Dola Seedream 5.0 Flash (260915)"
+type = "image"
+release_date = "2026-09"
+developer_name = "ByteDance"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

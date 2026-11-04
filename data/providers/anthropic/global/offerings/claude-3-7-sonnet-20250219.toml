@@ -1,0 +1,6 @@
+id = "claude-3-7-sonnet-20250219"
+model_ref = "anthropic/claude-3-7-sonnet-20250219"
+status = "unknown"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/about-claude/model-deprecations"

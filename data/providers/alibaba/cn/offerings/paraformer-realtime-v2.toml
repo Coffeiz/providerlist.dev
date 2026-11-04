@@ -1,0 +1,10 @@
+id = "paraformer-realtime-v2"
+model_ref = "alibaba/paraformer-realtime-v2"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/paraformer-realtime-v2"

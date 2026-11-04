@@ -1,0 +1,11 @@
+name = "Gemini 2.5 Computer Use"
+release_date = "2025-10-07"
+type = "computer_use"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 64000

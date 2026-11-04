@@ -1,0 +1,8 @@
+id = "google"
+name = "Google"
+aliases = [ "Gemini API", "Google AI for Developers" ]
+kind = "first_party"
+logo = "/logos/providers/google.svg"
+
+[integrations]
+ai_sdk = true

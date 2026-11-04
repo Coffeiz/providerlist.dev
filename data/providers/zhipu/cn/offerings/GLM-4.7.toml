@@ -1,0 +1,80 @@
+id = "GLM-4.7"
+model_ref = "zhipu/glm-4-7"
+status = "active"
+
+[api_limits]
+context = 128000
+output = 128000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.4"
+context = "<32000"
+
+[[pricing.conditions]]
+field = "usage.output_tokens"
+operator = "lt"
+value = 200
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "14"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.6"
+context = "<32000"
+
+[[pricing.conditions]]
+field = "usage.output_tokens"
+operator = "gte"
+value = 200
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "4"
+context = ">=32000 & <200000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "16"
+context = ">=32000 & <200000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.8"
+context = ">=32000 & <200000"

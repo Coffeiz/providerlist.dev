@@ -1,0 +1,18 @@
+{
+  "model": {
+    "id": "demo-lab/demo-image",
+    "developer_id": "demo-lab",
+    "developer_name": "演示模型实验室",
+    "name": "Demo Image",
+    "type": "image",
+    "modalities": {
+      "input": [
+        "text",
+        "image"
+      ],
+      "output": [
+        "image"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "model": {
+    "id": "example-lab/example-asr",
+    "developer_id": "example-lab",
+    "developer_name": "示例模型实验室",
+    "name": "Example ASR",
+    "type": "transcription",
+    "modalities": {
+      "input": [
+        "audio"
+      ],
+      "output": [
+        "text"
+      ]
+    }
+  }
+}

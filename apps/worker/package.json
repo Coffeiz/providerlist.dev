@@ -1,0 +1,21 @@
+{
+  "name": "@providerlist/worker",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "ProviderList Worker：只读站点数据查询投影、JSON 404 与未启用接入路径保护",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2"
+  },
+  "dependencies": {
+    "@providerlist/schema": "workspace:*",
+    "@providerlist/shared": "workspace:*"
+  }
+}

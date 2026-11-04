@@ -1,0 +1,12 @@
+name = "happyhorse-1.0-i2v"
+type = "video"
+release_date = "2026-04-22"
+developer_name = "Alibaba Token Hub (ATH)"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

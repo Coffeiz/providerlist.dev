@@ -1,0 +1,56 @@
+id = "gemini-3.1-flash-lite-image"
+model_ref = "google/gemini-3-1-flash-lite-image"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_text"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "0.25"
+
+[[pricing.rates]]
+metric = "output_text"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "30.00"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_text"
+unit = "per_1m_tokens"
+value = "0.125"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_1m_tokens"
+value = "0.125"
+
+[[pricing.rates]]
+metric = "output_text"
+unit = "per_1m_tokens"
+value = "0.75"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_1m_tokens"
+value = "15.00"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

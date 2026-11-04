@@ -1,0 +1,6 @@
+id = "grok-code-fast-1"
+model_ref = "xai/grok-code-fast-1"
+status = "retired"
+
+[links]
+documentation = "https://docs.x.ai/developers/migration/may-15-retirement"

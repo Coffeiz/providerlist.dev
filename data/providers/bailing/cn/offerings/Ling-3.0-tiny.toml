@@ -1,0 +1,7 @@
+id = "Ling-3.0-tiny"
+model_ref = "antgroup/ling-3-0-tiny"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://developer.ant-ling.com/zh-CN/docs/models/ling/"

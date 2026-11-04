@@ -1,0 +1,7 @@
+name = "Kling VIDEO 4.0"
+type = "video"
+release_date = "2026-10-15"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]

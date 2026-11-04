@@ -1,0 +1,13 @@
+name = "Doubao Seedance 2.0 Fast (260128)"
+type = "video"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video", "audio" ]
+
+[specifications]
+video_output_resolutions = [ "480p", "720p" ]
+
+[specifications.video_duration_seconds]
+min = 4
+max = 15

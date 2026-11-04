@@ -1,0 +1,112 @@
+id = "doubao-seedance-2-0-260128"
+model_ref = "bytedance/doubao-seedance-2-0-260128"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "46.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "28.00"
+
+[[pricing.conditions]]
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "480p"
+
+[[pricing.conditions.any]]
+field = "video.output_resolution"
+value = "720p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "51.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "31.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "1080p"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "26.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "4k"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = false
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "video_generation_token"
+unit = "per_1m_tokens"
+value = "16.00"
+
+[[pricing.conditions]]
+field = "video.output_resolution"
+value = "4k"
+
+[[pricing.conditions]]
+field = "video.input_includes_video"
+value = true

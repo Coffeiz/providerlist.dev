@@ -1,0 +1,6 @@
+name = "WAND-ASR-V1"
+type = "transcription"
+
+[modalities]
+input = [ "audio", "video" ]
+output = [ "text" ]

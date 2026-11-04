@@ -1,0 +1,7 @@
+name = "speech-02-hd"
+release_date = "2025-04-02"
+type = "speech"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

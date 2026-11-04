@@ -1,0 +1,17 @@
+name = "Gemini Embedding"
+type = "embedding"
+release_date = "2025-07-14"
+family = "gemini"
+
+[modalities]
+input = [ "text" ]
+output = [ "embedding" ]
+
+[limits]
+input = 2048
+context = 2048
+output = 1
+
+[output_dimensions]
+min = 128
+max = 3072

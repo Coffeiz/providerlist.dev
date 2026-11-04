@@ -1,0 +1,147 @@
+[[plans]]
+id = "token-plan-general-lite"
+name = "体验套餐（Lite）"
+credits = 780
+description = "新手尝鲜，入门首选。适合用于首次体验龙虾能力，可实现网页操作、文件处理、数据分析、定时任务等。注意：按龙虾基础使用场景预估可支持约 70 轮问答式交互（实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准）。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "39"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-general-standard"
+name = "基础套餐（Standard）"
+credits = 1980
+description = "日常使用，高性价比。适合日常用龙虾办公和轻量开发，可实现批量文件处理、Demo 制作、自动化工作流等。注意：按龙虾基础使用场景预估可支持约 200 轮问答式交互（实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准）。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-general-pro"
+name = "进阶套餐（Pro）"
+credits = 5980
+description = "高频 AI 开发，Token 配额相比基础版提升至 3 倍。适合每天高频使用 AI 的开发者和效率达人，多仓库并行、复杂逻辑生成、代码重构、Agent 编排等。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "299"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-general-max"
+name = "专业套餐（Max）"
+credits = 11980
+description = "更多额度加持，重度 AI 开发首选。适合把 AI 当核心生产力工具的重度用户，全栈 AI 生成、多 Agent 协同、CI 自动化等。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "599"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-hy-lite"
+name = "体验套餐（Lite）"
+credits = 560
+description = "新手尝鲜，入门首选。适合用于首次体验龙虾能力，可实现网页操作、文件处理、数据分析、定时任务等。注意：按龙虾基础使用场景预估可支持约 70 轮问答式交互（实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准）。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "28"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-hy-standard"
+name = "基础套餐（Standard）"
+credits = 1560
+description = "日常使用，高性价比。适合日常用龙虾办公和轻量开发，可实现批量文件处理、Demo 制作、自动化工作流等。注意：按龙虾基础使用场景预估可支持约 200 轮问答式交互（实际轮次受单轮输入输出内容长度、任务复杂度、代码量等因素影响，具体以实际使用为准）。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "78"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-hy-pro"
+name = "进阶套餐（Pro）"
+credits = 4760
+description = "高频 AI 开发，Token 配额相比基础版提升至 3 倍。适合每天高频使用 AI 的开发者和效率达人，多仓库并行、复杂逻辑生成、代码重构、Agent 编排等。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "238"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "token-plan-hy-max"
+name = "专业套餐（Max）"
+credits = 9360
+description = "更多额度加持，重度 AI 开发首选。适合把 AI 当核心生产力工具的重度用户，全栈 AI 生成、多 Agent 协同、CI 自动化等。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "468"
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130060"
+
+[[plans]]
+id = "coding-plan-lite"
+name = "Coding Plan Lite"
+description = "腾讯云 Coding Plan，是为 AI Coding 场景推出的专属订阅套餐。支持使用 OpenClaw、CodeBuddy、Claude Code、Cline、Cursor 等主流编程工具。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "40"
+
+[plans.allowance]
+requests_per_5_hours = 1200
+requests_per_week = 9000
+requests_per_month = 18000
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130092"
+
+[[plans]]
+id = "coding-plan-pro"
+name = "Coding Plan Pro"
+description = "腾讯云 Coding Plan，是为 AI Coding 场景推出的专属订阅套餐。支持使用 OpenClaw、CodeBuddy、Claude Code、Cline、Cursor 等主流编程工具。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.allowance]
+requests_per_5_hours = 6000
+requests_per_week = 45000
+requests_per_month = 90000
+
+[plans.links]
+overview = "https://cloud.tencent.com/document/product/1823/130092"

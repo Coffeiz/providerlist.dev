@@ -1,0 +1,42 @@
+id = "kimi-k2.7-code"
+model_ref = "moonshotai/kimi-k2-7-code"
+status = "active"
+
+[links]
+documentation = "https://platform.kimi.com/docs/models"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "6.50"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "27.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.30"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.9"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "16.2"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.78"

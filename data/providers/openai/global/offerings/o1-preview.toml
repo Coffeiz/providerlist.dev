@@ -1,0 +1,7 @@
+id = "o1-preview"
+model_ref = "openai/o1-preview"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o1-preview"

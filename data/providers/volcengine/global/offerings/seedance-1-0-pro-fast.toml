@@ -1,0 +1,30 @@
+id = "seedance-1-0-pro-fast"
+model_ref = "bytedance/seedance-1-0-pro-fast-251015"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "online"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.5"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "offline"

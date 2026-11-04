@@ -1,0 +1,134 @@
+id = "deepseek-v4-flash-ga-260731"
+model_ref = "deepseek/deepseek-v4-flash-ga"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "cache_storage"
+unit = "per_1m_tokens_per_hour"
+value = "0.017"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9.00"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.50"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch_inference"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.50"
+
+[[pricing.conditions]]
+field = "request.service_tier"
+value = "low_priority"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.50"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.50"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.50"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

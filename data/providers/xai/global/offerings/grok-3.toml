@@ -1,0 +1,6 @@
+id = "grok-3"
+model_ref = "xai/grok-3"
+status = "retired"
+
+[links]
+documentation = "https://docs.x.ai/developers/migration/may-15-retirement"

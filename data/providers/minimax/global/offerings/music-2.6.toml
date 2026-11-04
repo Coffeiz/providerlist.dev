@@ -1,0 +1,3 @@
+id = "music-2.6"
+model_ref = "minimax/music-2-6"
+status = "restricted"

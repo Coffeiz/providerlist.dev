@@ -1,0 +1,15 @@
+name = "text-embedding-v4"
+type = "embedding"
+release_date = "2025-06-05"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[output_dimensions]
+supported = [ 64, 128, 256, 512, 768, 1024, 1536, 2048 ]
+default = 1024
+
+[capabilities]
+tool_calling = false
+structured_output = false

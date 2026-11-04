@@ -1,0 +1,15 @@
+id = "step-tts-mini"
+model_ref = "stepfun/step-tts-mini"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "characters"
+unit = "per_character"
+value = "0.13"
+quantity = 10000

@@ -1,0 +1,14 @@
+id = "lyria-3.5"
+model_ref = "google/lyria-3-5"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/music-generation"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "song"
+unit = "per_song"
+value = "0.08"

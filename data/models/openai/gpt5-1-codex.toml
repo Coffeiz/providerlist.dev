@@ -1,0 +1,11 @@
+name = "GPT-5.1-Codex"
+type = "chat"
+release_date = "2025-11-13"
+
+[limits]
+context = 400000
+output = 128000
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]

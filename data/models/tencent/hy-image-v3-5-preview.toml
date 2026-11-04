@@ -1,0 +1,6 @@
+name = "Hy-Image-3.5-preview"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

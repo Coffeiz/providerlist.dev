@@ -1,0 +1,16 @@
+name = "kimi-k2-0711-preview"
+type = "chat"
+family = "K2"
+release_date = "2025-07-11"
+
+[limits]
+context = 131072
+output = 98304
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = false
+tool_calling = true

@@ -1,0 +1,6 @@
+name = "MiniMax-H3-Regeneration"
+type = "video"
+
+[modalities]
+input = [ "image", "video" ]
+output = [ "video" ]

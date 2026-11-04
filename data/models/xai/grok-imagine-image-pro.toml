@@ -1,0 +1,6 @@
+name = "grok-imagine-image-pro"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]

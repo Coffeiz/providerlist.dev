@@ -1,0 +1,7 @@
+id = "gpt-4"
+model_ref = "openai/gpt-4"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/gpt-4"

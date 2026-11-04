@@ -1,0 +1,14 @@
+id = "kling-video-o1"
+model_ref = "kling/video-o1"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_1m_tokens"
+value = "10"

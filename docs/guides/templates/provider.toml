@@ -1,0 +1,9 @@
+# Provider-wide facts. Market-specific links and API details belong in service.toml.
+id = "example-ai"
+name = "Example AI"
+kind = "first_party" # first_party, cloud_platform, aggregator, or other
+# aliases = ["Example API"]
+# logo = "/logos/providers/example-ai.svg"
+
+[integrations]
+ai_sdk = false # Set true only when an AI SDK integration is available.

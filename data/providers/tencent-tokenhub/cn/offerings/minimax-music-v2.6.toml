@@ -1,0 +1,14 @@
+id = "minimax-music-v2.6"
+model_ref = "minimax/music-2-6"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "10"

@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-c1-t2v"
+type = "video"
+release_date = "2026-04-07"
+
+[modalities]
+input = [ "text" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

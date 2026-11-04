@@ -1,0 +1,21 @@
+id = "GLM-4-Flash-250414"
+model_ref = "zhipu/glm-4-flash-250414"
+status = "active"
+
+[api_limits]
+context = 16000
+output = 16000
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "cache_read" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0"

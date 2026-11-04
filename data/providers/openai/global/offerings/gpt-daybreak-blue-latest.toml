@@ -1,0 +1,4 @@
+id = "gpt-daybreak-blue-latest"
+model_ref = "openai/gpt-daybreak-blue-latest"
+status = "unknown"
+pricing = []

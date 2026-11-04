@@ -1,0 +1,11 @@
+name = "Chat Latest"
+type = "chat"
+release_date = "2026-05-28"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 400000
+output = 128000

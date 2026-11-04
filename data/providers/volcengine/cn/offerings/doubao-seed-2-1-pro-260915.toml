@@ -1,0 +1,32 @@
+id = "doubao-seed-2-1-pro-260915"
+model_ref = "bytedance/doubao-seed-2-1-pro-260915"
+status = "active"
+
+[links]
+documentation = "https://ark.volcengine.com/region:cn-beijing/docs/model-list"
+
+[[pricing]]
+currency = "CNY"
+unsupported_metrics = [ "input_audio", "cache_read_audio" ]
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3.00"
+context = "<=1024000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "1.20"
+context = "<=1024000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "15.00"
+context = "<=1024000"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

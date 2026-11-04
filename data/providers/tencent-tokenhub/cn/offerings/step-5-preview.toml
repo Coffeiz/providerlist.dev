@@ -1,0 +1,29 @@
+id = "step-5-preview"
+model_ref = "stepfun/step-5-preview"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 64000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.35"

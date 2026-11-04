@@ -1,0 +1,8 @@
+id = "anthropic"
+name = "Anthropic"
+aliases = [ "Claude API" ]
+kind = "first_party"
+logo = "/logos/providers/anthropic.svg"
+
+[integrations]
+ai_sdk = true

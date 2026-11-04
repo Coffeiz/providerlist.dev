@@ -1,0 +1,14 @@
+id = "mimo-v2.5-tts-voiceclone"
+model_ref = "xiaomi/mimo-v2-5-tts-voiceclone"
+status = "active"
+
+[links]
+documentation = "https://mimo.mi.com/docs/en-US/api/audio/tts"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "0"

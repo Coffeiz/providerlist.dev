@@ -1,0 +1,4 @@
+id = "tongyi-embedding-vision-plus"
+model_ref = "alibaba/tongyi-embedding-vision-plus"
+status = "active"
+pricing = []

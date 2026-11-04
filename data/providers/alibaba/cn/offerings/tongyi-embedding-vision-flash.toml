@@ -1,0 +1,11 @@
+id = "tongyi-embedding-vision-flash"
+model_ref = "alibaba/tongyi-embedding-vision-flash"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1200
+tpm = 9600000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/tongyi-embedding-vision-flash"

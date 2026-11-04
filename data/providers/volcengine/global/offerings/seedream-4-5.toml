@@ -1,0 +1,22 @@
+id = "seedream-4-5"
+model_ref = "bytedance/doubao-seedream-4-5-251128"
+status = "active"
+
+[links]
+documentation = "https://docs.byteplus.com/en/docs/ModelArk/model-list?redirect=1"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_image"
+unit = "per_image"
+value = "0.04"

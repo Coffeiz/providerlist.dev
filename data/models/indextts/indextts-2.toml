@@ -1,0 +1,7 @@
+name = "IndexTTS-2"
+type = "speech"
+release_date = "2025-09-08"
+
+[modalities]
+input = [ "text", "audio" ]
+output = [ "audio" ]

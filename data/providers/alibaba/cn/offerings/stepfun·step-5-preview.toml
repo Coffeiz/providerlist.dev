@@ -1,0 +1,32 @@
+id = "stepfun/step-5-preview"
+model_ref = "stepfun/step-5-preview"
+status = "active"
+
+[api_limits]
+context = 1048576
+input = 1048576
+output = 1048576
+rpm = 500
+tpm = 10000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/step-5-preview"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "20"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.35"

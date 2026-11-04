@@ -1,0 +1,59 @@
+[[plans]]
+id = "cn-m-plan-go"
+name = "Go"
+ratio = "1"
+description = "入门使用，完成简单调研、轻量写作或小范围的代码修改。"
+currency = "CNY"
+
+[plans.links]
+official = "https://www.minimax.cn/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "49"
+sale_price = "24.5"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "588"
+sale_price = "490"
+
+[[plans]]
+id = "cn-m-plan-explore"
+name = "Explore"
+ratio = "3"
+description = "每天使用，日常辅助编程、写作与资料整理，处理多轮任务。"
+currency = "CNY"
+
+[plans.links]
+official = "https://www.minimax.cn/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "119"
+sale_price = "59.5"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1490"
+sale_price = "1190"
+
+[[plans]]
+id = "cn-m-plan-build"
+name = "Build"
+ratio = "12"
+description = "高频使用，处理长上下文、复杂的编程任务或大量多模态创作。"
+currency = "CNY"
+
+[plans.links]
+official = "https://www.minimax.cn/m-plan"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "469"
+sale_price = "234.5"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "5628"
+sale_price = "4690"

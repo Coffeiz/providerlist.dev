@@ -1,0 +1,17 @@
+name = "Hy3"
+type = "chat"
+family = "Hy"
+release_date = "2026-07-06"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 256000
+input = 192000
+output = 128000
+
+[capabilities]
+reasoning = true
+tool_calling = true

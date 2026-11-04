@@ -1,0 +1,7 @@
+id = "GLM-4.5-AirX"
+model_ref = "zhipu/glm-4-5-airx"
+status = "active"
+
+[api_limits]
+context = 96000
+output = 96000

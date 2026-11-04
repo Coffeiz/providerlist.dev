@@ -1,0 +1,17 @@
+name = "qwen3-asr-flash"
+type = "transcription"
+family = "qwen"
+release_date = "2025-09-08"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[limits]
+context = 53248
+output = 4096
+
+[capabilities]
+reasoning = false
+tool_calling = false
+structured_output = false

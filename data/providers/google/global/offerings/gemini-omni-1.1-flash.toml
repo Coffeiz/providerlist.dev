@@ -1,0 +1,14 @@
+id = "gemini-omni-1.1-flash"
+model_ref = "google/gemini-omni-1-1-flash"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.50"

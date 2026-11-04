@@ -1,0 +1,14 @@
+id = "step-asr"
+model_ref = "stepfun/step-asr"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "audio_duration"
+unit = "per_hour"
+value = "0.13"

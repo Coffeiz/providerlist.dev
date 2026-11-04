@@ -1,0 +1,10 @@
+id = "voice-enrollment"
+model_ref = "alibaba/voice-enrollment"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 600
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/voice-enrollment"

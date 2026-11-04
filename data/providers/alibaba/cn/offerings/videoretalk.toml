@@ -1,0 +1,10 @@
+id = "videoretalk"
+model_ref = "alibaba/videoretalk"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 60
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/acoustic-portraits-videoretalk"

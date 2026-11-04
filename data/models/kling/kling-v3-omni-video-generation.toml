@@ -1,0 +1,12 @@
+name = "kling/kling-v3-omni-video-generation"
+type = "video"
+release_date = "2026-02-05"
+developer_name = "Kling AI"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

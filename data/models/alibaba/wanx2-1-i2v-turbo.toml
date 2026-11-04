@@ -1,0 +1,7 @@
+name = "wanx2.1-i2v-turbo"
+type = "video"
+release_date = "2025-02-27"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

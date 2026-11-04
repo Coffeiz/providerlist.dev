@@ -1,0 +1,14 @@
+name = "grok-imagine-video-1.5-lite"
+release_date = "2026-10-01"
+type = "video"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "video" ]
+
+[specifications]
+video_output_resolutions = [ "480p", "720p", "1080p" ]
+
+[specifications.video_duration_seconds]
+minimum = 1
+maximum = 15

@@ -1,0 +1,6 @@
+name = "YT-Video-2.0"
+type = "video"
+
+[modalities]
+input = [ "image" ]
+output = [ "video" ]

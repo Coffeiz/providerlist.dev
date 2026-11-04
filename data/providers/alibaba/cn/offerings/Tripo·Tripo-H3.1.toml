@@ -1,0 +1,10 @@
+id = "Tripo/Tripo-H3.1"
+model_ref = "tripo/tripo-h3-1"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 5
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/tripo-h3-1"

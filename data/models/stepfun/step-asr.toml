@@ -1,0 +1,7 @@
+name = "Step ASR"
+family = "Step ASR"
+type = "transcription"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

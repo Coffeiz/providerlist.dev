@@ -1,0 +1,16 @@
+name = "Gemini Robotics ER 1.6"
+type = "chat"
+release_date = "2026-04-14"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "text" ]
+
+[limits]
+context = 131072
+output = 65536
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

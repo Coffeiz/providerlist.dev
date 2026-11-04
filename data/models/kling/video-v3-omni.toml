@@ -1,0 +1,7 @@
+name = "Kling VIDEO 3.0 Omni"
+type = "video"
+release_date = "2026-02-05"
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "video" ]

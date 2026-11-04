@@ -1,0 +1,15 @@
+name = "Step 3.7 Flash"
+family = "Step 3"
+type = "chat"
+release_date = "2026-05-29"
+
+[limits]
+context = 262144
+
+[modalities]
+input = [ "text", "image", "video" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "medium", "high" ]
+tool_calling = true

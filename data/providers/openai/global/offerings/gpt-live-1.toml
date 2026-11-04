@@ -1,0 +1,14 @@
+id = "gpt-live-1"
+model_ref = "openai/gpt-live-1"
+status = "active"
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_minute"
+value = "0.05"

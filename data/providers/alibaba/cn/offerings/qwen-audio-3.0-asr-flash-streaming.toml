@@ -1,0 +1,10 @@
+id = "qwen-audio-3.0-asr-flash-streaming"
+model_ref = "alibaba/qwen-audio-3-0-asr-flash-streaming"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 1200
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-audio-3-0-asr-flash-streaming"

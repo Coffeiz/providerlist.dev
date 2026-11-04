@@ -1,0 +1,6 @@
+id = "deepseek-v4-flash"
+model_ref = "deepseek/deepseek-v4-1-flash"
+status = "retired"
+
+[links]
+documentation = "https://api-docs.deepseek.com/zh-cn/updates/"

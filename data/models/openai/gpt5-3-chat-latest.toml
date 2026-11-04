@@ -1,0 +1,11 @@
+name = "GPT-5.3 Chat"
+type = "chat"
+release_date = "2026-03-03"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 128000
+output = 16384

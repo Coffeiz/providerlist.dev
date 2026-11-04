@@ -1,0 +1,27 @@
+id = "gui-plus"
+model_ref = "alibaba/gui-plus"
+status = "active"
+
+[api_limits]
+context = 256000
+input = 253952
+output = 32768
+rpm = 100
+tpm = 540000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/gui-plus"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.5"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4.5"

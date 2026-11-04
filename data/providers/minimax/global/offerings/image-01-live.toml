@@ -1,0 +1,3 @@
+id = "image-01-live"
+model_ref = "minimax/image-01-live"
+status = "active"

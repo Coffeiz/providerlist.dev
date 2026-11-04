@@ -1,0 +1,29 @@
+id = "kimi-k2.8-preview"
+model_ref = "moonshotai/kimi-k2-8-preview"
+status = "active"
+
+[links]
+documentation = "https://intl.cloud.tencent.com/document/product/1300/78934"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 1000000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.25"

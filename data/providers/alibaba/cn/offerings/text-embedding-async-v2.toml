@@ -1,0 +1,10 @@
+id = "text-embedding-async-v2"
+model_ref = "alibaba/text-embedding-async-v2"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 60
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/text-embedding-async-v2"

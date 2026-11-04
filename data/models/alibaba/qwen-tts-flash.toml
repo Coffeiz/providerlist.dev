@@ -1,0 +1,7 @@
+name = "Qwen TTS Flash"
+type = "speech"
+developer_name = "Alibaba Cloud"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

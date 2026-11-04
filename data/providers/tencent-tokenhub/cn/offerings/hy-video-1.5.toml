@@ -1,0 +1,14 @@
+id = "hy-video-1.5"
+model_ref = "tencent/hy-video-1-5"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_1m_tokens"
+value = "10"

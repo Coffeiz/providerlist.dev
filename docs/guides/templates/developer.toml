@@ -1,0 +1,3 @@
+# Shared developer identity for all Models in this directory.
+id = "example-ai"
+name = "Example AI"

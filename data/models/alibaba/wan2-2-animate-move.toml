@@ -1,0 +1,7 @@
+name = "wan2.2-animate-move"
+type = "video"
+release_date = "2025-09-19"
+
+[modalities]
+input = [ "image", "video" ]
+output = [ "video" ]

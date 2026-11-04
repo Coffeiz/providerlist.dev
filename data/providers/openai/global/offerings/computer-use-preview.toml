@@ -1,0 +1,7 @@
+id = "computer-use-preview"
+model_ref = "openai/computer-use-preview"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/computer-use-preview"

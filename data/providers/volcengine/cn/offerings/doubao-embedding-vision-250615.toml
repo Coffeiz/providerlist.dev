@@ -1,0 +1,7 @@
+id = "doubao-embedding-vision-250615"
+model_ref = "bytedance/doubao-embedding-vision-250615"
+status = "deprecated"
+pricing = []
+
+[links]
+documentation = "https://docs.volcengine.com/docs/ark/vectorization?lang=zh"

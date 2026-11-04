@@ -1,0 +1,10 @@
+id = "wanx-poster-generation-v1"
+model_ref = "alibaba/wanx-poster-generation-v1"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 120
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/wanx-poster-generation-v1"

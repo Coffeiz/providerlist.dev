@@ -1,0 +1,25 @@
+id = "GLM-5"
+model_ref = "zhipu/glm-5"
+status = "active"
+
+[api_limits]
+context = 200000
+output = 0
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3.2"

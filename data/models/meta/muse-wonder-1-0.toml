@@ -1,0 +1,15 @@
+name = "Muse Wonder 1.0"
+type = "chat"
+release_date = "2026-10-12"
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

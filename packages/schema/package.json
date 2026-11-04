@@ -1,0 +1,22 @@
+{
+  "name": "@providerlist/schema",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "ProviderList 公共 JSON Schema、稳定类型与标准模型类型基线",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts",
+    "./schema/*": "./schema/*.json"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,27 @@
+id = "siliconflow/deepseek-v3-0324"
+model_ref = "deepseek/deepseek-v3-0324"
+status = "active"
+
+[api_limits]
+context = 163840
+input = 163840
+output = 163840
+rpm = 500
+tpm = 500000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/deepseek-v3-by-siliconflow"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "2"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "8"

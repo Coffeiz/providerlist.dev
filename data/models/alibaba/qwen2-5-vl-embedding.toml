@@ -1,0 +1,10 @@
+name = "qwen2.5-vl-embedding"
+type = "embedding"
+release_date = "2025-10-21"
+
+[modalities]
+input = [ "text", "image" ]
+
+[output_dimensions]
+supported = [ 512, 768, 1024, 2048 ]
+default = 1024

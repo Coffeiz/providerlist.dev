@@ -1,0 +1,16 @@
+name = "gpt-oss-120b"
+type = "chat"
+family = "gpt-oss"
+release_date = "2025-08-05"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 131072
+output = 131072
+
+[capabilities]
+reasoning = true
+tool_calling = true

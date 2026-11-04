@@ -1,0 +1,67 @@
+[[plans]]
+id = "global-plus"
+name = "Plus"
+credits = "~60"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "19"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "180"
+
+[plans.links]
+pricing = "https://www.kimi.ai/membership/pricing"
+
+[[plans]]
+id = "global-pro"
+name = "Pro"
+credits = "~150"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "39"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "372"
+
+[plans.links]
+pricing = "https://www.kimi.ai/membership/pricing"
+
+[[plans]]
+id = "global-max"
+name = "Max"
+credits = "~360"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "99"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "948"
+
+[plans.links]
+pricing = "https://www.kimi.ai/membership/pricing"
+
+[[plans]]
+id = "global-ultra"
+name = "Ultra"
+credits = "~720"
+currency = "USD"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "199"
+
+[[plans.billing_options]]
+billing_period = "year"
+price = "1908"
+
+[plans.links]
+pricing = "https://www.kimi.ai/membership/pricing"

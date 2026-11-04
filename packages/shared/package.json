@@ -1,0 +1,27 @@
+{
+  "name": "@providerlist/shared",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "前端与流水线共用代码：金额 Decimal 运算、条件价匹配、计量单位与媒体约束",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./src/index.ts",
+    "./pricing": "./src/pricing/index.ts",
+    "./pricing/*": "./src/pricing/*.ts",
+    "./capabilities": "./src/capabilities/index.ts",
+    "./capabilities/*": "./src/capabilities/*.ts",
+    "./chat-catalog": "./src/chat-catalog.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --experimental-strip-types \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@providerlist/schema": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

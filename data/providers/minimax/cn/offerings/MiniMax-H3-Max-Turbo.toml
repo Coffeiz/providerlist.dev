@@ -1,0 +1,37 @@
+id = "MiniMax-H3-Max-Turbo"
+model_ref = "minimax/minimax-h3-max-turbo"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.26"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "768P"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.17"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "480P"

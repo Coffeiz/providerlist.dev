@@ -1,0 +1,6 @@
+id = "kimi-thinking-preview"
+model_ref = "moonshotai/kimi-thinking-preview"
+status = "retired"
+
+[links]
+documentation = "https://platform.kimi.ai/docs/models"

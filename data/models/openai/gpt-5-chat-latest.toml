@@ -1,0 +1,16 @@
+name = "GPT-5 Chat"
+type = "chat"
+family = "gpt"
+release_date = "2025-08-07"
+
+[limits]
+context = 128000
+output = 16384
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = false

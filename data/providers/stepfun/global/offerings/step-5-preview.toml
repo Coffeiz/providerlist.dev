@@ -1,0 +1,24 @@
+id = "step-5-preview"
+model_ref = "stepfun/step-5-preview"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.ai/docs/en/guides/models/overview"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1.00"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.70"

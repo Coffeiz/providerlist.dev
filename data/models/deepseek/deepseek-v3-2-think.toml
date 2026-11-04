@@ -1,0 +1,7 @@
+name = "DeepSeek V3.2 Think"
+type = "chat"
+release_date = "2025-12-01"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

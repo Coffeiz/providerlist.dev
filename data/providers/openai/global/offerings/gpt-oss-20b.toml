@@ -1,0 +1,7 @@
+id = "gpt-oss-20b"
+model_ref = "openai/gpt-oss-20b"
+status = "active"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/all"

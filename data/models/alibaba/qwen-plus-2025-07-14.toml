@@ -1,0 +1,7 @@
+name = "Qwen-Plus-2025-07-14"
+type = "chat"
+release_date = "2025-07-14"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]

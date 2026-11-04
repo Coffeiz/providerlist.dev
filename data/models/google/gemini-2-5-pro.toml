@@ -1,0 +1,16 @@
+name = "Gemini 2.5 Pro"
+type = "chat"
+release_date = "2025-06-17"
+
+[limits]
+context = 1048576
+output = 65536
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

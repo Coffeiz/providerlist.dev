@@ -1,0 +1,29 @@
+id = "mimo-v2.5-pro"
+model_ref = "xiaomi/mimo-v2-5-pro"
+status = "active"
+
+[links]
+documentation = "https://intl.cloud.tencent.com/document/product/1300/78934"
+
+[api_limits]
+context = 1000000
+input = 1000000
+output = 128000
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.435"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "0.87"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.0036"

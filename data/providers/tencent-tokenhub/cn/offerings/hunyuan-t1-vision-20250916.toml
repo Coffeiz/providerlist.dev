@@ -1,0 +1,24 @@
+id = "hunyuan-t1-vision-20250916"
+model_ref = "tencent/hunyuan-t1-vision-20250916"
+status = "active"
+
+[links]
+documentation = "https://cloud.tencent.com/document/product/1823/130051"
+
+[api_limits]
+context = 40000
+input = 16000
+output = 24000
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "3"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "9"

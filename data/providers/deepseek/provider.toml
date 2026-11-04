@@ -1,0 +1,8 @@
+id = "deepseek"
+name = "DeepSeek"
+aliases = [ "DeepSeek" ]
+kind = "first_party"
+logo = "/logos/providers/deepseek.svg"
+
+[integrations]
+ai_sdk = true

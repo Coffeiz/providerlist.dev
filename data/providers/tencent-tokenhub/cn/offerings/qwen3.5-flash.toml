@@ -1,0 +1,4 @@
+id = "qwen3.5-flash"
+model_ref = "alibaba/qwen3-5-flash"
+status = "unknown"
+pricing = []

@@ -1,0 +1,29 @@
+id = "MiniMax/speech-02-hd"
+model_ref = "minimax/speech-02-hd"
+status = "active"
+
+[api_limits]
+input = 10000
+rpm = 20
+tpm = 20000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/speech-02-hd"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "3.5"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "request"
+unit = "per_request"
+value = "9.9"

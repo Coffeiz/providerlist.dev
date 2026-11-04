@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-motioncontrol"
+type = "video"
+release_date = "2026-02-28"
+
+[modalities]
+input = [ "image", "video" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

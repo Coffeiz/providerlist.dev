@@ -1,0 +1,150 @@
+[[plans]]
+id = "cn-token-plan-personal-lite"
+name = "Lite"
+credits = 11500
+description = "入门探索，适用处于原型验证阶段、或仅需轻度测试单任务的智能体用户"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "60"
+sale_price = "39"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/token-plan-overview"
+
+[[plans]]
+id = "cn-token-plan-personal-essential"
+name = "Essential"
+credits = 25500
+description = "进阶实战，适用于已完成入门验证、需稳定承接日常单智能体任务的开发者与创作者"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "120"
+sale_price = "79"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/token-plan-overview"
+
+[[plans]]
+id = "cn-token-plan-personal-standard"
+name = "Standard"
+credits = 45000
+description = "效率升级，适用于日常高频调用、需要多智能体并行协作的开发者与业务用户"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "180"
+sale_price = "139"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/token-plan-overview"
+
+[[plans]]
+id = "cn-token-plan-personal-pro"
+name = "Pro"
+credits = 180000
+description = "专业优选，适用重度依赖平台、需承载高并发与海量调用的专业开发者"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "600"
+sale_price = "499"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/token-plan-overview"
+
+[[plans]]
+id = "cn-token-plan-personal-extra-bundle"
+name = "个人共享用量包"
+credits = 20000
+description = "用量包 ：定价 100 元/个/月，每个用量包含 20,000 Credits。需先订阅有效套餐后购买，最多同时持有 5 个；套餐月额度用尽后自动抵扣用量包额度。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "100"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/token-plan-overview"
+
+[plans.allowance]
+max_concurrent_bundles = 5
+
+[[plans]]
+id = "cn-token-plan-team-standard-seat"
+name = "标准座席 Standard"
+credits = 25000
+description = "Token Plan 团队版是阿里云百炼推出的 AI 大模型订阅服务，以 Credits 统一计量，支持文本生成、图像生成、视频生成、语音识别与实时语音对话模型，兼容主流 AI 编程与智能体工具，提供团队管理后台、数据安全保障，调用平稳运行。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "198"
+sale_price = "150"
+
+[plans.links]
+official = "https://help.aliyun.com/zh/model-studio/token-plan-team-overview"
+
+[[plans]]
+id = "cn-token-plan-team-pro-seat"
+name = "高级座席 Pro"
+credits = 100000
+description = "Token Plan 团队版是阿里云百炼推出的 AI 大模型订阅服务，以 Credits 统一计量，支持文本生成、图像生成、视频生成、语音识别与实时语音对话模型，兼容主流 AI 编程与智能体工具，提供团队管理后台、数据安全保障，调用平稳运行。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "698"
+sale_price = "550"
+
+[plans.links]
+official = "https://help.aliyun.com/zh/model-studio/token-plan-team-overview"
+
+[[plans]]
+id = "cn-token-plan-team-max-seat"
+name = "尊享座席 Max"
+credits = 250000
+description = "Token Plan 团队版是阿里云百炼推出的 AI 大模型订阅服务，以 Credits 统一计量，支持文本生成、图像生成、视频生成、语音识别与实时语音对话模型，兼容主流 AI 编程与智能体工具，提供团队管理后台、数据安全保障，调用平稳运行。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "1398"
+
+[plans.links]
+official = "https://help.aliyun.com/zh/model-studio/token-plan-team-overview"
+
+[[plans]]
+id = "cn-token-plan-team-shared-pack"
+name = "团队共享用量包"
+credits = 625000
+description = "跨坐席共享的弹性用量包，当个别坐席用量超出套餐额度时，可从共享用量包中抵扣。每个共享用量包有效期为 1 个月，到期未使用的额度自动清零。持有多个共享用量包时，优先抵扣最近到期的用量包。所有者和管理员可按成员设置共享用量包额度上限（每 24 小时仅可设置一次），控制单个成员的用量，详见 团队管理 。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "5000"
+
+[plans.links]
+official = "https://help.aliyun.com/zh/model-studio/token-plan-team-overview"
+
+[plans.allowance]
+validity_months = 1
+
+[[plans]]
+id = "cn-coding-plan-pro"
+name = "Coding Plan Pro"
+description = "Coding Plan 整合了千问、GLM、Kimi、MiniMax 等模型，并兼容主流 AI 编程工具。通过固定月费模式订阅，成本可控，可有效防范欠费风险。"
+currency = "CNY"
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "200"
+
+[plans.links]
+official = "https://docs.bailian.console.aliyun.com/zh/model-studio/coding-plan"

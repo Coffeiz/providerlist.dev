@@ -1,0 +1,23 @@
+id = "claude-mythos-preview"
+model_ref = "anthropic/claude-mythos-preview"
+status = "active"
+
+[links]
+documentation = "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "25"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "125"
+
+[[pricing.conditions]]
+field = "entitlement.program_id"
+value = "project-glasswing"

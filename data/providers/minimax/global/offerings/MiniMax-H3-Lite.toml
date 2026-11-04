@@ -1,0 +1,47 @@
+id = "MiniMax-H3-Lite"
+model_ref = "minimax/minimax-h3-lite"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.04"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.04"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.02"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "768P"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_second"
+value = "0.025"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_second"
+value = "0.025"
+
+[[pricing.rates]]
+metric = "input_image"
+unit = "per_image"
+value = "0.02"
+
+[[pricing.conditions]]
+field = "resolution"
+value = "480P"

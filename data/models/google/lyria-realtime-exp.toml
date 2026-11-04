@@ -1,0 +1,7 @@
+name = "Lyria RealTime"
+type = "realtime"
+release_date = "2025-05-20"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]

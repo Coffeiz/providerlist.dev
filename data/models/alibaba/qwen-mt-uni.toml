@@ -1,0 +1,11 @@
+name = "qwen-mt-uni"
+type = "chat"
+release_date = "2026-09-16"
+
+[modalities]
+input = [ "text", "image", "audio" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

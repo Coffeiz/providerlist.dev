@@ -1,0 +1,8 @@
+id = "openai"
+name = "OpenAI"
+aliases = [ "OpenAI API" ]
+kind = "first_party"
+logo = "/logos/providers/openai.svg"
+
+[integrations]
+ai_sdk = true

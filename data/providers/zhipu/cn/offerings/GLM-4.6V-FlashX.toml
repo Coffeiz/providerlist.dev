@@ -1,0 +1,45 @@
+id = "GLM-4.6V-FlashX"
+model_ref = "zhipu/glm-4-6v-flashx"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.15"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.5"
+context = "<32000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.03"
+context = "<32000"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.3"
+context = ">=32000 & <128000"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "3"
+context = ">=32000 & <128000"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.03"
+context = ">=32000 & <128000"

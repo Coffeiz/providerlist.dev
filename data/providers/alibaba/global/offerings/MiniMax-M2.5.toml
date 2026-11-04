@@ -1,0 +1,17 @@
+id = "MiniMax-M2.5"
+model_ref = "minimax/minimax-m2-5"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.304"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "1.213"

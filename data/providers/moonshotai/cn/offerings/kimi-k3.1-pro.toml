@@ -1,0 +1,36 @@
+id = "kimi-k3.1-pro"
+model_ref = "moonshotai/kimi-k3-1-pro"
+status = "active"
+
+[links]
+documentation = "https://platform.kimi.com/docs/models"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7.8"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "40.8"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.78"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "5min"
+unit = "per_1m_tokens"
+value = "7.8"
+
+[[pricing.rates]]
+metric = "cache_write"
+ttl = "1h"
+unit = "per_1m_tokens"
+value = "15.6"

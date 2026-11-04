@@ -1,0 +1,7 @@
+name = "grok-voice-transcribe-2.0"
+release_date = "2026-09-17"
+type = "transcription"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]

@@ -1,0 +1,16 @@
+name = "Gemini 3 Pro Preview"
+type = "chat"
+release_date = "2025-11-18"
+
+[modalities]
+input = [ "text", "image", "video", "audio", "file" ]
+output = [ "text" ]
+
+[limits]
+context = 1048576
+output = 65536
+
+[capabilities]
+reasoning = true
+tool_calling = true
+structured_output = true

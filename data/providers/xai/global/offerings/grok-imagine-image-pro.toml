@@ -1,0 +1,6 @@
+id = "grok-imagine-image-pro"
+model_ref = "xai/grok-imagine-image-pro"
+status = "retired"
+
+[links]
+documentation = "https://docs.x.ai/developers/migration/may-15-retirement"

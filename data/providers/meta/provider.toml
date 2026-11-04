@@ -1,0 +1,5 @@
+id = "meta"
+name = "Meta"
+aliases = [ "Meta Model API" ]
+kind = "first_party"
+logo = "/logos/providers/meta.svg"

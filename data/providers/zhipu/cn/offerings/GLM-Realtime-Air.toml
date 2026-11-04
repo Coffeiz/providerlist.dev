@@ -1,0 +1,16 @@
+id = "GLM-Realtime-Air"
+model_ref = "zhipu/glm-realtime-air"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "input_audio_minute"
+unit = "per_input_audio_minute"
+value = "0.3"
+
+[[pricing.rates]]
+metric = "input_video"
+unit = "per_minute"
+value = "2.1"

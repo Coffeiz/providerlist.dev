@@ -1,0 +1,11 @@
+name = "qwen3-asr-flash-realtime"
+type = "transcription"
+release_date = "2025-10-27"
+
+[modalities]
+input = [ "audio" ]
+output = [ "text" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

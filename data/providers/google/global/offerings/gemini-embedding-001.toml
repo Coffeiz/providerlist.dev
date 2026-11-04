@@ -1,0 +1,26 @@
+id = "gemini-embedding-001"
+model_ref = "google/gemini-embedding-001"
+status = "deprecated"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models?hl=en"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.20"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.10"
+
+[[pricing.conditions]]
+field = "request.mode"
+value = "batch"

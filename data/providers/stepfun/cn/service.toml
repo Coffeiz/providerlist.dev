@@ -1,0 +1,146 @@
+website = "https://platform.stepfun.com/"
+
+[[endpoints]]
+id = "openai-compatible"
+base_url = "https://api.stepfun.com/v1"
+api_region = "中国"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create"
+path = "/chat/completions"
+
+[[endpoints.routes]]
+protocol = "responses"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/responses/responses-create"
+path = "/responses"
+
+[[endpoints.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/search/search"
+path = "/search"
+
+[[endpoints]]
+id = "anthropic-compatible"
+base_url = "https://api.stepfun.com"
+api_region = "中国"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints]]
+id = "cn-anthropic-compatible"
+base_url = "https://api.stepfun.com/step_plan"
+api_region = "Step Plan"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+
+[[endpoints.routes]]
+protocol = "messages"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+path = "/v1/messages"
+
+[[endpoints.routes]]
+protocol = "chat-completions"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create"
+path = "/v1/chat/completions"
+
+[[endpoints]]
+id = "cn-wss"
+base_url = "https://api.stepfun.com"
+api_region = "中国"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/realtime/chat"
+
+[[endpoints.routes]]
+protocol = "websocket"
+method = "WEBSOCKET"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/realtime/chat"
+path = "/v1/realtime"
+
+[[capabilities]]
+kind = "web_search"
+
+[[capabilities.parameters]]
+name = "n"
+type = "integer"
+required = false
+min = 1
+max = 20
+default = 10
+route_mappings = [ "n" ]
+
+[[capabilities.parameters]]
+name = "category"
+type = "string"
+required = false
+enum = [ "", "programming", "research", "gov", "business" ]
+default = ""
+route_mappings = [ "category" ]
+
+[capabilities.execution]
+mode = "sync"
+
+[[capabilities.routes]]
+protocol = "http"
+method = "POST"
+callability = "documented_only"
+documentation = "https://platform.stepfun.com/docs/zh/api-reference/search/search"
+path = "/search"
+
+[[capabilities.pricing]]
+currency = "CNY"
+
+[[capabilities.pricing.rates]]
+metric = "search_query"
+unit = "per_request"
+value = "0.04"
+
+[capabilities.links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/developer/web-search"
+
+[[capabilities.input]]
+name = "query"
+kind = "text"
+required = true
+
+[[capabilities.output]]
+kind = "structured"
+fields = [ "query", "category", "results[].url", "results[].position", "results[].title", "results[].time", "results[].snippet", "results[].content" ]
+
+[docs]
+overview = "https://platform.stepfun.com/docs/zh/guides/models/list"
+pricing = "https://platform.stepfun.com/docs/zh/guides/pricing/details"
+api = "https://platform.stepfun.com/docs/zh/api-reference/chat/chat-completion-create"
+capabilities = "https://platform.stepfun.com/docs/zh/guides/developer/web-search"
+messages_api = "https://platform.stepfun.com/docs/zh/api-reference/chat/messages-create"
+responses_api = "https://platform.stepfun.com/docs/zh/api-reference/responses/responses-create"

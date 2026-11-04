@@ -1,0 +1,20 @@
+id = "MiniMax/MiniMax-M3.1-Flash"
+model_ref = "minimax/minimax-m3-1-flash"
+status = "active"
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/minimax-m3-1-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "4"

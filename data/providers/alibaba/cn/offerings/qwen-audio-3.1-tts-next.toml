@@ -1,0 +1,7 @@
+id = "qwen-audio-3.1-tts-next"
+model_ref = "alibaba/qwen-audio-3-1-tts-next"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen-audio-3-1-tts-next"

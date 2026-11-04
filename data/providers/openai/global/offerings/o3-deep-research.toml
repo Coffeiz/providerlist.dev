@@ -1,0 +1,7 @@
+id = "o3-deep-research"
+model_ref = "openai/o3-deep-research"
+status = "unknown"
+pricing = []
+
+[links]
+documentation = "https://developers.openai.com/api/docs/models/o3-deep-research"

@@ -1,0 +1,14 @@
+name = "mimo-v2-pro"
+type = "chat"
+release_date = "2026-03-18"
+developer_name = "Xiaomi MiMo"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[limits]
+context = 1000000
+
+[capabilities]
+tool_calling = true

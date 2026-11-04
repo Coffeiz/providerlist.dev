@@ -1,0 +1,16 @@
+name = "MiniMax-M2.5-highspeed"
+release_date = "2026-02"
+type = "chat"
+family = "minimax"
+
+[limits]
+context = 204800
+output = 131072
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = [ "low", "medium", "high", "xhigh", "max" ]
+tool_calling = true

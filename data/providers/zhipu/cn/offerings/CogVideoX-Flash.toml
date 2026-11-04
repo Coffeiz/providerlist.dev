@@ -1,0 +1,20 @@
+id = "CogVideoX-Flash"
+model_ref = "zhipu/cogvideox-flash"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_video"
+unit = "per_request"
+value = "0"
+
+[[pricing]]
+currency = "CNY"
+rates = []
+unsupported_metrics = [ "generated_video" ]
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "batch"

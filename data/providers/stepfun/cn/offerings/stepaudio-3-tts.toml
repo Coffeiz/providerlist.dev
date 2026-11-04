@@ -1,0 +1,22 @@
+id = "stepaudio-3-tts"
+model_ref = "stepfun/stepaudio-3-tts"
+status = "active"
+
+[links]
+documentation = "https://platform.stepfun.com/docs/zh/guides/models/list"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_character"
+unit = "per_10k_characters"
+value = "2.5"
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "cloned_voice"
+unit = "per_voice"
+value = "9.9"

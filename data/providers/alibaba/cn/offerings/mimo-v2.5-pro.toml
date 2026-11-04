@@ -1,0 +1,31 @@
+id = "mimo-v2.5-pro"
+model_ref = "xiaomi/mimo-v2-5-pro"
+status = "active"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "7"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "21"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "14"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "42"

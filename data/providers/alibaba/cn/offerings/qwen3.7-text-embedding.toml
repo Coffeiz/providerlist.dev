@@ -1,0 +1,31 @@
+id = "qwen3.7-text-embedding"
+model_ref = "alibaba/qwen3-7-text-embedding"
+status = "active"
+
+[api_limits]
+context = 131072
+input = 131072
+rpm = 24000
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/qwen3-7-text-embedding"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.5"
+
+[[pricing]]
+currency = "CNY"
+region = "新加坡"
+deployment = "国际"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.525"

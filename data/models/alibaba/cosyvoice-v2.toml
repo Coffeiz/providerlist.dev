@@ -1,0 +1,11 @@
+name = "cosyvoice-v2"
+type = "speech"
+release_date = "2025-05-27"
+
+[modalities]
+input = [ "text" ]
+output = [ "audio" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

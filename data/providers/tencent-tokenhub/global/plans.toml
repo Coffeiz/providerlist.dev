@@ -1,0 +1,43 @@
+[[plans]]
+id = "token-plan-global-lite"
+name = "Token Plan Lite"
+currency = "USD"
+description = "Best for beginners and first-time exploration.Ideal for first-time users exploring OpenClaw capabilities, including web operations, file processing, data analysis, scheduled tasks, and more."
+credits = 1000
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "7"
+
+[[plans]]
+id = "token-plan-global-standard"
+name = "Token Plan Standard"
+currency = "USD"
+description = "Great value for daily use. Suitable for daily office work and lightweight development with OpenClaw, including batch file processing, demo creation, automated workflows, and more."
+credits = 2600
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "17"
+
+[[plans]]
+id = "token-plan-global-pro"
+name = "Token Plan Pro"
+currency = "USD"
+description = "High-f Designed for frequent AI development,with a token quota three times higher than the Standard plan.Ideal for developers and productivity-focused users who rely on AI heavily every day, supporting parallel work across multiple repositories, complex logic generation, code refactoring, agent orchestration, and more."
+credits = 7900
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "51"
+
+[[plans]]
+id = "token-plan-global-max"
+name = "Token Plan Max"
+currency = "USD"
+description = "The preferred choice for intensive AI develoopment,with expanded quota support.Built for power users who use AI as a core productivity tool, supporting full-stack AI generation, multi-agent collaboration, CI automation, and more."
+credits = 15900
+
+[[plans.billing_options]]
+billing_period = "month"
+price = "103"

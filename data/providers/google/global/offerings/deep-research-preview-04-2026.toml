@@ -1,0 +1,6 @@
+id = "deep-research-preview-04-2026"
+model_ref = "google/deep-research-preview-04-2026"
+status = "active"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/deep-research"

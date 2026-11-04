@@ -1,0 +1,19 @@
+id = "sam-3.1"
+model_ref = "meta/sam-3-1"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "image_segmentation"
+unit = "per_1k_images"
+value = "2.50"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "video_segmentation"
+unit = "per_1k_frames"
+value = "0.20"

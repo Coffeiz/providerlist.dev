@@ -1,0 +1,6 @@
+id = "gemini-robotics-er-1.6-preview"
+model_ref = "google/gemini-robotics-er-1-6-preview"
+status = "retired"
+
+[links]
+documentation = "https://ai.google.dev/gemini-api/docs/models/gemini-robotics-er-1.6-preview"

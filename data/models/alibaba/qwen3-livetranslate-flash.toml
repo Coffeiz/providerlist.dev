@@ -1,0 +1,16 @@
+name = "qwen3-livetranslate-flash"
+type = "speech"
+release_date = "2025-12-04"
+
+[modalities]
+input = [ "video", "audio" ]
+output = [ "audio" ]
+
+[limits]
+context = 53248
+input = 49152
+output = 4096
+
+[capabilities]
+tool_calling = false
+structured_output = false

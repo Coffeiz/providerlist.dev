@@ -1,0 +1,14 @@
+id = "GLM-4-Voice"
+model_ref = "zhipu/glm-4-voice"
+status = "active"
+
+[api_limits]
+output = 0
+
+[[pricing]]
+currency = "CNY"
+
+[[pricing.rates]]
+metric = "generated_audio"
+unit = "per_1m_tokens"
+value = "80"

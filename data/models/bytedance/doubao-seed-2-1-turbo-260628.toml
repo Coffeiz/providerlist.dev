@@ -1,0 +1,12 @@
+name = "Doubao Seed 2.1 Turbo (260628)"
+type = "chat"
+release_date = "2026-06"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "text" ]
+
+[limits]
+context = 262144
+max_input = 262144
+output = 262144

@@ -1,0 +1,32 @@
+id = "tongyi-xiaomi-analysis-pro"
+model_ref = "alibaba/tongyi-xiaomi-analysis-pro"
+status = "active"
+
+[api_limits]
+context = 32768
+input = 28672
+output = 4096
+rpm = 600
+tpm = 1000000
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/tongyi-xiaomi-analysis-pro"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "1"
+
+[[pricing.rates]]
+metric = "output"
+unit = "per_1m_tokens"
+value = "2.7"
+
+[[pricing.rates]]
+metric = "cache_read"
+unit = "per_1m_tokens"
+value = "0.2"

@@ -1,0 +1,18 @@
+id = "cosyvoice-v3.5-flash"
+model_ref = "alibaba/cosyvoice-v3-5-flash"
+status = "active"
+
+[api_limits]
+rpm = 180
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/cosyvoice-v3-5-flash"
+
+[[pricing]]
+currency = "CNY"
+region = "华北2（北京）"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_10k_characters"
+value = "0.8"

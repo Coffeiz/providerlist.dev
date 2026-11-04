@@ -1,0 +1,9 @@
+name = "Doubao Seedream 5.0 (260128)"
+type = "image"
+
+[modalities]
+input = [ "text", "image" ]
+output = [ "image" ]
+
+[specifications]
+image_output_resolutions = [ "2K", "3K", "4K" ]

@@ -1,0 +1,11 @@
+name = "pixverse/pixverse-lipsync"
+type = "video"
+release_date = "2025-07-14"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video" ]
+
+[capabilities]
+tool_calling = false
+structured_output = false

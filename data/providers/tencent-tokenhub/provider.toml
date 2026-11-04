@@ -1,0 +1,5 @@
+id = "tencent-tokenhub"
+name = "腾讯云 TokenHub"
+aliases = [ "Tencent TokenHub", "腾讯混元 TokenHub", "大模型服务平台 TokenHub" ]
+kind = "cloud_platform"
+logo = "/logos/providers/tencent-tokenhub.svg"

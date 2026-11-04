@@ -1,0 +1,13 @@
+name = "text-embedding-async-v1"
+type = "embedding"
+release_date = "2024-04-09"
+
+[modalities]
+input = [ "text" ]
+
+[limits]
+input = 2048
+
+[capabilities]
+tool_calling = false
+structured_output = false

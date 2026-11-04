@@ -1,0 +1,6 @@
+name = "MiniMax-H3-Lite"
+type = "video"
+
+[modalities]
+input = [ "text", "image", "video", "audio" ]
+output = [ "video" ]

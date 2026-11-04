@@ -1,0 +1,27 @@
+id = "gpt-4o-mini-tts"
+model_ref = "openai/gpt-4o-mini-tts"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "output_audio"
+unit = "per_1m_tokens"
+value = "12.00"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "input"
+unit = "per_1m_tokens"
+value = "0.60"
+
+[[pricing.conditions]]
+field = "service_tier"
+value = "standard"

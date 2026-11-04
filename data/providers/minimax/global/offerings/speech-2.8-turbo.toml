@@ -1,0 +1,11 @@
+id = "speech-2.8-turbo"
+model_ref = "minimax/speech-2-8-turbo"
+status = "active"
+
+[[pricing]]
+currency = "USD"
+
+[[pricing.rates]]
+metric = "generated_character"
+unit = "per_1m_characters"
+value = "60"

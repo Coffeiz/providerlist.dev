@@ -1,0 +1,12 @@
+name = "Ling-3.0-tiny"
+family = "Ling 3.0"
+type = "chat"
+release_date = "2026-08-07"
+
+[modalities]
+input = [ "text" ]
+output = [ "text" ]
+
+[capabilities]
+reasoning = true
+tool_calling = true

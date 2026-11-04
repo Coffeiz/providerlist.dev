@@ -1,0 +1,10 @@
+id = "vidu/viduq3-turbo_img2video"
+model_ref = "vidu/viduq3-turbo-img2video"
+status = "unknown"
+pricing = []
+
+[api_limits]
+rpm = 300
+
+[links]
+documentation = "https://docs.bailian.console.aliyun.com/zh/model-studio/viduq3-turbo-img2video"

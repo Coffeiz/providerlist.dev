@@ -1,0 +1,9 @@
+name = "kimi-thinking-preview"
+type = "chat"
+family = "Kimi Thinking"
+release_date = "2025-05-06"
+
+[capabilities]
+reasoning = [ "low", "high", "max" ]
+tool_calling = false
+structured_output = false

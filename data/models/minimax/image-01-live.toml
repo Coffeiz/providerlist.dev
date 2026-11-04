@@ -1,0 +1,7 @@
+name = "image-01-live"
+type = "image"
+release_date = "2025-02-28"
+
+[modalities]
+input = [ "text" ]
+output = [ "image" ]
