@@ -1,0 +1,13 @@
+# Vite fingerprints these files in their names, so each URL is immutable.
+/assets/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+# These fixed URLs may change when a new release is published.
+/robots.txt
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
