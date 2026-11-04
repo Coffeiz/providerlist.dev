@@ -1,7 +1,7 @@
 ---
 name: Model 数据（中文）
 about: 新增或更新规范 Model 规格
-title: "[Model] "
+title: "data(model): "
 labels: data
 ---
 

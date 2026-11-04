@@ -1,17 +1,17 @@
 ## PR 类型
 
-标题格式：`主要类型：简短说明`。标题只写最能代表 PR 主要目的的一种类型；正文勾选本 PR 实际包含的所有类型。混合改动请在“主要变更”中分别说明。
+标题使用 `type: short summary` 格式，例如 `perf: reduce font payload`。只选最能代表 PR 主要目的的一种类型；正文勾选本 PR 实际包含的所有类型。混合改动请在“主要变更”中分别说明。
 
-- [ ] 功能：新增用户能力
-- [ ] 修复：修复错误或异常行为
-- [ ] 改进：优化现有能力、性能或体验
-- [ ] 重构：调整实现或架构，原则上不改变用户可见行为
-- [ ] 数据：新增或修订 Provider、Service、Offering、价格或证据数据
-- [ ] 安全：修复或强化安全边界
-- [ ] 文档：文档、规范或开发约定变更
-- [ ] 测试：测试用例或测试基础设施变更
-- [ ] 构建/CI：构建、依赖、流水线或开发工具变更
-- [ ] 发布：发布产物、发布流程或回滚机制变更
+- [ ] `feat`: add user-facing functionality
+- [ ] `fix`: correct a bug or unexpected behavior
+- [ ] `perf`: improve performance
+- [ ] `refactor`: restructure implementation without changing behavior
+- [ ] `data`: add or update Provider, Service, Offering, pricing, or source data
+- [ ] `security`: strengthen a security boundary
+- [ ] `docs`: update documentation or conventions
+- [ ] `test`: add or change tests or test infrastructure
+- [ ] `build` / `ci`: change dependencies, build, CI, or developer tooling
+- [ ] `release`: change release artifacts, deployment, or rollback
 
 ## 变更目的
 
