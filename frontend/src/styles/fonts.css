@@ -1,8 +1,0 @@
-/* 本地 CJK 可变字体，避免界面中英混排时字形视觉高度跳变。 */
-@font-face {
-  font-family: 'ProviderList Noto Sans SC';
-  src: url('/fonts/Noto_Sans_SC/NotoSansSC-VariableFont_wght.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
