@@ -1,7 +1,7 @@
 ---
 name: Model data (English)
 about: Add or update canonical Model specifications
-title: "[Model] "
+title: "data(model): "
 labels: data
 ---
 
