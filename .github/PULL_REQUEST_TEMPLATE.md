@@ -1,68 +1,67 @@
-## PR 类型
+## PR type
 
-标题格式：`主要类型：简短说明`。标题只写最能代表 PR 主要目的的一种类型；正文勾选本 PR 实际包含的所有类型。混合改动请在“主要变更”中分别说明。
+Use `type: short summary` for the title, for example `perf: reduce font payload`. Choose the type that best describes the PR's main purpose, and check every type included below. Describe mixed changes under **Changes**.
 
-- [ ] 功能：新增用户能力
-- [ ] 修复：修复错误或异常行为
-- [ ] 改进：优化现有能力、性能或体验
-- [ ] 重构：调整实现或架构，原则上不改变用户可见行为
-- [ ] 数据：新增或修订 Provider、Service、Offering、价格或证据数据
-- [ ] 安全：修复或强化安全边界
-- [ ] 文档：文档、规范或开发约定变更
-- [ ] 测试：测试用例或测试基础设施变更
-- [ ] 构建/CI：构建、依赖、流水线或开发工具变更
-- [ ] 发布：发布产物、发布流程或回滚机制变更
+- [ ] `feat`: add user-facing functionality
+- [ ] `fix`: correct a bug or unexpected behavior
+- [ ] `perf`: improve performance
+- [ ] `refactor`: restructure implementation without changing behavior
+- [ ] `data`: add or update Provider, Model, pricing, or source data
+- [ ] `security`: strengthen a security boundary
+- [ ] `docs`: update documentation or development conventions
+- [ ] `test`: add or change tests
+- [ ] `build` / `ci`: change dependencies, build, CI, or developer tooling
+- [ ] `release`: change release artifacts, deployment, or rollback
 
-## 变更目的
+## Purpose
 
-说明当前问题或需求，以及本 PR 要达到的结果。有关联的 issue、PRD、ADR 或设计文档时附链接；没有时写“无”。
+What problem or need does this PR address? Link a related issue, PRD, ADR, or design document, or write `None`.
 
-## 主要变更
+## Changes
 
-- 用户可感知的变化和关键改动：
-- 数据、Schema、校验或来源证据改动（如有）：
-- 内部重构、测试或基础设施改动（如有）：
-- 明确不包含的相关范围（如有）：无
+- User-visible changes:
+- Data, schema, validation, or source changes:
+- Internal, test, or infrastructure changes:
+- Related work intentionally excluded:
 
-## 数据与契约影响
+## Data and contract impact
 
-逐项说明本次改动是否影响以下内容；不适用时写“无”。
+Describe whether this PR affects the following; write `None` where not applicable.
 
-- ProviderList Schema、TS 类型、语义校验及 `docs/data/schema.md`：
-- `data/` 源数据、字段来源、抓取/观察/核验时间及市场边界：
-- `dist/` 或公开 `/v1/*.json` 产物：
-- 价格原币种、计量单位、未知值或生命周期语义：
+- ProviderList schema, TypeScript types, semantic validation, or `docs/data/schema.md`:
+- `data/` source records, source links, collection/observation times, or market boundaries:
+- `dist/` or public `/v1/*.json` output:
+- Original pricing currency, billing units, unknown values, or lifecycle semantics:
 
-## 验证
+## Validation
 
-- [ ] 数据校验：命令与结果；未执行时写明“未执行”和原因。
-- [ ] 测试：命令与结果；未执行时写明“未执行”和原因。
-- [ ] 类型检查 / 构建：命令与结果；未执行时写明“未执行”和原因。
-- [ ] 手动验证（适用时）：步骤与结果；未执行或不适用时说明原因。
+- [ ] Data validation: command and result, or why it was not run
+- [ ] Tests: command and result, or why they were not run
+- [ ] Type check / build: command and result, or why they were not run
+- [ ] Manual check, when applicable: steps and result
 
-只记录本次实际执行的验证，不得把计划执行描述为已通过。
+Report only checks actually performed. Do not describe planned checks as passing.
 
-## 风险与兼容性
+## Risks and compatibility
 
-说明影响范围及 Schema、公开数据、前端、CI、权限、部署和回滚影响。无已知影响时写“未发现”，不要留空或只写“低风险”。
+Describe the effects on the UI, data, schema, public API, CI, permissions, deployment, and rollback. Write `No known impact` where applicable; do not leave this blank.
 
-## 部署与数据发布
+## Deployment and data release
 
-说明是否需要额外环境变量、人工步骤、数据编译、受保护发布或回滚操作；无需额外步骤时写“无”。CI 不得写生产数据，公开数据发布须遵循仓库发布流程。
+List any required environment variables, manual steps, data compilation, protected release, or rollback actions. Write `None` if no extra action is needed. CI must not write production data; public data follows the repository release workflow.
 
-## 截图或样例
+## Screenshots or examples
 
-可选补充材料。UI 改动可附截图；数据改动可附脱敏后的候选片段、字段差异或来源定位。不要在截图、日志或样例中包含密钥和个人敏感信息。
+Optional. Add screenshots for UI changes or sanitized data examples with their sources when useful. Do not include credentials or personal information.
 
-## 合并前检查
+## Before merge
 
-- [ ] 目标分支正确，标题类型与本 PR 主要目的相符
-- [ ] 已勾选本 PR 实际包含的全部类型
-- [ ] 变更目的、范围和不包含项清楚
-- [ ] 验证结果真实可复现，未执行项已注明原因
-- [ ] Schema、TS 类型、语义校验和相关文档已同步（如适用）
-- [ ] 数据字段有可复核来源；市场、币种、未知值和时间语义未被臆测或混用（如适用）
-- [ ] 已说明风险、兼容性、发布与回滚影响
-- [ ] 没有提交密钥、原始抓取快照、临时诊断产物或手工修改的生成目录
+- [ ] The title type matches the PR's main purpose, and all included types are checked above
+- [ ] The purpose, scope, and excluded work are clear
+- [ ] Validation results are reproducible; skipped checks include a reason
+- [ ] Schema, types, validation, and related docs are synchronized where applicable
+- [ ] Data changes have reviewable sources; market, currency, unknown values, and time semantics are not guessed or mixed
+- [ ] Risks, compatibility, release, and rollback are addressed
+- [ ] No credentials, raw snapshots, temporary diagnostics, or manually edited generated output were added
 
-必填章节不得留空；不适用时保留章节并写明原因。自动化采集 PR 使用独立的生成模板，不使用本贡献模板。
+Keep every section. Write `None` or explain why a section does not apply. Automated ingestion PRs use their generated template.

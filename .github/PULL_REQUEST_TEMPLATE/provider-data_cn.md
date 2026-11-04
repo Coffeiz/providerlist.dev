@@ -1,7 +1,7 @@
 ---
 name: Provider 数据（中文）
 about: 新增或更新 Provider 供应数据
-title: "[Provider] "
+title: "data(provider): "
 labels: data
 ---
 

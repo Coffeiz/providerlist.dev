@@ -1,7 +1,7 @@
 ---
 name: Provider data (English)
 about: Add or update Provider supply data
-title: "[Provider] "
+title: "data(provider): "
 labels: data
 ---
 
