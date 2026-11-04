@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import { pathToFileURL } from 'node:url';
 /**
  * 聚合采集 PR 正文的唯一渲染入口。
  *
@@ -124,7 +125,7 @@ export { BLOCKING_STATUSES };
 
 // 本地预览：`node scripts/ci/render-ingestion-pr-body.mjs <描述.json>`
 // 描述文件形如 { "runEntries": [...], "viewerEntries": [...] }。
-if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   const { readFile: read } = await import('node:fs/promises');
   const { resolve } = await import('node:path');
   const descriptionPath = process.argv[2];

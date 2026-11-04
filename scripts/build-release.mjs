@@ -33,6 +33,7 @@
 import { cp, mkdir, readFile, readdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
+import { pathToFileURL } from 'node:url';
 
 const repoRoot = path.resolve(import.meta.dirname, '..');
 
@@ -64,15 +65,28 @@ async function siteEntries(siteDir) {
     .filter((name) => name !== 'v1');
 }
 
-/** Copy site assets without replacing the generator-owned dataset directory. */
+/**
+ * Copy site assets without replacing the generator-owned dataset directory.
+ *
+ * 同时**删除发布根里站点侧已不存在的资产**。构建产物带内容哈希，
+ * 每次构建文件名都会变；只做覆盖不删除，会让上一轮的哈希文件
+ * 一直留在发布根里（既白占部署体积，也让人误以为还有多版本并存）。
+ */
 async function mergeSiteAssets(siteAssetsDir, releaseAssetsDir) {
   await mkdir(releaseAssetsDir, { recursive: true });
+  const siteEntries = new Set();
   for (const entry of await readdir(siteAssetsDir, { withFileTypes: true })) {
     if (entry.name === 'datasets') continue;
+    siteEntries.add(entry.name);
     const source = path.join(siteAssetsDir, entry.name);
     const target = path.join(releaseAssetsDir, entry.name);
     await rm(target, { recursive: true, force: true });
     await cp(source, target, { recursive: true });
+  }
+  for (const entry of await readdir(releaseAssetsDir, { withFileTypes: true })) {
+    if (entry.name === 'datasets') continue;
+    if (siteEntries.has(entry.name)) continue;
+    await rm(path.join(releaseAssetsDir, entry.name), { recursive: true, force: true });
   }
 }
 
@@ -146,6 +160,15 @@ async function main(argv = process.argv.slice(2)) {
     await cp(from, to, { recursive: true });
   }
 
+  // 发布根里如果还留着站点已不再产出的目录（例如被移除的自托管字体），
+  // 它们会被一起部署上去——既白占体积，也让人误判线上还有这些资源。
+  // `v1/` 由 generator 管理，不在这里清理。
+  for (const entry of await readdir(releaseDir, { withFileTypes: true })) {
+    if (entry.name === 'v1') continue;
+    if (entries.includes(entry.name)) continue;
+    await rm(path.join(releaseDir, entry.name), { recursive: true, force: true });
+  }
+
   // 公开 JSON 以 **generator 产物为准**。
   // 站点产物里那份 v1/ 只是自包含的便利拷贝，合并时用权威版本覆盖——
   // 否则「两个来源不一致」的问题会被带上线。
@@ -195,6 +218,8 @@ async function main(argv = process.argv.slice(2)) {
   console.log('  SPA fallback 自检：/v1/*.json 均为真实文件，不会被错返回 index.html');
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// 用 fileURLToPath 比较：仓库路径含非 ASCII 字符时 import.meta.url 是百分号编码的，
+// 直接和 process.argv[1] 比会不相等——脚本会静默什么都不做（退出码仍是 0）。
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   await main();
 }

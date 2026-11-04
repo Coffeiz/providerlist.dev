@@ -48,9 +48,12 @@
   --pl-danger-hard: #8d3636;
 
   /* 字体 */
+  /* 站点不再自托管字体（仓库里已无字体文件，`Inter` 也不再有来源），
+   * 直接用系统字体栈：中英混排下表现足够，且不占任何带宽。 */
   --pl-font-sans:
-    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
-    'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC',
+    'Source Han Sans SC', 'WenQuanYi Micro Hei', sans-serif;
   --pl-font-mono:
     ui-monospace, SFMono-Regular, 'SF Mono', 'JetBrains Mono', Menlo, Consolas,
     'Liberation Mono', monospace;

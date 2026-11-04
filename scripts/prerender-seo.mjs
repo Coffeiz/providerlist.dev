@@ -1,9 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
-import { pathToFileURL } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+// `new URL(...).pathname` 不会解码百分号：仓库路径里含非 ASCII 字符时
+// （例如本地检出目录名是中文）会得到 `%E6%96%87...` 这种错误路径。
+// 必须用 fileURLToPath 解码。
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outputRoot = path.join(root, 'frontend', 'dist');
 const datasetRoot = path.join(root, 'dist', 'assets', 'datasets');
 const siteOrigin = 'https://providerlist.dev';
@@ -263,7 +266,7 @@ async function main() {
   console.log(`Pre-rendered ${providerIndex.providers?.length ?? 0} Providers, ${models.length} Models, ${types.length} type pages; sitemap has ${urls.size} URLs.`);
 }
 
-if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
     console.error(error);
     process.exitCode = 1;
