@@ -79,6 +79,7 @@ jobs:
         continue-on-error: true
         env:
           INGEST_PROVIDER: ${{ matrix.provider }}
+          INGEST_HANDOFF_SUMMARY_PATH: ${{ runner.temp }}/provider-ingest-summary/${{ matrix.provider }}.md
         # 不能写成 `pnpm ingest:sync -- provider X`：这个 `--` 会被 pnpm 原样透传成
         # 脚本参数，sync-cli 收到 scope="--" 直接退出码 2，采集步骤永远失败。
         run: pnpm ingest:sync provider "$INGEST_PROVIDER"
@@ -100,6 +101,7 @@ jobs:
         env:
           INGEST_PROVIDER: ${{ matrix.provider }}
           INGEST_COLLECT_STEP_OUTCOME: ${{ steps.collect_provider.outcome }}
+          INGEST_HANDOFF_SUMMARY_PATH: ${{ runner.temp }}/provider-ingest-summary/${{ matrix.provider }}.md
         run: node scripts/ci/package-ingestion-provider-artifact.mjs
       - uses: actions/upload-artifact@v4
         if: always()
@@ -252,6 +254,7 @@ jobs:
         working-directory: ${{ steps.branches.outputs.state_dir }}
         run: |
           set -euo pipefail
+          mkdir -p data/candidates data/ingestion-lifecycle
           git add data/candidates data/ingestion-lifecycle
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '更新 Provider 候选状态与 PR 生命周期'
@@ -305,6 +308,7 @@ jobs:
         working-directory: ${{ steps.state.outputs.state_dir }}
         run: |
           set -euo pipefail
+          mkdir -p data/candidates data/ingestion-lifecycle
           git add data/candidates data/ingestion-lifecycle
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m '记录 Provider 采集 PR 关闭结果'

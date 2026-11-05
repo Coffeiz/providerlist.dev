@@ -464,6 +464,11 @@ export async function writeSyncOutputs(input: {
   } else {
     console.log(summary);
   }
+  const handoffSummaryPath = process.env.INGEST_HANDOFF_SUMMARY_PATH;
+  if (handoffSummaryPath) {
+    await mkdir(path.dirname(handoffSummaryPath), { recursive: true });
+    await writeFile(handoffSummaryPath, `${summary}\n`, { flag: 'a' });
+  }
   // PR 正文由**聚合步骤**统一生成（scripts/ci/render-ingestion-pr-body.mjs）——
   // 采集步骤不产出 PR 正文，也不该拼第二份模板。两边各拼一次必然漂移。
 }

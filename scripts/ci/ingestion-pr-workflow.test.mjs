@@ -309,7 +309,9 @@ test('IR Artifact 打包与聚合：状态、评审和生命周期保留在 IR �
       env: {
         ...process.env,
         INGEST_PROVIDER: 'openai', RUNNER_TEMP: runnerTemp,
-        GITHUB_STEP_SUMMARY: summaryPath, INGEST_COLLECT_STEP_OUTCOME: 'success',
+        GITHUB_STEP_SUMMARY: path.join(base, 'package-step-summary.md'),
+        INGEST_HANDOFF_SUMMARY_PATH: summaryPath,
+        INGEST_COLLECT_STEP_OUTCOME: 'success',
       },
     });
 
