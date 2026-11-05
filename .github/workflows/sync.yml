@@ -170,7 +170,7 @@ jobs:
           if git show-ref --verify --quiet refs/remotes/origin/automation/provider-ingest; then
             git branch -f automation/provider-ingest origin/automation/provider-ingest
             git switch automation/provider-ingest
-            git merge --no-edit origin/main
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' merge --no-edit origin/main
           else
             git switch -c automation/provider-ingest origin/main
           fi
