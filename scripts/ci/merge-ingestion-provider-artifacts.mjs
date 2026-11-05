@@ -11,10 +11,12 @@ const artifactsRoot = required('INGESTION_ARTIFACTS_DIR');
 const stateDirectory = required('INGEST_STATE_DIR');
 const runId = required('GITHUB_RUN_ID');
 const runAttempt = process.env.GITHUB_RUN_ATTEMPT ?? '1';
+const currentAttempt = Number(runAttempt);
+if (!Number.isSafeInteger(currentAttempt) || currentAttempt < 1) throw new Error('GITHUB_RUN_ATTEMPT 必须是正整数');
+const repository = required('GITHUB_REPOSITORY');
+const serverUrl = process.env.GITHUB_SERVER_URL ?? 'https://github.com';
+const prBranch = process.env.INGEST_PR_BRANCH ?? 'automation/provider-ingest';
 const fxOutcome = process.env.INGEST_FX_OUTCOME ?? 'skipped';
-// PR 正文里的 viewer 链接用仓库内相对路径，不再硬编码仓库名与分支名。
-// 这里仍然要求该变量存在，作为 workflow 装配是否完整的早期检查。
-required('GITHUB_REPOSITORY');
 const prBodyPath = required('INGEST_PR_BODY_PATH');
 const summaryPath = required('GITHUB_STEP_SUMMARY');
 const workspace = process.cwd();
@@ -27,17 +29,29 @@ const reportRows = [];
 const runResults = [];
 const promotionRows = [];
 const modelIdRows = [];
+const artifactAttempts = await findArtifactAttempts(artifactsRoot, runId, currentAttempt);
 let staleCount = 0;
 for (const provider of providers) {
-  // upload-artifact 的单目录输入会把目录内容放在下载后的 Artifact 根目录。
-  const artifactDirectory = path.join(artifactsRoot, `provider-ingest-${runId}-${runAttempt}-${provider}`);
+  // A workflow rerun does not recreate artifacts for successful jobs. Reuse the
+  // newest available attempt for each Provider, while newer attempts override it.
+  const artifactAttempt = artifactAttempts.get(provider);
+  const artifactDirectory = artifactAttempt === undefined
+    ? null
+    : path.join(artifactsRoot, `provider-ingest-${runId}-${artifactAttempt}-${provider}`);
+  if (!artifactDirectory) {
+    const message = '没有可用的采集 Artifact；检查 Provider job 是否完成或 Artifact 是否已过期';
+    reportRows.push(`| \`${provider}\` | \`artifact_missing\` | — | ${safeCell(message)} |`);
+    runResults.push({ provider, status: 'artifact_missing', message, fingerprint: null });
+    continue;
+  }
   const manifestPath = path.join(artifactDirectory, 'manifest.json');
   let manifest;
   try { manifest = JSON.parse(await readFile(manifestPath, 'utf8')); }
   catch (error) {
     if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT')) throw error;
-    reportRows.push(`| \`${provider}\` | \`collection_failed\` | — | 未生成采集 Artifact，检查 Provider job 结果 |`);
-    runResults.push({ provider, status: 'collection_failed', message: '未生成采集 Artifact，检查 Provider job 结果', fingerprint: null });
+    const message = `Artifact 缺少 manifest；检查 Provider job（产物来自 attempt ${artifactAttempt}）`;
+    reportRows.push(`| \`${provider}\` | \`artifact_missing\` | — | ${safeCell(message)} |`);
+    runResults.push({ provider, status: 'artifact_missing', message, fingerprint: null });
     continue;
   }
   if (manifest.provider_id !== provider) throw new Error(`Artifact Provider 身份不匹配：${provider}`);
@@ -101,8 +115,10 @@ for (const provider of providers) {
     await mkdir(path.dirname(targetViewer), { recursive: true });
     await cp(sourceViewer, targetViewer, { force: true });
   }
-  reportRows.push(`| \`${provider}\` | \`${manifest.status}\` | ${manifest.fingerprint ? `\`${manifest.fingerprint}\`` : '—'} | ${safeCell(manifest.message)} |`);
-  runResults.push({ provider, status: manifest.status, message: manifest.message ?? '', fingerprint: manifest.fingerprint ?? null });
+  const reusedAttempt = artifactAttempt < currentAttempt ? `复用 attempt ${artifactAttempt} 的采集产物` : '';
+  const message = [manifest.message, reusedAttempt].filter(Boolean).join('；');
+  reportRows.push(`| \`${provider}\` | \`${manifest.status}\` | ${manifest.fingerprint ? `\`${manifest.fingerprint}\`` : '—'} | ${safeCell(message)} |`);
+  runResults.push({ provider, status: manifest.status, message, fingerprint: manifest.fingerprint ?? null });
 }
 
 const pendingViewers = await listPendingViewers();
@@ -165,6 +181,9 @@ const prBody = renderIngestionPrBody({
   runEntries: runResults,
   viewerEntries: pendingViewers,
   irProjectionSummary,
+  repository,
+  serverUrl,
+  viewerRef: prBranch,
 });
 await writeFile(prBodyPath, prBody);
 await writeFile(process.env.GITHUB_OUTPUT, `changed_providers=${JSON.stringify(pendingViewers.map(({ provider }) => provider))}\n`);
@@ -206,6 +225,27 @@ async function recordNewModelIds(provider, candidateScope) {
   await mkdir(path.dirname(candidatePath), { recursive: true });
   await writeFile(candidatePath, `${JSON.stringify(merged, null, 2)}\n`);
   return newlyObserved.sort((left, right) => left.localeCompare(right));
+}
+
+async function findArtifactAttempts(root, workflowRunId, maxAttempt) {
+  const attempts = new Map();
+  let entries;
+  try { entries = await readdir(root, { withFileTypes: true }); }
+  catch (error) {
+    if (error instanceof Error && 'code' in error && error.code === 'ENOENT') return attempts;
+    throw error;
+  }
+  const prefix = `provider-ingest-${workflowRunId}-`;
+  for (const entry of entries) {
+    if (!entry.isDirectory() || !entry.name.startsWith(prefix)) continue;
+    const match = entry.name.slice(prefix.length).match(/^(\d+)-([a-z0-9-]+)$/);
+    if (!match) continue;
+    const attempt = Number(match[1]);
+    const provider = match[2];
+    if (!Number.isSafeInteger(attempt) || attempt < 1 || attempt > maxAttempt) continue;
+    if (attempt > (attempts.get(provider) ?? 0)) attempts.set(provider, attempt);
+  }
+  return attempts;
 }
 
 async function readProviderModelIds(root, provider) {

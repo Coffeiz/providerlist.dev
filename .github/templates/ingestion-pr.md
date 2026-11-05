@@ -4,6 +4,7 @@
 
 {{run_overview}}
 {{run_failures}}
+{{run_artifact_missing}}
 {{run_stale}}
 
 ## Provider 差异报告
