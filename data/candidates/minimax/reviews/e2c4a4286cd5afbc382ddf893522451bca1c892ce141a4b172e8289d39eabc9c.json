@@ -1,0 +1,3880 @@
+{
+  "provider_id": "minimax",
+  "candidate_kind": "regional_current_supply_observation",
+  "observed_at": "2026-11-05T13:35:57.057Z",
+  "previous_candidate_hash": null,
+  "candidate_hash": "sha256:e2c4a4286cd5afbc382ddf893522451bca1c892ce141a4b172e8289d39eabc9c",
+  "review_markdown_file": "2026-11-05.md",
+  "sources": [
+    {
+      "source_id": "minimax-cn-model-catalog",
+      "market": "cn",
+      "source_name": "MiniMax 中国站模型列表",
+      "request_url": "https://platform.minimax.cn/docs/faq/models.md",
+      "retrieved_at": "2026-11-05T12:30:16.581Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:46 GMT",
+      "content_hash": "sha256:a222962f400cae8a8e000a9ff777abb2875bd1e43e92e841fb1ef40a2be17878",
+      "byte_length": 6296,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-a222962f400cae8a8e000a9ff777abb2875bd1e43e92e841fb1ef40a2be17878.body"
+    },
+    {
+      "source_id": "minimax-cn-pricing",
+      "market": "cn",
+      "source_name": "MiniMax 中国站定价概览",
+      "request_url": "https://platform.minimax.cn/docs/pricing/overview.md",
+      "retrieved_at": "2026-11-05T12:30:15.333Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:14 GMT",
+      "content_hash": "sha256:e23bbc8a65e411efbcf7a573ba68540d60f01b6b0b29fcbbaf895cde19b0bea9",
+      "byte_length": 21915,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-e23bbc8a65e411efbcf7a573ba68540d60f01b6b0b29fcbbaf895cde19b0bea9.body"
+    },
+    {
+      "source_id": "minimax-cn-video-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站视频生成接口规格",
+      "request_url": "https://platform.minimax.cn/docs/api-reference/video-generation-v2-create.md",
+      "retrieved_at": "2026-11-05T12:30:16.496Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:37 GMT",
+      "content_hash": "sha256:9a7276b7418755a8e7c5ff8e3819dd58b498eb7901fbdc5c5bf25df206905914",
+      "byte_length": 21925,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-9a7276b7418755a8e7c5ff8e3819dd58b498eb7901fbdc5c5bf25df206905914.body"
+    },
+    {
+      "source_id": "minimax-cn-video-guide",
+      "market": "cn",
+      "source_name": "MiniMax 中国站通用视频模型说明",
+      "request_url": "https://platform.minimax.cn/docs/guides/video-generation.md",
+      "retrieved_at": "2026-11-05T12:30:15.709Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:27:07 GMT",
+      "content_hash": "sha256:ac488c697aded1730769d9c7d0b93b13642ade8bbe6779e30a7f1ba52b6797fa",
+      "byte_length": 13961,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-ac488c697aded1730769d9c7d0b93b13642ade8bbe6779e30a7f1ba52b6797fa.body"
+    },
+    {
+      "source_id": "minimax-cn-asr-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站语音识别接口规格",
+      "request_url": "https://platform.minimax.cn/docs/api-reference/speech-to-text.md",
+      "retrieved_at": "2026-11-05T12:30:15.510Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:05 GMT",
+      "content_hash": "sha256:8666563dd1915daaf85bef063f9200da9e4740b528ddea2905eefb0c05c2d3c6",
+      "byte_length": 15450,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-8666563dd1915daaf85bef063f9200da9e4740b528ddea2905eefb0c05c2d3c6.body"
+    },
+    {
+      "source_id": "minimax-cn-audio-guide",
+      "market": "cn",
+      "source_name": "MiniMax 中国站语音生成通用指南",
+      "request_url": "https://platform.minimax.cn/docs/guides/speech-t2a-websocket.md",
+      "retrieved_at": "2026-11-05T12:30:16.763Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:16 GMT",
+      "content_hash": "sha256:556a0083477067958feebb3148401ad72c0a928a2af3e2affc5238782a39f289",
+      "byte_length": 12363,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-556a0083477067958feebb3148401ad72c0a928a2af3e2affc5238782a39f289.body"
+    },
+    {
+      "source_id": "minimax-cn-image-guide",
+      "market": "cn",
+      "source_name": "MiniMax 中国站图像生成通用指南",
+      "request_url": "https://platform.minimax.cn/docs/guides/image-generation.md",
+      "retrieved_at": "2026-11-05T12:30:16.022Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:15 GMT",
+      "content_hash": "sha256:3e526755c01aa08b42c952a920d4a7cf4201611328ed579501540d2b3d767d87",
+      "byte_length": 3435,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-3e526755c01aa08b42c952a920d4a7cf4201611328ed579501540d2b3d767d87.body"
+    },
+    {
+      "source_id": "minimax-cn-model-overview",
+      "market": "cn",
+      "source_name": "MiniMax 中国站模型概览（含音乐型号状态与 API 准入说明）",
+      "request_url": "https://platform.minimax.cn/docs/guides/models-intro.md",
+      "retrieved_at": "2026-11-05T12:30:15.834Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:05 GMT",
+      "content_hash": "sha256:f1310b1fb757cb0cf804530fc2c2a7d8d9f8a346a4d314396c2bbfdcc70a4819",
+      "byte_length": 5008,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-f1310b1fb757cb0cf804530fc2c2a7d8d9f8a346a4d314396c2bbfdcc70a4819.body"
+    },
+    {
+      "source_id": "minimax-cn-anthropic-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 Anthropic API 兼容与推理参数规格",
+      "request_url": "https://platform.minimax.cn/docs/api-reference/text-anthropic-api.md",
+      "retrieved_at": "2026-11-05T12:30:16.057Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:19 GMT",
+      "content_hash": "sha256:cbb574d27cee8da9ee052be1cfa1897f55eb2f36eda15b28b6cc0543eeec835c",
+      "byte_length": 10132,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-cbb574d27cee8da9ee052be1cfa1897f55eb2f36eda15b28b6cc0543eeec835c.body"
+    },
+    {
+      "source_id": "minimax-cn-function-call-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 M3 工具调用与交错思维文档",
+      "request_url": "https://platform.minimax.cn/docs/guides/text-m3-function-call.md",
+      "retrieved_at": "2026-11-05T12:30:16.973Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:29:19 GMT",
+      "content_hash": "sha256:5df799e4ce5554baf7f2f56ac8779d00ef38bc380cf6fd64136f31a9b790a7ec",
+      "byte_length": 13206,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-5df799e4ce5554baf7f2f56ac8779d00ef38bc380cf6fd64136f31a9b790a7ec.body"
+    },
+    {
+      "source_id": "minimax-cn-responses-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 Responses API 接口规格",
+      "request_url": "https://platform.minimax.cn/docs/api-reference/responses-create.md",
+      "retrieved_at": "2026-11-05T12:30:18.157Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:17 GMT",
+      "content_hash": "sha256:80a696108b9e34f39677e6ce092a7c6ac291a64cb10953c8b1c44f586d98aa6d",
+      "byte_length": 65623,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-80a696108b9e34f39677e6ce092a7c6ac291a64cb10953c8b1c44f586d98aa6d.body"
+    },
+    {
+      "source_id": "minimax-cn-file-upload-api",
+      "market": "cn",
+      "source_name": "MiniMax 中国站文件管理与上传接口规格",
+      "request_url": "https://platform.minimax.cn/docs/api-reference/file-management-upload.md",
+      "retrieved_at": "2026-11-05T12:30:18.539Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:18 GMT",
+      "content_hash": "sha256:06409fe8aea3d900c63a2f55c06690f8c8335a8935b96baa4c9dd75eea7d9c9f",
+      "byte_length": 5779,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-06409fe8aea3d900c63a2f55c06690f8c8335a8935b96baa4c9dd75eea7d9c9f.body"
+    },
+    {
+      "source_id": "minimax-cn-mcp-guide",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 M Plan MCP 指南",
+      "request_url": "https://platform.minimax.cn/docs/guides/token-plan-mcp-guide.md",
+      "retrieved_at": "2026-11-05T12:30:16.708Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:27:41 GMT",
+      "content_hash": "sha256:cd3fe5499cdee942baca47e8b0de506361fb8ae2b4cb6f2372db8e138bddaadf",
+      "byte_length": 4613,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-cd3fe5499cdee942baca47e8b0de506361fb8ae2b4cb6f2372db8e138bddaadf.body"
+    },
+    {
+      "source_id": "minimax-cn-m-plan-page",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 M Plan 档位与价格",
+      "request_url": "https://www.minimax.cn/m-plan",
+      "retrieved_at": "2026-11-05T13:35:57.057Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "etag": "\"oc3dth09vf1o8c\"",
+      "last_modified": null,
+      "content_hash": "sha256:479e0405f8d486cf4b45a946cfadca65fc66993e2f7c11ff1df480fb78dea0cf",
+      "byte_length": 99363,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-479e0405f8d486cf4b45a946cfadca65fc66993e2f7c11ff1df480fb78dea0cf.body"
+    },
+    {
+      "source_id": "minimax-cn-m-plan-intro",
+      "market": "cn",
+      "source_name": "MiniMax 中国站 M Plan 档位使用参考原文",
+      "request_url": "https://platform.minimax.cn/docs/m-plan/intro.md",
+      "retrieved_at": "2026-11-05T12:30:19.010Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:28 GMT",
+      "content_hash": "sha256:70a203c1e5ee7c554b09c4443b30562d85dc7d5039aeec9e680342d7f0328201",
+      "byte_length": 2823,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-70a203c1e5ee7c554b09c4443b30562d85dc7d5039aeec9e680342d7f0328201.body"
+    },
+    {
+      "source_id": "minimax-global-model-catalog",
+      "market": "global",
+      "source_name": "MiniMax 国际站模型列表",
+      "request_url": "https://platform.minimax.io/docs/faq/models.md",
+      "retrieved_at": "2026-11-05T12:30:16.480Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:20 GMT",
+      "content_hash": "sha256:2768cac752b3950fe0e4664c6a9ab029ba491f3a4a889dcd1f187fed368903df",
+      "byte_length": 6457,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-2768cac752b3950fe0e4664c6a9ab029ba491f3a4a889dcd1f187fed368903df.body"
+    },
+    {
+      "source_id": "minimax-global-video-guide",
+      "market": "global",
+      "source_name": "MiniMax International General Video Model Guide",
+      "request_url": "https://platform.minimax.io/docs/guides/video-generation.md",
+      "retrieved_at": "2026-11-05T12:30:16.648Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:35 GMT",
+      "content_hash": "sha256:dc74ab9682067530450f2ba21b74d8aa7c71c349de09569d0d5f86a725007a3b",
+      "byte_length": 14390,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-dc74ab9682067530450f2ba21b74d8aa7c71c349de09569d0d5f86a725007a3b.body"
+    },
+    {
+      "source_id": "minimax-global-audio-guide",
+      "market": "global",
+      "source_name": "MiniMax International General Speech Generation Guide",
+      "request_url": "https://platform.minimax.io/docs/guides/speech-t2a-websocket.md",
+      "retrieved_at": "2026-11-05T12:30:16.548Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:26:15 GMT",
+      "content_hash": "sha256:2e6390bac06c72b3c9512b4274aa9804cf8e068580e40f06c2fca4311bc635d9",
+      "byte_length": 12274,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-2e6390bac06c72b3c9512b4274aa9804cf8e068580e40f06c2fca4311bc635d9.body"
+    },
+    {
+      "source_id": "minimax-global-image-guide",
+      "market": "global",
+      "source_name": "MiniMax International General Image Generation Guide",
+      "request_url": "https://platform.minimax.io/docs/guides/image-generation.md",
+      "retrieved_at": "2026-11-05T12:30:16.778Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:16 GMT",
+      "content_hash": "sha256:3dde0949bd6bbda3f797c4be55176f5c8d065353ce44f6799d1e2913f1bac7e5",
+      "byte_length": 3593,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-3dde0949bd6bbda3f797c4be55176f5c8d065353ce44f6799d1e2913f1bac7e5.body"
+    },
+    {
+      "source_id": "minimax-global-model-overview",
+      "market": "global",
+      "source_name": "MiniMax International Models overview (music models and API eligibility)",
+      "request_url": "https://platform.minimax.io/docs/guides/models-intro.md",
+      "retrieved_at": "2026-11-05T12:30:16.502Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:18 GMT",
+      "content_hash": "sha256:2d1c470744605b2244951f5a5a4f5a0052808d2964d27ab4aff69d8256456f24",
+      "byte_length": 5808,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-2d1c470744605b2244951f5a5a4f5a0052808d2964d27ab4aff69d8256456f24.body"
+    },
+    {
+      "source_id": "minimax-global-pricing",
+      "market": "global",
+      "source_name": "MiniMax 国际站定价概览",
+      "request_url": "https://platform.minimax.io/docs/pricing/overview.md",
+      "retrieved_at": "2026-11-05T12:30:16.668Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:06 GMT",
+      "content_hash": "sha256:0f68524c7eea27db3c54380f776e344fe40ef63a61c966ed4ec0c1b3f8894863",
+      "byte_length": 21822,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-0f68524c7eea27db3c54380f776e344fe40ef63a61c966ed4ec0c1b3f8894863.body"
+    },
+    {
+      "source_id": "minimax-global-file-upload-api",
+      "market": "global",
+      "source_name": "MiniMax International File Management and Upload API",
+      "request_url": "https://platform.minimax.io/docs/api-reference/file-management-upload.md",
+      "retrieved_at": "2026-11-05T12:30:16.664Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:27 GMT",
+      "content_hash": "sha256:5633e9f67131ecacfc5f23dcf0a883156b487948fc2b29e93bc0a683bd35747d",
+      "byte_length": 6109,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-5633e9f67131ecacfc5f23dcf0a883156b487948fc2b29e93bc0a683bd35747d.body"
+    },
+    {
+      "source_id": "minimax-global-mcp-guide",
+      "market": "global",
+      "source_name": "MiniMax International M Plan MCP Guide",
+      "request_url": "https://platform.minimax.io/docs/guides/token-plan-mcp-guide.md",
+      "retrieved_at": "2026-11-05T12:30:16.787Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:30:16 GMT",
+      "content_hash": "sha256:cbb4cd5af944a091b262e3df66a236c0d84608c13d3b6d79076fb3474d8ce79e",
+      "byte_length": 4887,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-cbb4cd5af944a091b262e3df66a236c0d84608c13d3b6d79076fb3474d8ce79e.body"
+    },
+    {
+      "source_id": "minimax-global-anthropic-api",
+      "market": "global",
+      "source_name": "MiniMax 国际站 Anthropic API compatibility and reasoning parameters",
+      "request_url": "https://platform.minimax.io/docs/api-reference/text-anthropic-api.md",
+      "retrieved_at": "2026-11-05T12:30:16.543Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:20 GMT",
+      "content_hash": "sha256:0af82734b75b96914237bb36551a1b2b25ea29892452a5e8e7f560eb7e863e68",
+      "byte_length": 10145,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-0af82734b75b96914237bb36551a1b2b25ea29892452a5e8e7f560eb7e863e68.body"
+    },
+    {
+      "source_id": "minimax-global-responses-api",
+      "market": "global",
+      "source_name": "MiniMax International Responses API specification",
+      "request_url": "https://platform.minimax.io/docs/api-reference/responses-create.md",
+      "retrieved_at": "2026-11-05T12:30:16.568Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:24:13 GMT",
+      "content_hash": "sha256:dbad05069e19afac83a48463187e42a2c5dd12b815f30423fe97aaa2ffe76b35",
+      "byte_length": 64806,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-dbad05069e19afac83a48463187e42a2c5dd12b815f30423fe97aaa2ffe76b35.body"
+    },
+    {
+      "source_id": "minimax-global-function-call-api",
+      "market": "global",
+      "source_name": "MiniMax International M3 tool calling and interleaved thinking guide",
+      "request_url": "https://platform.minimax.io/docs/guides/text-m3-function-call.md",
+      "retrieved_at": "2026-11-05T12:30:16.683Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:34 GMT",
+      "content_hash": "sha256:57b67d51bbb29a206eebae8a016475ee78dad4073977e4a24b98b0f1f038c3e6",
+      "byte_length": 12866,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-57b67d51bbb29a206eebae8a016475ee78dad4073977e4a24b98b0f1f038c3e6.body"
+    },
+    {
+      "source_id": "minimax-global-m-plan-page",
+      "market": "global",
+      "source_name": "MiniMax Global M Plan tiers and pricing",
+      "request_url": "https://www.minimax.io/m-plan",
+      "retrieved_at": "2026-11-05T13:35:56.987Z",
+      "http_status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "etag": "\"hchasz5r7e20gb\"",
+      "last_modified": null,
+      "content_hash": "sha256:d7f1261b6d429a1833bbd4f04013176081aa4bcdc1e9ed132aa572975d780605",
+      "byte_length": 94033,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-d7f1261b6d429a1833bbd4f04013176081aa4bcdc1e9ed132aa572975d780605.body"
+    },
+    {
+      "source_id": "minimax-global-m-plan-intro",
+      "market": "global",
+      "source_name": "MiniMax International M Plan tier usage guide wording",
+      "request_url": "https://platform.minimax.io/docs/m-plan/intro.md",
+      "retrieved_at": "2026-11-05T12:30:16.616Z",
+      "http_status": 200,
+      "content_type": "text/markdown; charset=utf-8",
+      "etag": null,
+      "last_modified": "Thu, 05 Nov 2026 12:23:31 GMT",
+      "content_hash": "sha256:583172b21eac14a84c3a68b335f46ebf2eeae7471c6d289e9d4ed5624788ea83",
+      "byte_length": 2818,
+      "collector_version": "0.1.0",
+      "body_file": "sha256-583172b21eac14a84c3a68b335f46ebf2eeae7471c6d289e9d4ed5624788ea83.body"
+    }
+  ],
+  "previous": null,
+  "current": [
+    {
+      "market": "cn",
+      "plan_multipliers": [],
+      "plan_descriptions": [
+        {
+          "tier": "Go",
+          "description": "入门使用，完成简单调研、轻量写作或小范围的代码修改。",
+          "source_id": "minimax-cn-m-plan-intro",
+          "locator": "#用量额度/table/1"
+        },
+        {
+          "tier": "Explore",
+          "description": "每天使用，日常辅助编程、写作与资料整理，处理多轮任务。",
+          "source_id": "minimax-cn-m-plan-intro",
+          "locator": "#用量额度/table/2"
+        },
+        {
+          "tier": "Build",
+          "description": "高频使用，处理长上下文、复杂的编程任务或大量多模态创作。",
+          "source_id": "minimax-cn-m-plan-intro",
+          "locator": "#用量额度/table/3"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "file-management",
+          "kind": "file_storage",
+          "operation_id": "file-upload",
+          "operation_kind": "file_upload",
+          "input": [
+            {
+              "name": "file",
+              "kind": "file",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "name": "purpose",
+              "type": "string",
+              "required": true,
+              "enum": [
+                "voice_clone",
+                "prompt_audio",
+                "t2a_async_input",
+                "video_understanding",
+                "video_generation_input"
+              ],
+              "route_mappings": [
+                "multipart/form-data.purpose"
+              ]
+            }
+          ],
+          "output": [
+            {
+              "kind": "structured",
+              "fields": [
+                "file.file_id",
+                "file.bytes",
+                "file.created_at",
+                "file.filename",
+                "file.purpose",
+                "base_resp.status_code",
+                "base_resp.status_msg"
+              ]
+            }
+          ],
+          "source_suffix": "file-upload-api",
+          "requires_plan": false,
+          "method": "POST",
+          "path": "/files/upload"
+        },
+        {
+          "id": "web-search",
+          "kind": "web_search",
+          "operation_id": "web-search-mcp",
+          "operation_kind": "web_search",
+          "output": [
+            {
+              "kind": "structured"
+            }
+          ],
+          "source_suffix": "mcp-guide",
+          "requires_plan": true
+        },
+        {
+          "id": "image-understanding",
+          "kind": "image_understanding",
+          "operation_id": "understand-image-mcp",
+          "operation_kind": "image_understanding",
+          "output": [
+            {
+              "kind": "structured"
+            }
+          ],
+          "source_suffix": "mcp-guide",
+          "requires_plan": true
+        }
+      ],
+      "music_model_overview": {
+        "current_model_ids": [
+          "music-2.6",
+          "music-3.0",
+          "music-cover"
+        ],
+        "legacy_model_ids": [],
+        "access_notice": "自 2026 年 8 月 20 日起，付费接口（音乐生成、歌词生成）不再面向新用户提供服务，历史付费用户可继续使用现有 API 服务；免费音乐生成接口（Music-3.0-free、Music-2.6-free、music-cover-free）停止服务。"
+      },
+      "models": [
+        {
+          "model_id": "image-01",
+          "source_category": "图像模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "图像",
+              "headers": [
+                "模型",
+                "接口说明",
+                "单价  元/张"
+              ],
+              "values": [
+                "image-01 image-01-live",
+                "支持用户通过文本描述或参考图片生成图片",
+                "0.025"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "单价  元/张",
+                  "source_value": "0.025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "image-01-live",
+          "source_category": "图像模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "图像",
+              "headers": [
+                "模型",
+                "接口说明",
+                "单价  元/张"
+              ],
+              "values": [
+                "image-01 image-01-live",
+                "支持用户通过文本描述或参考图片生成图片",
+                "0.025"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "单价  元/张",
+                  "source_value": "0.025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "M2-her",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-H3",
+          "source_category": "视频模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3\\\n      画质优先，适合高品质视频创作",
+                "2K",
+                "¥0.80",
+                "¥0.80",
+                "¥0.20"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.80",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.80"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.80",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.80"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.20",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.20"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3\\\n      画质优先，适合高品质视频创作",
+                "768P",
+                "¥0.50",
+                "¥0.50",
+                "¥0.20"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.50",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.50"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.50",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.50"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.20",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.20"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "文生 t2v",
+                "图生 i2v",
+                "首尾帧 fl2v",
+                "参考生 ref"
+              ],
+              "values": [
+                "MiniMax-H3",
+                "支持",
+                "支持",
+                "支持",
+                "图片、视频、音频"
+              ],
+              "currency_code": "CNY",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "适用范围",
+              "headers": [
+                "对比项",
+                "语音资源包",
+                "视频资源包"
+              ],
+              "values": [
+                "适用模型",
+                "HD 与 Turbo 系列分别对应各自资源包",
+                "Hailuo 系列；暂不支持 MiniMax H3"
+              ],
+              "currency_code": "CNY",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Context-IR",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型/接口",
+                "输入价格 每百万 tokens",
+                "输出价格 每百万 tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Context-IR",
+                "¥5.80",
+                "¥23.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "5.80",
+                  "source_header": "输入价格 每百万 tokens",
+                  "source_value": "¥5.80"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "23.00",
+                  "source_header": "输出价格 每百万 tokens",
+                  "source_value": "¥23.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Highspeed",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed\\\n      兼顾质量与速度，适合日常内容创作",
+                "768P",
+                "¥0.40",
+                "¥0.40",
+                "¥0.20"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.40",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.40"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.40",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.40"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.20",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.20"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed\\\n      兼顾质量与速度，适合日常内容创作",
+                "480P",
+                "¥0.26",
+                "¥0.26",
+                "¥0.20"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.26",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.26"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.26",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.26"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.20",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.20"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "文生 t2v",
+                "图生 i2v",
+                "首尾帧 fl2v",
+                "参考生 ref"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed",
+                "支持",
+                "支持",
+                "支持",
+                "图片、视频、音频"
+              ],
+              "currency_code": "CNY",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Lite",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Lite\\\n      更低的成本，适合创意尝试与批量生成",
+                "768P",
+                "¥0.26",
+                "¥0.26",
+                "¥0.13"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.26",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.26"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.26",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.26"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.13",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.13"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Lite\\\n      更低的成本，适合创意尝试与批量生成",
+                "480P",
+                "¥0.16",
+                "¥0.16",
+                "¥0.13"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.16",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.16"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.16",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.16"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.13",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.13"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "文生 t2v",
+                "图生 i2v",
+                "首尾帧 fl2v",
+                "参考生 ref"
+              ],
+              "values": [
+                "MiniMax-H3-Lite",
+                "支持",
+                "支持",
+                "支持",
+                "图片、视频、音频"
+              ],
+              "currency_code": "CNY",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Max",
+          "source_category": "视频模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Max\\\n      支持图片、视频和音频参考，适合多素材视频创作",
+                "768P",
+                "¥0.50",
+                "¥0.97",
+                "¥0.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.50",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.50"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.97",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.97"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.50",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.50"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "输出分辨率",
+                "输出视频\\\n      每秒",
+                "输入视频\\\n      每秒",
+                "输入图片\\\n      每张\\\n      超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Max\\\n      支持图片、视频和音频参考，适合多素材视频创作",
+                "480P",
+                "¥0.33",
+                "¥0.37",
+                "¥0.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.33",
+                  "source_header": "输出视频\\\n      每秒",
+                  "source_value": "¥0.33"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.37",
+                  "source_header": "输入视频\\\n      每秒",
+                  "source_value": "¥0.37"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.50",
+                  "source_header": "输入图片\\\n      每张\\\n      超出免费额度后",
+                  "source_value": "¥0.50"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "模型",
+                "文生 t2v",
+                "图生 i2v",
+                "首尾帧 fl2v",
+                "参考生 ref"
+              ],
+              "values": [
+                "MiniMax-H3-Max",
+                "支持",
+                "支持",
+                "支持",
+                "图片、视频、音频"
+              ],
+              "currency_code": "CNY",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Regeneration",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "视频再生成",
+              "headers": [
+                "模型/接口",
+                "规格",
+                "输出视频 每秒",
+                "输入视频 每秒",
+                "输入图片 每张 超出免费额度后"
+              ],
+              "values": [
+                "MiniMax-H3-Regeneration",
+                "768P → 2K",
+                "¥0.30",
+                "¥0.30",
+                "¥0.15"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "¥",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.30",
+                  "source_header": "输出视频 每秒",
+                  "source_value": "¥0.30"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.30",
+                  "source_header": "输入视频 每秒",
+                  "source_value": "¥0.30"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.15",
+                  "source_header": "输入图片 每张 超出免费额度后",
+                  "source_value": "¥0.15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-02",
+          "source_category": "视频模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "文生视频，图生视频，768P 6s",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "文生视频，图生视频，768P 10s",
+                "4.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "文生视频，图生视频，1080P 6s",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "图生视频，512P 6s",
+                "0.60"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "图生视频，512P 10s",
+                "1.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-2.3",
+          "source_category": "视频模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "文生视频，图生视频，768P 6s",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "文生视频，图生视频，768P 10s",
+                "4.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "文生视频，图生视频，1080P 6s",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-2.3-Fast",
+          "source_category": "视频模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "图生视频，768P 6s",
+                "1.35"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "图生视频，768P 10s",
+                "2.25"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "模型",
+                "功能",
+                "单价  元/视频"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "图生视频，1080P 6s",
+                "2.31"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-M2",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.1",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.1-highspeed",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.5",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.5-highspeed",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.7",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.7-highspeed",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M3",
+          "source_category": "语言模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "语言模型",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens",
+                "输出价格  元/百万 tokens",
+                "缓存读取  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-M3 ≤ 512k 输入 tokens 永久五折",
+                "~~4.20~~ 2.10",
+                "~~16.80~~ 8.40",
+                "~~0.84~~ 0.42"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "2.10",
+                  "list_amount_decimal": "4.20",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "~~4.20~~ 2.10"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "8.40",
+                  "list_amount_decimal": "16.80",
+                  "source_header": "输出价格  元/百万 tokens",
+                  "source_value": "~~16.80~~ 8.40"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.42",
+                  "list_amount_decimal": "0.84",
+                  "source_header": "缓存读取  元/百万 tokens",
+                  "source_value": "~~0.84~~ 0.42"
+                }
+              ]
+            },
+            {
+              "section": "语言模型",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens",
+                "输出价格  元/百万 tokens",
+                "缓存读取  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-M3 > 512k 输入 tokens\\* 永久五折",
+                "~~8.40~~ 4.20",
+                "~~33.60~~ 16.80",
+                "~~1.68~~ 0.84"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "4.20",
+                  "list_amount_decimal": "8.40",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "~~8.40~~ 4.20"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "16.80",
+                  "list_amount_decimal": "33.60",
+                  "source_header": "输出价格  元/百万 tokens",
+                  "source_value": "~~33.60~~ 16.80"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.84",
+                  "list_amount_decimal": "1.68",
+                  "source_header": "缓存读取  元/百万 tokens",
+                  "source_value": "~~1.68~~ 0.84"
+                }
+              ]
+            },
+            {
+              "section": "语言模型",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens",
+                "输出价格  元/百万 tokens",
+                "缓存读取  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-M3 ≤ 512k 输入 tokens 永久五折",
+                "~~6.30~~ 3.15",
+                "~~25.20~~ 12.60",
+                "~~1.26~~ 0.63"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "3.15",
+                  "list_amount_decimal": "6.30",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "~~6.30~~ 3.15"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "12.60",
+                  "list_amount_decimal": "25.20",
+                  "source_header": "输出价格  元/百万 tokens",
+                  "source_value": "~~25.20~~ 12.60"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.63",
+                  "list_amount_decimal": "1.26",
+                  "source_header": "缓存读取  元/百万 tokens",
+                  "source_value": "~~1.26~~ 0.63"
+                }
+              ]
+            },
+            {
+              "section": "语言模型",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens",
+                "输出价格  元/百万 tokens",
+                "缓存读取  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-M3 > 512k 输入 tokens 永久五折",
+                "~~12.60~~ 6.30",
+                "~~50.40~~ 25.20",
+                "~~2.52~~ 1.26"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "6.30",
+                  "list_amount_decimal": "12.60",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "~~12.60~~ 6.30"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "25.20",
+                  "list_amount_decimal": "50.40",
+                  "source_header": "输出价格  元/百万 tokens",
+                  "source_value": "~~50.40~~ 25.20"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "1.26",
+                  "list_amount_decimal": "2.52",
+                  "source_header": "缓存读取  元/百万 tokens",
+                  "source_value": "~~2.52~~ 1.26"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-M3.1-Flash",
+          "source_category": "语言模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "语言模型",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens",
+                "输出价格  元/百万 tokens",
+                "缓存读取  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-M3.1-Flash",
+                "1.00",
+                "4.00",
+                "0.10"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "1.00",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "1.00"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "4.00",
+                  "source_header": "输出价格  元/百万 tokens",
+                  "source_value": "4.00"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.10",
+                  "source_header": "缓存读取  元/百万 tokens",
+                  "source_value": "0.10"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.0",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": [
+            {
+              "section": "计费与使用",
+              "headers": [
+                "模型",
+                "单价  元/首"
+              ],
+              "values": [
+                "Music-2.0（已下线）",
+                "0.25"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_audio",
+                  "unit": "per_song",
+                  "quantity": 1,
+                  "amount_decimal": "0.25",
+                  "source_header": "单价  元/首",
+                  "source_value": "0.25"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.5",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": [
+            {
+              "section": "计费与使用",
+              "headers": [
+                "模型",
+                "单价  元/首"
+              ],
+              "values": [
+                "Music-2.5（已下线）",
+                "1.0"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_audio",
+                  "unit": "per_song",
+                  "quantity": 1,
+                  "amount_decimal": "1.0",
+                  "source_header": "单价  元/首",
+                  "source_value": "1.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.5+",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": [
+            {
+              "section": "计费与使用",
+              "headers": [
+                "模型",
+                "单价  元/首"
+              ],
+              "values": [
+                "Music-2.5+（已下线）",
+                "1.0"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_audio",
+                  "unit": "per_song",
+                  "quantity": 1,
+                  "amount_decimal": "1.0",
+                  "source_header": "单价  元/首",
+                  "source_value": "1.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "music-2.6",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": [
+            {
+              "section": "计费与使用",
+              "headers": [
+                "模型",
+                "单价  元/首"
+              ],
+              "values": [
+                "Music-2.6（已下线）",
+                "1.0"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_audio",
+                  "unit": "per_song",
+                  "quantity": 1,
+                  "amount_decimal": "1.0",
+                  "source_header": "单价  元/首",
+                  "source_value": "1.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "music-2.6-free",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-3.0",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": [
+            {
+              "section": "计费与使用",
+              "headers": [
+                "模型",
+                "单价  元/首"
+              ],
+              "values": [
+                "Music-3.0（已下线）",
+                "1.0"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_audio",
+                  "unit": "per_song",
+                  "quantity": 1,
+                  "amount_decimal": "1.0",
+                  "source_header": "单价  元/首",
+                  "source_value": "1.0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "music-3.0-free",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-cover",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-cover-free",
+          "source_category": "语言模型",
+          "source_listing": "historical",
+          "source_status": "已下线",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "speech-02-hd",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.6-hd / speech-02-hd",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            },
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.6-hd / speech-02-hd",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-02-turbo",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.6-turbo / speech-02-turbo",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            },
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.6-turbo / speech-02-turbo",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.6-hd",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.6-hd / speech-02-hd",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            },
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.6-hd / speech-02-hd",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.6-turbo",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.6-turbo / speech-02-turbo",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            },
+            {
+              "section": "音色管理",
+              "headers": [
+                "计费项",
+                "模型",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.6-turbo / speech-02-turbo",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.8-hd",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "语音合成（TTS）",
+              "headers": [
+                "计费项",
+                "模型",
+                "接口说明",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.8-hd",
+                "支持音量、语调、语速调整和混音，支持比特率、采样率相关参数调整，支持音频时长、音频大小等返回参数。适用于短文本快速合成，如闲聊、对话等场景。",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            },
+            {
+              "section": "语音合成（TTS）",
+              "headers": [
+                "计费项",
+                "模型",
+                "接口说明",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.8-hd",
+                "支持文本到语音的异步生成，单次最大支持 100 万字符，生成结果支持异步检索。",
+                "3.50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "3.50",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "3.50"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.8-turbo",
+          "source_category": "语音模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "语音合成（TTS）",
+              "headers": [
+                "计费项",
+                "模型",
+                "接口说明",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "同步语音合成 T2A",
+                "speech-2.8-turbo",
+                "同上，速度更快、成本更低。",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            },
+            {
+              "section": "语音合成（TTS）",
+              "headers": [
+                "计费项",
+                "模型",
+                "接口说明",
+                "单价 元/万字符"
+              ],
+              "values": [
+                "异步长文本语音合成 T2A Async",
+                "speech-2.8-turbo",
+                "同上，速度更快、成本更低。",
+                "2.00"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_10k_characters",
+                  "quantity": 1,
+                  "amount_decimal": "2.00",
+                  "source_header": "单价 元/万字符",
+                  "source_value": "2.00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "market": "global",
+      "plan_multipliers": [],
+      "plan_descriptions": [
+        {
+          "tier": "Go",
+          "description": "Getting started with simple research, light writing, or small code changes.",
+          "source_id": "minimax-global-m-plan-intro",
+          "locator": "#usage-limits/table/1"
+        },
+        {
+          "tier": "Explore",
+          "description": "Daily use for coding, writing, organizing information, and multi-turn tasks.",
+          "source_id": "minimax-global-m-plan-intro",
+          "locator": "#usage-limits/table/2"
+        },
+        {
+          "tier": "Build",
+          "description": "Frequent use for long-context work, complex coding tasks, or extensive multimodal creation.",
+          "source_id": "minimax-global-m-plan-intro",
+          "locator": "#usage-limits/table/3"
+        }
+      ],
+      "capabilities": [
+        {
+          "id": "file-management",
+          "kind": "file_storage",
+          "operation_id": "file-upload",
+          "operation_kind": "file_upload",
+          "input": [
+            {
+              "name": "file",
+              "kind": "file",
+              "required": true
+            }
+          ],
+          "parameters": [
+            {
+              "name": "purpose",
+              "type": "string",
+              "required": true,
+              "enum": [
+                "voice_clone",
+                "prompt_audio",
+                "t2a_async_input",
+                "video_understanding",
+                "video_generation_input"
+              ],
+              "route_mappings": [
+                "multipart/form-data.purpose"
+              ]
+            }
+          ],
+          "output": [
+            {
+              "kind": "structured",
+              "fields": [
+                "file.file_id",
+                "file.bytes",
+                "file.created_at",
+                "file.filename",
+                "file.purpose",
+                "base_resp.status_code",
+                "base_resp.status_msg"
+              ]
+            }
+          ],
+          "source_suffix": "file-upload-api",
+          "requires_plan": false,
+          "method": "POST",
+          "path": "/files/upload"
+        },
+        {
+          "id": "web-search",
+          "kind": "web_search",
+          "operation_id": "web-search-mcp",
+          "operation_kind": "web_search",
+          "output": [
+            {
+              "kind": "structured"
+            }
+          ],
+          "source_suffix": "mcp-guide",
+          "requires_plan": true
+        },
+        {
+          "id": "image-understanding",
+          "kind": "image_understanding",
+          "operation_id": "understand-image-mcp",
+          "operation_kind": "image_understanding",
+          "output": [
+            {
+              "kind": "structured"
+            }
+          ],
+          "source_suffix": "mcp-guide",
+          "requires_plan": true
+        }
+      ],
+      "music_model_overview": {
+        "current_model_ids": [
+          "music-2.0",
+          "music-2.6",
+          "music-3.0",
+          "music-cover"
+        ],
+        "legacy_model_ids": [],
+        "access_notice": "Starting August 20, 2026, the paid APIs (Music Generation and Lyrics Generation) will no longer be available to new users; existing paying users can continue to use the current API services. The free music generation APIs (Music-3.0-free, Music-2.6-free, music-cover-free) will be discontinued."
+      },
+      "models": [
+        {
+          "model_id": "image-01",
+          "source_category": "Image Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Image",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "image-01",
+                "$0.0035 per image"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.0035",
+                  "source_header": "Price",
+                  "source_value": "$0.0035 per image"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "image-01-live",
+          "source_category": "Image Models",
+          "source_listing": "available",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "M2-her",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-H3",
+          "source_category": "Video Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3\\\n      Quality first, for high-quality video creation.",
+                "2K",
+                "$0.13",
+                "$0.13",
+                "$0.04"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.13",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.13"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.13",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.13"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.04"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3\\\n      Quality first, for high-quality video creation.",
+                "768P",
+                "$0.08",
+                "$0.08",
+                "$0.04"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.08",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.08"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.08",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.08"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.04"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Coverage",
+              "headers": [
+                "Feature",
+                "Audio",
+                "Video"
+              ],
+              "values": [
+                "Supported models",
+                "All speech models",
+                "Hailuo video models; MiniMax H3 is not supported yet"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Context-IR",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model / API",
+                "Input Price per M tokens",
+                "Output Price per M tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Context-IR",
+                "$0.90",
+                "$3.60"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.90",
+                  "source_header": "Input Price per M tokens",
+                  "source_value": "$0.90"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "3.60",
+                  "source_header": "Output Price per M tokens",
+                  "source_value": "$3.60"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Highspeed",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed\\\n      Balances quality and speed, for everyday content creation.",
+                "768P",
+                "$0.06",
+                "$0.06",
+                "$0.03"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.06",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.06"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.06",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.06"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.03",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.03"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed\\\n      Balances quality and speed, for everyday content creation.",
+                "480P",
+                "$0.04",
+                "$0.04",
+                "$0.03"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.03",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.03"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-Highspeed",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Lite",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Lite\\\n      Lower cost, for creative exploration and batch generation.",
+                "768P",
+                "$0.04",
+                "$0.04",
+                "$0.02"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.02",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.02"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Lite\\\n      Lower cost, for creative exploration and batch generation.",
+                "480P",
+                "$0.025",
+                "$0.025",
+                "$0.02"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.025"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.025"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.02",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.02"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-Lite",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Max",
+          "source_category": "Video Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Max\\\n      Supports image, video, and audio references, for multi-asset video creation.",
+                "768P",
+                "$0.08",
+                "$0.143",
+                "$0.074"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.08",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.08"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.143",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.143"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.074",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.074"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image\\\n      beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Max\\\n      Supports image, video, and audio references, for multi-asset video creation.",
+                "480P",
+                "$0.05",
+                "$0.0553",
+                "$0.074"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.05",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.05"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.0553",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.0553"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.074",
+                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
+                  "source_value": "$0.074"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-Max",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Regeneration",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "Video Regeneration",
+              "headers": [
+                "Model / API",
+                "Spec",
+                "Output Video per second",
+                "Input Video per second",
+                "Input Image per image beyond free quota"
+              ],
+              "values": [
+                "MiniMax-H3-Regeneration",
+                "768P → 2K",
+                "$0.05",
+                "$0.05",
+                "$0.025"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.05",
+                  "source_header": "Output Video per second",
+                  "source_value": "$0.05"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.05",
+                  "source_header": "Input Video per second",
+                  "source_value": "$0.05"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "Input Image per image beyond free quota",
+                  "source_value": "$0.025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-02",
+          "source_category": "Video Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "$0.28 per 768P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "$0.56 per 768P, 10s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "$0.49 per 1080P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "$0.10 per 512P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-02",
+                "$0.15 per 512P, 10s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-2.3",
+          "source_category": "Video Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "$0.28 per 768P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "$0.56 per 768P, 10s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3",
+                "$0.49 per 1080P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-Hailuo-2.3-Fast",
+          "source_category": "Video Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "$0.19 per 768P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "$0.32 per 768P, 10s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            },
+            {
+              "section": "Context-IR",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "MiniMax-Hailuo-2.3-Fast",
+                "$0.33 per 1080P, 6s video"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-M2",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.1",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.1-highspeed",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.5",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.5-highspeed",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.7",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M2.7-highspeed",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "MiniMax-M3",
+          "source_category": "LLM",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "LLM",
+              "headers": [
+                "Model",
+                "Input $ / M tokens",
+                "Output $ / M tokens",
+                "Prompt caching Read $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-M3 ≤ 512k input tokens Permanent 50% off",
+                "~~$0.60~~ $0.30",
+                "~~$2.40~~ $1.20",
+                "~~$0.12~~ $0.06"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.30",
+                  "list_amount_decimal": "0.60",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "~~$0.60~~ $0.30"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "1.20",
+                  "list_amount_decimal": "2.40",
+                  "source_header": "Output $ / M tokens",
+                  "source_value": "~~$2.40~~ $1.20"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.06",
+                  "list_amount_decimal": "0.12",
+                  "source_header": "Prompt caching Read $ / M tokens",
+                  "source_value": "~~$0.12~~ $0.06"
+                }
+              ]
+            },
+            {
+              "section": "LLM",
+              "headers": [
+                "Model",
+                "Input $ / M tokens",
+                "Output $ / M tokens",
+                "Prompt caching Read $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-M3 > 512k input tokens\\* Permanent 50% off",
+                "~~$1.20~~ $0.60",
+                "~~$4.80~~ $2.40",
+                "~~$0.24~~ $0.12"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.60",
+                  "list_amount_decimal": "1.20",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "~~$1.20~~ $0.60"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "2.40",
+                  "list_amount_decimal": "4.80",
+                  "source_header": "Output $ / M tokens",
+                  "source_value": "~~$4.80~~ $2.40"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.12",
+                  "list_amount_decimal": "0.24",
+                  "source_header": "Prompt caching Read $ / M tokens",
+                  "source_value": "~~$0.24~~ $0.12"
+                }
+              ]
+            },
+            {
+              "section": "LLM",
+              "headers": [
+                "Model",
+                "Input $ / M tokens",
+                "Output $ / M tokens",
+                "Prompt caching Read $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-M3 ≤ 512k input tokens Permanent 50% off",
+                "~~$0.90~~ $0.45",
+                "~~$3.60~~ $1.80",
+                "~~$0.18~~ $0.09"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.45",
+                  "list_amount_decimal": "0.90",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "~~$0.90~~ $0.45"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "1.80",
+                  "list_amount_decimal": "3.60",
+                  "source_header": "Output $ / M tokens",
+                  "source_value": "~~$3.60~~ $1.80"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.09",
+                  "list_amount_decimal": "0.18",
+                  "source_header": "Prompt caching Read $ / M tokens",
+                  "source_value": "~~$0.18~~ $0.09"
+                }
+              ]
+            },
+            {
+              "section": "LLM",
+              "headers": [
+                "Model",
+                "Input $ / M tokens",
+                "Output $ / M tokens",
+                "Prompt caching Read $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-M3 > 512k input tokens Permanent 50% off",
+                "~~$1.80~~ $0.90",
+                "~~$7.20~~ $3.60",
+                "~~$0.36~~ $0.18"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.90",
+                  "list_amount_decimal": "1.80",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "~~$1.80~~ $0.90"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "3.60",
+                  "list_amount_decimal": "7.20",
+                  "source_header": "Output $ / M tokens",
+                  "source_value": "~~$7.20~~ $3.60"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.18",
+                  "list_amount_decimal": "0.36",
+                  "source_header": "Prompt caching Read $ / M tokens",
+                  "source_value": "~~$0.36~~ $0.18"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-M3.1-Flash",
+          "source_category": "LLM",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "LLM",
+              "headers": [
+                "Model",
+                "Input $ / M tokens",
+                "Output $ / M tokens",
+                "Prompt caching Read $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-M3.1-Flash",
+                "$0.15",
+                "$0.60",
+                "$0.015"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.15",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "$0.15"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.60",
+                  "source_header": "Output $ / M tokens",
+                  "source_value": "$0.60"
+                },
+                {
+                  "metric": "cache_read",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "0.015",
+                  "source_header": "Prompt caching Read $ / M tokens",
+                  "source_value": "$0.015"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.0",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": [
+            {
+              "section": "Billing and Usage",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "Music-2.0",
+                "$0.03 per track (up to 5 minutes)"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.5",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": [
+            {
+              "section": "Billing and Usage",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "Music-2.5",
+                "$0.15 per track (up to 5 minutes)"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "Music-2.5+",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": [
+            {
+              "section": "Billing and Usage",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "Music-2.5+",
+                "$0.15 per track (up to 5 minutes)"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "music-2.6",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": [
+            {
+              "section": "Billing and Usage",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "Music-2.6",
+                "$0.15 per track (up to 5 minutes)"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "music-2.6-free",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-3.0",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": [
+            {
+              "section": "Billing and Usage",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "Music-3.0",
+                "$0.15 per track (up to 5 minutes)"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "music-3.0-free",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-cover",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "music-cover-free",
+          "source_category": "LLM",
+          "source_listing": "historical",
+          "source_status": "Retired",
+          "pricing_rows": []
+        },
+        {
+          "model_id": "speech-02-hd",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Voice Management",
+              "headers": [
+                "API",
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "T2A",
+                "speech-2.6-hd / speech-02-hd",
+                "$100/M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "100",
+                  "source_header": "Price",
+                  "source_value": "$100/M characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-02-turbo",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Voice Management",
+              "headers": [
+                "API",
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "T2A",
+                "speech-2.6-turbo / speech-02-turbo",
+                "$60/M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "60",
+                  "source_header": "Price",
+                  "source_value": "$60/M characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.6-hd",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Voice Management",
+              "headers": [
+                "API",
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "T2A",
+                "speech-2.6-hd / speech-02-hd",
+                "$100/M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "100",
+                  "source_header": "Price",
+                  "source_value": "$100/M characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.6-turbo",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Voice Management",
+              "headers": [
+                "API",
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "T2A",
+                "speech-2.6-turbo / speech-02-turbo",
+                "$60/M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "60",
+                  "source_header": "Price",
+                  "source_value": "$60/M characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.8-hd",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Text-to-Speech (TTS)",
+              "headers": [
+                "API",
+                "Model",
+                "Description",
+                "Price"
+              ],
+              "values": [
+                "T2A (Sync)",
+                "speech-2.8-hd",
+                "Real-time synthesis with volume/pitch/speed/mixing controls and bitrate/sample-rate options. Best for short-form conversational audio.",
+                "$100 / M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "100",
+                  "source_header": "Price",
+                  "source_value": "$100 / M characters"
+                }
+              ]
+            },
+            {
+              "section": "Text-to-Speech (TTS)",
+              "headers": [
+                "API",
+                "Model",
+                "Description",
+                "Price"
+              ],
+              "values": [
+                "T2A Async",
+                "speech-2.8-hd",
+                "Asynchronous long-form synthesis, up to 1M characters per request, retrieved asynchronously.",
+                "$100 / M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "100",
+                  "source_header": "Price",
+                  "source_value": "$100 / M characters"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "speech-2.8-turbo",
+          "source_category": "Speech Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Text-to-Speech (TTS)",
+              "headers": [
+                "API",
+                "Model",
+                "Description",
+                "Price"
+              ],
+              "values": [
+                "T2A (Sync)",
+                "speech-2.8-turbo",
+                "Same capabilities as hd, optimized for speed and cost.",
+                "$60 / M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "60",
+                  "source_header": "Price",
+                  "source_value": "$60 / M characters"
+                }
+              ]
+            },
+            {
+              "section": "Text-to-Speech (TTS)",
+              "headers": [
+                "API",
+                "Model",
+                "Description",
+                "Price"
+              ],
+              "values": [
+                "T2A Async",
+                "speech-2.8-turbo",
+                "Same capabilities as hd, optimized for speed and cost.",
+                "$60 / M characters"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_character",
+                  "unit": "per_1m_characters",
+                  "quantity": 1,
+                  "amount_decimal": "60",
+                  "source_header": "Price",
+                  "source_value": "$60 / M characters"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
