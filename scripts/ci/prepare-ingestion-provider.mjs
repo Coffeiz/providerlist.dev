@@ -80,7 +80,11 @@ async function copyBranchFiles(ref, gitDirectory, allowedPaths) {
 }
 
 async function copyBlob(ref, gitPath, target = path.join(process.cwd(), gitPath)) {
-  const content = execFileSync('git', ['show', `${ref}:${gitPath}`], { encoding: 'buffer' });
+  // Review viewers for large Providers can exceed Node's 1 MiB execFileSync default.
+  const content = execFileSync('git', ['show', `${ref}:${gitPath}`], {
+    encoding: 'buffer',
+    maxBuffer: 32 * 1024 * 1024,
+  });
   await mkdir(path.dirname(target), { recursive: true });
   await writeFile(target, content);
 }
