@@ -5,6 +5,7 @@ developer_name = "Xiaomi MiMo"
 
 [modalities]
 input = [ "text", "image", "audio", "video" ]
+output = [ "text" ]
 
 [limits]
 context = 256000

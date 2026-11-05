@@ -51,7 +51,16 @@ test('占位符不算密钥', () => {
   assert.equal(isPlaceholder('EXAMPLE_API_KEY'), true);
   assert.equal(isPlaceholder('your-api-key-here'), true);
   assert.equal(isPlaceholder('<your-token>'), true);
+  assert.equal(isPlaceholder('&lt;API_KEY_FROM_PROVIDER_CONSOLE&gt;'), true);
   assert.equal(isPlaceholder(`9f8a7b6c5d4e3f2a${'1b0c'}`), false);
+});
+
+test('HTML 转义的配置占位符不会被误报为密钥', () => {
+  const findings = scanText(
+    '"apiKey": "&lt;API_KEY_FROM_PROVIDER_CONSOLE&gt;"\n' +
+      '"secretKey": "&lt;YOUR_ACCESS_KEY&gt;"',
+  );
+  assert.deepEqual(findings, []);
 });
 
 test('提示环境变量名不算密钥', () => {

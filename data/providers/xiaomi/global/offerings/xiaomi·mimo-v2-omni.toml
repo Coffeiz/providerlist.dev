@@ -1,6 +1,6 @@
 id = "xiaomi/mimo-v2-omni"
 model_ref = "xiaomi/mimo-v2-omni"
-status = "unknown"
+status = "retired"
 
 [links]
-documentation = "https://platform.xiaomimimo.com/api/v1/models"
+documentation = "https://mimo.mi.com/docs/en-US/updates/deprecate"

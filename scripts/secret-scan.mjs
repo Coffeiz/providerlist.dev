@@ -111,7 +111,7 @@ const CREDENTIAL_KEY_RE =
 
 /** 明显是占位符 / 提示名 / 环境变量名的值，不算密钥。 */
 const PLACEHOLDER_RE =
-  /(example|placeholder|dummy|fake|sample|your[_-]?|xxx+|<[^>]*>|\$\{|\{\{|env|var|hint|redacted|changeme|not[_-]?a[_-]?real|test[_-]?only)/i;
+  /(example|placeholder|dummy|fake|sample|your[_-]?|xxx+|<[^>]*>|&lt;[^&]*&gt;|\$\{|\{\{|env|var|hint|redacted|changeme|not[_-]?a[_-]?real|test[_-]?only)/i;
 
 /** CSS / 标识符形态的值：设计令牌、颜色、枚举。 */
 const NON_CREDENTIAL_VALUE_RE =
