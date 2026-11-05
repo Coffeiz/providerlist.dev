@@ -11,7 +11,7 @@ import { pathToFileURL } from 'node:url';
  * 排版约定（对应 PRD-INGEST-1 §5.2 / §5.5）：
  * - 每个待评审 Provider 一行，带**状态**，`needs_review` / `invalid_data` 显著标注；
  * - 采集失败的 Provider 单独点名——失败不得伪装成无变化；
- * - viewer 链接用**仓库内相对路径**，不硬编码仓库名与分支名；
+ * - viewer 链接指向聚合 PR 分支上的文件，避免 GitHub 将相对路径误解为 compare URL；
  * - 不重复复制各 Provider 的差异表，也不重复「无变化」Provider。
  */
 
@@ -29,9 +29,15 @@ const BLOCKING_STATUSES = new Set(['needs_review', 'invalid_data']);
  * @param {Array<{provider: string, status: string, message?: string, fingerprint?: string|null}>} input.runEntries 本次运行每个 Provider 的结果。
  * @param {Array<{provider: string, viewerPath: string, status?: string, message?: string}>} input.viewerEntries 分支上待评审的 viewer 清单。
  * @param {string} [input.irProjectionSummary] 正式字段投影摘要（仅由 Sync 聚合 workflow 提供）。
+ * @param {string} [input.repository] GitHub 仓库 `owner/name`。
+ * @param {string} [input.serverUrl] GitHub Enterprise 或 github.com 根 URL。
+ * @param {string} [input.viewerRef] 包含 viewer 文件的分支或 ref。
  * @returns {string} 渲染后的 PR 正文。
  */
-export function renderIngestionPrBody({ template, runEntries, viewerEntries, irProjectionSummary }) {
+export function renderIngestionPrBody({
+  template, runEntries, viewerEntries, irProjectionSummary,
+  repository, serverUrl = 'https://github.com', viewerRef = 'automation/provider-ingest',
+}) {
   const run = new Map(runEntries.map((entry) => [entry.provider, entry]));
   const failed = runEntries.filter((entry) => entry.status === 'collection_failed');
   const counted = {
@@ -42,12 +48,14 @@ export function renderIngestionPrBody({ template, runEntries, viewerEntries, irP
     unchanged: runEntries.filter((e) => e.status === 'unchanged').length,
     stale: runEntries.filter((e) => e.status === 'stale_needs_rerun').length,
     failed: failed.length,
+    artifactMissing: runEntries.filter((e) => e.status === 'artifact_missing').length,
   };
 
   const rows = viewerEntries.map((entry) => {
     const status = entry.status ?? run.get(entry.provider)?.status ?? 'changed_ready';
     const flag = BLOCKING_STATUSES.has(status) ? ' ⚠️ 需人工判断' : '';
-    return `| \`${entry.provider}\` | \`${status}\`${flag} | [查看差异](${entry.viewerPath}) |`;
+    const url = viewerUrl({ repository, serverUrl, ref: viewerRef, path: entry.viewerPath });
+    return `| \`${entry.provider}\` | \`${status}\`${flag} | [查看差异](${url}) |`;
   });
 
   const overview = [
@@ -60,6 +68,7 @@ export function renderIngestionPrBody({ template, runEntries, viewerEntries, irP
     `| 无变化（unchanged） | ${counted.unchanged} |`,
     `| 基线冲突需重跑 | ${counted.stale} |`,
     `| 采集失败 | ${counted.failed} |`,
+    `| 缺少采集产物 | ${counted.artifactMissing} |`,
   ].join('\n');
 
   const failureNote = failed.length
@@ -69,6 +78,17 @@ export function renderIngestionPrBody({ template, runEntries, viewerEntries, irP
         ...failed.map((entry) => `> - \`${entry.provider}\` — ${cell(entry.message) || '未提供失败原因'}`),
         '>',
         '> 采集失败**不构成「无变化」**，也不代表供应清空；这些 Provider 本轮没有可信候选，因此不生成差异报告。',
+      ].join('\n')
+    : '';
+
+  const missingArtifacts = runEntries.filter((entry) => entry.status === 'artifact_missing');
+  const artifactNote = missingArtifacts.length
+    ? [
+        '',
+        '> ⚠️ **以下 Provider 缺少采集产物**：',
+        ...missingArtifacts.map((entry) => `> - \`${entry.provider}\` — ${cell(entry.message) || '未找到 Artifact'}`),
+        '>',
+        '> 这表示无法读取本次采集结果，不等同于采集器报告失败。',
       ].join('\n')
     : '';
 
@@ -105,10 +125,18 @@ export function renderIngestionPrBody({ template, runEntries, viewerEntries, irP
   return template
     .replace('{{run_overview}}', overview)
     .replace('{{run_failures}}', failureNote)
+    .replace('{{run_artifact_missing}}', artifactNote)
     .replace('{{run_stale}}', staleNote)
     .replace('{{provider_viewer_links}}', links)
     .replace('{{ir_projection_summary}}', irProjectionSummary ?? '本地采集预览没有执行正式字段投影。')
     .replace('{{validation_summary}}', validation);
+}
+
+function viewerUrl({ repository, serverUrl, ref, path }) {
+  if (!repository) return path;
+  const encodedPath = path.split('/').map(encodeURIComponent).join('/');
+  const encodedRef = encodeURIComponent(ref).replaceAll('%2F', '/');
+  return `${serverUrl.replace(/\/$/, '')}/${repository}/blob/${encodedRef}/${encodedPath}`;
 }
 
 /** 表格/列表单元格里的文本：压掉换行与竖线，避免撑破排版。 */
