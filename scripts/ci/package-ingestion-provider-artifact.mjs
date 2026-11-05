@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 
 const provider = process.env.INGEST_PROVIDER;
 const runnerTemp = process.env.RUNNER_TEMP;
-const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+const summaryPath = process.env.INGEST_HANDOFF_SUMMARY_PATH;
 const outcome = process.env.INGEST_COLLECT_STEP_OUTCOME;
 if (!provider || !/^[a-z0-9-]+$/.test(provider) || !runnerTemp || !summaryPath) {
   throw new Error('缺少采集 Artifact 所需的 Provider 或 Runner 环境变量');
@@ -29,7 +29,9 @@ const fingerprintMatch = cells[2]?.match(/^`(sha256:[a-f0-9]{64})`$/);
 const status = outcome === 'success' && statusMatch ? statusMatch[1] : 'collection_failed';
 const fingerprint = fingerprintMatch?.[1] ?? null;
 const candidateScopeCell = cells[6] ?? '';
-const candidateScopes = candidateScopeCell.replaceAll('`', '').split('+').filter(Boolean);
+const candidateScopes = candidateScopeCell
+  ? candidateScopeCell.replaceAll('`', '').split('+').filter(Boolean)
+  : outcome === 'success' ? [] : ['legacy'];
 if (!candidateScopes.length || candidateScopes.some((scope) => !isCandidateScope(scope))) throw new Error('采集摘要中的候选范围无效');
 const irFingerprint = cells[7]?.match(/^`(sha256:[a-f0-9]{64})`$/)?.[1] ?? null;
 const message = status === 'collection_failed'
