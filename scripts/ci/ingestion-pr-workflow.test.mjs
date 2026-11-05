@@ -72,6 +72,7 @@ function runMerge(workspace, options) {
       GITHUB_RUN_ID: runId,
       GITHUB_RUN_ATTEMPT: runAttempt,
       GITHUB_REPOSITORY: 'owner/repository',
+      INGEST_PR_BRANCH: 'automation/provider-ingest',
       INGEST_PR_BODY_PATH: bodyPath,
       GITHUB_STEP_SUMMARY: summaryPath,
       GITHUB_OUTPUT: outputPath,
@@ -212,10 +213,9 @@ test('聚合 PR：两个 Provider 变化合成一个 PR，各自 viewer 互不�
 
     const { body, summary, output } = runMerge(workspace, { providers: ['anthropic', 'openai'], artifactsRoot, stateDirectory });
 
-    // 只生成一个聚合 PR，链接指向各自 viewer
-    assert.match(body, /data\/candidates\/anthropic\/viewer\.md/);
-    assert.match(body, /data\/candidates\/openai\/viewer\.md/);
-    assert.ok(!body.includes('https://github.com/owner/repository/blob/'), 'viewer 链接应使用仓库内相对路径，不硬编码仓库与分支');
+    // 只生成一个聚合 PR，差异链接可直接打开 PR 分支上的各自 viewer。
+    assert.match(body, /\[查看差异\]\(https:\/\/github\.com\/owner\/repository\/blob\/automation\/provider-ingest\/data\/candidates\/anthropic\/viewer\.md\)/);
+    assert.match(body, /\[查看差异\]\(https:\/\/github\.com\/owner\/repository\/blob\/automation\/provider-ingest\/data\/candidates\/openai\/viewer\.md\)/);
 
     // 两份 viewer 各自独立，只含自己的字段
     const anthropicViewer = await readFile(path.join(workspace, 'data/candidates/anthropic/viewer.md'), 'utf8');

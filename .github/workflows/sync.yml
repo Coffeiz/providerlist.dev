@@ -139,7 +139,9 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-          pattern: provider-ingest-${{ github.run_id }}-${{ github.run_attempt }}-*
+          # A partial rerun may rerun only aggregate (or only failed matrix jobs).
+          # Successful Provider jobs keep artifacts from earlier attempts.
+          pattern: provider-ingest-${{ github.run_id }}-*
           path: ${{ runner.temp }}/provider-ingest-artifacts
           merge-multiple: false
       - name: Prepare Serialized Aggregation Branch
@@ -185,8 +187,10 @@ jobs:
           INGEST_STATE_DIR: ${{ steps.branches.outputs.state_dir }}
           INGEST_PR_BODY_PATH: ${{ runner.temp }}/provider-ingest-pr.md
           GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_SERVER_URL: ${{ github.server_url }}
           GITHUB_RUN_ID: ${{ github.run_id }}
           GITHUB_RUN_ATTEMPT: ${{ github.run_attempt }}
+          INGEST_PR_BRANCH: automation/provider-ingest
           INGEST_FX_OUTCOME: ${{ steps.fx.outcome }}
         run: node scripts/ci/merge-ingestion-provider-artifacts.mjs
       - name: Save Aggregation Report Branch
