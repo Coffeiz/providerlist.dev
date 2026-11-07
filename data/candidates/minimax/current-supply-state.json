@@ -1,6 +1,6 @@
 {
   "provider_id": "minimax",
-  "candidate_hash": "sha256:e2c4a4286cd5afbc382ddf893522451bca1c892ce141a4b172e8289d39eabc9c",
+  "candidate_hash": "sha256:06fb4b901390af51414c0267e8e30d40fc83cd3586b251ba367b9bde561bc770",
   "semantic_facts": [
     {
       "market": "cn",
@@ -600,8 +600,8 @@
         },
         {
           "model_id": "MiniMax-H3-Max",
-          "source_category": "视频模型",
-          "source_listing": "available",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
           "pricing_rows": [
             {
               "section": "",
@@ -2395,8 +2395,8 @@
         },
         {
           "model_id": "MiniMax-H3-Max",
-          "source_category": "Video Models",
-          "source_listing": "available",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
           "pricing_rows": [
             {
               "section": "",
@@ -3450,5 +3450,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-05.md"
+  "review_markdown_file": "2026-11-07.md"
 }
