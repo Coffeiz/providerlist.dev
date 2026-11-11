@@ -1,6 +1,6 @@
 {
   "provider_id": "minimax",
-  "candidate_hash": "sha256:06fb4b901390af51414c0267e8e30d40fc83cd3586b251ba367b9bde561bc770",
+  "candidate_hash": "sha256:8e3737c96f5acb9b04810a5752e3f82ad29adb9f0e1385b5e0327e9b7bdaf329",
   "semantic_facts": [
     {
       "market": "cn",
@@ -113,11 +113,11 @@
       "models": [
         {
           "model_id": "image-01",
-          "source_category": "图像模型",
+          "source_category": "图片模型",
           "source_listing": "available",
           "pricing_rows": [
             {
-              "section": "图像",
+              "section": "H3-Image-Context-IR（Prompt 增强）",
               "headers": [
                 "模型",
                 "接口说明",
@@ -146,11 +146,11 @@
         },
         {
           "model_id": "image-01-live",
-          "source_category": "图像模型",
+          "source_category": "图片模型",
           "source_listing": "available",
           "pricing_rows": [
             {
-              "section": "图像",
+              "section": "H3-Image-Context-IR（Prompt 增强）",
               "headers": [
                 "模型",
                 "接口说明",
@@ -296,22 +296,6 @@
                 "支持",
                 "支持",
                 "图片、视频、音频"
-              ],
-              "currency_code": "CNY",
-              "currency_evidence": "以下价格均以人民币计价。",
-              "normalized_rates": []
-            },
-            {
-              "section": "适用范围",
-              "headers": [
-                "对比项",
-                "语音资源包",
-                "视频资源包"
-              ],
-              "values": [
-                "适用模型",
-                "HD 与 Turbo 系列分别对应各自资源包",
-                "Hailuo 系列；暂不支持 MiniMax H3"
               ],
               "currency_code": "CNY",
               "currency_evidence": "以下价格均以人民币计价。",
@@ -476,6 +460,132 @@
               "currency_code": "CNY",
               "currency_evidence": "以下价格均以人民币计价。",
               "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Image",
+          "source_category": "图片模型",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "图片生成",
+              "headers": [
+                "模型",
+                "文本输入  元/百万 tokens",
+                "图片输入  元/百万 tokens",
+                "图片输出  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image 标准版",
+                "15",
+                "10",
+                "25"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "15",
+                  "source_header": "文本输入  元/百万 tokens",
+                  "source_value": "15"
+                },
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "10",
+                  "source_header": "图片输入  元/百万 tokens",
+                  "source_value": "10"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "25",
+                  "source_header": "图片输出  元/百万 tokens",
+                  "source_value": "25"
+                }
+              ]
+            },
+            {
+              "section": "H3-Image-Context-IR（Prompt 增强）",
+              "headers": [
+                "模型",
+                "输入价格  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image",
+                "15"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "15",
+                  "source_header": "输入价格  元/百万 tokens",
+                  "source_value": "15"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Image-Highspeed",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "图片生成",
+              "headers": [
+                "模型",
+                "文本输入  元/百万 tokens",
+                "图片输入  元/百万 tokens",
+                "图片输出  元/百万 tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image-Highspeed 极速版",
+                "15",
+                "20",
+                "50"
+              ],
+              "currency_code": "CNY",
+              "currency_symbol": "元",
+              "currency_evidence": "以下价格均以人民币计价。",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "15",
+                  "source_header": "文本输入  元/百万 tokens",
+                  "source_value": "15"
+                },
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "20",
+                  "source_header": "图片输入  元/百万 tokens",
+                  "source_value": "20"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "50",
+                  "source_header": "图片输出  元/百万 tokens",
+                  "source_value": "50"
+                }
+              ]
             }
           ]
         },
@@ -1941,13 +2051,13 @@
           "source_listing": "available",
           "pricing_rows": [
             {
-              "section": "Image",
+              "section": "H3-Image-Context-IR (Prompt Enhancement)",
               "headers": [
                 "Model",
                 "Price"
               ],
               "values": [
-                "image-01",
+                "image-01 image-01-live",
                 "$0.0035 per image"
               ],
               "currency_code": "USD",
@@ -1970,7 +2080,32 @@
           "model_id": "image-01-live",
           "source_category": "Image Models",
           "source_listing": "available",
-          "pricing_rows": []
+          "pricing_rows": [
+            {
+              "section": "H3-Image-Context-IR (Prompt Enhancement)",
+              "headers": [
+                "Model",
+                "Price"
+              ],
+              "values": [
+                "image-01 image-01-live",
+                "$0.0035 per image"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0.0035",
+                  "source_header": "Price",
+                  "source_value": "$0.0035 per image"
+                }
+              ]
+            }
+          ]
         },
         {
           "model_id": "M2-her",
@@ -2091,22 +2226,6 @@
                 "Supported",
                 "Supported",
                 "Image, video, audio"
-              ],
-              "currency_code": "USD",
-              "currency_evidence": "All prices are in USD.",
-              "normalized_rates": []
-            },
-            {
-              "section": "Coverage",
-              "headers": [
-                "Feature",
-                "Audio",
-                "Video"
-              ],
-              "values": [
-                "Supported models",
-                "All speech models",
-                "Hailuo video models; MiniMax H3 is not supported yet"
               ],
               "currency_code": "USD",
               "currency_evidence": "All prices are in USD.",
@@ -2271,6 +2390,132 @@
               "currency_code": "USD",
               "currency_evidence": "All prices are in USD.",
               "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Image",
+          "source_category": "Image Models",
+          "source_listing": "available",
+          "pricing_rows": [
+            {
+              "section": "Image Generation",
+              "headers": [
+                "Model",
+                "Input Text $ / M tokens",
+                "Input Image $ / M tokens",
+                "Output Image $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image Standard",
+                "$2.30",
+                "$1.50",
+                "$3.80"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "2.30",
+                  "source_header": "Input Text $ / M tokens",
+                  "source_value": "$2.30"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "1.50",
+                  "source_header": "Input Image $ / M tokens",
+                  "source_value": "$1.50"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "3.80",
+                  "source_header": "Output Image $ / M tokens",
+                  "source_value": "$3.80"
+                }
+              ]
+            },
+            {
+              "section": "H3-Image-Context-IR (Prompt Enhancement)",
+              "headers": [
+                "Model",
+                "Input $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image",
+                "$2.30"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "2.30",
+                  "source_header": "Input $ / M tokens",
+                  "source_value": "$2.30"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Image-Highspeed",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "Image Generation",
+              "headers": [
+                "Model",
+                "Input Text $ / M tokens",
+                "Input Image $ / M tokens",
+                "Output Image $ / M tokens"
+              ],
+              "values": [
+                "MiniMax-H3-Image-Highspeed Highspeed",
+                "$2.30",
+                "$3.00",
+                "$7.60"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "input",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "2.30",
+                  "source_header": "Input Text $ / M tokens",
+                  "source_value": "$2.30"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "3.00",
+                  "source_header": "Input Image $ / M tokens",
+                  "source_value": "$3.00"
+                },
+                {
+                  "metric": "output",
+                  "unit": "per_1m_tokens",
+                  "quantity": 1,
+                  "amount_decimal": "7.60",
+                  "source_header": "Output Image $ / M tokens",
+                  "source_value": "$7.60"
+                }
+              ]
             }
           ]
         },
@@ -3450,5 +3695,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-07.md"
+  "review_markdown_file": "2026-11-11.md"
 }
