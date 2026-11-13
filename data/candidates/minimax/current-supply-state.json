@@ -1,6 +1,6 @@
 {
   "provider_id": "minimax",
-  "candidate_hash": "sha256:8e3737c96f5acb9b04810a5752e3f82ad29adb9f0e1385b5e0327e9b7bdaf329",
+  "candidate_hash": "sha256:f8d5ff24d90af9c59378bf1481fe6805c222ce05767ef91d9357191834f3a1ce",
   "semantic_facts": [
     {
       "market": "cn",
@@ -509,30 +509,6 @@
                   "amount_decimal": "25",
                   "source_header": "图片输出  元/百万 tokens",
                   "source_value": "25"
-                }
-              ]
-            },
-            {
-              "section": "H3-Image-Context-IR（Prompt 增强）",
-              "headers": [
-                "模型",
-                "输入价格  元/百万 tokens"
-              ],
-              "values": [
-                "MiniMax-H3-Image",
-                "15"
-              ],
-              "currency_code": "CNY",
-              "currency_symbol": "元",
-              "currency_evidence": "以下价格均以人民币计价。",
-              "normalized_rates": [
-                {
-                  "metric": "input",
-                  "unit": "per_1m_tokens",
-                  "quantity": 1,
-                  "amount_decimal": "15",
-                  "source_header": "输入价格  元/百万 tokens",
-                  "source_value": "15"
                 }
               ]
             }
@@ -2441,30 +2417,6 @@
                   "source_value": "$3.80"
                 }
               ]
-            },
-            {
-              "section": "H3-Image-Context-IR (Prompt Enhancement)",
-              "headers": [
-                "Model",
-                "Input $ / M tokens"
-              ],
-              "values": [
-                "MiniMax-H3-Image",
-                "$2.30"
-              ],
-              "currency_code": "USD",
-              "currency_symbol": "$",
-              "currency_evidence": "All prices are in USD.",
-              "normalized_rates": [
-                {
-                  "metric": "input",
-                  "unit": "per_1m_tokens",
-                  "quantity": 1,
-                  "amount_decimal": "2.30",
-                  "source_header": "Input $ / M tokens",
-                  "source_value": "$2.30"
-                }
-              ]
             }
           ]
         },
@@ -3695,5 +3647,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-11.md"
+  "review_markdown_file": "2026-11-13.md"
 }
