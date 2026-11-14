@@ -1,6 +1,6 @@
 {
   "provider_id": "zhipu",
-  "candidate_hash": "sha256:45fd0c663ccd9802d4aa433ce2383aecd97db19a24f44df46538dccae9e622e1",
+  "candidate_hash": "sha256:3eed2b78a42e457e81fa6895fa2bb0f3826016224608280240e82c628994393b",
   "facts": [
     {
       "market": "cn",
@@ -2178,7 +2178,7 @@
         },
         {
           "source_id": "zhipu-cn-api-overview",
-          "text": "> [card] [技术支持](https://bigmodel.cn/online-book/customerService)"
+          "text": "> [card] [技术支持](https://bigmodel.cn/usercenter/worker-order-mgmt/create)"
         },
         {
           "source_id": "zhipu-cn-api-overview",
@@ -2294,7 +2294,7 @@
         },
         {
           "source_id": "zhipu-cn-claude-api",
-          "text": "> 智谱致力于保持与 Claude API 的兼容性，如果您在迁移过程中遇到任何问题，请联系我们的[技术支持团队](https://bigmodel.cn/online-book/customerService)。"
+          "text": "> 智谱致力于保持与 Claude API 的兼容性，如果您在迁移过程中遇到任何问题，请联系我们的[技术支持团队](https://bigmodel.cn/usercenter/worker-order-mgmt/create)。"
         },
         {
           "source_id": "zhipu-cn-claude-api",
@@ -5512,5 +5512,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-05.md"
+  "review_markdown_file": "2026-11-14.md"
 }
