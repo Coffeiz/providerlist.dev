@@ -184,14 +184,14 @@ export function applyRouteMetadata(route = router.currentRoute.value): void {
     const doc = getProviderDocument(providerId);
     const name = doc ? providerDisplayName(doc.provider) : providerId;
     title = `${name} API access, models and pricing — ProviderList`;
-    description = `Browse ${name} API access, current model supply, markets, and published pricing on ProviderList.`;
+    description = `Explore ${name} AI models, API endpoints, token pricing, cache costs, and availability across supported markets.`;
     crumbs.push({ name, url: canonical });
   } else if (route.name === 'model-detail') {
     const ref = `${String(route.params.developerId)}/${String(route.params.modelSlug)}`;
     const model = getModel(ref);
     if (model) {
-      title = `${model.name} by ${model.developer_name} — ProviderList`;
-      description = `View ${model.name} specifications and current Provider availability, model IDs, and pricing.`;
+      title = `${model.name} pricing, API and specifications — ProviderList`;
+      description = `Compare ${model.name} by ${model.developer_name}: provider availability, API model IDs, context window, modalities, and pricing.`;
       crumbs.push({ name: 'Models', url: `${base}/models/` }, { name: model.name, url: canonical });
     }
   } else if (route.name === 'type-index') {
@@ -202,10 +202,10 @@ export function applyRouteMetadata(route = router.currentRoute.value): void {
     crumbs.push({ name: 'Models', url: `${base}/models/` }, { name: label, url: canonical });
   } else if (route.name === 'providers') {
     title = 'AI Providers, API access and pricing — ProviderList';
-    description = 'Browse AI Providers by market, API access, current model supply, capabilities, and pricing.';
+    description = 'Compare AI providers, model availability, API endpoints, token pricing, and capabilities across China and global markets.';
   } else if (route.name === 'models') {
     title = 'AI model directory and pricing — ProviderList';
-    description = 'Compare current AI model supply, Provider IDs, context limits, modalities, and pricing.';
+    description = 'Compare AI models, providers, context windows, input and output modalities, token pricing, and cache costs.';
     crumbs.push({ name: 'Models', url: canonical });
   }
 

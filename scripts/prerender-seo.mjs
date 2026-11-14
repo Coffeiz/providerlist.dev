@@ -107,7 +107,7 @@ async function main() {
   }).join('\n');
   const providersPage = {
     title: 'AI Providers, API access and pricing — ProviderList',
-    description: 'Browse AI Providers by market, API access, current model supply, capabilities, and pricing.',
+    description: 'Compare AI providers, model availability, API endpoints, token pricing, and capabilities across China and global markets.',
     canonical: pageUrl('/providers'),
     content: `<main class="pl-container pl-page"><header><h1>AI Providers</h1><p>${htmlEscape(providerIndex.providers?.length ?? 0)} Providers in the current catalog</p></header><ul>${providerItems}</ul></main>`,
     structuredData: webPageData({
@@ -160,7 +160,7 @@ async function main() {
     const href = `/providers/${encodeURIComponent(summary.id)}/`;
     const canonical = pageUrl(href);
     const title = `${provider.name} API access, models and pricing — ProviderList`;
-    const description = `Browse ${provider.name} API access, current model supply, markets, and published pricing on ProviderList.`;
+    const description = `Explore ${provider.name} AI models, API endpoints, token pricing, cache costs, and availability across supported markets.`;
     const marketSections = (document.services ?? []).map((service) => {
       const items = (service.offerings ?? []).map((offering) => {
         const model = modelById.get(offering.model_ref);
@@ -186,7 +186,7 @@ async function main() {
   }).join('\n');
   await writePage(template, '/models', {
     title: 'AI model directory and pricing — ProviderList',
-    description: 'Compare current AI model supply, Provider IDs, context limits, modalities, and pricing.',
+    description: 'Compare AI models, providers, context windows, input and output modalities, token pricing, and cache costs.',
     canonical: pageUrl('/models'),
     content: `<main class="pl-container pl-page"><header><h1>AI model directory</h1><p>${models.length} canonical models</p></header><ul>${modelItems}</ul></main>`,
     structuredData: webPageData({ title: 'AI model directory', description: 'Browse canonical AI models and their current Provider availability.', canonical: pageUrl('/models') }),
@@ -212,9 +212,9 @@ async function main() {
   for (const model of models) {
     const href = modelPath(model);
     const canonical = pageUrl(href);
-    const title = `${model.name} by ${model.developer_name} — ProviderList`;
+    const title = `${model.name} pricing, API and specifications — ProviderList`;
     const supply = modelProviders.get(model.id) ?? [];
-    const description = `View ${model.name} specifications and current Provider availability, model IDs, and pricing.`;
+    const description = `Compare ${model.name} by ${model.developer_name}: provider availability, API model IDs, context window, modalities, and pricing.`;
     const limits = model.limits ?? {};
     const modality = model.modalities ?? {};
     const facts = [
