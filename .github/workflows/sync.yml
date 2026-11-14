@@ -224,8 +224,7 @@ jobs:
             closed_number=$(node -e 'const v=JSON.parse(process.argv[1]); process.stdout.write(v[0]?.number ? String(v[0].number) : "")' "$closed_json")
             if [ -n "$closed_number" ]; then
               merged_at=$(node -e 'const v=JSON.parse(process.argv[1]); process.stdout.write(v[0]?.mergedAt ?? "")' "$closed_json")
-              if [ -z "$merged_at" ]; then
-                gh pr reopen "$closed_number"
+              if [ -z "$merged_at" ] && gh pr reopen "$closed_number"; then
                 gh pr edit "$closed_number" --body-file "$RUNNER_TEMP/provider-ingest-pr.md"
                 pr_number=$closed_number
                 action=reopened
