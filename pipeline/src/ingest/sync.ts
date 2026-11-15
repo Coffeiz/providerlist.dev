@@ -284,7 +284,7 @@ async function captureOne(repoRoot: string, providerId: (typeof MANUAL_PROVIDER_
     const irCandidate = output.irCandidate;
     const requestedStatus = output.status;
     const irReportRequired = Boolean(irCandidate && (irCandidate.changed || irCandidate.status === 'needs_review' || irCandidate.status === 'invalid_data'));
-    const reportRequired = output.changed || requestedStatus === 'needs_review' || requestedStatus === 'invalid_data' || irReportRequired;
+    const reportRequired = output.changed || requestedStatus === 'needs_review' || requestedStatus === 'invalid_data';
     const primaryValidation = await validateCandidateScope(repoRoot, providerId, output, output.candidateScope, reportRequired);
     const irValidation = irCandidate ? await validateCandidateScope(repoRoot, providerId, irCandidate, 'ir', irReportRequired) : null;
     const reviewPath = primaryValidation.reviewPath;
