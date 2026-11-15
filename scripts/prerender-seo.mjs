@@ -36,7 +36,7 @@ function pageDocument(template, { title, description, canonical, content, struct
     .replace(/<title>[\s\S]*?<\/title>/u, '')
     .replace(/<meta\s+name="description"[\s\S]*?\/>/u, '')
     .replace('</head>', `    ${meta}\n  </head>`)
-    .replace('<div id="app"></div>', `<div id="app">${content}</div>`);
+    .replace('<div id="app"></div>', `<div id="app"><div class="seo-fallback">${content}</div></div>`);
 }
 
 function listItem(href, title, detail = '') {
