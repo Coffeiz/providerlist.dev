@@ -1,6 +1,6 @@
 {
   "provider_id": "zhipu",
-  "candidate_hash": "sha256:11b6b0f2339ab8d179707e811143a706db41f34706d4992ac5fce84efe46acf1",
+  "candidate_hash": "sha256:4c0398b24dae4846d09b15d58e9e815f24ebb641acb337c12b77e8755e51b0ff",
   "facts": [
     {
       "market": "cn",
@@ -1651,6 +1651,29 @@
               "text": "| GLM-5.3-FlashX-Legal | 1M | 2 | 7 | 限时免费 | 0.57 |"
             }
           ]
+        },
+        {
+          "model_id": "GLM-5.4",
+          "catalog_rows": [
+            {
+              "source_id": "zhipu-cn-model-catalog",
+              "section": "推荐模型",
+              "headers": [
+                "模型",
+                "特点",
+                "上下文",
+                "最大输出"
+              ],
+              "cells": [
+                "[GLM-5.4](https://docs.bigmodel.cn/cn/guide/models/glm-5.4.md)",
+                "首款采用 Loop Transformer 架构的旗舰模型  智能水平达到 2-3T 级模型，“泛 Coding” 提升显著",
+                "1M",
+                "128K"
+              ],
+              "text": "| [GLM-5.4](https://docs.bigmodel.cn/cn/guide/models/glm-5.4.md) | 首款采用 Loop Transformer 架构的旗舰模型 智能水平达到 2-3T 级模型，“泛 Coding” 提升显著 | 1M | 128K |"
+            }
+          ],
+          "pricing_rows": []
         },
         {
           "model_id": "GLM-5V-Turbo",
@@ -3985,7 +4008,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4105,7 +4128,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4200,7 +4223,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4245,7 +4268,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4290,7 +4313,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4470,7 +4493,7 @@
           "catalog_rows": [
             {
               "source_id": "zhipu-global-model-catalog",
-              "section": "Text Models",
+              "section": "Language Models",
               "headers": [
                 "Model",
                 "Strength",
@@ -4509,6 +4532,31 @@
               "text": "| GLM-5.3-FlashX-Legal | \\$0.37 | \\$0.075 | Limited-time Free | \\$1.25 |"
             }
           ]
+        },
+        {
+          "model_id": "GLM-5.4",
+          "catalog_rows": [
+            {
+              "source_id": "zhipu-global-model-catalog",
+              "section": "Featured Models",
+              "headers": [
+                "Model",
+                "Strength",
+                "Language",
+                "Context",
+                "Resource"
+              ],
+              "cells": [
+                "GLM-5.4",
+                "Advanced generalized coding with loop transformer",
+                "English & Chinese",
+                "1M",
+                "[Guide](https://docs.z.ai/guides/llm/glm-5.4.md)"
+              ],
+              "text": "| GLM-5.4 | Advanced generalized coding with loop transformer | English & Chinese | 1M | [Guide](https://docs.z.ai/guides/llm/glm-5.4.md) |"
+            }
+          ],
+          "pricing_rows": []
         },
         {
           "model_id": "GLM-ASR-2512",
@@ -5517,5 +5565,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-17.md"
+  "review_markdown_file": "2026-11-24.md"
 }

@@ -1,6 +1,6 @@
 {
   "provider_id": "minimax",
-  "candidate_hash": "sha256:f8d5ff24d90af9c59378bf1481fe6805c222ce05767ef91d9357191834f3a1ce",
+  "candidate_hash": "sha256:e275a0d54016197a3c080f1c776871aedf804771ba247c511316dc815fa2255a",
   "semantic_facts": [
     {
       "market": "cn",
@@ -2600,16 +2600,18 @@
               "headers": [
                 "Model",
                 "Output Resolution",
+                "Task Type",
                 "Output Video\\\n      per second",
                 "Input Video\\\n      per second",
-                "Input Image\\\n      per image\\\n      beyond free quota"
+                "Input Image\\\n      per image"
               ],
               "values": [
-                "MiniMax-H3-Max\\\n      Supports image, video, and audio references, for multi-asset video creation.",
+                "MiniMax-H3-Max\\\n      Provider: fal",
                 "768P",
+                "All",
                 "$0.08",
                 "$0.143",
-                "$0.074"
+                "$0.074\\\n      first 2 free"
               ],
               "currency_code": "USD",
               "currency_symbol": "$",
@@ -2635,9 +2637,8 @@
                   "metric": "input_image",
                   "unit": "per_image",
                   "quantity": 1,
-                  "amount_decimal": "0.074",
-                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
-                  "source_value": "$0.074"
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.074\\\n      first 2 free"
                 }
               ]
             },
@@ -2646,16 +2647,18 @@
               "headers": [
                 "Model",
                 "Output Resolution",
+                "Task Type",
                 "Output Video\\\n      per second",
                 "Input Video\\\n      per second",
-                "Input Image\\\n      per image\\\n      beyond free quota"
+                "Input Image\\\n      per image"
               ],
               "values": [
-                "MiniMax-H3-Max\\\n      Supports image, video, and audio references, for multi-asset video creation.",
+                "MiniMax-H3-Max\\\n      Provider: fal",
                 "480P",
+                "All",
                 "$0.05",
                 "$0.0553",
-                "$0.074"
+                "$0.074\\\n      first 2 free"
               ],
               "currency_code": "USD",
               "currency_symbol": "$",
@@ -2681,9 +2684,8 @@
                   "metric": "input_image",
                   "unit": "per_image",
                   "quantity": 1,
-                  "amount_decimal": "0.074",
-                  "source_header": "Input Image\\\n      per image\\\n      beyond free quota",
-                  "source_value": "$0.074"
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.074\\\n      first 2 free"
                 }
               ]
             },
@@ -2698,6 +2700,557 @@
               ],
               "values": [
                 "MiniMax-H3-Max",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-Max-Turbo",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-Max-Turbo\\\n      Provider: fal",
+                "768P",
+                "t2v / i2v",
+                "$0.04",
+                "—",
+                "$0.06\\\n      first 2 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "—"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.06\\\n      first 2 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-Max-Turbo\\\n      Provider: fal",
+                "768P",
+                "reference",
+                "$0.08",
+                "$0.12",
+                "$0.06\\\n      first 2 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.08",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.08"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.12",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.12"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.06\\\n      first 2 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-Max-Turbo\\\n      Provider: fal",
+                "480P",
+                "t2v / i2v",
+                "$0.025",
+                "—",
+                "$0.06\\\n      first 2 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.025",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.025"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "—"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.06\\\n      first 2 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-Max-Turbo\\\n      Provider: fal",
+                "480P",
+                "reference",
+                "$0.05",
+                "$0.04",
+                "$0.06\\\n      first 2 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.05",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.05"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.06\\\n      first 2 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-Max-Turbo",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-MG",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-MG\\\n      Provider: MachGen",
+                "2K",
+                "t2v / i2v",
+                "$0.10",
+                "—",
+                "Free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.10",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.10"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "—"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0",
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "Free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-MG\\\n      Provider: MachGen",
+                "2K",
+                "reference",
+                "$0.12",
+                "$0.12",
+                "Free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.12",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.12"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.12",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.12"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0",
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "Free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-MG\\\n      Provider: MachGen",
+                "768P",
+                "t2v / i2v",
+                "$0.04",
+                "—",
+                "Free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.04",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.04"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "—"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0",
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "Free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-MG\\\n      Provider: MachGen",
+                "768P",
+                "reference",
+                "$0.06",
+                "$0.06",
+                "Free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.06",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.06"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.06",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.06"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "amount_decimal": "0",
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "Free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-MG",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-NC",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-NC\\\n      Provider: Nunchux AI",
+                "768P",
+                "All",
+                "$0.03",
+                "$0.03",
+                "$0.015\\\n      first 5 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.03",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.03"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.03",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.03"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.015\\\n      first 5 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-NC\\\n      Provider: Nunchux AI",
+                "480P",
+                "All",
+                "$0.022",
+                "$0.022",
+                "$0.011\\\n      first 5 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.022",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.022"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.022",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.022"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.011\\\n      first 5 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-NC",
                 "Supported",
                 "Supported",
                 "Supported",
@@ -2759,6 +3312,80 @@
                   "source_value": "$0.025"
                 }
               ]
+            }
+          ]
+        },
+        {
+          "model_id": "MiniMax-H3-RH",
+          "source_category": "官方价格表列示",
+          "source_listing": "price_listed",
+          "pricing_rows": [
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Output Resolution",
+                "Task Type",
+                "Output Video\\\n      per second",
+                "Input Video\\\n      per second",
+                "Input Image\\\n      per image"
+              ],
+              "values": [
+                "MiniMax-H3-RH\\\n      Provider: RunningHub",
+                "480P",
+                "All",
+                "$0.038",
+                "$0.038",
+                "$0.04\\\n      first 5 free"
+              ],
+              "currency_code": "USD",
+              "currency_symbol": "$",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": [
+                {
+                  "metric": "generated_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.038",
+                  "source_header": "Output Video\\\n      per second",
+                  "source_value": "$0.038"
+                },
+                {
+                  "metric": "input_video",
+                  "unit": "per_second",
+                  "quantity": 1,
+                  "amount_decimal": "0.038",
+                  "source_header": "Input Video\\\n      per second",
+                  "source_value": "$0.038"
+                },
+                {
+                  "metric": "input_image",
+                  "unit": "per_image",
+                  "quantity": 1,
+                  "source_header": "Input Image\\\n      per image",
+                  "source_value": "$0.04\\\n      first 5 free"
+                }
+              ]
+            },
+            {
+              "section": "",
+              "headers": [
+                "Model",
+                "Text-to-video t2v",
+                "Image-to-video i2v",
+                "First & last frame fl2v",
+                "Reference ref"
+              ],
+              "values": [
+                "MiniMax-H3-RH",
+                "Supported",
+                "Supported",
+                "Supported",
+                "Image, video, audio"
+              ],
+              "currency_code": "USD",
+              "currency_evidence": "All prices are in USD.",
+              "normalized_rates": []
             }
           ]
         },
@@ -3647,5 +4274,5 @@
       ]
     }
   ],
-  "review_markdown_file": "2026-11-13.md"
+  "review_markdown_file": "2026-11-24.md"
 }
