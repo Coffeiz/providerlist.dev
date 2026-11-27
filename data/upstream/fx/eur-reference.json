@@ -4,15 +4,15 @@
   "quotes": [
     {
       "currency": "EUR",
-      "rate_decimal": "0.91215908"
+      "rate_decimal": "0.91116173"
     },
     {
       "currency": "CNY",
-      "rate_decimal": "6.66450789"
+      "rate_decimal": "6.66022779"
     }
   ],
-  "as_of_date": "2026-11-24",
-  "retrieved_at": "2026-11-25T06:04:31.527Z",
+  "as_of_date": "2026-11-26",
+  "retrieved_at": "2026-11-27T05:51:30.110Z",
   "source": {
     "publisher": "European Central Bank",
     "dataset": "Euro foreign exchange reference rates (USD, CNY against EUR)",
@@ -21,8 +21,8 @@
       "R7",
       "R8"
     ],
-    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY.EUR.SP00.A?startPeriod=2026-11-15&format=csvdata",
-    "content_hash": "sha256:d05606d5ef19a6d2b2152828544acbb0da8642b8618f326a95dd8ebdc29d986d"
+    "url": "https://data-api.ecb.europa.eu/service/data/EXR/D.USD+CNY.EUR.SP00.A?startPeriod=2026-11-17&format=csvdata",
+    "content_hash": "sha256:017ae165dd1032da5f2969fa757433ec7f7c8b58a6c0f9386d6261de8533a335"
   },
   "derivation": {
     "formula": "EUR_per_USD = 1 / (EUR/USD); CNY_per_USD = (EUR/CNY) / (EUR/USD)",
